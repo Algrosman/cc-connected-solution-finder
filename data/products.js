@@ -1376,51 +1376,58 @@ window.CC_CATALOG = [
  {
   "id": "EDU-06",
   "domain": "education",
-  "title": "Clinical Knowledge Exchange & Expert Sessions",
+  "title": "Clinical Knowledge Exchange & Faculty Development",
   "fit": [
    "new",
    "existing"
   ],
-  "pdf": "brochures/3_Education/EDU-06_Clinical_Knowledge_Exchange_Expert_Sessions_Product_Profile.pdf",
-  "subtitle": "Cleveland Clinic expertise for your teams through best-practice sessions, a member speaker series, presenters for your own events and visiting professorships.",
+  "pdf": "brochures/3_Education/EDU-06_Clinical_Knowledge_Exchange_Faculty_Development_Product_Profile.pdf",
+  "subtitle": "Cleveland Clinic expertise delivered to your institution: best-practice sessions, a member speaker series, visiting professorships, curriculum review and faculty development.",
   "category": "Education & Training",
-  "durationShort": "1 hour to 2 weeks, by format",
-  "deliveryShort": "On-site, Virtual",
+  "durationShort": "1 hour to 6 months, by format",
+  "deliveryShort": "On-site, Virtual, Workshop-based",
   "need": [
-   "Clients often want quick, targeted access to Cleveland Clinic expertise for a broad audience without sending staff abroad, whether on a specific clinical topic, as part of an event they are hosting, or as teaching delivered at their own institution.",
-   "Intended audience: All healthcare staff and leadership; physicians for Visiting Professorships. The CC Connected Speaker Series is available only to Cleveland Clinic Connected members and select JAC members as an included benefit."
+   "Clients often want targeted access to Cleveland Clinic expertise at their own institution without sending staff abroad, whether on a specific clinical topic, for an event they are hosting, or as teaching for their staff. Medical schools and teaching hospitals building or strengthening their education programs also need an outside, expert view of their curriculum and practical development for the clinicians who teach.",
+   "Intended audience: All healthcare staff and leadership; physicians for Visiting Professorships; medical school deans, clinicians and educators for curriculum review and faculty development. The CC Connected Speaker Series is available only to Cleveland Clinic Connected members and select JAC members as an included benefit."
   ],
   "value": [
    "Cleveland Clinic clinical leaders share their approach to medicine in their departments and specialties through live sessions, lectures and symposiums tailored to the hosting organization.",
-   "Formats range from monthly member sessions and one-hour virtual best-practice sessions to presenter support for a client's own symposium and visiting professorships, giving broad groups direct access to specialized expertise across clinical disciplines."
+   "Formats range from monthly member sessions and one-hour virtual best-practice sessions to presenter support for a client's own symposium and visiting professorships.",
+   "For education programs, Cleveland Clinic's Center for International Medical Education provides a high-level advisory review of medical curricula, identifying strengths, gaps and improvement considerations, and Cleveland Clinic Abu Dhabi offers customizable faculty-development workshops on teaching skills, learner assessment, curriculum design and clinical education."
   ],
   "deliverables": [
    "Clinical Best Practice Session. 1-hour live session, virtual or at the client site, with topic, faculty and format tailored to the client",
    "CC Connected Speaker Series. Monthly 1-hour live virtual sessions on the topics that matter most to Cleveland Clinic Connected members",
    "Client Symposium/Conference. Cleveland Clinic support for, and presenters at, a client-hosted 1 to 2 day event",
-   "Visiting Professorships. Cleveland Clinic physicians deliver lectures, teaching and symposiums tailored to the host institution over 1 to 2 weeks"
+   "Visiting Professorships. Cleveland Clinic physicians deliver lectures, teaching and symposiums tailored to the host institution over 1 to 2 weeks",
+   "Undergraduate Medical Curriculum Review. High-level advisory review of curriculum strengths, gaps and improvement considerations, with optional individual syllabus review given extra time and resources",
+   "CCAD Faculty Development. Half-day to multi-day workshops on teaching skills, learner assessment, curriculum design and clinical education",
+   "ACGME Assessment Hub Training, offered twice yearly at Cleveland Clinic Abu Dhabi"
   ],
-  "deliveryModel": "On-site / Virtual",
+  "deliveryModel": "On-site / Virtual / Workshop-based",
   "deliveryDetail": [
-   "Format: Live virtual sessions, presenter support for client events, and in-person didactic teaching",
-   "Location: Virtual or client site; Visiting Professorships are delivered in person",
-   "Offering type: Standardized member offering (Speaker Series), program or custom engagement",
-   "Customizable: Yes, except the CC Connected Speaker Series.",
-   "Client Symposium/Conference support is aligned with expert consultation and educational services offered through Cleveland Clinic Connected."
+   "Format: Live virtual sessions, presenter support for client events, in-person teaching and workshops, and virtual curriculum advisory with a possible site visit",
+   "Location: Virtual or client site; Visiting Professorships are delivered in person; faculty development workshops at Cleveland Clinic Abu Dhabi",
+   "Offering type: Standardized member offering (Speaker Series), program or advisory engagement",
+   "Customizable: Yes, except the CC Connected Speaker Series."
   ],
-  "duration": "1 hour to 2 weeks, by format",
+  "duration": "1 hour to 6 months, by format",
   "durationDetail": [
-   "Clinical Best Practice Sessions and Speaker Series sessions: 1 hour (the Speaker Series runs monthly). Client Symposium/Conference: 1 to 2 days. Visiting Professorships: 1 to 2 weeks, subject to specialty alignment and faculty availability."
+   "Clinical Best Practice Sessions and Speaker Series sessions: 1 hour (the Speaker Series runs monthly). Client Symposium/Conference: 1 to 2 days. Visiting Professorships: 1 to 2 weeks, subject to specialty alignment and faculty availability. CCAD Faculty Development: half-day to multi-day; ACGME Assessment Hub Training is offered twice yearly (June and December), and other workshops can be explored based on demand. Undergraduate Medical Curriculum Review: 3 to 6 months."
   ],
   "resourcesCC": [],
   "resourcesClient": [
    "Speaker Series access limited to Cleveland Clinic Connected members and select JAC members",
-   "Coordination with the host institution and faculty availability for Visiting Professorships",
-   "Program fees: Speaker Series included as a member benefit; other formats to be confirmed"
+   "Coordination with the host institution, and faculty availability for Visiting Professorships and workshops",
+   "Curriculum documents for review, including syllabi if individual review is in scope",
+   "Visit visa for on-site attendance at Cleveland Clinic Abu Dhabi",
+   "Program fees: Speaker Series included as a member benefit; Curriculum Review $450 per hour; other formats to be confirmed"
   ],
   "outcomes": [
    "Transfer of Cleveland Clinic expertise and best practices to the client organization",
-   "Broad access to Cleveland Clinic specialty expertise for staff at the client's own institution"
+   "Broad access to Cleveland Clinic specialty expertise for staff at the client's own institution",
+   "A curriculum strengthened through an international expert perspective",
+   "Stronger teaching and learner-assessment capability among faculty"
   ],
   "stageNote": "",
   "deliverablesIntro": "",
@@ -1432,69 +1439,11 @@ window.CC_CATALOG = [
  {
   "id": "EDU-07",
   "domain": "education",
-  "title": "Medical Education & Faculty Development",
-  "fit": [
-   "new",
-   "existing"
-  ],
-  "pdf": "brochures/3_Education/EDU-07_Medical_Education_Faculty_Development_Product_Profile.pdf",
-  "subtitle": "Expert review of medical school curricula and practical faculty development in teaching, learner assessment and curriculum design.",
-  "category": "Education & Training",
-  "durationShort": "Half-day workshops to 3- to 6-month reviews",
-  "deliveryShort": "On-site, Virtual, Workshop-based",
-  "need": [
-   "Medical schools and teaching hospitals building or strengthening their education programs need an outside, expert view of their curriculum and practical development for the clinicians who teach. Best fit for medical school deans seeking a high-level curriculum review, and for clinical educators or faculty teams seeking development in teaching, assessment, curriculum design or clinical education.",
-   "Intended audience: Medical school deans, clinicians and educators."
-  ],
-  "value": [
-   "Cleveland Clinic's Center for International Medical Education provides a high-level advisory review of medical curricula, identifying strengths, gaps and improvement considerations, with individual syllabus review possible given extra time and resources.",
-   "Cleveland Clinic Abu Dhabi complements this with customizable faculty-development workshops on teaching skills, learner assessment, curriculum design and clinical education for clinicians and educators."
-  ],
-  "deliverables": [
-   "Undergraduate Medical Curriculum Review. High-level advisory review of curriculum strengths, gaps and improvement considerations",
-   "Individual syllabus review (optional), given extra time and resources",
-   "CCAD Faculty Development. Half-day to multi-day workshops on teaching skills, learner assessment, curriculum design and clinical education",
-   "ACGME Assessment Hub Training, offered twice yearly at Cleveland Clinic Abu Dhabi"
-  ],
-  "deliveryModel": "On-site / Virtual / Workshop-based",
-  "deliveryDetail": [
-   "Format: Virtual advisory with a possible site visit (curriculum review); in-person workshops (faculty development)",
-   "Location: Virtual and/or on-site engagement; Cleveland Clinic Abu Dhabi",
-   "Offering type: Advisory / Consulting and Program",
-   "Customizable: Yes"
-  ],
-  "duration": "Half-day workshops to 3- to 6-month reviews",
-  "durationDetail": [
-   "Undergraduate Medical Curriculum Review: 3 to 6 months. CCAD Faculty Development: half-day to multi-day; ACGME Assessment Hub Training is offered twice yearly (June and December), and other workshops can be explored based on demand."
-  ],
-  "resourcesCC": [],
-  "resourcesClient": [
-   "Curriculum documents for review, including syllabi if individual review is in scope",
-   "visit visa for on-site attendance at Cleveland Clinic Abu Dhabi",
-   "Workshop scope and schedule depend on demand and faculty availability",
-   "Program fees: Curriculum Review $450 per hour; Faculty Development to be confirmed"
-  ],
-  "outcomes": [
-   "A curriculum strengthened through an international expert perspective",
-   "Stronger teaching and learner-assessment capability among faculty",
-   "Improved curricula and clinical education programs",
-   "Transfer of Cleveland Clinic expertise and best practices to the client organization"
-  ],
-  "stageNote": "",
-  "deliverablesIntro": "",
-  "leadBold": false,
-  "phases": [],
-  "resourcesNote": "",
-  "assumptions": []
- },
- {
-  "id": "EDU-08",
-  "domain": "education",
   "title": "eClinical Review",
   "fit": [
    "existing"
   ],
-  "pdf": "brochures/3_Education/EDU-08_eClinical_Review_Product_Profile.pdf",
+  "pdf": "brochures/3_Education/EDU-07_eClinical_Review_Product_Profile.pdf",
   "subtitle": "Written opinions from Cleveland Clinic specialists on your physicians' most complex cases, typically within three days.",
   "category": "Education & Training",
   "durationShort": "Typically 3 days per case",

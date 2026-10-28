@@ -1054,48 +1054,18 @@
  {
   "id": "EDU-06",
   "area": "Education & Training",
-  "file": "3_Education/EDU-06_Clinical_Knowledge_Exchange_Expert_Sessions_Product_Profile.pdf",
-  "name": "Clinical Knowledge Exchange & Expert Sessions",
-  "tagline": "Cleveland Clinic expertise for your teams through best-practice sessions, a member speaker series, presenters for your own events and visiting professorships.",
+  "file": "3_Education/EDU-06_Clinical_Knowledge_Exchange_Faculty_Development_Product_Profile.pdf",
+  "name": "Clinical Knowledge Exchange & Faculty Development",
+  "tagline": "Cleveland Clinic expertise delivered to your institution: best-practice sessions, a member speaker series, visiting professorships, curriculum review and faculty development.",
   "category": "Education & Training",
-  "need": "Clients often want quick, targeted access to Cleveland Clinic expertise for a broad audience without sending staff abroad, whether on a specific clinical topic, as part of an event they are hosting, or as teaching delivered at their own institution.\nIntended audience: All healthcare staff and leadership; physicians for Visiting Professorships. The CC Connected Speaker Series is available only to Cleveland Clinic Connected members and select JAC members as an included benefit.",
-  "value": "Cleveland Clinic clinical leaders share their approach to medicine in their departments and specialties through live sessions, lectures and symposiums tailored to the hosting organization.\nFormats range from monthly member sessions and one-hour virtual best-practice sessions to presenter support for a client's own symposium and visiting professorships, giving broad groups direct access to specialized expertise across clinical disciplines.",
+  "need": "Clients often want targeted access to Cleveland Clinic expertise at their own institution without sending staff abroad, whether on a specific clinical topic, for an event they are hosting, or as teaching for their staff. Medical schools and teaching hospitals building or strengthening their education programs also need an outside, expert view of their curriculum and practical development for the clinicians who teach.\nIntended audience: All healthcare staff and leadership; physicians for Visiting Professorships; medical school deans, clinicians and educators for curriculum review and faculty development. The CC Connected Speaker Series is available only to Cleveland Clinic Connected members and select JAC members as an included benefit.",
+  "value": "Cleveland Clinic clinical leaders share their approach to medicine in their departments and specialties through live sessions, lectures and symposiums tailored to the hosting organization.\nFormats range from monthly member sessions and one-hour virtual best-practice sessions to presenter support for a client's own symposium and visiting professorships.\nFor education programs, Cleveland Clinic's Center for International Medical Education provides a high-level advisory review of medical curricula, identifying strengths, gaps and improvement considerations, and Cleveland Clinic Abu Dhabi offers customizable faculty-development workshops on teaching skills, learner assessment, curriculum design and clinical education.",
   "deliverables": [
    "Clinical Best Practice Session. 1-hour live session, virtual or at the client site, with topic, faculty and format tailored to the client",
    "CC Connected Speaker Series. Monthly 1-hour live virtual sessions on the topics that matter most to Cleveland Clinic Connected members",
    "Client Symposium/Conference. Cleveland Clinic support for, and presenters at, a client-hosted 1 to 2 day event",
-   "Visiting Professorships. Cleveland Clinic physicians deliver lectures, teaching and symposiums tailored to the host institution over 1 to 2 weeks"
-  ],
-  "deliveryModes": [
-   "On-site",
-   "Virtual"
-  ],
-  "deliveryDetail": "Format: Live virtual sessions, presenter support for client events, and in-person didactic teaching\nLocation: Virtual or client site; Visiting Professorships are delivered in person\nOffering type: Standardized member offering (Speaker Series), program or custom engagement\nCustomizable: Yes, except the CC Connected Speaker Series.\nClient Symposium/Conference support is aligned with expert consultation and educational services offered through Cleveland Clinic Connected.",
-  "duration": "1 hour to 2 weeks, by format",
-  "durationNotes": "Clinical Best Practice Sessions and Speaker Series sessions: 1 hour (the Speaker Series runs monthly). Client Symposium/Conference: 1 to 2 days. Visiting Professorships: 1 to 2 weeks, subject to specialty alignment and faculty availability.",
-  "resCC": [],
-  "resClient": [
-   "Speaker Series access limited to Cleveland Clinic Connected members and select JAC members",
-   "Coordination with the host institution and faculty availability for Visiting Professorships",
-   "Program fees: Speaker Series included as a member benefit; other formats to be confirmed"
-  ],
-  "outcomes": [
-   "Transfer of Cleveland Clinic expertise and best practices to the client organization",
-   "Broad access to Cleveland Clinic specialty expertise for staff at the client's own institution"
-  ]
- },
- {
-  "id": "EDU-07",
-  "area": "Education & Training",
-  "file": "3_Education/EDU-07_Medical_Education_Faculty_Development_Product_Profile.pdf",
-  "name": "Medical Education & Faculty Development",
-  "tagline": "Expert review of medical school curricula and practical faculty development in teaching, learner assessment and curriculum design.",
-  "category": "Education & Training",
-  "need": "Medical schools and teaching hospitals building or strengthening their education programs need an outside, expert view of their curriculum and practical development for the clinicians who teach. Best fit for medical school deans seeking a high-level curriculum review, and for clinical educators or faculty teams seeking development in teaching, assessment, curriculum design or clinical education.\nIntended audience: Medical school deans, clinicians and educators.",
-  "value": "Cleveland Clinic's Center for International Medical Education provides a high-level advisory review of medical curricula, identifying strengths, gaps and improvement considerations, with individual syllabus review possible given extra time and resources.\nCleveland Clinic Abu Dhabi complements this with customizable faculty-development workshops on teaching skills, learner assessment, curriculum design and clinical education for clinicians and educators.",
-  "deliverables": [
-   "Undergraduate Medical Curriculum Review. High-level advisory review of curriculum strengths, gaps and improvement considerations",
-   "Individual syllabus review (optional), given extra time and resources",
+   "Visiting Professorships. Cleveland Clinic physicians deliver lectures, teaching and symposiums tailored to the host institution over 1 to 2 weeks",
+   "Undergraduate Medical Curriculum Review. High-level advisory review of curriculum strengths, gaps and improvement considerations, with optional individual syllabus review given extra time and resources",
    "CCAD Faculty Development. Half-day to multi-day workshops on teaching skills, learner assessment, curriculum design and clinical education",
    "ACGME Assessment Hub Training, offered twice yearly at Cleveland Clinic Abu Dhabi"
   ],
@@ -1104,21 +1074,84 @@
    "Virtual",
    "Workshop-based"
   ],
-  "deliveryDetail": "Format: Virtual advisory with a possible site visit (curriculum review); in-person workshops (faculty development)\nLocation: Virtual and/or on-site engagement; Cleveland Clinic Abu Dhabi\nOffering type: Advisory / Consulting and Program\nCustomizable: Yes",
-  "duration": "Half-day workshops to 3- to 6-month reviews",
-  "durationNotes": "Undergraduate Medical Curriculum Review: 3 to 6 months. CCAD Faculty Development: half-day to multi-day; ACGME Assessment Hub Training is offered twice yearly (June and December), and other workshops can be explored based on demand.",
+  "deliveryDetail": "Format: Live virtual sessions, presenter support for client events, in-person teaching and workshops, and virtual curriculum advisory with a possible site visit\nLocation: Virtual or client site; Visiting Professorships are delivered in person; faculty development workshops at Cleveland Clinic Abu Dhabi\nOffering type: Standardized member offering (Speaker Series), program or advisory engagement\nCustomizable: Yes, except the CC Connected Speaker Series.",
+  "duration": "1 hour to 6 months, by format",
+  "durationNotes": "Clinical Best Practice Sessions and Speaker Series sessions: 1 hour (the Speaker Series runs monthly). Client Symposium/Conference: 1 to 2 days. Visiting Professorships: 1 to 2 weeks, subject to specialty alignment and faculty availability. CCAD Faculty Development: half-day to multi-day; ACGME Assessment Hub Training is offered twice yearly (June and December), and other workshops can be explored based on demand. Undergraduate Medical Curriculum Review: 3 to 6 months.",
   "resCC": [],
   "resClient": [
+   "Speaker Series access limited to Cleveland Clinic Connected members and select JAC members",
+   "Coordination with the host institution, and faculty availability for Visiting Professorships and workshops",
    "Curriculum documents for review, including syllabi if individual review is in scope",
-   "visit visa for on-site attendance at Cleveland Clinic Abu Dhabi",
-   "Workshop scope and schedule depend on demand and faculty availability",
-   "Program fees: Curriculum Review $450 per hour; Faculty Development to be confirmed"
+   "Visit visa for on-site attendance at Cleveland Clinic Abu Dhabi",
+   "Program fees: Speaker Series included as a member benefit; Curriculum Review $450 per hour; other formats to be confirmed"
   ],
   "outcomes": [
+   "Transfer of Cleveland Clinic expertise and best practices to the client organization",
+   "Broad access to Cleveland Clinic specialty expertise for staff at the client's own institution",
    "A curriculum strengthened through an international expert perspective",
-   "Stronger teaching and learner-assessment capability among faculty",
-   "Improved curricula and clinical education programs",
-   "Transfer of Cleveland Clinic expertise and best practices to the client organization"
+   "Stronger teaching and learner-assessment capability among faculty"
+  ]
+ },
+ {
+  "id": "EDU-07",
+  "area": "Education & Training",
+  "file": "3_Education/EDU-07_eClinical_Review_Product_Profile.pdf",
+  "name": "eClinical Review",
+  "tagline": "Written opinions from Cleveland Clinic specialists on your physicians' most complex cases, typically within three days.",
+  "category": "Education & Training",
+  "stageNote": "case-based learning",
+  "need": "Physicians regularly face complex or uncommon cases where a subspecialist's view would confirm or change the plan of care. Sending the patient abroad for a second opinion is costly and disruptive, and informal advice from colleagues is hard to obtain, document or act on. Hospitals need a reliable, documented way for their physicians to consult a subspecialist while the patient stays in local care.\nIt is typically requested by hospitals that want to extend the expertise available to their physicians, add confidence to difficult treatment decisions and build their clinicians' skills one case at a time.",
+  "value": "Cleveland Clinic is an operating health system with 23 hospitals, 300 outpatient locations and about 6,600 physicians and scientists (figures as of December 31, 2025). eClinical Review gives the client's physicians access to specialists in every Cleveland Clinic specialty, through one request from their own hospital.\nThe patient stays with their local physician, who remains responsible for care. Each written report sets out the specialist's assessment and recommendations, so every review also builds the requesting physician's knowledge for similar cases.",
+  "deliverablesIntro": "Each case the client hospital submits receives:",
+  "leadBold": true,
+  "deliverables": [
+   "Written specialist report: a Cleveland Clinic specialist's assessment of the case, with recommendations on diagnosis and treatment, returned to the requesting physician",
+   "Specialist matched to the case: each case is assigned to a specialist in the relevant field, from any Cleveland Clinic specialty",
+   "Defined turnaround: the written report is typically returned within three days of receiving the complete case"
+  ],
+  "deliveryModes": [
+   "Virtual"
+  ],
+  "deliveryDetail": "The client hospital submits each case on behalf of its physician, with the clinical question and the supporting medical records and imaging. Cleveland Clinic matches the case to a specialist in the relevant field, who reviews the records and returns a written report to the requesting physician. All care stays with the local care team.",
+  "duration": "Typically 3 days per case",
+  "phases": [
+   {
+    "name": "Case submission",
+    "weeks": "day 0",
+    "detail": "The client hospital sends the clinical question, medical records and imaging"
+   },
+   {
+    "name": "Specialist review",
+    "weeks": "days 1 to 3",
+    "detail": "The case is matched to a specialist in the relevant field, who reviews the records"
+   },
+   {
+    "name": "Written report",
+    "weeks": "by day 3",
+    "detail": "The specialist's assessment and recommendations go back to the requesting physician"
+   }
+  ],
+  "durationNotes": "The three-day turnaround starts once the complete case has been received. Missing records or imaging, or questions that need more information from the requesting physician, can extend it.",
+  "resCC": [
+   "Case coordination, to receive each case and match it to the right specialist",
+   "A Cleveland Clinic specialist in the relevant field, who reviews the case and writes the report",
+   "International & Emerging Markets relationship manager for the client hospital"
+  ],
+  "resClient": [
+   "A named point of contact who submits cases on behalf of the hospital's physicians",
+   "The requesting physician's clinical question for each case",
+   "Complete medical records and imaging for each case"
+  ],
+  "assumptions": [
+   "Availability depends on legal approval in the client's jurisdiction",
+   "Patient consent is obtained as local rules require",
+   "The local care team remains responsible for the patient's care and for acting on the report"
+  ],
+  "outcomes": [
+   "Physicians get a subspecialist's view on complex cases without the patient leaving local care",
+   "Difficult treatment decisions are confirmed or refined with documented specialist input",
+   "Physicians build expertise case by case from each specialist's written assessment",
+   "Patients benefit from Cleveland Clinic expertise while staying with their trusted local physician"
   ]
  },
  {
@@ -1399,68 +1432,6 @@
    "Faster answers to emerging SQPE questions",
    "Stronger professional development for quality and nursing teams",
    "A deeper working relationship between member teams and Cleveland Clinic experts"
-  ]
- },
- {
-  "id": "EDU-08",
-  "area": "Education & Training",
-  "file": "3_Education/EDU-08_eClinical_Review_Product_Profile.pdf",
-  "name": "eClinical Review",
-  "tagline": "Written opinions from Cleveland Clinic specialists on your physicians' most complex cases, typically within three days.",
-  "category": "Education & Training",
-  "stageNote": "case-based learning",
-  "need": "Physicians regularly face complex or uncommon cases where a subspecialist's view would confirm or change the plan of care. Sending the patient abroad for a second opinion is costly and disruptive, and informal advice from colleagues is hard to obtain, document or act on. Hospitals need a reliable, documented way for their physicians to consult a subspecialist while the patient stays in local care.\nIt is typically requested by hospitals that want to extend the expertise available to their physicians, add confidence to difficult treatment decisions and build their clinicians' skills one case at a time.",
-  "value": "Cleveland Clinic is an operating health system with 23 hospitals, 300 outpatient locations and about 6,600 physicians and scientists (figures as of December 31, 2025). eClinical Review gives the client's physicians access to specialists in every Cleveland Clinic specialty, through one request from their own hospital.\nThe patient stays with their local physician, who remains responsible for care. Each written report sets out the specialist's assessment and recommendations, so every review also builds the requesting physician's knowledge for similar cases.",
-  "deliverablesIntro": "Each case the client hospital submits receives:",
-  "leadBold": true,
-  "deliverables": [
-   "Written specialist report: a Cleveland Clinic specialist's assessment of the case, with recommendations on diagnosis and treatment, returned to the requesting physician",
-   "Specialist matched to the case: each case is assigned to a specialist in the relevant field, from any Cleveland Clinic specialty",
-   "Defined turnaround: the written report is typically returned within three days of receiving the complete case"
-  ],
-  "deliveryModes": [
-   "Virtual"
-  ],
-  "deliveryDetail": "The client hospital submits each case on behalf of its physician, with the clinical question and the supporting medical records and imaging. Cleveland Clinic matches the case to a specialist in the relevant field, who reviews the records and returns a written report to the requesting physician. All care stays with the local care team.",
-  "duration": "Typically 3 days per case",
-  "phases": [
-   {
-    "name": "Case submission",
-    "weeks": "day 0",
-    "detail": "The client hospital sends the clinical question, medical records and imaging"
-   },
-   {
-    "name": "Specialist review",
-    "weeks": "days 1 to 3",
-    "detail": "The case is matched to a specialist in the relevant field, who reviews the records"
-   },
-   {
-    "name": "Written report",
-    "weeks": "by day 3",
-    "detail": "The specialist's assessment and recommendations go back to the requesting physician"
-   }
-  ],
-  "durationNotes": "The three-day turnaround starts once the complete case has been received. Missing records or imaging, or questions that need more information from the requesting physician, can extend it.",
-  "resCC": [
-   "Case coordination, to receive each case and match it to the right specialist",
-   "A Cleveland Clinic specialist in the relevant field, who reviews the case and writes the report",
-   "International & Emerging Markets relationship manager for the client hospital"
-  ],
-  "resClient": [
-   "A named point of contact who submits cases on behalf of the hospital's physicians",
-   "The requesting physician's clinical question for each case",
-   "Complete medical records and imaging for each case"
-  ],
-  "assumptions": [
-   "Availability depends on legal approval in the client's jurisdiction",
-   "Patient consent is obtained as local rules require",
-   "The local care team remains responsible for the patient's care and for acting on the report"
-  ],
-  "outcomes": [
-   "Physicians get a subspecialist's view on complex cases without the patient leaving local care",
-   "Difficult treatment decisions are confirmed or refined with documented specialist input",
-   "Physicians build expertise case by case from each specialist's written assessment",
-   "Patients benefit from Cleveland Clinic expertise while staying with their trusted local physician"
   ]
  }
 ]

@@ -29,8 +29,7 @@
     "EDU-04": { "fit": ["new", "existing"] },
     "EDU-05": { "fit": ["new", "existing"] },
     "EDU-06": { "fit": ["new", "existing"] },
-    "EDU-07": { "fit": ["new", "existing"] },
-    "EDU-08": { "fit": ["existing"] },
+    "EDU-07": { "fit": ["existing"] },
 
     "SQPE-01": { "fit": ["existing"] },
     "SQPE-02": { "fit": ["existing"] },

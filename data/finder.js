@@ -241,10 +241,10 @@ window.CC_FINDER = {
         short: "Who to develop",
         title: "Who do you want to develop?",
         options: [
-          { id: "physicians", label: "Physicians and clinical trainees", scores: { "EDU-01": 1, "EDU-02": 1, "EDU-06": 1, "EDU-08": 1 } },
+          { id: "physicians", label: "Physicians and clinical trainees", scores: { "EDU-01": 1, "EDU-02": 1, "EDU-06": 1, "EDU-07": 1 } },
           { id: "caregivers", label: "Nurses, pharmacists and frontline caregivers", scores: { "EDU-04": 1, "EDU-05": 1, "EDU-01": 1 } },
           { id: "leaders", label: "Executives and leaders", scores: { "EDU-03": 6 } },
-          { id: "educators", label: "Medical school faculty and educators", scores: { "EDU-07": 7 } }
+          { id: "educators", label: "Medical school faculty and educators", scores: { "EDU-06": 7 } }
         ]
       },
       {
@@ -254,10 +254,10 @@ window.CC_FINDER = {
         options: [
           { id: "observe", label: "Send people to Cleveland Clinic to observe", scores: { "EDU-01": 4, "EDU-03": 1 } },
           { id: "hands-on", label: "Hands-on training, simulation or fellowships", scores: { "EDU-02": 2, "EDU-05": 3 } },
-          { id: "experts", label: "Bring Cleveland Clinic experts to our teams", scores: { "EDU-06": 4, "EDU-07": 1 } },
+          { id: "experts", label: "Bring Cleveland Clinic experts to our teams", scores: { "EDU-06": 5 } },
           { id: "cases", status: ["existing"], label: "Specialist opinions on our physicians' complex cases", detail: "A written report from a Cleveland Clinic specialist, typically within three days.",
-            scores: { "EDU-08": 8, "EDU-06": 2, "EDU-01": 1 } },
-          { id: "in-house", label: "Build a lasting program in our organization", scores: { "EDU-04": 4, "EDU-05": 1, "EDU-07": 1 } }
+            scores: { "EDU-07": 10, "EDU-06": 2, "EDU-01": 1 } },
+          { id: "in-house", label: "Build a lasting program in our organization", scores: { "EDU-04": 4, "EDU-05": 1, "EDU-06": 1 } }
         ]
       },
       {
@@ -268,7 +268,7 @@ window.CC_FINDER = {
         options: [
           { id: "days", label: "A few hours to a few days", scores: { "EDU-06": 2, "EDU-04": 1, "EDU-05": 2, "EDU-03": 1 } },
           { id: "weeks", label: "One to four weeks", scores: { "EDU-01": 2, "EDU-05": 1, "EDU-03": 1 } },
-          { id: "months", label: "Several months", scores: { "EDU-03": 1, "EDU-04": 1, "EDU-07": 1 } },
+          { id: "months", label: "Several months", scores: { "EDU-03": 1, "EDU-04": 1, "EDU-06": 1 } },
           { id: "year", label: "A year or longer", scores: { "EDU-02": 3 } }
         ]
       }

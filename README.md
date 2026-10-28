@@ -13,7 +13,7 @@ It is plain HTML, CSS and JavaScript with no build step, so it runs on any stati
 | `assets/app.js` | Finder flow, portfolio map, catalog, detail panel, cart and proposal request |
 | `assets/engine.js` | Scoring logic for the finder (no page code, so it can be tested on its own) |
 | `assets/config.js` | Settings: where proposal requests go, contact email, prototype banner |
-| `data/products.js` | The 29 solutions, generated from the brochure source (do not edit by hand) |
+| `data/products.js` | The 28 solutions, generated from the brochure source (do not edit by hand) |
 | `data/catalog-settings.json` | Website-only fields per solution: which hospitals it is offered to (`new`, `existing` or both) |
 | `data/finder.js` | The questions, options and scoring weights |
 | `brochures/` | The offering profile PDFs, the Finance packet (`1_Finance/00_Finance_Advisory_Offerings_Packet.pdf`) and `Offerings_Index.csv` |
