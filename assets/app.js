@@ -272,7 +272,11 @@
       b.setAttribute("data-action", "detail");
       b.setAttribute("data-id", p.id);
       b.style.backgroundColor = DOMAIN_COLOR[p.domain] || DOMAIN_COLOR.finance;
-      b.innerHTML = '<span class="tile-text"><span class="tile-label"></span><span class="tile-title">' + esc(p.title) + "</span></span>";
+      // number within its area, taken from the brochure code (FIN-03 is Finance 3)
+      var num = parseInt(String(p.id).split("-").pop(), 10) || "";
+      b.setAttribute("data-num", num);
+      b.innerHTML = '<span class="tile-num" aria-hidden="true">' + num + "</span>" +
+        '<span class="tile-text"><span class="tile-label"></span><span class="tile-title">' + esc(p.title) + "</span></span>";
       b.addEventListener("mouseenter", function () { showTip(p.id); });
       b.addEventListener("mouseleave", hideTip);
       b.addEventListener("focus", function () { showTip(p.id); });
@@ -353,7 +357,7 @@
 
     // Result: best match full width, alternatives side by side below it
     if (isResult) {
-      var hTop = stacked ? 100 : 124, hAlt = stacked ? 112 : 104, half = (W - gap) / 2;
+      var hTop = stacked ? 100 : 124, hAlt = stacked ? 124 : 140, half = (W - gap) / 2;
       boxes.push({ x: 0, y: 0, w: W, h: hTop });
       for (i = 1; i < n; i++) {
         boxes.push({ x: ((i - 1) % 2) * (half + gap), y: hTop + gap + Math.floor((i - 1) / 2) * (hAlt + gap), w: half, h: hAlt });
@@ -364,7 +368,7 @@
     var cols = stacked ? (n >= 17 ? 14 : n >= 9 ? 9 : n) : (n >= 17 ? 7 : n >= 9 ? 4 : n >= 4 ? 2 : 1);
     var w = (W - gap * (cols - 1)) / cols;
     var text = w >= 110;
-    var h = text ? (cols === 1 ? 72 : stacked ? 120 : 100) : Math.min(w, 64);
+    var h = text ? (cols === 1 ? 72 : stacked ? 120 : 118) : Math.min(w, 64);
     for (i = 0; i < n; i++) boxes.push({ x: (i % cols) * (w + gap), y: Math.floor(i / cols) * (h + gap), w: w, h: h });
     var rows = Math.ceil(n / cols);
     return { boxes: boxes, labels: [], height: rows * h + (rows - 1) * gap, text: text };
@@ -448,7 +452,7 @@
     var t = tiles[id];
     if (!t || t.classList.contains("is-out")) return;
     var p = BY_ID[id];
-    tip.innerHTML = '<p class="tip-domain">' + esc(DOMAIN_BY_ID[p.domain].name) + "</p>" +
+    tip.innerHTML = '<p class="tip-domain">' + esc(DOMAIN_BY_ID[p.domain].name) + " " + esc(tiles[id].getAttribute("data-num")) + "</p>" +
       '<p class="tip-title">' + esc(p.title) + "</p>" +
       '<p class="tip-sub">' + rich(p.subtitle) + "</p>" +
       '<p class="tip-meta">Typical duration: ' + rich(p.durationShort) + "</p>";
@@ -551,12 +555,11 @@
   function renderCatalog() {
     var total = 0, html = "";
     DOMAINS.forEach(function (d) {
-      var all = CATALOG.filter(function (p) { return p.domain === d.id; });
       var list = visibleProducts(d.id);
       total += list.length;
       if (state.query && !list.length) return;
       var open = !!state.open[d.id] || (!!state.query && list.length > 0);
-      var countText = list.length === all.length ? plural(all.length, "solution", "solutions") : list.length + " of " + all.length + " solutions";
+      var countText = plural(list.length, "solution", "solutions");
       html += '<section class="domain" aria-labelledby="dh-' + d.id + '">' +
         '<button type="button" class="domain-head" id="dh-' + d.id + '" data-action="toggle-domain" data-domain="' + d.id +
         '" aria-expanded="' + open + '" aria-controls="db-' + d.id + '">' +
