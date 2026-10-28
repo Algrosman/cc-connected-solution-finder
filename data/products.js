@@ -1488,6 +1488,82 @@ window.CC_CATALOG = [
   "assumptions": []
  },
  {
+  "id": "EDU-08",
+  "domain": "education",
+  "title": "eClinical Review",
+  "fit": [
+   "existing"
+  ],
+  "pdf": "brochures/3_Education/EDU-08_eClinical_Review_Product_Profile.pdf",
+  "subtitle": "Written opinions from Cleveland Clinic specialists on your physicians' most complex cases, typically within three days.",
+  "category": "Education & Training",
+  "durationShort": "Typically 3 days per case",
+  "deliveryShort": "Virtual",
+  "need": [
+   "Physicians regularly face complex or uncommon cases where a subspecialist's view would confirm or change the plan of care. Sending the patient abroad for a second opinion is costly and disruptive, and informal advice from colleagues is hard to obtain, document or act on. Hospitals need a reliable, documented way for their physicians to consult a subspecialist while the patient stays in local care.",
+   "It is typically requested by hospitals that want to extend the expertise available to their physicians, add confidence to difficult treatment decisions and build their clinicians' skills one case at a time."
+  ],
+  "value": [
+   "Cleveland Clinic is an operating health system with 23 hospitals, 300 outpatient locations and about 6,600 physicians and scientists (figures as of December 31, 2025). eClinical Review gives the client's physicians access to specialists in every Cleveland Clinic specialty, through one request from their own hospital.",
+   "The patient stays with their local physician, who remains responsible for care. Each written report sets out the specialist's assessment and recommendations, so every review also builds the requesting physician's knowledge for similar cases."
+  ],
+  "deliverables": [
+   "Written specialist report: a Cleveland Clinic specialist's assessment of the case, with recommendations on diagnosis and treatment, returned to the requesting physician",
+   "Specialist matched to the case: each case is assigned to a specialist in the relevant field, from any Cleveland Clinic specialty",
+   "Defined turnaround: the written report is typically returned within three days of receiving the complete case"
+  ],
+  "deliveryModel": "Virtual",
+  "deliveryDetail": [
+   "The client hospital submits each case on behalf of its physician, with the clinical question and the supporting medical records and imaging. Cleveland Clinic matches the case to a specialist in the relevant field, who reviews the records and returns a written report to the requesting physician. All care stays with the local care team."
+  ],
+  "duration": "Typically 3 days per case",
+  "durationDetail": [
+   "The three-day turnaround starts once the complete case has been received. Missing records or imaging, or questions that need more information from the requesting physician, can extend it."
+  ],
+  "resourcesCC": [
+   "Case coordination, to receive each case and match it to the right specialist",
+   "A Cleveland Clinic specialist in the relevant field, who reviews the case and writes the report",
+   "International & Emerging Markets relationship manager for the client hospital"
+  ],
+  "resourcesClient": [
+   "A named point of contact who submits cases on behalf of the hospital's physicians",
+   "The requesting physician's clinical question for each case",
+   "Complete medical records and imaging for each case"
+  ],
+  "outcomes": [
+   "Physicians get a subspecialist's view on complex cases without the patient leaving local care",
+   "Difficult treatment decisions are confirmed or refined with documented specialist input",
+   "Physicians build expertise case by case from each specialist's written assessment",
+   "Patients benefit from Cleveland Clinic expertise while staying with their trusted local physician"
+  ],
+  "stageNote": "case-based learning",
+  "deliverablesIntro": "Each case the client hospital submits receives:",
+  "leadBold": true,
+  "phases": [
+   {
+    "name": "Case submission",
+    "weeks": "day 0",
+    "detail": "The client hospital sends the clinical question, medical records and imaging"
+   },
+   {
+    "name": "Specialist review",
+    "weeks": "days 1 to 3",
+    "detail": "The case is matched to a specialist in the relevant field, who reviews the records"
+   },
+   {
+    "name": "Written report",
+    "weeks": "by day 3",
+    "detail": "The specialist's assessment and recommendations go back to the requesting physician"
+   }
+  ],
+  "resourcesNote": "",
+  "assumptions": [
+   "Availability depends on legal approval in the client's jurisdiction",
+   "Patient consent is obtained as local rules require",
+   "The local care team remains responsible for the patient's care and for acting on the report"
+  ]
+ },
+ {
   "id": "SQPE-01",
   "domain": "sqpe",
   "title": "CC Connected SQPE Core Program",
