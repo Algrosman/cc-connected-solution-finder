@@ -1,6 +1,6 @@
 # Cleveland Clinic Connected: advisory solution finder
 
-A static web page for the Cleveland Clinic Connected advisory portfolio. Visitors answer a few questions (existing or new hospital, advisory area, then two or three questions about their needs), get one recommended solution with two alternatives, add solutions to a cart from the finder or from the full catalog, and send the cart as a proposal request.
+A static web page for the Cleveland Clinic Connected advisory portfolio. Visitors answer a few questions (existing or new hospital, advisory area, then one to three questions about their needs), get one recommended solution with two alternatives, add solutions to a cart from the finder or from the full catalog, and send the cart as a proposal request.
 
 It is plain HTML, CSS and JavaScript with no build step, so it runs on any static host (GitHub Pages, Vercel, Netlify, SharePoint or an internal web server).
 

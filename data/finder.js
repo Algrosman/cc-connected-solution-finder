@@ -3,12 +3,12 @@
 
   How it works
   - Every visitor answers "status" (new or existing hospital) and "domain" first.
-  - Each domain then asks two or three questions. A question can be limited to one
+  - Each domain then asks one to three questions. A question can be limited to one
     hospital status ("status") or shown only after a specific earlier answer ("when").
   - "short" is the label shown in the "Your answers" list.
   - Each option adds points to product IDs ("scores"). The highest-scoring product that
     is offered to the visitor's hospital type is recommended; the next two are shown
-    as "Also consider".
+    as "Also consider". Smaller scores (2 and 1) on an option set those two alternatives.
   - Product IDs must match data/products.js. Options can also carry "status" to show
     them only to new or existing hospitals.
 */
@@ -195,7 +195,7 @@ window.CC_FINDER = {
           { id: "data", label: "Data, analytics and AI", detail: "Measures, data governance and the responsible use of AI.",
             scores: {} },
           { id: "patient", label: "The patient's digital experience", detail: "Apps, portals and digital journeys aligned to clinical pathways.",
-            scores: { "IT-07": 4 } }
+            scores: { "IT-07": 4, "IT-03": 2, "IT-04": 1 } }
         ]
       },
       {
@@ -204,9 +204,9 @@ window.CC_FINDER = {
         when: { "dig-area": ["strategy"] },
         title: "What is your next milestone?",
         options: [
-          { id: "plan-refresh", label: "A strategic plan or capital planning cycle", scores: { "IT-01": 2 } },
-          { id: "go-live", status: ["new"], label: "An opening date we have to hit", detail: "Build, testing, training and cutover on a fixed date.", scores: { "IT-06": 5 } },
-          { id: "go-live", status: ["existing"], label: "A major go-live or system migration", detail: "Build, testing, training and cutover on a fixed date.", scores: { "IT-06": 5 } },
+          { id: "plan-refresh", label: "A strategic plan or capital planning cycle", scores: { "IT-01": 2, "IT-02": 2, "IT-04": 1 } },
+          { id: "go-live", status: ["new"], label: "An opening date we have to hit", detail: "Build, testing, training and cutover on a fixed date.", scores: { "IT-06": 5, "IT-03": 1 } },
+          { id: "go-live", status: ["existing"], label: "A major go-live or system migration", detail: "Build, testing, training and cutover on a fixed date.", scores: { "IT-06": 5, "IT-03": 1 } },
           { id: "system-decision", label: "A major system decision", detail: "Such as an EHR selection or a new data center.", scores: { "IT-01": 1, "IT-03": 2, "IT-02": 2 } }
         ]
       },
@@ -216,10 +216,10 @@ window.CC_FINDER = {
         when: { "dig-area": ["core"] },
         title: "What is most pressing?",
         options: [
-          { id: "ehr", label: "Selecting, implementing or improving our EHR", scores: { "IT-03": 4 } },
-          { id: "integration", label: "Hosting, integration and interoperability", scores: { "IT-02": 4 } },
-          { id: "cyber", label: "Cybersecurity, privacy and downtime resilience", scores: { "IT-02": 4 } },
-          { id: "activation", label: "Getting to go-live safely and on time", scores: { "IT-06": 5 } }
+          { id: "ehr", label: "Selecting, implementing or improving our EHR", scores: { "IT-03": 4, "IT-06": 2, "IT-04": 1 } },
+          { id: "integration", label: "Hosting, integration and interoperability", scores: { "IT-02": 4, "IT-03": 2, "IT-04": 1 } },
+          { id: "cyber", label: "Cybersecurity, privacy and downtime resilience", scores: { "IT-02": 4, "IT-03": 2, "IT-05": 1 } },
+          { id: "activation", label: "Getting to go-live safely and on time", scores: { "IT-06": 5, "IT-03": 2, "IT-02": 1 } }
         ]
       },
       {
@@ -228,20 +228,9 @@ window.CC_FINDER = {
         when: { "dig-area": ["data"] },
         title: "What is most pressing?",
         options: [
-          { id: "measures", label: "Agreeing the measures leaders rely on", detail: "A focused measure set and certified metric definitions.", scores: { "IT-04": 4 } },
-          { id: "foundations", label: "Data governance, architecture and team", detail: "The foundations analytics depends on.", scores: { "IT-04": 4 } },
-          { id: "ai", label: "Governing the safe use of AI", detail: "Policies, review and monitoring for every AI tool.", scores: { "IT-05": 4 } }
-        ]
-      },
-      {
-        id: "dig-sponsor",
-        short: "Sponsor",
-        title: "Who will sponsor this work?",
-        options: [
-          { id: "ceo", label: "CEO or board", scores: { "IT-01": 1, "IT-06": 1 } },
-          { id: "cio", label: "CIO, CISO or IT leadership", scores: { "IT-02": 1, "IT-03": 1, "IT-06": 1 } },
-          { id: "clinical", label: "CMIO, CNO or clinical leadership", scores: { "IT-03": 1, "IT-05": 1, "IT-07": 1 } },
-          { id: "data-cx", label: "CFO, data or patient experience leader", scores: { "IT-04": 1, "IT-07": 1 } }
+          { id: "measures", label: "Agreeing the measures leaders rely on", detail: "A focused measure set and certified metric definitions.", scores: { "IT-04": 4, "IT-01": 2, "IT-05": 1 } },
+          { id: "foundations", label: "Data governance, architecture and team", detail: "The foundations analytics depends on.", scores: { "IT-04": 4, "IT-05": 2, "IT-02": 1 } },
+          { id: "ai", label: "Governing the safe use of AI", detail: "Policies, review and monitoring for every AI tool.", scores: { "IT-05": 4, "IT-04": 2, "IT-01": 1 } }
         ]
       }
     ],
