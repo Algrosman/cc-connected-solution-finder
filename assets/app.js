@@ -1049,6 +1049,15 @@
         document.getElementById("db-" + dom).hidden = expanded;
         break;
       case "clear-search": state.query = ""; $("#catalogSearch").value = ""; renderCatalog(); break;
+      case "open-domains":
+        // Open the listed areas in the catalog and scroll to the first one
+        ev.preventDefault();
+        var doms = (el.getAttribute("data-domains") || "").split(",");
+        doms.forEach(function (d) { state.open[d] = true; });
+        renderCatalog();
+        var first = document.getElementById("dh-" + doms[0]);
+        if (first) first.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+        break;
     }
   });
 
