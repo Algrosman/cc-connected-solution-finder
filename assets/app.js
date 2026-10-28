@@ -248,37 +248,187 @@
     });
   }
 
-  function renderMap(step) {
-    var a = state.answers;
-    var live = E.inPlay(CATALOG, FINDER, a.status, a.domain, domainAnswers());
-    var rec = step.type === "result" ? recommendation() : null;
-    var altIds = rec ? rec.alternatives.map(function (x) { return x.id; }) : [];
-    var html = "";
-    DOMAINS.forEach(function (d) {
-      html += '<div class="map-col' + (a.domain === d.id ? " is-active" : "") + '"><h3>' + esc(d.short) + '</h3><div class="map-cells">';
-      CATALOG.filter(function (p) { return p.domain === d.id; }).forEach(function (p) {
-        var cls = "cell", note = "";
-        if (a.status && !E.fits(p, a.status)) { cls += " is-off"; note = "not offered for " + STATUS_PLURAL[a.status]; }
-        else if (rec && rec.top.id === p.id) { cls += " is-top"; note = "recommended"; }
-        else if (rec && altIds.indexOf(p.id) !== -1) { cls += " is-alt"; note = "also consider"; }
-        else if (!live[p.id]) { cls += " is-dim"; note = a.domain && p.domain !== a.domain ? "different area" : "not a match yet"; }
-        else note = "matches so far";
-        html += '<button type="button" class="' + cls + '" data-action="detail" data-id="' + p.id + '" title="' + esc(p.id + ": " + p.title) +
-          '" aria-label="' + esc(p.id + ", " + p.title + ", " + note) + '">' + esc(p.id) + "</button>";
-      });
-      html += "</div></div>";
-    });
-    $("#portfolioMap").innerHTML = html;
+  /* ---------------- Portfolio field ----------------
+     One box per solution. Boxes drop out as visitors answer and the ones left grow,
+     so the field always shows what is still in the running. Hover or focus shows a
+     short description; selecting a box opens the full profile. */
+  var DOMAIN_COLOR = { finance: "#3761ad", sqpe: "#467d3c", digital: "#2b7d9c", education: "#6f5a9e" };
+  var field = $("#portfolioField");
+  var tip = $("#fieldTip");
+  var tiles = {};
+  var fieldBuilt = false;
+  // boxes are grouped by area in the same order as the color key
+  var ORDERED = CATALOG.slice().sort(function (x, y) {
+    return DOMAINS.indexOf(DOMAIN_BY_ID[x.domain]) - DOMAINS.indexOf(DOMAIN_BY_ID[y.domain]) || CATALOG.indexOf(x) - CATALOG.indexOf(y);
+  });
 
-    var count;
-    var n = Object.keys(live).length;
-    if (!a.status) count = CATALOG.length + " solutions across " + DOMAINS.length + " areas";
-    else if (!a.domain) count = plural(n, "solution", "solutions") + " offered to " + STATUS_PLURAL[a.status];
-    else if (step.type === "result") count = "Best match " + rec.top.id + ", with " + plural(altIds.length, "alternative", "alternatives");
+  function buildField() {
+    ORDERED.forEach(function (p) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "tile is-out";
+      b.tabIndex = -1;
+      b.setAttribute("data-action", "detail");
+      b.setAttribute("data-id", p.id);
+      b.style.backgroundColor = DOMAIN_COLOR[p.domain] || DOMAIN_COLOR.finance;
+      b.innerHTML = '<span class="tile-text"><span class="tile-label"></span><span class="tile-title">' + esc(p.title) + "</span></span>";
+      b.addEventListener("mouseenter", function () { showTip(p.id); });
+      b.addEventListener("mouseleave", hideTip);
+      b.addEventListener("focus", function () { showTip(p.id); });
+      b.addEventListener("blur", hideTip);
+      field.appendChild(b);
+      tiles[p.id] = b;
+    });
+    fieldBuilt = true;
+  }
+
+  /* Solutions still in the running. The number only goes down: everything offered to the
+     visitor's hospital, then the chosen area, then the strongest matches after each answer,
+     ending with the best match and two alternatives. */
+  function fieldIds(step) {
+    var a = state.answers;
+    if (!a.status) return ORDERED.map(function (p) { return p.id; });
+    if (!a.domain) return ORDERED.filter(function (p) { return E.fits(p, a.status); }).map(function (p) { return p.id; });
+    if (step.type === "result") {
+      var rec = recommendation();
+      return [rec.top.id].concat(rec.alternatives.map(function (x) { return x.id; }));
+    }
+    var ranked = E.rank(CATALOG, FINDER, a.status, a.domain, {});
+    var n = ranked.length;
+    var ids = ranked.map(function (r) { return r.product.id; });
+    var partial = {};
+    state.order.filter(function (k) { return k !== "status" && k !== "domain"; }).forEach(function (k, i) {
+      partial[k] = a[k];
+      var r = E.rank(CATALOG, FINDER, a.status, a.domain, partial);
+      var pos = r.filter(function (x) { return x.score > 0; }).length;
+      n = i === 0 ? Math.min(n - 1, Math.max(4, pos)) : Math.max(3, Math.min(n - 1, pos));
+      n = Math.max(1, Math.min(n, r.length));
+      ids = r.slice(0, n).map(function (x) { return x.product.id; });
+    });
+    // catalog order keeps boxes from jumping around between answers
+    return ORDERED.filter(function (p) { return ids.indexOf(p.id) !== -1; }).map(function (p) { return p.id; });
+  }
+
+  function fieldLayout(n, W, isResult) {
+    var stacked = window.matchMedia("(max-width: 900px)").matches;
+    var gap = 6, boxes = [], i;
+    if (isResult) {
+      if (!stacked) {
+        var hTop = 120, hAlt = 92, half = (W - gap) / 2;
+        boxes.push({ x: 0, y: 0, w: W, h: hTop });
+        for (i = 1; i < n; i++) {
+          boxes.push({ x: ((i - 1) % 2) * (half + gap), y: hTop + gap + Math.floor((i - 1) / 2) * (hAlt + gap), w: half, h: hAlt });
+        }
+        var altRows = Math.ceil((n - 1) / 2);
+        return { boxes: boxes, height: hTop + (altRows ? altRows * (hAlt + gap) : 0), text: true };
+      }
+      var w3 = (W - gap * (n - 1)) / n;
+      for (i = 0; i < n; i++) boxes.push({ x: i * (w3 + gap), y: 0, w: w3, h: 96 });
+      return { boxes: boxes, height: 96, text: true };
+    }
+    var cols = stacked ? (n >= 17 ? 14 : n >= 9 ? 9 : n) : (n >= 17 ? 7 : n >= 9 ? 4 : n >= 4 ? 2 : 1);
+    var w = (W - gap * (cols - 1)) / cols;
+    var text = w >= 110;
+    var h = text ? (n <= 3 && !stacked ? 84 : 76) : Math.min(w, 64);
+    for (i = 0; i < n; i++) boxes.push({ x: (i % cols) * (w + gap), y: Math.floor(i / cols) * (h + gap), w: w, h: h });
+    var rows = Math.ceil(n / cols);
+    return { boxes: boxes, height: rows * h + (rows - 1) * gap, text: text };
+  }
+
+  function place(t, b) {
+    t.style.left = b.x + "px";
+    t.style.top = b.y + "px";
+    t.style.width = b.w + "px";
+    t.style.height = b.h + "px";
+  }
+
+  function renderMap(step, instant) {
+    if (!fieldBuilt) { buildField(); instant = true; }
+    hideTip();
+    var a = state.answers;
+    var ids = fieldIds(step);
+    var isResult = step.type === "result";
+    var rec = isResult ? recommendation() : null;
+    var L = fieldLayout(ids.length, field.clientWidth, isResult);
+    if (instant) field.classList.add("no-anim");
+
+    CATALOG.forEach(function (p) {
+      var t = tiles[p.id];
+      var i = ids.indexOf(p.id);
+      if (i === -1) {
+        t.classList.add("is-out");
+        t.tabIndex = -1;
+        t.setAttribute("aria-hidden", "true");
+        return;
+      }
+      if (t.classList.contains("is-out")) {
+        // returning box: put it in place first, then fade it in
+        t.style.transition = "none";
+        place(t, L.boxes[i]);
+        void t.offsetWidth;
+        t.style.transition = "";
+      } else {
+        place(t, L.boxes[i]);
+      }
+      var isTop = !!rec && rec.top.id === p.id;
+      var isAlt = !!rec && !isTop;
+      t.classList.remove("is-out");
+      t.classList.toggle("is-top", isTop);
+      t.classList.toggle("is-alt", isAlt);
+      t.classList.toggle("has-text", L.text);
+      t.style.backgroundColor = isTop ? "#ffffff" : DOMAIN_COLOR[p.domain];
+      $(".tile-label", t).textContent = isTop ? "Best match" : isAlt ? "Also consider" : "";
+      t.tabIndex = 0;
+      t.removeAttribute("aria-hidden");
+      t.setAttribute("aria-label", (isTop ? "Best match: " : isAlt ? "Also consider: " : "") + p.title + ". " + p.subtitle);
+    });
+    field.style.height = L.height + "px";
+    if (instant) { void field.offsetWidth; field.classList.remove("no-anim"); }
+
+    // color key, only while more than one area is on show
+    var shown = DOMAINS.filter(function (d) { return ids.some(function (id) { return BY_ID[id].domain === d.id; }); });
+    $("#fieldLegend").innerHTML = shown.length > 1 ? shown.map(function (d) {
+      return '<li><span style="background:' + DOMAIN_COLOR[d.id] + '"></span>' + esc(d.short) + "</li>";
+    }).join("") : "";
+
+    var n = ids.length, count;
+    if (!a.status) count = n + " solutions across " + DOMAINS.length + " areas";
+    else if (!a.domain) count = n + " offered to " + STATUS_PLURAL[a.status];
+    else if (isResult) count = "Your best match and " + plural(rec.alternatives.length, "alternative", "alternatives");
     else if (state.order.length <= 2) count = plural(n, DOMAIN_BY_ID[a.domain].short + " solution", DOMAIN_BY_ID[a.domain].short + " solutions") + " for " + STATUS_PLURAL[a.status];
-    else count = plural(n, "solution matches", "solutions match") + " your answers so far";
+    else count = n + " still in the running";
     $("#mapCount").textContent = count;
   }
+
+  function showTip(id) {
+    var t = tiles[id];
+    if (!t || t.classList.contains("is-out")) return;
+    var p = BY_ID[id];
+    tip.innerHTML = '<p class="tip-domain">' + esc(DOMAIN_BY_ID[p.domain].name) + "</p>" +
+      '<p class="tip-title">' + esc(p.title) + "</p>" +
+      '<p class="tip-sub">' + rich(p.subtitle) + "</p>" +
+      '<p class="tip-meta">Typical duration: ' + rich(p.durationShort) + "</p>";
+    tip.hidden = false;
+    var side = tip.offsetParent || tip.parentNode;
+    var sr = side.getBoundingClientRect(), tr = t.getBoundingClientRect();
+    var tw = Math.min(300, sr.width);
+    tip.style.width = tw + "px";
+    var left = tr.left - sr.left + tr.width / 2 - tw / 2;
+    left = Math.max(0, Math.min(left, sr.width - tw));
+    var th = tip.offsetHeight;
+    var top = tr.top - sr.top - th - 10;
+    if (tr.top - th - 10 < 8) top = tr.bottom - sr.top + 10;
+    tip.style.left = left + "px";
+    tip.style.top = top + "px";
+  }
+
+  function hideTip() { tip.hidden = true; }
+
+  var resizeTimer = null;
+  window.addEventListener("resize", function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () { renderMap(currentStep(), true); }, 120);
+  });
 
   function renderAnswers() {
     var box = $("#answerList");
@@ -576,7 +726,8 @@
           markersHTML(p) + '<span class="cart-dur">Typical duration: ' + rich(p.durationShort) + "</span>" +
           '<button type="button" class="remove" data-action="remove" data-id="' + p.id + '" aria-label="Remove ' + esc(p.title) + '">Remove</button></li>';
       }).join("") + "</ul>";
-      html += '<p class="cart-summary">There is no charge to request a proposal. Our team confirms scope, timing and fees with you before any engagement begins.</p>';
+      html += '<p class="cart-summary">There is no charge to request a proposal. Our team confirms scope, timing and fees with you before any engagement begins.</p>' +
+        '<p><button type="button" class="remove" data-action="clear-cart">Empty cart</button></p>';
     }
     html += "</div>";
     if (items.length) {
@@ -741,7 +892,7 @@
       (sent ? "" : '<a class="btn btn-primary" href="' + esc(mailtoLink(req)) + '">Open the email again</a>') +
       '<button type="button" class="btn btn-secondary" data-action="print">Print or save as PDF</button>' +
       "</div>" +
-      '<p style="margin-top:22px;font-size:14.5px">Your cart is unchanged, so you can keep adding solutions. <button type="button" class="remove" data-action="clear-cart">Empty the cart</button></p>' +
+      '<p style="margin-top:22px;font-size:14.5px">Your cart is unchanged, so you can keep adding solutions. <button type="button" class="remove" data-action="clear-cart">Empty cart</button></p>' +
       "</div></div>";
     panel.innerHTML = html;
   }
@@ -764,7 +915,7 @@
       return "<tr><th>" + esc(s.id) + "</th><td><strong>" + esc(p.title) + "</strong><br>" + esc(s.area) + "<br>Typical duration: " + esc(p.durationShort) + "<br>Delivery: " + esc(p.deliveryShort) + "</td></tr>";
     }).join("");
     $("#printArea").innerHTML =
-      '<img src="assets/cleveland-clinic-logo.png" alt="Cleveland Clinic">' +
+      '<img src="assets/cleveland-clinic-connected-logo.png" alt="Cleveland Clinic Connected">' +
       "<h1>Proposal request</h1><p>Cleveland Clinic Connected, International &amp; Emerging Markets</p>" +
       "<h2>Contact</h2><table>" + rows.map(function (r) { return "<tr><th>" + esc(r[0]) + "</th><td>" + esc(r[1]) + "</td></tr>"; }).join("") + "</table>" +
       "<h2>Solutions of interest</h2><table>" + sol + "</table>" +

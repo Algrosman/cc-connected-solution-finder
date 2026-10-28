@@ -22,8 +22,7 @@
   <header class="site-header">
     <div class="wrap header-row">
       <a class="brand" href="#top" aria-label="Cleveland Clinic Connected, advisory solutions home">
-        <img src="assets/cleveland-clinic-logo.png" alt="Cleveland Clinic" width="174" height="29">
-        <span class="brand-sub">Connected</span>
+        <img src="assets/cleveland-clinic-connected-logo.png" alt="Cleveland Clinic Connected" width="300" height="35">
       </a>
       <nav class="main-nav" aria-label="Main">
         <a href="#finder">Find a solution</a>
@@ -71,13 +70,10 @@
                 <h2 class="map-title">The portfolio</h2>
                 <p class="map-count" id="mapCount" aria-live="polite"></p>
               </div>
-              <div class="map" id="portfolioMap"></div>
-              <ul class="map-legend" aria-label="Map key">
-                <li><span class="key key-live"></span>Matches so far</li>
-                <li><span class="key key-top"></span>Recommended</li>
-                <li><span class="key key-alt"></span>Also consider</li>
-                <li><span class="key key-off"></span>Not offered to your hospital type</li>
-              </ul>
+              <div class="field" id="portfolioField" role="group" aria-label="Solutions still in the running"></div>
+              <ul class="field-legend" id="fieldLegend" aria-label="Box colors"></ul>
+              <p class="field-hint" id="fieldHint">Hover over a box to see what it offers. Select it for the full profile.</p>
+              <div class="tip" id="fieldTip" role="tooltip" hidden></div>
               <div class="answers" id="answerList"></div>
             </aside>
           </div>
