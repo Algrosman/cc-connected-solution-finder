@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
@@ -26,7 +26,7 @@
       </a>
       <nav class="main-nav" aria-label="Main">
         <a href="#finder">Find a solution</a>
-        <a href="#portfolio">All solutions</a>
+        <a href="#portfolio">Our offerings</a>
         <a href="#how">How it works</a>
         <a href="#contact">Contact us</a>
       </nav>
@@ -36,19 +36,17 @@
         <span class="cart-count" id="cartCount" aria-live="polite">0</span>
       </button>
     </div>
-    <div class="wrap">
-      <ol class="crumbs" aria-label="Breadcrumb">
-        <li><a href="https://my.clevelandclinic.org/">Home</a></li>
-        <li><a href="https://my.clevelandclinic.org/professionals">Resources for Medical Professionals</a></li>
-        <li><a href="https://my.clevelandclinic.org/professionals/connected">Cleveland Clinic Connected</a></li>
-        <li aria-current="page">Advisory solutions</li>
-      </ol>
-    </div>
   </header>
 
   <main id="top">
-    <section class="hero" id="finder" aria-labelledby="heroTitle">
+    <section class="hero" aria-labelledby="heroTitle">
       <div class="wrap">
+        <ol class="crumbs" aria-label="Breadcrumb">
+          <li><a href="https://my.clevelandclinic.org/">Home</a></li>
+          <li><a href="https://my.clevelandclinic.org/professionals">Resources for Medical Professionals</a></li>
+          <li><a href="https://my.clevelandclinic.org/professionals/connected">Cleveland Clinic Connected</a></li>
+          <li aria-current="page">Advisory offerings</li>
+        </ol>
         <div class="hero-top">
           <div class="hero-intro">
             <h1 id="heroTitle">Find the advisory support your hospital needs</h1>
@@ -72,7 +70,11 @@
             </ol>
           </div>
         </div>
+      </div>
+    </section>
 
+    <section class="finder-band" id="finder" aria-label="Solution finder">
+      <div class="wrap">
         <div class="finder">
           <ol class="finder-steps" id="finderSteps" aria-label="Progress">
             <li data-step="status">Your hospital</li>
@@ -102,7 +104,7 @@
     <section class="portfolio" id="portfolio" aria-labelledby="portfolioTitle">
       <div class="wrap">
         <div class="portfolio-head">
-          <h2 id="portfolioTitle" class="section-title">All solutions</h2>
+          <h2 id="portfolioTitle" class="section-title">Our advisory offerings</h2>
           <p class="section-lede">Every Cleveland Clinic Connected advisory solution, grouped by area. Each one is marked for new hospitals, existing hospitals or both.</p>
         </div>
 
@@ -147,7 +149,7 @@
       </div>
       <ul class="footer-links">
         <li><a href="https://my.clevelandclinic.org/professionals/connected">About Cleveland Clinic Connected</a></li>
-        <li><a href="#portfolio">All solutions</a></li>
+        <li><a href="#portfolio">Our advisory offerings</a></li>
         <li><a href="#finder">Solution finder</a></li>
       </ul>
       <p class="footer-legal">&copy; <span id="year"></span> Cleveland Clinic. Solution scope, timing and availability are confirmed during proposal development.</p>

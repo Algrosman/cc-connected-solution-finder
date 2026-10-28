@@ -252,7 +252,7 @@
      One box per solution. Boxes drop out as visitors answer and the ones left grow,
      so the field always shows what is still in the running. Hover or focus shows a
      short description; selecting a box opens the full profile. */
-  var DOMAIN_COLOR = { finance: "#3761ad", sqpe: "#467d3c", digital: "#2b7d9c", education: "#6f5a9e" };
+  var DOMAIN_COLOR = { finance: "#1f9be0", sqpe: "#2f9a4f", digital: "#14a0a6", education: "#8b6fd0" };
   var field = $("#portfolioField");
   var tip = $("#fieldTip");
   var tiles = {};
@@ -416,7 +416,7 @@
       t.classList.toggle("is-alt", isAlt);
       t.classList.toggle("has-text", L.text);
       t.style.setProperty("--accent", DOMAIN_COLOR[p.domain]);
-      t.style.backgroundColor = isTop ? "#ffffff" : L.text ? "#1a3560" : DOMAIN_COLOR[p.domain];
+      t.style.backgroundColor = isTop ? "#ffffff" : L.text ? "#235692" : DOMAIN_COLOR[p.domain];
       $(".tile-label", t).textContent = isTop ? "Best match" : isAlt ? "Also consider" : "";
       t.tabIndex = 0;
       t.removeAttribute("aria-hidden");
