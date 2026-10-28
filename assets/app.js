@@ -209,7 +209,7 @@
       '<p class="result-sub">' + rich(p.subtitle) + "</p>" +
       '<div style="margin-top:14px">' + markersHTML(p) + "</div>" +
       '<div class="result-cols"><div><h4>What you receive</h4><ul class="squares">' +
-      shown.map(function (x) { return "<li>" + rich(x) + "</li>"; }).join("") + "</ul>" +
+      shown.map(function (x) { return "<li>" + (p.leadBold ? leadHTML(x) : rich(x)) + "</li>"; }).join("") + "</ul>" +
       (more > 0 ? '<p style="margin-top:10px;font-size:14.5px;color:var(--slate)">Plus ' + plural(more, "more deliverable", "more deliverables") + " in the full profile.</p>" : "") +
       "</div>" +
       '<dl class="facts">' +
@@ -567,6 +567,10 @@
         '<span class="domain-count">' + countText + "</span>" +
         '<span class="chev" aria-hidden="true">' + ICON.chev + "</span></button>" +
         '<div class="domain-body" id="db-' + d.id + '"' + (open ? "" : " hidden") + ">";
+      if (d.packet && list.length) {
+        html += '<div class="packet-bar"><div><p class="packet-title">' + esc(d.packet.title) + '</p><p class="packet-text">' + esc(d.packet.text) + "</p></div>" +
+          packetLinkHTML(d, true, "Download packet (PDF)") + "</div>";
+      }
       if (!list.length) {
         html += '<p class="empty-domain">No ' + esc(d.name) + " solutions are offered to " + STATUS_PLURAL[state.fit] + ".</p>";
       }
@@ -618,8 +622,19 @@
     }).join("");
   }
 
-  function listHTML(items, green) {
-    return '<ul class="squares' + (green ? " green" : "") + '">' + items.map(function (x) { return "<li>" + rich(x) + "</li>"; }).join("") + "</ul>";
+  var LEAD = /^([^:]{2,80}):\s+([\s\S]*)$/;
+  function leadHTML(x) {
+    var m = LEAD.exec(x);
+    return m ? "<strong>" + esc(m[1]) + ":</strong> " + rich(m[2]) : rich(x);
+  }
+
+  function listHTML(items, green, lead) {
+    return '<ul class="squares' + (green ? " green" : "") + '">' + items.map(function (x) { return "<li>" + (lead ? leadHTML(x) : rich(x)) + "</li>"; }).join("") + "</ul>";
+  }
+
+  function packetLinkHTML(d, small, label) {
+    if (!d.packet) return "";
+    return '<a class="btn btn-quiet' + (small ? " btn-small" : "") + '" href="' + esc(d.packet.href) + '" target="_blank" rel="noopener">' + ICON.pdf + esc(label || d.packet.title + " (PDF)") + "</a>";
   }
 
   var panelReturn = null;
@@ -630,15 +645,18 @@
     var d = DOMAIN_BY_ID[p.domain];
     var panel = $("#detailPanel");
     var res = "";
+    var clientLabel = p.assumptions.length ? "Your team" : "Your team and inputs";
     if (p.resourcesCC.length || p.resourcesClient.length) {
       res = '<section class="dsec"><h3>Resource requirements</h3>';
       if (p.resourcesCC.length && p.resourcesClient.length) {
         res += '<div class="res-cols"><div><h4>Cleveland Clinic team</h4>' + listHTML(p.resourcesCC) + "</div>" +
-          "<div><h4>Your team and inputs</h4>" + listHTML(p.resourcesClient, true) + "</div></div>";
+          "<div><h4>" + clientLabel + "</h4>" + listHTML(p.resourcesClient, true) + "</div></div>";
       } else {
-        res += "<h4 style=\"font-size:14px;color:var(--slate);margin-bottom:8px\">" + (p.resourcesCC.length ? "Cleveland Clinic team" : "Your team and inputs") + "</h4>" +
+        res += "<h4 style=\"font-size:14px;color:var(--slate);margin-bottom:8px\">" + (p.resourcesCC.length ? "Cleveland Clinic team" : clientLabel) + "</h4>" +
           listHTML(p.resourcesCC.length ? p.resourcesCC : p.resourcesClient, !p.resourcesCC.length);
       }
+      if (p.resourcesNote) res += '<p class="res-note">' + rich(p.resourcesNote) + "</p>";
+      if (p.assumptions.length) res += '<h4 class="sub-h">Engagement assumptions</h4>' + listHTML(p.assumptions);
       res += "</section>";
     }
     panel.innerHTML =
@@ -649,21 +667,25 @@
       '<p class="panel-sub">' + rich(p.subtitle) + "</p>" + markersHTML(p) + "</div>" +
       '<div class="panel-body">' +
       '<dl class="fact-strip">' +
-      "<div><dt>Category</dt><dd>" + esc(p.category) + "</dd></div>" +
+      "<div><dt>Category</dt><dd>" + esc(p.category) + (p.stageNote ? '<span class="dd-note">(' + esc(p.stageNote) + ")</span>" : "") + "</dd></div>" +
       "<div><dt>Typical duration</dt><dd>" + rich(p.durationShort) + "</dd></div>" +
       "<div><dt>Delivery model</dt><dd>" + esc(p.deliveryShort) + "</dd></div>" +
-      "<div><dt>Delivered by</dt><dd>" + p.deliveredBy.map(esc).join("<br>") + "</dd></div>" +
       "</dl>" +
       '<section class="dsec"><h3>The need</h3>' + paragraphsHTML(p.need) + "</section>" +
       '<section class="dsec"><h3>What Cleveland Clinic brings</h3>' + paragraphsHTML(p.value) + "</section>" +
-      '<section class="dsec"><h3>Key deliverables</h3>' + listHTML(p.deliverables) + "</section>" +
+      '<section class="dsec"><h3>Key deliverables</h3>' + (p.deliverablesIntro ? "<p class=\"intro\">" + rich(p.deliverablesIntro) + "</p>" : "") + listHTML(p.deliverables, false, p.leadBold) + "</section>" +
       '<section class="dsec"><h3>How it is delivered</h3><p class="lead-in">' + esc(p.deliveryModel) + "</p>" + paragraphsHTML(p.deliveryDetail) + "</section>" +
-      '<section class="dsec"><h3>Typical duration</h3><p class="lead-in">' + rich(p.duration) + "</p>" + paragraphsHTML(p.durationDetail) + "</section>" +
+      '<section class="dsec"><h3>Typical duration</h3><p class="lead-in">' + rich(p.duration) + "</p>" +
+      (p.phases.length ? '<ul class="squares phases">' + p.phases.map(function (ph) {
+        return "<li><strong>" + esc(ph.name) + " (" + esc(ph.weeks) + "):</strong> " + rich(ph.detail) + "</li>";
+      }).join("") + "</ul>" : "") +
+      paragraphsHTML(p.durationDetail) + "</section>" +
       res +
       '<section class="dsec"><h3>Expected outcomes</h3>' + listHTML(p.outcomes, true) + "</section>" +
       "</div>" +
       '<div class="panel-foot">' + cartButtonHTML(p.id) +
-      '<a class="btn btn-quiet" href="' + esc(p.pdf) + '" target="_blank" rel="noopener">' + ICON.pdf + "Download brochure (PDF)</a></div>";
+      '<a class="btn btn-quiet" href="' + esc(p.pdf) + '" target="_blank" rel="noopener">' + ICON.pdf + "Download brochure (PDF)</a>" +
+      packetLinkHTML(d) + "</div>";
     var foot = $(".panel-foot .btn", panel);
     if (foot && !inCart(p.id)) { foot.classList.remove("btn-secondary"); foot.classList.add("btn-primary"); }
     showPanel(panel, opener);

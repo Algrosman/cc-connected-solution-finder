@@ -4,395 +4,543 @@
   "area": "Finance Advisory",
   "file": "1_Finance/FIN-01_Strategic_Finance_Growth_Advisory_Product_Profile.pdf",
   "name": "Strategic Finance & Growth Advisory",
-  "tagline": "Financial evaluation of growth decisions, from market sizing and feasibility to business cases, investment prioritization and a phased implementation roadmap.",
-  "category": "Finance Advisory: Plan Phase",
-  "need": "New facilities, service lines, programs and market entries compete for limited capital and executive attention, and they are often advanced on enthusiasm rather than a clear financial picture. Boards, investors and government sponsors need to know whether an initiative is viable, which opportunities to pursue first, and how an approved plan will be funded and sequenced over several years.\nThe offering sits within the Plan phase of the Cleveland Clinic Healthcare Financial Advisory Lifecycle, which answers the client question \"Can we do this?\" It is typically requested by new market entrants and organizations pursuing growth initiatives, new facilities or service line expansion, and can be scoped as a single business case or a full growth agenda.",
-  "value": "Cleveland Clinic brings the discipline of an operating health system to growth decisions. Our finance advisors build market assessments, feasibility studies and business cases grounded in how hospitals actually run, linking demand, volumes, staffing, reimbursement and capital to realistic financial outcomes.\nClients gain access to Cleveland Clinic's experience planning, funding and delivering new services, programs and facilities over multiple years, combined with an international perspective from Cleveland Clinic International & Emerging Markets engagements across diverse healthcare markets.",
+  "tagline": "An advisory offering that helps healthcare leaders decide which growth investments to pursue, and how to fund and sequence them.",
+  "category": "Finance Advisory: Plan Stage",
+  "need": "New facilities, service lines, programs and market entries compete for limited capital and executive attention, and they are often advanced on enthusiasm rather than a clear financial picture. Boards, investors and government sponsors need to know whether an initiative is viable, which opportunities to pursue first, and how an approved plan will be funded and sequenced over several years.\nThis offering sits in the Plan stage of the Cleveland Clinic Healthcare Financial Advisory Lifecycle, which follows an organization's financial decisions through five stages: Plan, Measure, Optimize, Manage and Transform. The Plan stage covers deciding whether and how to invest, and answers the client question \"Can we do this?\" It is typically requested by new market entrants and organizations pursuing growth initiatives, new facilities or service line expansion. Scope ranges from a single business case to a full growth agenda.",
+  "value": "This offering is delivered by Cleveland Clinic's Finance Advisory team. Cleveland Clinic is an operating health system with 23 hospitals, 300 outpatient locations and about 83,000 caregivers, and has grown from Northeast Ohio into Florida, Las Vegas, Toronto, London and Abu Dhabi (figures as of December 31, 2025).\nClients get business cases built and challenged against Cleveland Clinic's own experience planning, funding and opening new services, programs and facilities, in established and new markets. Volume ramps, staffing, reimbursement and capital needs reflect how hospitals actually run rather than desk-based assumptions.\nModels are built with the client's finance team, every assumption is documented, and the work is handed over with a walk-through so the team can update it as plans change.",
   "deliverables": [
-   "Market assessment and demand forecast by service, with population and utilization assumptions",
-   "Feasibility assessment of operational and financial viability, risks and conditions for success",
-   "Business case or pro forma with ROI, NPV and IRR views and sensitivity analysis",
-   "Service line or new program analysis with volume, revenue, cost and resource estimates",
-   "Growth opportunity assessment and investment prioritization matrix with a repeatable scoring framework",
-   "Multi-year implementation roadmap with phasing, milestones, dependencies and a funding view by year",
-   "Executive summary and go or no-go recommendation for the board or investment committee"
+   "Market assessment: written report and Excel-based demand model forecasting volumes by service, with the population, utilization and market share assumptions behind each forecast",
+   "Feasibility assessment: written report on operational and financial viability, with the key risks and the conditions that must be met for success",
+   "Business case and pro forma: Excel-based financial model over a multi-year horizon set at scoping, showing return on investment (ROI), net present value (NPV) and internal rate of return (IRR) under best, base and downside scenarios, with sensitivity analysis on the assumptions that most affect the result",
+   "Service line or new program analysis: Excel-based model of volume, revenue, cost and staffing for each program evaluated",
+   "Investment prioritization matrix: Excel-based scoring tool that ranks growth opportunities on agreed strategic and financial criteria, reusable for future decisions",
+   "Implementation roadmap: phased, multi-year plan with milestones, dependencies, owners and the funding required each year",
+   "Executive presentation: findings and a go or no-go recommendation for each opportunity, prepared for the board or investment committee"
   ],
   "deliveryModes": [
    "Hybrid",
    "Workshop-based"
   ],
-  "deliveryDetail": "The engagement opens with a virtual kickoff and a structured data request, followed by interviews with key stakeholders. Analysis and modeling are completed through regular virtual working sessions, with interim findings reviewed alongside the client team. It concludes with an executive readout of findings and recommendations, delivered on-site or virtually. Modules are selected at scoping, so a single business case and a full growth agenda follow the same approach.",
+  "deliveryDetail": "Delivered by Cleveland Clinic's Finance Advisory team, working alongside the client's finance lead. The engagement opens with a virtual kickoff and a structured data request, followed by interviews with key stakeholders. Analysis and modeling take place in weekly virtual working sessions, where interim findings are reviewed with the client team. It closes with an executive readout, on-site or virtual, and a handover of the models.",
   "duration": "4 to 12 weeks",
-  "durationNotes": "Typically delivered in three phases: discovery and data collection; analysis and modeling; recommendations and executive readout. A single business case or program evaluation runs 4 to 8 weeks; a market assessment, multi-option growth strategy or implementation roadmap extends toward 12 weeks. Final timing depends on data availability and scope.",
+  "durationNotes": "Where an engagement falls in the range depends mainly on the number of opportunities or options evaluated, the number of sites and service lines modeled, and how quickly complete market and financial data can be provided. A single business case with ready data sits at the low end; a multi-option growth strategy with an implementation roadmap sits at the high end.",
   "resCC": [
-   "Director / Executive Sponsor: 5 to 10%",
+   "Director / Executive Sponsor: 5 to 10% (larger engagements)",
    "Assistant Director / Engagement Lead: 10 to 25%",
-   "Manager / Workstream Lead: 20 to 40%",
+   "Manager / Workstream Lead: 20 to 40% (mid-sized and larger engagements)",
    "Senior Analyst: 30 to 60%",
    "Analyst: 20 to 50%",
    "Admin / Project Support: up to 10%"
   ],
   "resClient": [
-   "Executive sponsor with decision authority",
-   "Finance lead or day-to-day point of contact",
-   "Timely access to financial, operational, market, volume, reporting and staffing information",
-   "Stakeholder availability for interviews, working sessions and reviews",
-   "Timely review and feedback on draft deliverables"
+   "Executive sponsor with decision authority, for scoping, key reviews and the final readout",
+   "Finance lead as day-to-day point of contact, attending the weekly working sessions",
+   "Strategy, planning and service line leaders for interviews and to validate assumptions",
+   "Data owners who can supply market, volume, financial and staffing information"
   ],
   "outcomes": [
-   "Evidence-based view of market opportunity and future demand",
-   "Independent view of viability, with the risks and conditions required for success",
-   "Board-ready business case showing which assumptions most affect the investment outcome",
-   "Prioritized growth and investment agenda aligned to strategic priorities and available capital",
-   "Agreed, phased roadmap with clear milestones and accountability for execution",
-   "Investment decisions supported by validated, documented assumptions"
+   "Leadership knows which growth opportunities are viable, and why, before committing capital",
+   "The board or investment committee decides with support from validated data, documented assumptions, structured working sessions and clear decision-support materials",
+   "Opportunities are ranked on consistent criteria, so the strongest go first",
+   "An approved plan has a clear sequence, a funding requirement by year and an owner for each milestone",
+   "The client's finance team can update the models and rerun scenarios as plans change, using the documentation and walk-through provided at handover"
   ],
-  "owner": {
-   "name": "IEM Finance Advisory",
-   "title": "Connected & Advisory Services",
-   "dept": "Cleveland Clinic International & Emerging Markets",
-   "email": ""
-  }
+  "stageNote": "deciding whether and how to invest",
+  "deliverablesIntro": "Each engagement is scoped from the modules below. A focused engagement may deliver a single business case; a full growth agenda includes all of them.",
+  "phases": [
+   {
+    "name": "Discovery",
+    "weeks": "1 to 2 weeks",
+    "detail": "Kickoff, structured data request, stakeholder interviews and agreement on the options and scenarios to be tested"
+   },
+   {
+    "name": "Analysis and modeling",
+    "weeks": "2 to 8 weeks",
+    "detail": "Market, demand and financial models built and reviewed with the client team in weekly working sessions"
+   },
+   {
+    "name": "Validation and readout",
+    "weeks": "1 to 2 weeks",
+    "detail": "Assumptions tested with finance and clinical leaders, recommendations finalized and presented at an executive readout, and models handed over"
+   }
+  ],
+  "assumptions": [
+   "The client provides timely access to the financial, operational, market, volume, stakeholder, reporting and staffing information in the data request",
+   "Scope and timing may change if data is late or incomplete",
+   "Modules, scenarios and the projection horizon are confirmed at scoping",
+   "Stakeholders are available for interviews and working sessions, and draft deliverables are reviewed within an agreed turnaround",
+   "Recommendations are advisory; decisions and implementation remain with the client's leadership"
+  ],
+  "leadBold": true,
+  "resNote": "Percentages are the share of each team member's working time during the engagement, so they do not add up to 100%. Roles marked for larger engagements join only when the scope calls for them."
  },
  {
   "id": "FIN-02",
   "area": "Finance Advisory",
   "file": "1_Finance/FIN-02_Partnership_Affiliation_Transaction_Advisory_Product_Profile.pdf",
   "name": "Partnership, Affiliation & Transaction Advisory",
-  "tagline": "Strategic and financial evaluation of partnerships, affiliations, joint ventures and transactions, including financial due diligence.",
-  "category": "Finance Advisory: Plan Phase",
-  "need": "Health systems are increasingly approached with, or are actively pursuing, partnerships, affiliations, joint ventures and acquisitions. Their economics depend heavily on structure, contribution levels, governance and how returns are shared, and material risks are not always visible in summary materials. Leadership needs an objective view of what a proposed arrangement would cost, return and risk before committing capital, brand or clinical capacity.\nThe offering sits within the Plan phase of the Cleveland Clinic Healthcare Financial Advisory Lifecycle, which answers the client question \"Can we do this?\" It is typically requested by new market entrants and organizations pursuing growth through partnerships, affiliations or strategic transactions.",
-  "value": "Cleveland Clinic evaluates partnerships, affiliations and investments from the perspective of a large operating health system, not only as an outside advisor. Our finance teams understand how clinical operations, staffing and service mix translate into the numbers that determine whether a transaction creates value.\nThrough its International & Emerging Markets work, Cleveland Clinic has supported health system development and partnerships across multiple regions, bringing practical insight into the structures, risks and assumptions that matter most to boards and investors.",
+  "tagline": "An advisory offering that shows leadership what a proposed partnership, affiliation or transaction would cost, return and risk before they commit.",
+  "category": "Finance Advisory: Plan Stage",
+  "need": "Health systems are increasingly approached with, or are actively pursuing, partnerships, affiliations, joint ventures and acquisitions. Their economics depend heavily on structure, contribution levels, governance and how returns are shared, and material risks are not always visible in summary materials. Leadership needs an objective view of what a proposed arrangement would cost, return and risk before committing capital, brand or clinical capacity.\nThis offering sits in the Plan stage of the Cleveland Clinic Healthcare Financial Advisory Lifecycle, which follows an organization's financial decisions through five stages: Plan, Measure, Optimize, Manage and Transform. The Plan stage covers deciding whether and how to invest, and answers the client question \"Can we do this?\" It is typically requested by new market entrants and organizations pursuing growth through partnerships, affiliations or strategic transactions.",
+  "value": "This offering is delivered by Cleveland Clinic's Finance Advisory team. Cleveland Clinic is an operating health system with 23 hospitals, 300 outpatient locations and about 83,000 caregivers, and has grown from Northeast Ohio into Florida, Las Vegas, Toronto, London and Abu Dhabi (figures as of December 31, 2025).\nClients get an evaluation from the perspective of a large operating health system, not only an outside advisor. The team understands how clinical operations, staffing and service mix translate into the numbers that decide whether a transaction creates value.\nThrough its International & Emerging Markets work, Cleveland Clinic has supported health system development and partnerships across multiple regions, bringing practical insight into the structures, risks and assumptions that matter most to boards and investors.",
   "deliverables": [
-   "Partnership or affiliation business case combining strategic fit and financial implications",
-   "Financial model of the proposed arrangement, with operating assumptions and partner economics",
-   "Joint venture analysis comparing alternative structures under best, base and downside scenarios",
-   "Financial due diligence findings, risk assessment and prioritized open diligence questions",
-   "Workpaper summary documenting the risks and assumptions that drive the analysis",
-   "Go or no-go recommendation and summary to inform negotiation",
-   "Executive summary of findings and recommendations"
+   "Partnership or affiliation business case: written report combining strategic fit and the financial implications for each party",
+   "Transaction financial model: Excel-based model of the proposed arrangement, with operating assumptions, contributions and partner economics",
+   "Structure comparison: analysis of alternative joint venture or affiliation structures under best, base and downside scenarios",
+   "Financial due diligence report: findings, an assessment of each material risk and a prioritized list of open diligence questions",
+   "Assumptions workpaper: the risks and assumptions that drive the analysis, documented for use in negotiation and integration planning",
+   "Executive presentation: findings and a go or no-go recommendation, with the points to address in negotiation"
   ],
   "deliveryModes": [
    "Hybrid",
    "Workshop-based"
   ],
-  "deliveryDetail": "The engagement opens with a virtual kickoff and a structured data request, followed by interviews with key stakeholders. Analysis and modeling are completed through regular virtual working sessions, with interim findings reviewed alongside the client team. It concludes with an executive readout of findings and recommendations, delivered on-site or virtually.",
+  "deliveryDetail": "Delivered by Cleveland Clinic's Finance Advisory team, working alongside the client's finance and transaction leads. The engagement opens with a virtual kickoff and a structured data request, followed by interviews with key stakeholders. Analysis and modeling take place in weekly virtual working sessions, where interim findings are reviewed with the client team. It closes with an executive readout, on-site or virtual.",
   "duration": "6 to 12 weeks",
-  "durationNotes": "Typically delivered in three phases: discovery and data collection; analysis and modeling; recommendations and executive readout. Partnership and affiliation evaluations typically run 6 to 10 weeks; joint venture analysis and due diligence support can extend to 12 weeks depending on transaction complexity. Cross-border or multi-party structures for governments and investors are scoped as a Premium International engagement.",
+  "durationNotes": "Where an engagement falls in the range depends mainly on the complexity of the transaction, the number of structures compared, the depth of due diligence required and how quickly partner data can be obtained. A single partnership evaluation sits at the low end; joint venture structuring with full due diligence sits at the high end. Cross-border or multi-party structures for governments and investors are scoped as a Premium International engagement.",
   "resCC": [
-   "Director / Executive Sponsor: 5 to 10%",
+   "Director / Executive Sponsor: 5 to 10% (larger engagements)",
    "Assistant Director / Engagement Lead: 10 to 25%",
-   "Manager / Workstream Lead: 20 to 40%",
+   "Manager / Workstream Lead: 20 to 40% (mid-sized and larger engagements)",
    "Senior Analyst: 30 to 60%",
    "Analyst: 20 to 50%",
    "Admin / Project Support: up to 10%"
   ],
   "resClient": [
-   "Executive sponsor with decision authority",
-   "Finance lead or day-to-day point of contact",
-   "Timely access to financial, operational, market, volume, reporting and staffing information",
-   "Stakeholder availability for interviews, working sessions and reviews",
-   "Timely review and feedback on draft deliverables"
+   "Executive sponsor with decision authority, for scoping, key reviews and the final readout",
+   "Finance lead as day-to-day point of contact, attending the weekly working sessions",
+   "Leaders responsible for the proposed arrangement, for interviews and to validate operating assumptions",
+   "Access to partner materials and data through the client"
   ],
   "outcomes": [
-   "Clear, evidence-based go or no-go recommendation on the proposed partnership, affiliation or transaction",
-   "Understanding of each partner's economics under alternative structures",
-   "Material financial risks identified before commitments are made",
-   "Negotiating position informed by scenario-tested financial analysis",
-   "Documented operating assumptions to carry into negotiation and integration planning",
-   "Investment decisions supported by validated, documented assumptions"
+   "Leadership understands what the proposed arrangement would cost, return and risk before committing capital, brand or clinical capacity",
+   "Each partner's economics are clear under alternative structures, so the board can choose the structure that fits",
+   "Material financial risks surface before commitments are made, with open diligence questions to resolve",
+   "The negotiating team enters discussions with scenario-tested numbers and a documented position",
+   "Operating assumptions carry forward into integration planning, so results can be tracked against the plan agreed at signing"
   ],
-  "owner": {
-   "name": "IEM Finance Advisory",
-   "title": "Connected & Advisory Services",
-   "dept": "Cleveland Clinic International & Emerging Markets",
-   "email": ""
-  }
+  "stageNote": "deciding whether and how to invest",
+  "deliverablesIntro": "Deliverables depend on the type of arrangement under review and are confirmed at scoping.",
+  "phases": [
+   {
+    "name": "Discovery",
+    "weeks": "1 to 2 weeks",
+    "detail": "Kickoff, structured data request, review of partner materials and stakeholder interviews"
+   },
+   {
+    "name": "Analysis and modeling",
+    "weeks": "4 to 8 weeks",
+    "detail": "Financial model of the arrangement, structure comparison and due diligence, reviewed in weekly working sessions"
+   },
+   {
+    "name": "Validation and readout",
+    "weeks": "1 to 2 weeks",
+    "detail": "Findings tested with leadership, recommendation finalized and presented at an executive readout"
+   }
+  ],
+  "assumptions": [
+   "The client provides timely access to the financial, operational, market, volume, stakeholder, reporting and staffing information in the data request",
+   "Scope and timing may change if data is late or incomplete",
+   "The structures and scenarios to be compared are confirmed at scoping",
+   "Stakeholders are available for interviews and working sessions, and draft deliverables are reviewed within an agreed turnaround",
+   "Recommendations are advisory; decisions and implementation remain with the client's leadership"
+  ],
+  "leadBold": true,
+  "resNote": "Percentages are the share of each team member's working time during the engagement, so they do not add up to 100%. Roles marked for larger engagements join only when the scope calls for them."
  },
  {
   "id": "FIN-03",
   "area": "Finance Advisory",
   "file": "1_Finance/FIN-03_Financial_Performance_Improvement_Profitability_Product_Profile.pdf",
   "name": "Financial Performance Improvement & Profitability",
-  "tagline": "Diagnostic that benchmarks financial performance, quantifies cost and revenue opportunities, and builds the cost accounting behind service line profitability.",
-  "category": "Finance Advisory: Measure and Optimize Phases",
-  "need": "Boards and executives facing margin pressure from rising labor, supply and operating costs need an objective view of where performance is falling short and why. Many organizations lack reliable benchmarks, consistent productivity measures or the cost accounting needed to know which procedures, patients and service lines generate or consume margin once direct and indirect costs are fully considered.\nThe offering spans the Measure and Optimize phases of the Cleveland Clinic Healthcare Financial Advisory Lifecycle, which answer the client questions \"How are we performing?\" and \"How do we become best-in-class?\" It is typically requested by organizations facing margin pressure, from growing providers with limited performance data to mature health systems pursuing sustained margin improvement.",
-  "value": "Cleveland Clinic brings an operator's understanding of what drives financial performance in healthcare, from revenue mix and cost structure to productivity, cost allocation and service line management. Our advisors focus on opportunities that are achievable without compromising quality of care.\nFindings are practical and prioritized, reflecting Cleveland Clinic's experience balancing financial sustainability with clinical excellence, and clients gain the cost and profitability foundations needed to sustain improvements over time.",
+  "tagline": "An advisory offering that shows leaders where margin is being lost, sizes the opportunities to recover it, and builds the cost foundations to see profitability by service line.",
+  "category": "Finance Advisory: Measure and Optimize Stages",
+  "need": "Boards and executives facing margin pressure from rising labor, supply and operating costs need an objective view of where performance is falling short and why. Many organizations lack reliable benchmarks, consistent productivity measures or the cost accounting needed to know which procedures, patients and service lines generate or consume margin once direct and indirect costs are fully considered.\nThis offering spans the Measure and Optimize stages of the Cleveland Clinic Healthcare Financial Advisory Lifecycle, which follows an organization's financial decisions through five stages: Plan, Measure, Optimize, Manage and Transform. These stages cover understanding current financial performance and improving margin toward best-in-class, and answer the client questions \"How are we performing?\" and \"How do we become best-in-class?\" It is typically requested by organizations facing margin pressure, from growing providers with limited performance data to mature health systems pursuing sustained margin improvement.",
+  "value": "This offering is delivered by Cleveland Clinic's Finance Advisory team. Cleveland Clinic is an operating health system with 23 hospitals, 300 outpatient locations and about 83,000 caregivers, and has grown from Northeast Ohio into Florida, Las Vegas, Toronto, London and Abu Dhabi (figures as of December 31, 2025).\nClients get an operator's view of margin. Cleveland Clinic balances financial sustainability with clinical quality across a large system, so opportunities are tested for what is achievable without compromising care, and the cost accounting foundations are those a working health system uses to manage service line performance.\nCost rules, models and the improvement roadmap are built with the client's team and handed over with documentation, so improvements can be sustained after the engagement.",
   "deliverables": [
-   "Current-state financial performance assessment with KPI review and the key drivers of results",
-   "Financial and productivity benchmarking against peer and internal standards, with variance commentary",
-   "Cost optimization analysis with quantified, prioritized savings estimates",
-   "Revenue enhancement assessment covering payer mix, service mix, pricing and capture",
-   "Review of the operational processes and enablers that drive financial performance",
-   "Cost accounting framework with allocation rules for direct, indirect, fixed and variable costs, and supporting governance",
-   "Service line profitability model and margin analysis by service line",
-   "Improvement roadmap and action plan with owners, plus an executive summary of findings and recommendations"
+   "Current-state assessment: written report on financial performance, covering key performance indicators (KPIs), the operational processes behind them and the main drivers of results",
+   "Benchmarking analysis: comparison of financial and productivity measures against agreed peer and internal standards, with commentary on each material variance",
+   "Cost opportunity analysis: quantified savings estimates, ranked by value and ease of implementation",
+   "Revenue opportunity analysis: quantified opportunities in payer mix, service mix, pricing and charge capture",
+   "Improvement roadmap: prioritized action plan with an owner, timing and estimated financial impact for each action, presented at an executive readout",
+   "Cost accounting framework (extended scope): allocation rules for direct, indirect, fixed and variable costs, with supporting governance and documentation",
+   "Service line profitability model (extended scope): margin by service line, with the cost and revenue detail behind each"
   ],
   "deliveryModes": [
    "On-site",
    "Hybrid",
    "Workshop-based"
   ],
-  "deliveryDetail": "The engagement begins with a structured data request, a review of current financial results, cost data and operating processes, and interviews with finance, operational and clinical leaders. Analysis is completed through regular virtual working sessions, with on-site discovery added when cost accounting or service line profitability is in scope. Findings are validated with clinical and finance leaders before a final executive readout and improvement roadmap.",
+  "deliveryDetail": "Delivered by Cleveland Clinic's Finance Advisory team, working alongside the client's finance lead. The engagement begins with a structured data request, a review of financial results, cost data and operating processes, and interviews with finance, operational and clinical leaders. Analysis continues in weekly virtual working sessions, with on-site discovery added when cost accounting or service line profitability is in scope. Findings are validated with clinical and finance leaders before the final executive readout.",
   "duration": "4 to 8 weeks; 12 to 24 weeks with service line profitability",
-  "durationNotes": "Typically delivered in three phases: data collection and current-state assessment; analysis, benchmarking and opportunity sizing; improvement roadmap and executive readout. A focused performance, cost or revenue diagnostic runs 4 to 8 weeks. Adding cost accounting implementation and service line profitability extends the engagement to 12 to 24 weeks, depending heavily on data availability.",
+  "durationNotes": "The diagnostic runs 4 to 8 weeks, depending mainly on the number of hospitals or entities in scope and the quality of available cost and productivity data. The extended scope adds 8 to 16 weeks (12 to 24 weeks in total), driven mainly by the number of service lines and how complete the client's cost data is.",
   "resCC": [
-   "Director / Executive Sponsor: 5 to 10%",
+   "Director / Executive Sponsor: 5 to 10% (larger engagements)",
    "Assistant Director / Engagement Lead: 10 to 25%",
-   "Manager / Workstream Lead: 20 to 40%",
+   "Manager / Workstream Lead: 20 to 40% (mid-sized and larger engagements)",
    "Senior Analyst: 30 to 60%",
    "Analyst: 20 to 50%",
    "Admin / Project Support: up to 10%"
   ],
   "resClient": [
-   "Executive sponsor with decision authority",
-   "Finance lead or day-to-day point of contact",
-   "Timely access to financial, operational, market, volume, reporting and staffing information",
-   "Stakeholder availability for interviews, working sessions and reviews",
-   "Timely review and feedback on draft deliverables"
+   "Executive sponsor with decision authority, for scoping, key reviews and the final readout",
+   "Finance lead as day-to-day point of contact, attending the weekly working sessions",
+   "Operational and clinical leaders for interviews and to validate findings",
+   "Cost accounting or decision support analyst when service line profitability is in scope",
+   "IT or data team support for system extracts"
   ],
   "outcomes": [
-   "Fact-based view of current financial performance and its drivers",
-   "Objective comparison against relevant benchmarks, with targeted opportunities where performance lags",
-   "Quantified and prioritized cost and revenue opportunities, with owners for the highest-value actions",
-   "Reliable, defensible cost information by service and patient",
-   "Clear view of margin by service line to guide investment and optimization decisions",
-   "Foundation for sustained margin improvement and enterprise performance management"
+   "Leadership sees where margin is being lost and which drivers explain the gap to peers",
+   "Cost and revenue opportunities are quantified and ranked, with an owner for each of the highest-value actions",
+   "Improvement effort goes to changes that are achievable without compromising quality of care",
+   "With the extended scope, leaders see true margin by service line and use it in investment decisions",
+   "The client's team can sustain the work using the cost rules, governance and roadmap handed over"
   ],
-  "owner": {
-   "name": "IEM Finance Advisory",
-   "title": "Connected & Advisory Services",
-   "dept": "Cleveland Clinic International & Emerging Markets",
-   "email": ""
-  }
+  "stageNote": "understanding performance and improving margin",
+  "deliverablesIntro": "Every engagement includes the first five deliverables below, which make up the diagnostic. The cost accounting framework and service line profitability model are added when that extended scope is selected.",
+  "phases": [
+   {
+    "name": "Discovery",
+    "weeks": "1 to 2 weeks",
+    "detail": "Data request, review of financial results and processes, and interviews with finance, operational and clinical leaders"
+   },
+   {
+    "name": "Analysis and benchmarking",
+    "weeks": "2 to 4 weeks",
+    "detail": "Benchmarking and sizing of cost and revenue opportunities, reviewed in weekly working sessions"
+   },
+   {
+    "name": "Validation and readout",
+    "weeks": "1 to 2 weeks",
+    "detail": "Opportunities validated with clinical and finance leaders, roadmap finalized and presented"
+   },
+   {
+    "name": "Extended scope build",
+    "weeks": "8 to 16 weeks",
+    "detail": "Cost accounting rules designed and applied, service line profitability model built and tested, then handed over with training"
+   }
+  ],
+  "assumptions": [
+   "The client provides timely access to the financial, operational, market, volume, stakeholder, reporting and staffing information in the data request",
+   "Scope and timing may change if data is late or incomplete",
+   "Peer groups and benchmark sources are agreed at scoping",
+   "Stakeholders are available for interviews and working sessions, and draft deliverables are reviewed within an agreed turnaround",
+   "Recommendations are advisory; decisions and implementation remain with the client's leadership"
+  ],
+  "leadBold": true,
+  "resNote": "Percentages are the share of each team member's working time during the engagement, so they do not add up to 100%. Roles marked for larger engagements join only when the scope calls for them."
  },
  {
   "id": "FIN-04",
   "area": "Finance Advisory",
   "file": "1_Finance/FIN-04_Financial_Reporting_Performance_Management_Product_Profile.pdf",
   "name": "Financial Reporting & Performance Management",
-  "tagline": "Design of the KPIs, dashboards and management reporting leaders rely on, backed by documented procedures, optimized systems and a governed path to AI-enabled reporting.",
-  "category": "Finance Advisory: Measure Phase",
-  "need": "Executives frequently receive financial information that is late, fragmented across systems or too detailed to act on. Without agreed definitions, the same KPI is calculated differently across hospitals and departments, dashboards built by different teams conflict, and month-end reporting depends on manual workarounds and the knowledge of a few individuals. Leadership needs consistent measures, a clear performance story each period and a realistic path to automation.\nThe offering sits within the Measure phase of the Cleveland Clinic Healthcare Financial Advisory Lifecycle, which answers the client question \"How are we performing?\" It is typically requested by growing organizations and those with limited reporting capabilities or multiple, disconnected data sources.",
-  "value": "Cleveland Clinic reports, governs and manages performance across a complex, multi-entity enterprise and understands what it takes to build reporting that leaders trust. Our advisors bring practical, tested approaches to KPI governance, dashboards, management and month-end reporting, and reporting systems.\nClients receive frameworks built by practitioners who use similar tools every day, adapted to the client's systems, maturity and regulatory context, with an emphasis on governance that sustains results after the engagement ends.",
+  "tagline": "An advisory offering that gives leaders consistent KPIs, trusted dashboards and a faster, repeatable month-end reporting process.",
+  "category": "Finance Advisory: Measure Stage",
+  "need": "Executives frequently receive financial information that is late, fragmented across systems or too detailed to act on. Without agreed definitions, the same key performance indicator (KPI) is calculated differently across hospitals and departments, dashboards built by different teams conflict, and month-end reporting depends on manual workarounds and the knowledge of a few individuals. Leadership needs consistent measures, a clear performance story each period and a realistic path to automation.\nThis offering sits in the Measure stage of the Cleveland Clinic Healthcare Financial Advisory Lifecycle, which follows an organization's financial decisions through five stages: Plan, Measure, Optimize, Manage and Transform. The Measure stage covers understanding how the organization is performing financially and why, and answers the client question \"How are we performing?\" It is typically requested by growing organizations and those with limited reporting capabilities or multiple, disconnected data sources.",
+  "value": "This offering is delivered by Cleveland Clinic's Finance Advisory team. Cleveland Clinic is an operating health system with 23 hospitals, 300 outpatient locations and about 83,000 caregivers, and has grown from Northeast Ohio into Florida, Las Vegas, Toronto, London and Abu Dhabi (figures as of December 31, 2025).\nClients get reporting designed by a team that draws on how Cleveland Clinic reports, governs and manages performance across a complex, multi-entity enterprise. KPI definitions, dashboards and month-end processes are adapted to the client's systems, maturity and regulatory context rather than copied from a template.\nProcedures are documented and the client's reporting team is trained before handover, so results are sustained after the engagement ends.",
   "deliverables": [
-   "Enterprise KPI framework and KPI dictionary with definitions, formulas, owners and review cadence",
-   "Dashboard ecosystem design with audience mapping, executive dashboard prototype and data definitions",
-   "Standardized management and month-end reporting package, including board reporting templates",
-   "Variance commentary framework and production timeline with responsibilities",
-   "Reporting requirements inventory and standard operating procedures for key reports",
-   "Reporting system assessment with optimization recommendations and future-state architecture",
-   "AI-enabled reporting roadmap with prioritized use cases, data readiness review and pilot design",
-   "Governance, rollout and implementation roadmap"
+   "KPI framework and dictionary: the agreed set of KPIs, each with a definition, formula, owner and review cadence",
+   "Dashboard design: audience map, data definitions and a working prototype of the executive dashboard",
+   "Management reporting package: standard month-end and board reporting templates, with a production timeline and responsibilities",
+   "Variance commentary framework: a standard approach and templates for explaining results against budget and prior periods",
+   "Reporting procedures: an inventory of required reports and standard operating procedures for producing the key reports",
+   "Reporting system assessment: review of current tools, with optimization recommendations and a future-state architecture",
+   "AI-enabled reporting roadmap: prioritized use cases, a data readiness review and the design for a first pilot",
+   "Governance and rollout plan: ownership, change control and a phased implementation roadmap"
   ],
   "deliveryModes": [
    "On-site",
    "Hybrid",
    "Workshop-based"
   ],
-  "deliveryDetail": "The engagement begins with a review of current reports, systems and processes and interviews with finance and operational leaders. Design workshops are used to agree the future state, followed by iterative build and review of deliverables. It closes with handover and guidance so the client team can sustain the new approach.",
+  "deliveryDetail": "Delivered by Cleveland Clinic's Finance Advisory team, working alongside the client's finance and reporting leads. The engagement begins with a review of current reports, systems and processes and interviews with finance and operational leaders. Design workshops agree the future state, followed by iterative build and review in weekly working sessions. It closes with training and handover so the client team can run the new approach.",
   "duration": "2 to 5 weeks per module; 8 to 12 weeks for a full reporting redesign",
-  "durationNotes": "Typically delivered in three phases: current-state assessment; future-state design and build; handover and adoption support. A focused KPI, dashboard or reporting package module runs 2 to 5 weeks; an enterprise-wide redesign covering KPIs, dashboards, month-end reporting, SOPs and systems runs 8 to 12 weeks. Final timing depends on data availability and scope.",
+  "durationNotes": "Phase timing above is for a full reporting redesign. A single module follows the same three phases in 2 to 5 weeks. The range depends mainly on the number of entities and reports in scope, the number of source systems and how consistent existing definitions are.",
   "resCC": [
-   "Director / Executive Sponsor: 5 to 10%",
+   "Director / Executive Sponsor: 5 to 10% (larger engagements)",
    "Assistant Director / Engagement Lead: 10 to 25%",
-   "Manager / Workstream Lead: 20 to 40%",
+   "Manager / Workstream Lead: 20 to 40% (mid-sized and larger engagements)",
    "Senior Analyst: 30 to 60%",
    "Analyst: 20 to 50%",
    "Admin / Project Support: up to 10%"
   ],
   "resClient": [
-   "Executive sponsor with decision authority",
-   "Finance lead or day-to-day point of contact",
-   "Timely access to financial, operational, market, volume, reporting and staffing information",
-   "Stakeholder availability for interviews, working sessions and reviews",
-   "Timely review and feedback on draft deliverables"
+   "Executive sponsor with decision authority, for scoping, key reviews and the final readout",
+   "Finance or reporting lead as day-to-day point of contact, attending the weekly working sessions",
+   "Report owners and dashboard users across finance and operations for interviews and design workshops",
+   "IT, reporting or business intelligence team for system access and extracts"
   ],
   "outcomes": [
-   "Single, agreed definition and clear owner for each KPI, comparable across the enterprise",
-   "Coherent, trusted set of dashboards built around the measures that drive decisions",
-   "Faster, consistent month-end reporting with variance commentary that explains performance",
-   "Documented, repeatable reporting processes with reduced key-person dependency",
-   "Better use of existing reporting systems and a governed path to AI-enabled reporting",
-   "Improved visibility into financial and operational performance"
+   "Every KPI has one agreed definition and owner, so results are comparable across hospitals and departments",
+   "Executives receive a consistent reporting package each month, with commentary that explains what changed and why",
+   "Month-end reporting is faster, repeatable and no longer depends on a few individuals",
+   "Dashboards built by different teams tell the same story from the same definitions",
+   "The organization has a governed, prioritized path to automated and AI-enabled reporting",
+   "The client's reporting team runs and maintains the new approach after handover, using the documented procedures and training provided"
   ],
-  "owner": {
-   "name": "IEM Finance Advisory",
-   "title": "Connected & Advisory Services",
-   "dept": "Cleveland Clinic International & Emerging Markets",
-   "email": ""
-  }
+  "stageNote": "understanding how the organization is performing",
+  "deliverablesIntro": "Clients can start with a single module, such as the KPI framework, dashboard design or reporting package. A full reporting redesign includes all of the deliverables below.",
+  "phases": [
+   {
+    "name": "Current-state assessment",
+    "weeks": "about 2 weeks",
+    "detail": "Review of current reports, KPIs, systems and processes, with leader interviews"
+   },
+   {
+    "name": "Design and build",
+    "weeks": "5 to 8 weeks",
+    "detail": "Workshops to agree the future state, then iterative build and review of KPIs, dashboards, reports and procedures"
+   },
+   {
+    "name": "Handover and adoption",
+    "weeks": "1 to 2 weeks",
+    "detail": "Training, documentation and a governance plan so the client's team can run the new approach"
+   }
+  ],
+  "assumptions": [
+   "The client provides timely access to the financial, operational, market, volume, stakeholder, reporting and staffing information in the data request",
+   "Scope and timing may change if data is late or incomplete",
+   "The modules in scope are confirmed at scoping",
+   "Stakeholders are available for interviews and working sessions, and draft deliverables are reviewed within an agreed turnaround",
+   "Recommendations are advisory; decisions and implementation remain with the client's leadership"
+  ],
+  "leadBold": true,
+  "resNote": "Percentages are the share of each team member's working time during the engagement, so they do not add up to 100%. Roles marked for larger engagements join only when the scope calls for them."
  },
  {
   "id": "FIN-05",
   "area": "Finance Advisory",
   "file": "1_Finance/FIN-05_Integrated_Financial_Planning_Forecasting_Modeling_Product_Profile.pdf",
   "name": "Integrated Financial Planning, Forecasting & Modeling",
-  "tagline": "Driver-based financial models and planning processes that link volumes, revenue, staffing and capital to budgets, multi-year forecasts and integrated financial statements.",
-  "category": "Finance Advisory: Manage Phase",
-  "need": "Volume assumptions drive nearly every downstream plan, from staffing and physician compensation to revenue, capital and cash. Yet many organizations plan with one-off spreadsheets that cannot be reused, audited or scenario-tested, budget processes that are lengthy and disconnected from operations, and assumptions that are undocumented or inconsistent. Boards and executives need an integrated, driver-based view of the plan that shows whether it is affordable, how it responds to change and how it will be managed through the year.\nThe offering sits within the Manage phase of the Cleveland Clinic Healthcare Financial Advisory Lifecycle, which answers the client question \"How do we improve planning and decision-making?\" It is typically requested by multi-site organizations and providers facing budgeting or forecasting challenges.",
-  "value": "Cleveland Clinic's financial planning and analysis practices support planning, budgeting and forecasting across a large and complex academic health system. Our advisors build models and processes around the operational drivers that matter in healthcare, reflecting how volumes, reimbursement, staffing and capital interact in real hospital operations.\nClients receive transparent, well-documented models and assumptions that leadership can understand and challenge, and that their own teams can own, update and extend long after the engagement ends.",
+  "tagline": "An advisory offering that helps finance teams build driver-based plans, budgets and forecasts that connect volumes, staffing, revenue and capital.",
+  "category": "Finance Advisory: Manage Stage",
+  "need": "Volume assumptions drive nearly every downstream plan, from staffing and physician compensation to revenue, capital and cash. Yet many organizations plan with one-off spreadsheets that cannot be reused, audited or scenario-tested, budget processes that are lengthy and disconnected from operations, and assumptions that are undocumented or inconsistent. Boards and executives need an integrated, driver-based view of the plan that shows whether it is affordable, how it responds to change and how it will be managed through the year.\nThis offering sits in the Manage stage of the Cleveland Clinic Healthcare Financial Advisory Lifecycle, which follows an organization's financial decisions through five stages: Plan, Measure, Optimize, Manage and Transform. The Manage stage covers planning, budgeting and forecasting with confidence, and answers the client question \"How do we improve planning and decision-making?\" It is typically requested by multi-site organizations and providers facing budgeting or forecasting challenges.",
+  "value": "This offering is delivered by Cleveland Clinic's Finance Advisory team. Cleveland Clinic is an operating health system with 23 hospitals, 300 outpatient locations and about 83,000 caregivers, and has grown from Northeast Ohio into Florida, Las Vegas, Toronto, London and Abu Dhabi (figures as of December 31, 2025).\nClients get models built around the drivers that matter in a working health system, drawing on how Cleveland Clinic plans, budgets and forecasts across a large, complex academic health system. Volumes, reimbursement, staffing and capital are linked the way they interact in real hospital operations.\nModels are built with the client's finance team and handed over with training, documentation and an assumptions workbook, so the team can own, update and extend them after the engagement.",
   "deliverables": [
-   "Volume and demand model by service line, with service phasing and a ramp-up schedule",
-   "Revenue and reimbursement model built on chargemaster pricing, payer mix and contract terms",
-   "Staffing and workforce cost model, including organizational design and physician compensation scenarios",
-   "Integrated three-statement model (P&L, cash flow and balance sheet) with scenario toggles and an output dashboard",
-   "Assumptions workbook covering inflation, service mix, pricing and recruitment, with sources, owners and update cadence",
-   "Scenario and sensitivity package with best, base and downside cases, tornado and break-even analysis",
-   "Operating budget package and redesigned budget process, with templates, roles and calendar",
-   "Multi-year forecast (3 to 10 years) with a predictive forecasting approach and accuracy tracking",
-   "Capital plan with prioritization framework, ROI analysis, request process and capitalization policy recommendations"
+   "Volume and demand model: Excel-based model by service line, with service phasing and a ramp-up schedule",
+   "Revenue and reimbursement model: Excel-based model built on chargemaster pricing, payer mix and contract terms",
+   "Staffing and workforce cost model: Excel-based model with volume-driven full-time equivalent (FTE) calculations, organizational structure and physician compensation scenarios",
+   "Integrated three-statement model: Excel-based profit and loss, cash flow and balance sheet, with scenario toggles and an output dashboard",
+   "Assumptions workbook: inflation, service mix, pricing and recruitment assumptions, each with its source, owner and update cadence",
+   "Scenario and sensitivity package: best, base and downside cases, with tornado charts showing which assumptions matter most and break-even analysis",
+   "Operating budget package: redesigned budget process with templates, roles and an annual calendar",
+   "Multi-year forecast: 3 to 10 year projection with a predictive forecasting method and accuracy tracking",
+   "Capital plan: prioritization framework, return on investment (ROI) analysis for each request, a standard request process and capitalization policy recommendations"
   ],
   "deliveryModes": [
    "Hybrid",
    "Workshop-based"
   ],
-  "deliveryDetail": "Design workshops establish model structure, drivers and assumptions with finance leadership. The model or process is then built iteratively, with regular virtual review sessions and validation against historical results. The engagement closes with training and documentation so the client team can own and update the work. Components are modular, so clients can start with a single model or analysis and extend to the full integrated toolkit.",
+  "deliveryDetail": "Delivered by Cleveland Clinic's Finance Advisory team, working alongside the client's finance team. Design workshops set the model structure, drivers and assumptions with finance leadership. Models and processes are then built iteratively, reviewed in weekly virtual sessions and validated against historical results. The engagement closes with training and documentation so the client team can own and update the work.",
   "duration": "2 to 12 weeks per module; 12 to 20 weeks for the full toolkit",
-  "durationNotes": "Typically delivered in three phases: design and assumption setting; model or process build with iterative review; validation, training and handover. Focused analyses such as a scenario package, operating budget or capital plan run 2 to 6 weeks, and individual driver or statement models run 6 to 12 weeks. The full integrated toolkit is phased over 12 to 20 weeks, building volume and revenue drivers first. Final timing depends on data availability and scope.",
+  "durationNotes": "Phase timing above is for the full toolkit (12 to 20 weeks). A single module follows the same phases: focused analyses such as a scenario package, operating budget or capital plan take 2 to 6 weeks, and individual driver or statement models take 6 to 12 weeks. The range depends mainly on the number of models, sites and service lines in scope, the projection horizon and the quality of historical data.",
   "resCC": [
-   "Director / Executive Sponsor: 5 to 10%",
+   "Director / Executive Sponsor: 5 to 10% (larger engagements)",
    "Assistant Director / Engagement Lead: 10 to 25%",
-   "Manager / Workstream Lead: 20 to 40%",
+   "Manager / Workstream Lead: 20 to 40% (mid-sized and larger engagements)",
    "Senior Analyst: 30 to 60%",
    "Analyst: 20 to 50%",
    "Admin / Project Support: up to 10%"
   ],
   "resClient": [
-   "Executive sponsor with decision authority",
-   "Finance lead or day-to-day point of contact",
-   "Access to historical volume, revenue, staffing and financial data",
-   "IT or data team support for system extracts",
-   "Stakeholder availability for interviews, working sessions and reviews",
-   "Timely review and feedback on draft deliverables"
+   "Executive sponsor with decision authority, for scoping, key reviews and the final readout",
+   "Finance lead as day-to-day point of contact, attending the weekly working sessions",
+   "Finance analysts who will own and maintain the models after handover",
+   "Operational leaders to validate volume, staffing and capital assumptions",
+   "IT or data team support for system extracts"
   ],
   "outcomes": [
-   "Defensible, documented assumptions that anchor every financial plan",
-   "Integrated three-statement view of profitability, cash and financial position for financing and board review",
-   "Faster scenario testing, with a clear view of downside exposure and the assumptions that matter most",
-   "Shorter, more accurate budget cycle with operational ownership of targets",
-   "Prioritized capital plan aligned to funding capacity, supported by a consistent request and approval process",
-   "Client team equipped to maintain and update the tools delivered"
+   "Finance and operations work from one shared, driver-based model, so staffing, revenue and capital decisions tie to the same volume forecast",
+   "Leadership can test scenarios quickly and see downside exposure before committing to a plan",
+   "The board and lenders receive an integrated view of profitability, cash and financial position",
+   "The budget cycle is shorter, and operational leaders own their targets",
+   "Capital requests are prioritized against funding capacity through one consistent process",
+   "The client's finance team maintains and extends the models after handover, supported by training, documentation and an assumptions workbook with named owners"
   ],
-  "owner": {
-   "name": "IEM Finance Advisory",
-   "title": "Connected & Advisory Services",
-   "dept": "Cleveland Clinic International & Emerging Markets",
-   "email": ""
-  }
+  "stageNote": "planning, budgeting and forecasting with confidence",
+  "deliverablesIntro": "Each model or analysis below can be delivered as a standalone module. Together they form an integrated planning toolkit, built volume and revenue first.",
+  "phases": [
+   {
+    "name": "Design and assumption setting",
+    "weeks": "2 to 3 weeks",
+    "detail": "Workshops to agree model structure, drivers and assumptions with finance leadership"
+   },
+   {
+    "name": "Build and review",
+    "weeks": "8 to 14 weeks",
+    "detail": "Models and processes built iteratively, volume and revenue drivers first, with weekly review sessions"
+   },
+   {
+    "name": "Validation, training and handover",
+    "weeks": "2 to 3 weeks",
+    "detail": "Results tested against history, then training and documentation for the client's team"
+   }
+  ],
+  "assumptions": [
+   "The client provides timely access to the financial, operational, market, volume, stakeholder, reporting and staffing information in the data request",
+   "Scope and timing may change if data is late or incomplete",
+   "Modules and the projection horizon are confirmed at scoping",
+   "Stakeholders are available for interviews and working sessions, and draft deliverables are reviewed within an agreed turnaround",
+   "Recommendations are advisory; decisions and implementation remain with the client's leadership"
+  ],
+  "leadBold": true,
+  "resNote": "Percentages are the share of each team member's working time during the engagement, so they do not add up to 100%. Roles marked for larger engagements join only when the scope calls for them."
  },
  {
   "id": "FIN-06",
   "area": "Finance Advisory",
   "file": "1_Finance/FIN-06_Finance_Transformation_Operating_Model_Product_Profile.pdf",
   "name": "Finance Transformation & Operating Model",
-  "tagline": "Assessment and redesign of the finance function, from organization, processes and governance to shared services, the finance calendar and the chart of accounts.",
-  "category": "Finance Advisory: Transform Phase",
-  "need": "Finance functions built for a smaller or simpler organization often fall behind the enterprise they support in structure, skills and governance. Manual workflows slow the close, planning and reporting cycles; decision rights and policies are unclear; shared functions are duplicated across entities; and an inconsistent chart of accounts undermines reporting and comparability. CFOs need an objective assessment of the finance function and a practical roadmap to the target organization.\nThe offering sits within the Transform phase of the Cleveland Clinic Healthcare Financial Advisory Lifecycle, which answers the client question \"Do we have the right finance organization?\" It is typically requested by health systems, academic medical centers and organizations undergoing growth or restructuring.",
-  "value": "Cleveland Clinic has experience designing and running a finance organization at enterprise scale, including governance, shared services, reporting architecture and account structures that support a multi-entity system. Our advisors bring that operating perspective to finance organization design and transformation.\nClients benefit from recommendations that are practical to implement, sequenced realistically, and informed by Cleveland Clinic's work supporting health systems internationally.",
+  "tagline": "An advisory offering that helps CFOs assess their finance function and design the structure, processes and governance it needs to support the enterprise.",
+  "category": "Finance Advisory: Transform Stage",
+  "need": "Finance functions built for a smaller or simpler organization often fall behind the enterprise they support in structure, skills and governance. Manual workflows slow the close, planning and reporting cycles; decision rights and policies are unclear; shared functions are duplicated across entities; and an inconsistent chart of accounts undermines reporting and comparability. CFOs need an objective assessment of the finance function and a practical roadmap to the target organization.\nThis offering sits in the Transform stage of the Cleveland Clinic Healthcare Financial Advisory Lifecycle, which follows an organization's financial decisions through five stages: Plan, Measure, Optimize, Manage and Transform. The Transform stage covers building a finance organization that fits the enterprise it supports, and answers the client question \"Do we have the right finance organization?\" It is typically requested by health systems, academic medical centers and organizations undergoing growth or restructuring.",
+  "value": "This offering is delivered by Cleveland Clinic's Finance Advisory team. Cleveland Clinic is an operating health system with 23 hospitals, 300 outpatient locations and about 83,000 caregivers, and has grown from Northeast Ohio into Florida, Las Vegas, Toronto, London and Abu Dhabi (figures as of December 31, 2025).\nClients get recommendations from an organization that designs and runs a finance function at enterprise scale, including governance, shared services, reporting architecture and account structures for a multi-entity system. Roadmaps are sequenced for what can realistically be implemented.\nDesigns are developed with the client's finance leaders in workshops, so the organization owns the future state and the roadmap to reach it.",
   "deliverables": [
-   "Finance organizational assessment of structure, capabilities, roles and capability gaps",
-   "Finance process maps, pain point analysis and future-state process design",
-   "Future-state finance operating model blueprint",
-   "Finance governance model with decision rights, delegation of authority, committee charters and policy framework",
-   "Shared services blueprint with service catalog, governance, staffing and cost allocation approach",
-   "Finance operating calendar with reporting and planning cycles, fiscal year conventions and deadlines",
-   "Chart of accounts design with cost center and natural account definitions and a maintenance model",
-   "Phased finance transformation roadmap with change management approach and executive presentation"
+   "Finance organization assessment: written report on structure, roles and capabilities, with the gaps to close",
+   "Process maps: current and future-state maps of core finance processes such as close, planning and reporting, with pain points identified",
+   "Finance operating model blueprint: the future-state design for how finance is organized, governed and staffed",
+   "Governance model: decision rights, delegation of authority, committee charters and a policy framework",
+   "Shared services blueprint: service catalog, governance, staffing and cost allocation approach",
+   "Finance operating calendar: reporting and planning cycles, fiscal year conventions and deadlines",
+   "Chart of accounts design: cost center and natural account definitions, with a model for maintaining them",
+   "Transformation roadmap: phased plan with a change management approach, presented to executive leadership"
   ],
   "deliveryModes": [
    "On-site",
    "Hybrid",
    "Workshop-based"
   ],
-  "deliveryDetail": "On-site discovery, including leadership interviews and a review of current finance structures, opens the engagement. Future-state design workshops follow, supported by virtual working sessions between visits. The roadmap is reviewed and refined with executive leadership in a final on-site session.",
+  "deliveryDetail": "Delivered by Cleveland Clinic's Finance Advisory team, working alongside the CFO and finance leadership. On-site discovery, including leadership interviews and a review of current finance structures, opens the engagement. Future-state design workshops follow, supported by virtual working sessions between visits. The roadmap is reviewed and refined with executive leadership in a final on-site session.",
   "duration": "4 to 10 weeks per module; 8 to 20 weeks for a full transformation",
-  "durationNotes": "Typically delivered in three phases: current-state assessment; future-state design; roadmap development and executive alignment. Focused modules such as an organizational assessment, governance model or finance calendar run 4 to 10 weeks; a full transformation roadmap with chart of accounts redesign runs 8 to 20 weeks. Longer engagements may add implementation support.",
+  "durationNotes": "Phase timing above is for a full transformation (8 to 20 weeks). A single module, such as an organizational assessment, governance model or finance calendar, takes 4 to 10 weeks. The range depends mainly on the number of entities and finance teams in scope and whether chart of accounts redesign is included. Implementation support can be added after the roadmap.",
   "resCC": [
-   "Director / Executive Sponsor: 5 to 10%",
+   "Director / Executive Sponsor: 5 to 10% (larger engagements)",
    "Assistant Director / Engagement Lead: 10 to 25%",
-   "Manager / Workstream Lead: 20 to 40%",
+   "Manager / Workstream Lead: 20 to 40% (mid-sized and larger engagements)",
    "Senior Analyst: 30 to 60%",
    "Analyst: 20 to 50%",
    "Admin / Project Support: up to 10%"
   ],
   "resClient": [
-   "Executive sponsor with decision authority",
-   "Finance lead or day-to-day point of contact",
-   "Timely access to financial, operational, market, volume, reporting and staffing information",
-   "Stakeholder availability for interviews, working sessions and reviews",
-   "Timely review and feedback on draft deliverables"
+   "CFO or executive sponsor with decision authority, for scoping, key reviews and the final readout",
+   "Finance lead as day-to-day point of contact, attending the weekly working sessions",
+   "Finance leaders and staff across entities for interviews and design workshops",
+   "Human resources partner when roles or structures change"
   ],
   "outcomes": [
-   "Agreed vision for the future finance organization, with an objective view of capability gaps",
-   "Documented future-state processes that reduce manual effort and cycle time",
-   "Clear finance decision rights, accountability and a stronger control environment",
-   "Reduced duplication and improved accountability across entities through governed shared services",
-   "Consistent chart of accounts and predictable reporting and planning cycles across the enterprise",
-   "Phased, fundable roadmap to a scalable finance organization"
+   "The CFO and executive team share one view of the finance organization they need and the gaps to close",
+   "Close, planning and reporting cycles run faster, with less manual effort",
+   "Decision rights and approvals are clear, strengthening the control environment",
+   "Shared services remove duplicated work across entities",
+   "A consistent chart of accounts makes results comparable across the enterprise",
+   "Leadership has a phased, fundable roadmap and a change approach to carry the transformation forward"
   ],
-  "owner": {
-   "name": "IEM Finance Advisory",
-   "title": "Connected & Advisory Services",
-   "dept": "Cleveland Clinic International & Emerging Markets",
-   "email": ""
-  }
+  "stageNote": "building the right finance organization",
+  "deliverablesIntro": "Clients can start with a single module, such as the organizational assessment, governance model or finance calendar. A full transformation includes all of the deliverables below.",
+  "phases": [
+   {
+    "name": "Current-state assessment",
+    "weeks": "2 to 4 weeks",
+    "detail": "On-site discovery, leadership interviews and review of finance structures and processes"
+   },
+   {
+    "name": "Future-state design",
+    "weeks": "4 to 12 weeks",
+    "detail": "Design workshops for the operating model, governance, shared services, calendar and chart of accounts"
+   },
+   {
+    "name": "Roadmap and executive alignment",
+    "weeks": "2 to 4 weeks",
+    "detail": "Phased roadmap and change approach, refined with executive leadership on-site"
+   }
+  ],
+  "assumptions": [
+   "The client provides timely access to the financial, operational, market, volume, stakeholder, reporting and staffing information in the data request",
+   "Scope and timing may change if data is late or incomplete",
+   "The modules in scope are confirmed at scoping",
+   "Stakeholders are available for interviews and working sessions, and draft deliverables are reviewed within an agreed turnaround",
+   "Recommendations are advisory; decisions and implementation remain with the client's leadership"
+  ],
+  "leadBold": true,
+  "resNote": "Percentages are the share of each team member's working time during the engagement, so they do not add up to 100%. Roles marked for larger engagements join only when the scope calls for them."
  },
  {
   "id": "FIN-07",
   "area": "Finance Advisory",
   "file": "1_Finance/FIN-07_Large-Scale_Healthcare_Development_Financial_Advisory_Product_Profile.pdf",
   "name": "Large-Scale Healthcare Development Financial Advisory",
-  "tagline": "Senior-led financial strategy and planning for greenfield hospitals, academic medical centers, multi-site networks, national transformation programs and complex partnerships.",
+  "tagline": "A senior-led advisory offering that helps governments, investors and health systems build the financial strategy for a major healthcare development or partnership.",
   "category": "Finance Advisory: Premium International",
-  "need": "Greenfield hospitals, academic medical centers, integrated delivery networks and national transformation programs involve substantial capital, many stakeholders and long ramps to financial sustainability. Coordinated decisions on sites, services, phasing and partnership structures, often spanning borders and organizations, cannot be made through a collection of individual business cases. Sponsors, investors, ministries and system leaders need an end-to-end, scenario-tested financial strategy before committing to construction, expansion or a partnership.\nThis is a Premium International offering for higher-complexity engagements, typically requested by governments, investors and health systems undertaking large healthcare developments or partnerships.",
-  "value": "Cleveland Clinic brings the combined perspective of a global health system operator and an international advisor. Through International & Emerging Markets, Cleveland Clinic has supported hospital development, partnerships and health system planning in multiple countries.\nClients gain access to senior finance advisors who understand both the financial mechanics of large healthcare investments and the operational realities of building and running hospitals, adapted to local market and regulatory conditions.",
+  "need": "Greenfield hospitals, academic medical centers, integrated delivery networks and national transformation programs involve substantial capital, many stakeholders and long ramps to financial sustainability. Coordinated decisions on sites, services, phasing and partnership structures, often spanning borders and organizations, cannot be made through a collection of individual business cases. Sponsors, investors, ministries and system leaders need an end-to-end, scenario-tested financial strategy before committing to construction, expansion or a partnership.\nThis is a Premium International offering for higher-complexity engagements. It draws on every stage of the Cleveland Clinic Healthcare Financial Advisory Lifecycle (Plan, Measure, Optimize, Manage and Transform) and is typically requested by governments, investors and health systems undertaking large healthcare developments or partnerships.",
+  "value": "This offering is delivered by Cleveland Clinic's Finance Advisory team. Cleveland Clinic is an operating health system with 23 hospitals, 300 outpatient locations and about 83,000 caregivers, and has grown from Northeast Ohio into Florida, Las Vegas, Toronto, London and Abu Dhabi (figures as of December 31, 2025).\nClients get the combined perspective of a global health system operator and an international advisor. Through International & Emerging Markets, Cleveland Clinic has supported hospital development, partnerships and health system planning in multiple countries.\nSenior members of the Finance Advisory team lead the work, bringing both the financial mechanics of large healthcare investments and the operational realities of building and running hospitals, adapted to local market and regulatory conditions.",
   "deliverables": [
-   "Integrated pro forma covering startup assumptions, capital plan and operating ramp for a new hospital or campus",
-   "Network or multi-site financial model with phasing plan, service mix assumptions and scenario analysis",
-   "Academic medical center financial strategy covering the clinical, education and research missions",
-   "Enterprise financial strategy and prioritized initiatives for national or system-wide transformation",
-   "Partnership and affiliation strategy with financial model, risk assessment and negotiation support materials",
-   "Governance and reporting roadmap to track program progress",
-   "Board and investor-ready business case and executive summary of findings and recommendations"
+   "Integrated pro forma: Excel-based model of startup costs, capital plan and operating ramp-up for a new hospital or campus",
+   "Network financial model: Excel-based multi-site model with a phasing plan, service mix assumptions and scenario analysis",
+   "Academic medical center financial strategy: funding approach for the clinical, education and research missions",
+   "Enterprise financial strategy: prioritized initiatives for a national or system-wide transformation",
+   "Partnership strategy: financial model, risk assessment and materials to support negotiation",
+   "Governance and reporting roadmap: the structure and reports used to track program progress",
+   "Board and investor business case: executive presentation and summary of findings and recommendations"
   ],
   "deliveryModes": [
    "On-site",
    "Hybrid",
    "Workshop-based"
   ],
-  "deliveryDetail": "A senior-led engagement that combines on-site visits at key milestones with regular virtual working sessions. Cleveland Clinic advisors work alongside the client leadership team and project sponsors, with formal executive and board-level readouts at major decision points.",
+  "deliveryDetail": "A senior-led engagement delivered by Cleveland Clinic's Finance Advisory team, working alongside the client's leadership team and program sponsors. On-site visits at key milestones are combined with regular virtual working sessions, with formal executive and board-level readouts at major decision points.",
   "duration": "8 to 24 weeks",
-  "durationNotes": "Delivered in phases aligned to the client's program milestones, typically covering baseline assessment, modeling and strategy development, and executive decision support. Partnership and academic medical center strategy engagements typically run 8 to 16 weeks; greenfield, network, multi-hospital and national programs run 12 to 24 weeks.",
+  "durationNotes": "Phases align to the client's program milestones. Partnership and academic medical center strategy engagements typically run 8 to 16 weeks; greenfield, network, multi-hospital and national programs run 12 to 24 weeks. The range depends mainly on the number of sites and partners, the number of stakeholders who must approve the plan, and how much of the program's design is already settled.",
   "resCC": [
-   "Director / Executive Sponsor: 5 to 10%",
+   "Director / Executive Sponsor: 5 to 10% (larger engagements)",
    "Assistant Director / Engagement Lead: 10 to 25%",
-   "Manager / Workstream Lead: 20 to 40%",
+   "Manager / Workstream Lead: 20 to 40% (mid-sized and larger engagements)",
    "Senior Analyst: 30 to 60%",
    "Analyst: 20 to 50%",
    "Admin / Project Support: up to 10%"
   ],
   "resClient": [
-   "Executive sponsor with decision authority",
-   "Finance lead or day-to-day point of contact",
-   "Timely access to financial, operational, market, volume, reporting and staffing information",
-   "Stakeholder availability for interviews, working sessions and reviews",
-   "Timely review and feedback on draft deliverables"
+   "Program sponsor or steering committee with decision authority",
+   "Client program director as day-to-day point of contact",
+   "Finance, planning, clinical and facilities leads for working sessions",
+   "Access to partners, investors or ministry representatives where their input is needed"
   ],
   "outcomes": [
-   "End-to-end financial plan and a board and investor-ready business case for the development",
-   "Network-level financial roadmap with coordinated phasing and service mix across sites",
-   "Scenario-tested view of capital and operating implications across sites and markets",
-   "Financial strategy that sustains clinical, education and research missions where an academic medical center is in scope",
-   "Clear partnership strategy and a stronger position entering negotiations",
-   "Senior-level confidence in a major investment, development or partnership decision"
+   "Sponsors and investors commit with a board and investor-ready business case built on tested assumptions",
+   "Decisions on sites, services, phasing and partners are coordinated in one financial strategy rather than separate business cases",
+   "Leadership understands capital and operating needs across sites and markets under different scenarios",
+   "Where an academic medical center is in scope, the financial strategy sustains the clinical, education and research missions",
+   "The client enters partner negotiations with a clear strategy and scenario-tested numbers",
+   "Program leaders track progress against the plan through the governance and reporting roadmap"
   ],
-  "owner": {
-   "name": "IEM Finance Advisory",
-   "title": "Connected & Advisory Services",
-   "dept": "Cleveland Clinic International & Emerging Markets",
-   "email": ""
-  }
+  "stageNote": "senior-led support across all stages",
+  "deliverablesIntro": "Deliverables are selected to match the program, for example a greenfield hospital, a multi-site network or a national transformation, and are confirmed at scoping.",
+  "phases": [
+   {
+    "name": "Baseline assessment",
+    "weeks": "2 to 4 weeks",
+    "detail": "Review of program plans, data and stakeholder priorities, usually including an on-site visit"
+   },
+   {
+    "name": "Modeling and strategy",
+    "weeks": "4 to 16 weeks",
+    "detail": "Financial models, scenarios and strategy developed with the client team in regular working sessions"
+   },
+   {
+    "name": "Executive decision support",
+    "weeks": "2 to 4 weeks",
+    "detail": "Board and investor-ready materials, with formal readouts at decision points"
+   }
+  ],
+  "assumptions": [
+   "The client provides timely access to the financial, operational, market, volume, stakeholder, reporting and staffing information in the data request",
+   "Scope and timing may change if data is late or incomplete",
+   "On-site visits are scheduled at key milestones agreed at scoping",
+   "Stakeholders are available for interviews and working sessions, and draft deliverables are reviewed within an agreed turnaround",
+   "Recommendations are advisory; decisions and implementation remain with the client's leadership"
+  ],
+  "leadBold": true,
+  "resNote": "Percentages are the share of each team member's working time during the engagement, so they do not add up to 100%. Roles marked for larger engagements join only when the scope calls for them."
  },
  {
   "id": "IT-01",
@@ -418,7 +566,7 @@
   "duration": "8 to 12 weeks",
   "durationNotes": "Phase 1 Discovery and maturity snapshot; Phase 2 Roadmap working sessions; Phase 3 Executive readout. Optional ongoing advisory support.",
   "resCC": [
-   "IEM engagement lead / relationship manager",
+   "International & Emerging Markets engagement lead / relationship manager",
    "Cleveland Clinic Digital strategy SME(s)",
    "Domain SMEs as needed (data, architecture, cybersecurity)"
   ],
@@ -432,13 +580,7 @@
    "Shared leadership view of digital priorities and maturity gaps",
    "Sequenced roadmap tied to clinical, capital and opening milestones",
    "Clear, owned next steps for the first 6 to 12 months"
-  ],
-  "owner": {
-   "name": "Cleveland Clinic Digital Strategy",
-   "title": "",
-   "dept": "Cleveland Clinic Digital",
-   "email": ""
-  }
+  ]
  },
  {
   "id": "IT-02",
@@ -470,7 +612,7 @@
   "duration": "6 to 16 weeks",
   "durationNotes": "Phase 1 Current-state architecture, security posture and policy review; Phase 2 Option analysis and working sessions; Phase 3 Recommendations, guideline package and risk mitigation plan; optional tabletop exercise. Security-focused scopes typically run 6 to 12 weeks and full architecture and infrastructure scopes 8 to 16 weeks.",
   "resCC": [
-   "IEM engagement lead",
+   "International & Emerging Markets engagement lead",
    "Enterprise or solution architect",
    "Infrastructure and network SME",
    "Cybersecurity SME",
@@ -492,13 +634,7 @@
    "Security and privacy controls designed in from day one",
    "Tested downtime and continuity procedures",
    "Reduced risk of care disruption from cyber events"
-  ],
-  "owner": {
-   "name": "Cleveland Clinic Enterprise Architecture & Information Security",
-   "title": "",
-   "dept": "Cleveland Clinic Digital / Information Technology / Information Security",
-   "email": ""
-  }
+  ]
  },
  {
   "id": "IT-03",
@@ -524,7 +660,7 @@
   "duration": "8 to 16 weeks",
   "durationNotes": "Phase 1 Best-practice sessions; Phase 2 Document review and recommendations; optional ongoing advisory through implementation.",
   "resCC": [
-   "IEM engagement lead",
+   "International & Emerging Markets engagement lead",
    "Clinical informatics SME (physician and/or nursing)",
    "EHR application / implementation SME"
   ],
@@ -538,13 +674,7 @@
    "Confident, well-governed EHR decisions",
    "Clear implementation team structure and roles",
    "Improved clinician workflows and reduced documentation burden"
-  ],
-  "owner": {
-   "name": "Clinical Informatics",
-   "title": "Cleveland Clinic Digital",
-   "dept": "",
-   "email": ""
-  }
+  ]
  },
  {
   "id": "IT-04",
@@ -571,7 +701,7 @@
   "duration": "About 6 months",
   "durationNotes": "Six 60-minute sessions approximately every 3 to 4 weeks, with light asynchronous review as client drafts become available. Sessions can be re-sequenced or consolidated within an agreed hour envelope.",
   "resCC": [
-   "IEM relationship manager (scheduling, agendas, notes, action tracking)",
+   "International & Emerging Markets relationship manager (scheduling, agendas, notes, action tracking)",
    "Cleveland Clinic data strategy and governance leader",
    "Cleveland Clinic analytic solutions leader",
    "Guest SMEs for architecture and EHR integration sessions"
@@ -588,13 +718,7 @@
    "Minimum viable data governance in place before go-live",
    "Architecture and integration decisions that avoid costly rework",
    "Right-sized analytics team plan for opening and growth"
-  ],
-  "owner": {
-   "name": "Enterprise Data & Analytics",
-   "title": "Cleveland Clinic Digital",
-   "dept": "",
-   "email": ""
-  }
+  ]
  },
  {
   "id": "IT-05",
@@ -622,7 +746,7 @@
   "duration": "8 to 12 weeks",
   "durationNotes": "Phase 1 Current AI landscape and governance review; Phase 2 Governance, policy and process design; Phase 3 Monitoring framework and readout. Optional ongoing advisory as use cases are reviewed.",
   "resCC": [
-   "IEM engagement lead",
+   "International & Emerging Markets engagement lead",
    "AI governance SME (AI Task Force leadership)",
    "Supporting SMEs as needed (data science, bioethics, legal/compliance, cybersecurity)"
   ],
@@ -638,13 +762,7 @@
    "Visibility of all AI in use, including shadow AI",
    "Ongoing monitoring for performance, bias and unintended impacts",
    "Readiness for emerging regulatory and accreditation expectations"
-  ],
-  "owner": {
-   "name": "AI Task Force",
-   "title": "Cleveland Clinic",
-   "dept": "",
-   "email": ""
-  }
+  ]
  },
  {
   "id": "IT-06",
@@ -673,7 +791,7 @@
   "duration": "12 to 18 months (aligned to go-live)",
   "durationNotes": "Plan and pre-work (about T-15 months); validation and build (about T-12 months); deploy and test; training (from about T-6 months); operational readiness (about T-4 months, with 90-day assessment); cutover and go-live (60/30-day assessments); stabilize and optimize (up to about 3 months after go-live).",
   "resCC": [
-   "IEM engagement lead",
+   "International & Emerging Markets engagement lead",
    "IT activation / program management SME",
    "Testing, training and operational readiness SMEs",
    "Infrastructure SME as needed"
@@ -690,13 +808,7 @@
    "Objective, milestone-based go-live readiness",
    "High caregiver training completion before go-live",
    "Smoother go-live and faster stabilization"
-  ],
-  "owner": {
-   "name": "Information Technology",
-   "title": "Cleveland Clinic Digital",
-   "dept": "",
-   "email": ""
-  }
+  ]
  },
  {
   "id": "IT-07",
@@ -722,7 +834,7 @@
   "duration": "8 to 12 weeks",
   "durationNotes": "Phase 1 Pathway and current-state review; Phase 2 Journey mapping and design sessions; Phase 3 Recommendations and readout.",
   "resCC": [
-   "IEM engagement lead",
+   "International & Emerging Markets engagement lead",
    "Patient experience SME",
    "Digital / patient app SME",
    "Clinical pathway SME as needed"
@@ -738,13 +850,7 @@
    "Higher patient digital adoption and engagement",
    "Shift from insecure channels to secure digital communication",
    "Clear roadmap for digital patient experience improvements"
-  ],
-  "owner": {
-   "name": "Patient Experience",
-   "title": "Cleveland Clinic Digital",
-   "dept": "",
-   "email": ""
-  }
+  ]
  },
  {
   "id": "EDU-01",
@@ -784,13 +890,7 @@
    "Targeted skill development against defined learning objectives",
    "Clearer career direction through exposure to U.S. clinical practice",
    "Long-term capacity building at the participant's home institution"
-  ],
-  "owner": {
-   "name": "Cleveland Clinic program hosts",
-   "title": "Center for International Medical Education; Nursing Institute; Pharmacy Education",
-   "dept": "Cleveland Clinic Florida Orthopaedic & Rheumatology Institute; Cleveland Clinic Abu Dhabi",
-   "email": ""
-  }
+  ]
  },
  {
   "id": "EDU-02",
@@ -828,13 +928,7 @@
    "Supervised, hands-on clinical skill development",
    "Advanced specialty skills beyond core training",
    "Strengthened research capability and evidence-based practice"
-  ],
-  "owner": {
-   "name": "Cleveland Clinic program hosts",
-   "title": "Center for Medical Education",
-   "dept": "Cleveland Clinic Abu Dhabi",
-   "email": ""
-  }
+  ]
  },
  {
   "id": "EDU-03",
@@ -875,13 +969,7 @@
    "First-hand exposure to Cleveland Clinic practices and care models",
    "Shared alignment with the organization's mission, vision and values",
    "Leadership development tied to measurable organizational results"
-  ],
-  "owner": {
-   "name": "Cleveland Clinic program hosts",
-   "title": "Global Leadership & Learning (Global Executive Education)",
-   "dept": "International & Emerging Markets; Education Institute",
-   "email": ""
-  }
+  ]
  },
  {
   "id": "EDU-04",
@@ -923,13 +1011,7 @@
    "Sustainable internal capability to lead and reinforce change",
    "Improved patient safety and team performance",
    "Sustained reinforcement of caregiver learning by their leaders"
-  ],
-  "owner": {
-   "name": "Cleveland Clinic program hosts",
-   "title": "Global Leadership & Learning (Global Executive Education)",
-   "dept": "Center for Excellence in Healthcare Communication; Office of Patient Experience",
-   "email": ""
-  }
+  ]
  },
  {
   "id": "EDU-05",
@@ -967,13 +1049,7 @@
    "Improved patient safety and team performance",
    "Tested and improved clinical systems, spaces and workflows",
    "Sustainable local simulation capability through program design and train-the-trainer support"
-  ],
-  "owner": {
-   "name": "Cleveland Clinic program hosts",
-   "title": "Simulation and Advanced Skills Center",
-   "dept": "Cleveland Clinic Abu Dhabi",
-   "email": ""
-  }
+  ]
  },
  {
   "id": "EDU-06",
@@ -1006,13 +1082,7 @@
   "outcomes": [
    "Transfer of Cleveland Clinic expertise and best practices to the client organization",
    "Broad access to Cleveland Clinic specialty expertise for staff at the client's own institution"
-  ],
-  "owner": {
-   "name": "Cleveland Clinic program hosts",
-   "title": "International & Emerging Markets (Cleveland Clinic Connected)",
-   "dept": "Center for Medical Education",
-   "email": ""
-  }
+  ]
  },
  {
   "id": "EDU-07",
@@ -1049,13 +1119,7 @@
    "Stronger teaching and learner-assessment capability among faculty",
    "Improved curricula and clinical education programs",
    "Transfer of Cleveland Clinic expertise and best practices to the client organization"
-  ],
-  "owner": {
-   "name": "Cleveland Clinic program hosts",
-   "title": "Center for International Medical Education",
-   "dept": "Cleveland Clinic Abu Dhabi",
-   "email": ""
-  }
+  ]
  },
  {
   "id": "SQPE-01",
@@ -1099,13 +1163,7 @@
    "Reliable quarterly performance data visible to leadership",
    "A prioritized, year-over-year improvement plan",
    "Measurable progress on the 3 to 5 priority measures each member selects, against targets the member sets"
-  ],
-  "owner": {
-   "name": "CC Connected SQPE Team",
-   "title": "",
-   "dept": "Cleveland Clinic Connected",
-   "email": ""
-  }
+  ]
  },
  {
   "id": "SQPE-02",
@@ -1143,13 +1201,7 @@
    "Alignment between leadership perception and independent assessment",
    "Clear priorities for advancing PI, PE and safety culture",
    "A baseline for measuring maturity gains year over year"
-  ],
-  "owner": {
-   "name": "CC Connected SQPE Team",
-   "title": "",
-   "dept": "Cleveland Clinic Connected",
-   "email": ""
-  }
+  ]
  },
  {
   "id": "SQPE-03",
@@ -1189,13 +1241,7 @@
    "Governance, metrics and policies aligned with Cleveland Clinic practice",
    "Readiness for accreditation and regulatory review",
    "A clear path to SQPE maturity in the first years of operation"
-  ],
-  "owner": {
-   "name": "CC Connected SQPE Team",
-   "title": "",
-   "dept": "Cleveland Clinic Connected",
-   "email": ""
-  }
+  ]
  },
  {
   "id": "SQPE-04",
@@ -1234,13 +1280,7 @@
    "Faster self-assessment against Cleveland Clinic practice",
    "Consistent improvement approaches across units",
    "Practical tools that support metric improvement in priority areas"
-  ],
-  "owner": {
-   "name": "CC Connected SQPE Team",
-   "title": "",
-   "dept": "Cleveland Clinic Connected",
-   "email": ""
-  }
+  ]
  },
  {
   "id": "SQPE-05",
@@ -1278,13 +1318,7 @@
    "A shared Cleveland Clinic language for safety and quality",
    "Scalable training without large-scale staff release",
    "Trackable course completion for [number of] target caregivers"
-  ],
-  "owner": {
-   "name": "CC Connected SQPE Team",
-   "title": "",
-   "dept": "Cleveland Clinic Connected",
-   "email": ""
-  }
+  ]
  },
  {
   "id": "SQPE-06",
@@ -1327,13 +1361,7 @@
    "Sustainable, locally led training capacity",
    "Improved caregiver and provider communication",
    "Stronger high reliability, just culture and improvement practices across the organization"
-  ],
-  "owner": {
-   "name": "CC Connected SQPE Team",
-   "title": "",
-   "dept": "Cleveland Clinic Connected",
-   "email": ""
-  }
+  ]
  },
  {
   "id": "SQPE-07",
@@ -1371,12 +1399,6 @@
    "Faster answers to emerging SQPE questions",
    "Stronger professional development for quality and nursing teams",
    "A deeper working relationship between member teams and Cleveland Clinic experts"
-  ],
-  "owner": {
-   "name": "CC Connected SQPE Team",
-   "title": "",
-   "dept": "Cleveland Clinic Connected",
-   "email": ""
-  }
+  ]
  }
 ]

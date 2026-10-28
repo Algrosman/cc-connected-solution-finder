@@ -18,7 +18,12 @@ window.CC_FINDER = {
       id: "finance",
       name: "Finance",
       short: "Finance",
-      blurb: "Feasibility, business cases, partnerships, performance improvement, planning and finance transformation."
+      blurb: "Feasibility, business cases, partnerships, performance improvement, planning and finance transformation.",
+      packet: {
+        href: "brochures/1_Finance/00_Finance_Advisory_Offerings_Packet.pdf",
+        title: "Finance Advisory packet",
+        text: "A two-page executive summary of the finance advisory lifecycle, followed by every Finance profile in one PDF."
+      }
     },
     {
       id: "sqpe",

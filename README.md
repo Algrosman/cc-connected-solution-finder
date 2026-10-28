@@ -16,10 +16,11 @@ It is plain HTML, CSS and JavaScript with no build step, so it runs on any stati
 | `data/products.js` | The 28 solutions, generated from the brochure source (do not edit by hand) |
 | `data/catalog-settings.json` | Website-only fields per solution: which hospitals it is offered to (`new`, `existing` or both) |
 | `data/finder.js` | The questions, options and scoring weights |
-| `brochures/` | The product profile PDFs and `Offerings_Index.csv` |
-| `brochures/brochure-content.json` | Source text for every brochure (the builder's 10-field input) |
+| `brochures/` | The offering profile PDFs, the Finance packet (`1_Finance/00_Finance_Advisory_Offerings_Packet.pdf`) and `Offerings_Index.csv` |
+| `brochures/brochure-content.json` | Source text for every brochure (the builder's input fields, plus the optional fields below) |
 | `scripts/render_brochures.js` | Regenerates the brochure PDFs from that source with the builder's own PDF code |
 | `scripts/add_links.py` | Re-adds clickable links the builder cannot draw |
+| `scripts/build_finance_packet.py` | Builds the Finance packet: a two-page executive summary (drawn by `scripts/finance_packet_summary.js`) followed by the seven Finance profiles, with a linked contents table and bookmarks |
 | `scripts/build_catalog.py` | Rebuilds `data/products.js` from the brochure source (or a PDF when there is no source entry) |
 | `tests/check_finder.js` | Walks every finder path and confirms every solution can be recommended |
 
@@ -37,13 +38,22 @@ The brochure text lives in `brochures/brochure-content.json`, one entry per solu
 
 To change a brochure:
 
-1. Edit its entry in `brochures/brochure-content.json`. Paragraphs are separated by `\n`. Do not put individual people's names in the owner fields; use the team or department.
+1. Edit its entry in `brochures/brochure-content.json`. Paragraphs are separated by `\n`. The brochures do not show a product owner, and no individual people's names should appear anywhere in the text. Optional fields (used by the Finance profiles):
+   - `stageNote`: plain-language anchor shown in brackets under the category in the blue band
+   - `deliverablesIntro`: a paragraph above the deliverables saying what is core and what is modular
+   - `leadBold`: `true` when each deliverable is written as "Name: what it is", so the name prints in bold
+   - `phases`: `[{"name", "weeks", "detail"}]`, listed under Typical Duration; `durationNotes` then explains what moves an engagement within its range
+   - `resNote`: what the Cleveland Clinic team percentages mean
+   - `assumptions`: engagement assumptions, listed separately from the client team (the client panel is then labelled "Client team" rather than "Client team and inputs")
 2. Regenerate the PDFs with the builder's own PDF code (needs Node.js, `npm install jspdf@2.5.1 playwright`, and a copy of the builder repo):
    ```
    node scripts/render_brochures.js ../iem-advisory-product-builder/index.html brochures/brochure-content.json brochures
    python3 scripts/add_links.py brochures
    ```
-   Add solution IDs at the end of the first command to regenerate only those brochures.
+   Add solution IDs at the end of the first command to regenerate only those brochures. After changing a Finance profile, rebuild the packet:
+   ```
+   python3 scripts/build_finance_packet.py ../iem-advisory-product-builder/index.html brochures
+   ```
 3. Rebuild the website data:
    ```
    pip install pdfplumber
@@ -53,7 +63,7 @@ To change a brochure:
 
 To add a new solution, add its row to `brochures/Offerings_Index.csv`, its hospital fit to `data/catalog-settings.json`, and either an entry in `brochure-content.json` or just the builder's PDF (the catalog script reads the PDF when there is no entry). Then add its ID to the `scores` of the finder options in `data/finder.js` that should lead to it.
 
-`render_brochures.js` patches two bugs in the builder's PDF code at render time: resource panels that did not fit at the bottom of a page were left out entirely (the cause of several empty "Resource Requirements" sections), and the "Resource Requirements" heading could be stranded at the bottom of a page. The builder itself should get the same fix.
+`render_brochures.js` patches the builder's PDF code at render time. It fixes two bugs (resource panels that did not fit at the bottom of a page were left out entirely, the cause of several empty "Resource Requirements" sections, and the "Resource Requirements" heading could be stranded at the bottom of a page), says "offering" rather than "product" in the header, removes the product owner (the band cell and section 08), and draws the optional fields above. The builder itself should get the same changes.
 
 Bracketed placeholders still in a brochure, such as `[X]` or `[confirm scope]`, are highlighted in yellow on the website so reviewers can spot them.
 
