@@ -202,7 +202,7 @@
     var html = '<div class="q-enter">' +
       '<article class="result" aria-labelledby="resultTitle">' +
       '<div class="result-band"><p class="result-for">Your best match</p>' +
-      "<p>For " + STATUS_PHRASE[state.answers.status] + ", based on your " + plural(nAnswers, "answer", "answers") + " about " + esc(d.name.toLowerCase().replace("safety, quality & patient experience", "safety, quality and patient experience")) + ".</p></div>" +
+      "<p>For " + STATUS_PHRASE[state.answers.status] + ", based on your " + plural(nAnswers, "answer", "answers") + " about " + esc(d.phrase || d.name.toLowerCase()) + ".</p></div>" +
       '<div class="result-body">' +
       '<p class="ref">' + esc(p.id) + "</p>" +
       '<h2 class="result-title" id="resultTitle">' + esc(p.title) + "</h2>" +
