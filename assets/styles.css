@@ -184,14 +184,19 @@ h1, h2, h3, h4, p, ul, ol, dl, dd { margin: 0; }
 }
 .tile:hover, .tile:focus-visible { box-shadow: 0 0 0 2px var(--white); outline: none; }
 .tile.is-out { opacity: 0; transform: scale(0.4); pointer-events: none; }
-.tile-text { position: absolute; left: 12px; right: 12px; bottom: 10px; top: 10px; display: flex; flex-direction: column; justify-content: flex-end; gap: 3px; opacity: 0; transition: opacity 200ms; }
+.tile-text { position: absolute; left: 14px; right: 12px; top: 15px; bottom: 10px; display: flex; flex-direction: column; justify-content: flex-start; gap: 4px; opacity: 0; transition: opacity 200ms; }
 .tile.has-text .tile-text { opacity: 1; transition: opacity 260ms 320ms; }
-.tile-label { font-size: 12px; font-weight: 500; color: rgba(255, 255, 255, 0.82); }
-.tile-title { font-size: 13px; font-weight: 600; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+/* larger boxes become cards: dark face, thin bar in the area color, full title */
+.tile::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--accent, transparent); opacity: 0; transition: opacity 260ms; }
+.tile.has-text::before { opacity: 1; }
+.tile.has-text:hover { background-color: #21416c !important; }
+.tile-label { font-size: 12px; font-weight: 500; color: var(--slate-on-navy); }
+.tile-label:empty { display: none; }
+.tile-title { font-family: var(--serif); font-size: 15px; font-weight: 600; line-height: 1.28; letter-spacing: -0.003em; }
 .tile.is-top { color: var(--navy); }
+.tile.is-top:hover { background-color: #ffffff !important; }
 .tile.is-top .tile-label { color: var(--blue); font-weight: 600; }
-.tile.is-top .tile-title { font-family: var(--serif); font-size: 18px; line-height: 1.2; }
-.tile.is-alt .tile-text { left: 10px; right: 10px; }
+.tile.is-top .tile-title { font-size: 19px; line-height: 1.2; }
 
 .field-label {
   position: absolute; left: 0; top: 0; display: flex; align-items: flex-end;
@@ -567,3 +572,8 @@ body.is-locked { overflow: hidden; }
   .finder-grid.is-result .answers { display: block; }
 }
 @media (hover: none) { .field-hint { display: none; } }
+@media (max-width: 900px) {
+  .tile-title { font-size: 13.5px; }
+  .tile.is-top .tile-title { font-size: 15px; }
+  .tile-text { left: 10px; right: 8px; top: 13px; }
+}

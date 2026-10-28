@@ -351,24 +351,20 @@
       return { boxes: boxes, labels: labelsOut, height: y - rowGap, text: false };
     }
 
+    // Result: best match full width, alternatives side by side below it
     if (isResult) {
-      if (!stacked) {
-        var hTop = 120, hAlt = 92, half = (W - gap) / 2;
-        boxes.push({ x: 0, y: 0, w: W, h: hTop });
-        for (i = 1; i < n; i++) {
-          boxes.push({ x: ((i - 1) % 2) * (half + gap), y: hTop + gap + Math.floor((i - 1) / 2) * (hAlt + gap), w: half, h: hAlt });
-        }
-        var altRows = Math.ceil((n - 1) / 2);
-        return { boxes: boxes, labels: [], height: hTop + (altRows ? altRows * (hAlt + gap) : 0), text: true };
+      var hTop = stacked ? 100 : 124, hAlt = stacked ? 112 : 104, half = (W - gap) / 2;
+      boxes.push({ x: 0, y: 0, w: W, h: hTop });
+      for (i = 1; i < n; i++) {
+        boxes.push({ x: ((i - 1) % 2) * (half + gap), y: hTop + gap + Math.floor((i - 1) / 2) * (hAlt + gap), w: half, h: hAlt });
       }
-      var w3 = (W - gap * (n - 1)) / n;
-      for (i = 0; i < n; i++) boxes.push({ x: i * (w3 + gap), y: 0, w: w3, h: 96 });
-      return { boxes: boxes, labels: [], height: 96, text: true };
+      var altRows = Math.ceil((n - 1) / 2);
+      return { boxes: boxes, labels: [], height: hTop + (altRows ? altRows * (hAlt + gap) : 0), text: true };
     }
     var cols = stacked ? (n >= 17 ? 14 : n >= 9 ? 9 : n) : (n >= 17 ? 7 : n >= 9 ? 4 : n >= 4 ? 2 : 1);
     var w = (W - gap * (cols - 1)) / cols;
     var text = w >= 110;
-    var h = text ? (n <= 3 && !stacked ? 84 : 76) : Math.min(w, 64);
+    var h = text ? (cols === 1 ? 72 : stacked ? 120 : 100) : Math.min(w, 64);
     for (i = 0; i < n; i++) boxes.push({ x: (i % cols) * (w + gap), y: Math.floor(i / cols) * (h + gap), w: w, h: h });
     var rows = Math.ceil(n / cols);
     return { boxes: boxes, labels: [], height: rows * h + (rows - 1) * gap, text: text };
@@ -415,7 +411,8 @@
       t.classList.toggle("is-top", isTop);
       t.classList.toggle("is-alt", isAlt);
       t.classList.toggle("has-text", L.text);
-      t.style.backgroundColor = isTop ? "#ffffff" : DOMAIN_COLOR[p.domain];
+      t.style.setProperty("--accent", DOMAIN_COLOR[p.domain]);
+      t.style.backgroundColor = isTop ? "#ffffff" : L.text ? "#1a3560" : DOMAIN_COLOR[p.domain];
       $(".tile-label", t).textContent = isTop ? "Best match" : isAlt ? "Also consider" : "";
       t.tabIndex = 0;
       t.removeAttribute("aria-hidden");
