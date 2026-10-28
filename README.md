@@ -13,11 +13,14 @@ It is plain HTML, CSS and JavaScript with no build step, so it runs on any stati
 | `assets/app.js` | Finder flow, portfolio map, catalog, detail panel, cart and proposal request |
 | `assets/engine.js` | Scoring logic for the finder (no page code, so it can be tested on its own) |
 | `assets/config.js` | Settings: where proposal requests go, contact email, prototype banner |
-| `data/products.js` | The 28 solutions, generated from the brochure PDFs (do not edit by hand) |
+| `data/products.js` | The 28 solutions, generated from the brochure source (do not edit by hand) |
 | `data/catalog-settings.json` | Website-only fields per solution: which hospitals it is offered to (`new`, `existing` or both) |
 | `data/finder.js` | The questions, options and scoring weights |
 | `brochures/` | The product profile PDFs and `Offerings_Index.csv` |
-| `scripts/build_catalog.py` | Rebuilds `data/products.js` from the PDFs |
+| `brochures/brochure-content.json` | Source text for every brochure (the builder's 10-field input) |
+| `scripts/render_brochures.js` | Regenerates the brochure PDFs from that source with the builder's own PDF code |
+| `scripts/add_links.py` | Re-adds clickable links the builder cannot draw |
+| `scripts/build_catalog.py` | Rebuilds `data/products.js` from the brochure source (or a PDF when there is no source entry) |
 | `tests/check_finder.js` | Walks every finder path and confirms every solution can be recommended |
 
 ## Preview locally
@@ -30,18 +33,29 @@ Then open http://localhost:8000.
 
 ## Updating the brochures
 
-1. Put the new or replaced PDF in the right `brochures/` subfolder and add or update its row in `brochures/Offerings_Index.csv` (Area, ID, Product, File, Notes).
-2. For a new ID, add an entry to `data/catalog-settings.json` saying whether it is offered to new hospitals, existing hospitals or both.
-3. Rebuild the catalog:
+The brochure text lives in `brochures/brochure-content.json`, one entry per solution with the same fields as the Advisory Product Builder form (name, tagline, category, need, value, deliverables, delivery modes and detail, duration and notes, resources, outcomes, owner). The PDFs and the website are both generated from it, so they always say the same thing.
+
+To change a brochure:
+
+1. Edit its entry in `brochures/brochure-content.json`. Paragraphs are separated by `\n`. Do not put individual people's names in the owner fields; use the team or department.
+2. Regenerate the PDFs with the builder's own PDF code (needs Node.js, `npm install jspdf@2.5.1 playwright`, and a copy of the builder repo):
+   ```
+   node scripts/render_brochures.js ../iem-advisory-product-builder/index.html brochures/brochure-content.json brochures
+   python3 scripts/add_links.py brochures
+   ```
+   Add solution IDs at the end of the first command to regenerate only those brochures.
+3. Rebuild the website data:
    ```
    pip install pdfplumber
    python3 scripts/build_catalog.py brochures data/catalog-settings.json data/products.js
    ```
-   The script reads the brochure layout produced by the Advisory Product Builder (sections 01 to 08). It needs `pdftotext` from poppler-utils.
-4. For a new solution, add its ID to the `scores` of the finder options that should lead to it in `data/finder.js`. It appears in the catalog either way.
-5. Run `node tests/check_finder.js` and confirm the last lines show every solution as reachable and `fit violations: 0`.
+4. Run `node tests/check_finder.js` and confirm every solution is reachable and `fit violations: 0`.
 
-Bracketed placeholders still in a brochure, such as `[X]` or `[confirm scope]`, are highlighted in yellow on the page so reviewers can spot them.
+To add a new solution, add its row to `brochures/Offerings_Index.csv`, its hospital fit to `data/catalog-settings.json`, and either an entry in `brochure-content.json` or just the builder's PDF (the catalog script reads the PDF when there is no entry). Then add its ID to the `scores` of the finder options in `data/finder.js` that should lead to it.
+
+`render_brochures.js` patches two bugs in the builder's PDF code at render time: resource panels that did not fit at the bottom of a page were left out entirely (the cause of several empty "Resource Requirements" sections), and the "Resource Requirements" heading could be stranded at the bottom of a page. The builder itself should get the same fix.
+
+Bracketed placeholders still in a brochure, such as `[X]` or `[confirm scope]`, are highlighted in yellow on the website so reviewers can spot them.
 
 ## Proposal requests
 

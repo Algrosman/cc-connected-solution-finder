@@ -20,7 +20,7 @@ window.CC_CATALOG = [
   ],
   "value": [
    "Cleveland Clinic brings the discipline of an operating health system to growth decisions. Our finance advisors build market assessments, feasibility studies and business cases grounded in how hospitals actually run, linking demand, volumes, staffing, reimbursement and capital to realistic financial outcomes.",
-   "Clients gain access to Cleveland Clinic's experience planning, funding and delivering new services, programs and facilities over multiple years, combined with an international perspective from IEM engagements across diverse healthcare markets."
+   "Clients gain access to Cleveland Clinic's experience planning, funding and delivering new services, programs and facilities over multiple years, combined with an international perspective from Cleveland Clinic International & Emerging Markets engagements across diverse healthcare markets."
   ],
   "deliverables": [
    "Market assessment and demand forecast by service, with population and utilization assumptions",
@@ -39,8 +39,21 @@ window.CC_CATALOG = [
   "durationDetail": [
    "Typically delivered in three phases: discovery and data collection; analysis and modeling; recommendations and executive readout. A single business case or program evaluation runs 4 to 8 weeks; a market assessment, multi-option growth strategy or implementation roadmap extends toward 12 weeks. Final timing depends on data availability and scope."
   ],
-  "resourcesCC": [],
-  "resourcesClient": [],
+  "resourcesCC": [
+   "Director / Executive Sponsor: 5 to 10%",
+   "Assistant Director / Engagement Lead: 10 to 25%",
+   "Manager / Workstream Lead: 20 to 40%",
+   "Senior Analyst: 30 to 60%",
+   "Analyst: 20 to 50%",
+   "Admin / Project Support: up to 10%"
+  ],
+  "resourcesClient": [
+   "Executive sponsor with decision authority",
+   "Finance lead or day-to-day point of contact",
+   "Timely access to financial, operational, market, volume, reporting and staffing information",
+   "Stakeholder availability for interviews, working sessions and reviews",
+   "Timely review and feedback on draft deliverables"
+  ],
   "outcomes": [
    "Evidence-based view of market opportunity and future demand",
    "Independent view of viability, with the risks and conditions required for success",
@@ -48,11 +61,6 @@ window.CC_CATALOG = [
    "Prioritized growth and investment agenda aligned to strategic priorities and available capital",
    "Agreed, phased roadmap with clear milestones and accountability for execution",
    "Investment decisions supported by validated, documented assumptions"
-  ],
-  "owner": [
-   "IEM Finance Advisory",
-   "Connected & Advisory Services",
-   "Cleveland Clinic International & Emerging Markets"
   ],
   "deliveredBy": [
    "IEM Finance Advisory",
@@ -98,8 +106,21 @@ window.CC_CATALOG = [
   "durationDetail": [
    "Typically delivered in three phases: discovery and data collection; analysis and modeling; recommendations and executive readout. Partnership and affiliation evaluations typically run 6 to 10 weeks; joint venture analysis and due diligence support can extend to 12 weeks depending on transaction complexity. Cross-border or multi-party structures for governments and investors are scoped as a Premium International engagement."
   ],
-  "resourcesCC": [],
-  "resourcesClient": [],
+  "resourcesCC": [
+   "Director / Executive Sponsor: 5 to 10%",
+   "Assistant Director / Engagement Lead: 10 to 25%",
+   "Manager / Workstream Lead: 20 to 40%",
+   "Senior Analyst: 30 to 60%",
+   "Analyst: 20 to 50%",
+   "Admin / Project Support: up to 10%"
+  ],
+  "resourcesClient": [
+   "Executive sponsor with decision authority",
+   "Finance lead or day-to-day point of contact",
+   "Timely access to financial, operational, market, volume, reporting and staffing information",
+   "Stakeholder availability for interviews, working sessions and reviews",
+   "Timely review and feedback on draft deliverables"
+  ],
   "outcomes": [
    "Clear, evidence-based go or no-go recommendation on the proposed partnership, affiliation or transaction",
    "Understanding of each partner's economics under alternative structures",
@@ -107,11 +128,6 @@ window.CC_CATALOG = [
    "Negotiating position informed by scenario-tested financial analysis",
    "Documented operating assumptions to carry into negotiation and integration planning",
    "Investment decisions supported by validated, documented assumptions"
-  ],
-  "owner": [
-   "IEM Finance Advisory",
-   "Connected & Advisory Services",
-   "Cleveland Clinic International & Emerging Markets"
   ],
   "deliveredBy": [
    "IEM Finance Advisory",
@@ -144,7 +160,7 @@ window.CC_CATALOG = [
    "Financial and productivity benchmarking against peer and internal standards, with variance commentary",
    "Cost optimization analysis with quantified, prioritized savings estimates",
    "Revenue enhancement assessment covering payer mix, service mix, pricing and capture",
-   "Operational performance review of finance-related operating enablers",
+   "Review of the operational processes and enablers that drive financial performance",
    "Cost accounting framework with allocation rules for direct, indirect, fixed and variable costs, and supporting governance",
    "Service line profitability model and margin analysis by service line",
    "Improvement roadmap and action plan with owners, plus an executive summary of findings and recommendations"
@@ -157,8 +173,21 @@ window.CC_CATALOG = [
   "durationDetail": [
    "Typically delivered in three phases: data collection and current-state assessment; analysis, benchmarking and opportunity sizing; improvement roadmap and executive readout. A focused performance, cost or revenue diagnostic runs 4 to 8 weeks. Adding cost accounting implementation and service line profitability extends the engagement to 12 to 24 weeks, depending heavily on data availability."
   ],
-  "resourcesCC": [],
-  "resourcesClient": [],
+  "resourcesCC": [
+   "Director / Executive Sponsor: 5 to 10%",
+   "Assistant Director / Engagement Lead: 10 to 25%",
+   "Manager / Workstream Lead: 20 to 40%",
+   "Senior Analyst: 30 to 60%",
+   "Analyst: 20 to 50%",
+   "Admin / Project Support: up to 10%"
+  ],
+  "resourcesClient": [
+   "Executive sponsor with decision authority",
+   "Finance lead or day-to-day point of contact",
+   "Timely access to financial, operational, market, volume, reporting and staffing information",
+   "Stakeholder availability for interviews, working sessions and reviews",
+   "Timely review and feedback on draft deliverables"
+  ],
   "outcomes": [
    "Fact-based view of current financial performance and its drivers",
    "Objective comparison against relevant benchmarks, with targeted opportunities where performance lags",
@@ -166,11 +195,6 @@ window.CC_CATALOG = [
    "Reliable, defensible cost information by service and patient",
    "Clear view of margin by service line to guide investment and optimization decisions",
    "Foundation for sustained margin improvement and enterprise performance management"
-  ],
-  "owner": [
-   "IEM Finance Advisory",
-   "Connected & Advisory Services",
-   "Cleveland Clinic International & Emerging Markets"
   ],
   "deliveredBy": [
    "IEM Finance Advisory",
@@ -217,8 +241,21 @@ window.CC_CATALOG = [
   "durationDetail": [
    "Typically delivered in three phases: current-state assessment; future-state design and build; handover and adoption support. A focused KPI, dashboard or reporting package module runs 2 to 5 weeks; an enterprise-wide redesign covering KPIs, dashboards, month-end reporting, SOPs and systems runs 8 to 12 weeks. Final timing depends on data availability and scope."
   ],
-  "resourcesCC": [],
-  "resourcesClient": [],
+  "resourcesCC": [
+   "Director / Executive Sponsor: 5 to 10%",
+   "Assistant Director / Engagement Lead: 10 to 25%",
+   "Manager / Workstream Lead: 20 to 40%",
+   "Senior Analyst: 30 to 60%",
+   "Analyst: 20 to 50%",
+   "Admin / Project Support: up to 10%"
+  ],
+  "resourcesClient": [
+   "Executive sponsor with decision authority",
+   "Finance lead or day-to-day point of contact",
+   "Timely access to financial, operational, market, volume, reporting and staffing information",
+   "Stakeholder availability for interviews, working sessions and reviews",
+   "Timely review and feedback on draft deliverables"
+  ],
   "outcomes": [
    "Single, agreed definition and clear owner for each KPI, comparable across the enterprise",
    "Coherent, trusted set of dashboards built around the measures that drive decisions",
@@ -226,11 +263,6 @@ window.CC_CATALOG = [
    "Documented, repeatable reporting processes with reduced key-person dependency",
    "Better use of existing reporting systems and a governed path to AI-enabled reporting",
    "Improved visibility into financial and operational performance"
-  ],
-  "owner": [
-   "IEM Finance Advisory",
-   "Connected & Advisory Services",
-   "Cleveland Clinic International & Emerging Markets"
   ],
   "deliveredBy": [
    "IEM Finance Advisory",
@@ -260,7 +292,7 @@ window.CC_CATALOG = [
    "Clients receive transparent, well-documented models and assumptions that leadership can understand and challenge, and that their own teams can own, update and extend long after the engagement ends."
   ],
   "deliverables": [
-   "Volume and demand model by service line, with offering phasing and a ramp-up schedule",
+   "Volume and demand model by service line, with service phasing and a ramp-up schedule",
    "Revenue and reimbursement model built on chargemaster pricing, payer mix and contract terms",
    "Staffing and workforce cost model, including organizational design and physician compensation scenarios",
    "Integrated three-statement model (P&L, cash flow and balance sheet) with scenario toggles and an output dashboard",
@@ -284,7 +316,7 @@ window.CC_CATALOG = [
    "Manager / Workstream Lead: 20 to 40%",
    "Senior Analyst: 30 to 60%",
    "Analyst: 20 to 50%",
-   "Project Support: as needed"
+   "Admin / Project Support: up to 10%"
   ],
   "resourcesClient": [
    "Executive sponsor with decision authority",
@@ -301,11 +333,6 @@ window.CC_CATALOG = [
    "Shorter, more accurate budget cycle with operational ownership of targets",
    "Prioritized capital plan aligned to funding capacity, supported by a consistent request and approval process",
    "Client team equipped to maintain and update the tools delivered"
-  ],
-  "owner": [
-   "IEM Finance Advisory",
-   "Connected & Advisory Services",
-   "Cleveland Clinic International & Emerging Markets"
   ],
   "deliveredBy": [
    "IEM Finance Advisory",
@@ -332,7 +359,7 @@ window.CC_CATALOG = [
   ],
   "value": [
    "Cleveland Clinic has experience designing and running a finance organization at enterprise scale, including governance, shared services, reporting architecture and account structures that support a multi-entity system. Our advisors bring that operating perspective to finance organization design and transformation.",
-   "Clients benefit from recommendations that are practical to implement, sequenced realistically, and informed by IEM's work supporting health systems internationally."
+   "Clients benefit from recommendations that are practical to implement, sequenced realistically, and informed by Cleveland Clinic's work supporting health systems internationally."
   ],
   "deliverables": [
    "Finance organizational assessment of structure, capabilities, roles and capability gaps",
@@ -346,15 +373,27 @@ window.CC_CATALOG = [
   ],
   "deliveryModel": "On-site / Hybrid / Workshop-based",
   "deliveryDetail": [
-   "On-site discovery, including leadership interviews and a review of current finance structures, opens the engagement. Future-state design workshops follow, supported by virtual working sessions between visits.",
-   "The roadmap is reviewed and refined with executive leadership in a final on-site session."
+   "On-site discovery, including leadership interviews and a review of current finance structures, opens the engagement. Future-state design workshops follow, supported by virtual working sessions between visits. The roadmap is reviewed and refined with executive leadership in a final on-site session."
   ],
   "duration": "4 to 10 weeks per module; 8 to 20 weeks for a full transformation",
   "durationDetail": [
    "Typically delivered in three phases: current-state assessment; future-state design; roadmap development and executive alignment. Focused modules such as an organizational assessment, governance model or finance calendar run 4 to 10 weeks; a full transformation roadmap with chart of accounts redesign runs 8 to 20 weeks. Longer engagements may add implementation support."
   ],
-  "resourcesCC": [],
-  "resourcesClient": [],
+  "resourcesCC": [
+   "Director / Executive Sponsor: 5 to 10%",
+   "Assistant Director / Engagement Lead: 10 to 25%",
+   "Manager / Workstream Lead: 20 to 40%",
+   "Senior Analyst: 30 to 60%",
+   "Analyst: 20 to 50%",
+   "Admin / Project Support: up to 10%"
+  ],
+  "resourcesClient": [
+   "Executive sponsor with decision authority",
+   "Finance lead or day-to-day point of contact",
+   "Timely access to financial, operational, market, volume, reporting and staffing information",
+   "Stakeholder availability for interviews, working sessions and reviews",
+   "Timely review and feedback on draft deliverables"
+  ],
   "outcomes": [
    "Agreed vision for the future finance organization, with an objective view of capability gaps",
    "Documented future-state processes that reduce manual effort and cycle time",
@@ -362,11 +401,6 @@ window.CC_CATALOG = [
    "Reduced duplication and improved accountability across entities through governed shared services",
    "Consistent chart of accounts and predictable reporting and planning cycles across the enterprise",
    "Phased, fundable roadmap to a scalable finance organization"
-  ],
-  "owner": [
-   "IEM Finance Advisory",
-   "Connected & Advisory Services",
-   "Cleveland Clinic International & Emerging Markets"
   ],
   "deliveredBy": [
    "IEM Finance Advisory",
@@ -388,8 +422,7 @@ window.CC_CATALOG = [
   "durationShort": "8 to 24 weeks",
   "deliveryShort": "On-site, Hybrid, Workshop-based",
   "need": [
-   "Greenfield hospitals, academic medical centers, integrated delivery networks and national transformation programs involve substantial capital, many stakeholders and long ramps to financial sustainability.",
-   "Coordinated decisions on sites, services, phasing and partnership structures, often spanning borders and organizations, cannot be made through a collection of individual business cases. Sponsors, investors, ministries and system leaders need an end-to-end, scenario-tested financial strategy before committing to construction, expansion or a partnership.",
+   "Greenfield hospitals, academic medical centers, integrated delivery networks and national transformation programs involve substantial capital, many stakeholders and long ramps to financial sustainability. Coordinated decisions on sites, services, phasing and partnership structures, often spanning borders and organizations, cannot be made through a collection of individual business cases. Sponsors, investors, ministries and system leaders need an end-to-end, scenario-tested financial strategy before committing to construction, expansion or a partnership.",
    "This is a Premium International offering for higher-complexity engagements, typically requested by governments, investors and health systems undertaking large healthcare developments or partnerships."
   ],
   "value": [
@@ -413,8 +446,21 @@ window.CC_CATALOG = [
   "durationDetail": [
    "Delivered in phases aligned to the client's program milestones, typically covering baseline assessment, modeling and strategy development, and executive decision support. Partnership and academic medical center strategy engagements typically run 8 to 16 weeks; greenfield, network, multi-hospital and national programs run 12 to 24 weeks."
   ],
-  "resourcesCC": [],
-  "resourcesClient": [],
+  "resourcesCC": [
+   "Director / Executive Sponsor: 5 to 10%",
+   "Assistant Director / Engagement Lead: 10 to 25%",
+   "Manager / Workstream Lead: 20 to 40%",
+   "Senior Analyst: 30 to 60%",
+   "Analyst: 20 to 50%",
+   "Admin / Project Support: up to 10%"
+  ],
+  "resourcesClient": [
+   "Executive sponsor with decision authority",
+   "Finance lead or day-to-day point of contact",
+   "Timely access to financial, operational, market, volume, reporting and staffing information",
+   "Stakeholder availability for interviews, working sessions and reviews",
+   "Timely review and feedback on draft deliverables"
+  ],
   "outcomes": [
    "End-to-end financial plan and a board and investor-ready business case for the development",
    "Network-level financial roadmap with coordinated phasing and service mix across sites",
@@ -422,11 +468,6 @@ window.CC_CATALOG = [
    "Financial strategy that sustains clinical, education and research missions where an academic medical center is in scope",
    "Clear partnership strategy and a stronger position entering negotiations",
    "Senior-level confidence in a major investment, development or partnership decision"
-  ],
-  "owner": [
-   "IEM Finance Advisory",
-   "Connected & Advisory Services",
-   "Cleveland Clinic International & Emerging Markets"
   ],
   "deliveredBy": [
    "IEM Finance Advisory",
@@ -451,7 +492,7 @@ window.CC_CATALOG = [
    "Hospital leaders often have an ambitious clinical vision but no single, sequenced plan for the technology needed to deliver it. Greenfield projects need digital decisions tied to design and construction milestones before costly choices are locked in. Existing hospitals face fragmented systems and competing priorities with no clear view of where they stand. Requests typically come from the CEO, CIO or board, triggered by a new hospital project, a strategic plan refresh, or a major system decision."
   ],
   "value": [
-   "Cleveland Clinic advises from the perspective of an operating academic health system that plans, builds and runs digital capabilities across domestic and international locations, not from theory. Our international advisory team pairs client leaders with Cleveland Clinic Digital experts and frames recommendations around a simple maturity view and a three-horizon roadmap (Foundation, Build & Integrate, Optimize & Scale). Every opportunity is paired with a practical next step the client can act on. Cleveland Clinic advises; the client owns and approves all decisions, keeping recommendations vendor-neutral."
+   "Cleveland Clinic advises from the perspective of an operating academic health system that plans, builds and runs digital capabilities across domestic and international locations, not from theory. Our international advisory team pairs client leaders with Cleveland Clinic Digital experts and frames recommendations around a simple maturity view and a three-horizon roadmap (Foundation, Build & Integrate, Optimize & Scale). Every opportunity is paired with a practical next step the client can act on. Recommendations are vendor-neutral, and the client owns and approves all decisions."
   ],
   "deliverables": [
    "Digital maturity snapshot across priority domains (current vs. target)",
@@ -483,10 +524,6 @@ window.CC_CATALOG = [
    "Sequenced roadmap tied to clinical, capital and opening milestones",
    "Clear, owned next steps for the first 6 to 12 months"
   ],
-  "owner": [
-   "Cleveland Clinic Digital Strategy",
-   "Cleveland Clinic Digital"
-  ],
   "deliveredBy": [
    "Cleveland Clinic Digital Strategy",
    "Cleveland Clinic Digital"
@@ -506,13 +543,12 @@ window.CC_CATALOG = [
   "durationShort": "6 to 16 weeks",
   "deliveryShort": "Virtual, Hybrid, Workshop-based",
   "need": [
-   "New and existing hospitals struggle with how to host, connect and protect a growing set of systems: EHR, ERP,imaging, call center, CRM and local vendor solutions. Key questions include building versus renting data center capacity, what must stay on site for resilience, and how to integrate systems without costly rework. Hospitals are also prime targets for cyberattacks, and an outage can halt clinical operations, so security, data residency, consent and access controls must be designed in from day one and downtime and recovery plans must be tested.",
+   "New and existing hospitals struggle with how to host, connect and protect a growing set of systems: EHR, ERP, imaging, call center, CRM and local vendor solutions. Key questions include building versus renting data center capacity, what must stay on site for resilience, and how to integrate systems without costly rework. Hospitals are also prime targets for cyberattacks, and an outage can halt clinical operations, so security, data residency, consent and access controls must be designed in from day one and downtime and recovery plans must be tested.",
    "Requests usually come from the CIO, CISO, IT leadership, compliance or executive leadership, triggered by EHR selection, data center planning, a new build, integration problems in an existing environment, a regulatory requirement, a security incident or a board-level risk review."
   ],
   "value": [
-   "Cleveland Clinic designs, builds and activates technology infrastructure for its own new facilities using a standard Global Design for enterprise platforms (EHR, ERP, HRIS) and dedicated infrastructure, network and telecom delivery teams, and it integrates cybersecurity architecture, vulnerability remediation and annual testing into its own implementation programs.",
-   "Clients benefit from lessons learned on hosting models, integration sequencing, security by design, and downtime and business continuity planning, the foundational decisions that are hardest to reverse later.",
-   "Advice is vendor-neutral and grounded in standards-based interoperability (HL7/FHIR)."
+   "Cleveland Clinic designs, builds and activates technology infrastructure for its own new facilities using a standard Global Design for enterprise platforms (EHR, ERP, HRIS) and dedicated infrastructure, network and telecom delivery teams. It also integrates cybersecurity architecture, vulnerability remediation and annual testing into its own implementation programs.",
+   "Clients benefit from lessons learned on hosting models, integration sequencing, security by design, and downtime and business continuity planning, the foundational decisions that are hardest to reverse later. Advice is vendor-neutral and grounded in standards-based interoperability (HL7/FHIR)."
   ],
   "deliverables": [
    "Current-state architecture and application landscape review",
@@ -534,8 +570,21 @@ window.CC_CATALOG = [
   "durationDetail": [
    "Phase 1 Current-state architecture, security posture and policy review; Phase 2 Option analysis and working sessions; Phase 3 Recommendations, guideline package and risk mitigation plan; optional tabletop exercise. Security-focused scopes typically run 6 to 12 weeks and full architecture and infrastructure scopes 8 to 16 weeks."
   ],
-  "resourcesCC": [],
-  "resourcesClient": [],
+  "resourcesCC": [
+   "IEM engagement lead",
+   "Enterprise or solution architect",
+   "Infrastructure and network SME",
+   "Cybersecurity SME",
+   "Infrastructure and business continuity SME as needed"
+  ],
+  "resourcesClient": [
+   "Executive sponsor (CIO, CISO or IT director)",
+   "Architecture, application and integration inventory",
+   "Data center and hosting plans",
+   "Security policies and controls",
+   "Downtime and business continuity plans",
+   "IT team time, with IT and clinical operations representatives"
+  ],
   "outcomes": [
    "Clear decisions on hosting model and integration approach",
    "Reduced risk of costly, hard-to-reverse infrastructure choices",
@@ -544,10 +593,6 @@ window.CC_CATALOG = [
    "Security and privacy controls designed in from day one",
    "Tested downtime and continuity procedures",
    "Reduced risk of care disruption from cyber events"
-  ],
-  "owner": [
-   "Cleveland Clinic Enterprise Architecture & Information Security",
-   "Cleveland Clinic Digital / Information Technology / Information Security"
   ],
   "deliveredBy": [
    "Cleveland Clinic Enterprise Architecture & Information Security",
@@ -568,12 +613,10 @@ window.CC_CATALOG = [
   "durationShort": "8 to 16 weeks",
   "deliveryShort": "Virtual, Hybrid, Workshop-based",
   "need": [
-   "The EHR is the largest and most consequential technology decision a hospital makes. New hospitals need help evaluating vendors, defining the implementation team and designing workflows before build begins.",
-   "Existing hospitals face low adoption, documentation burden and workflows that do not match how care is delivered. Requests typically come from the CMIO, CNO, CIO or COO, triggered by vendor selection, implementation planning or clinician dissatisfaction."
+   "The EHR is the largest and most consequential technology decision a hospital makes. New hospitals need help evaluating vendors, defining the implementation team and designing workflows before build begins. Existing hospitals face low adoption, documentation burden and workflows that do not match how care is delivered. Requests typically come from the CMIO, CNO, CIO or COO, triggered by vendor selection, implementation planning or clinician dissatisfaction."
   ],
   "value": [
-   "Cleveland Clinic brings clinical informatics leaders who design and optimize clinical systems in a high-volume academic medical center, and an activation model proven across major implementations.",
-   "Clients gain practical insight into implementation governance, team structure and roles, EHR champion programs and service-line workflows, plus a sample workflow library and future-state use-case examples across service lines."
+   "Cleveland Clinic brings clinical informatics leaders who design and optimize clinical systems in a high-volume academic medical center, and an activation model proven across major implementations. Clients gain practical insight into implementation governance, team structure and roles, EHR champion programs and service-line workflows, plus a sample workflow library and future-state use-case examples across service lines."
   ],
   "deliverables": [
    "Vendor evaluation criteria and scorecard (new hospitals)",
@@ -605,12 +648,9 @@ window.CC_CATALOG = [
    "Clear implementation team structure and roles",
    "Improved clinician workflows and reduced documentation burden"
   ],
-  "owner": [
-   "Sam Hayhurst",
-   "Cleveland Clinic Digital / Clinical Informatics"
-  ],
   "deliveredBy": [
-   "Cleveland Clinic Digital / Clinical Informatics"
+   "Clinical Informatics",
+   "Cleveland Clinic Digital"
   ]
  },
  {
@@ -630,8 +670,7 @@ window.CC_CATALOG = [
    "Hospitals often start with hundreds of candidate indicators but lack a focused, defensible first-year measure set, certified metric definitions, data governance and a clear analytics architecture. Teams may be strong in financial and operational reporting but less experienced in clinical analytics. Requests typically come from the CEO, CFO or Head of Data Analytics, triggered by a new hospital opening, accreditation goals such as JCI, or inconsistent numbers across clinical, finance and quality teams."
   ],
   "value": [
-   "Cleveland Clinic's Enterprise Data & Analytics organization leads enterprise data strategy, data governance, platform engineering and analytics for one of the world's leading health systems.",
-   "Engagements are led directly by Cleveland Clinic analytics executives in data strategy and governance and in analytic solutions, drawing on real Cleveland Clinic examples. Rather than handing over a library of documents, we coach client teams through the decisions that matter most and are hardest to reverse."
+   "Cleveland Clinic's Enterprise Data & Analytics organization leads enterprise data strategy, data governance, platform engineering and analytics for one of the world's leading health systems. Engagements are led directly by Cleveland Clinic analytics executives in data strategy and governance and in analytic solutions, drawing on real Cleveland Clinic examples. Rather than handing over a library of documents, we coach client teams through the decisions that matter most and are hardest to reverse."
   ],
   "deliverables": [
    "Virtual advisory session series (typically up to six sessions)",
@@ -644,7 +683,7 @@ window.CC_CATALOG = [
   ],
   "deliveryModel": "Virtual",
   "deliveryDetail": [
-   "A series of 60-minute virtual coaching sessions, roughly every 3 to 4 weeks, led by Cleveland Clinic analytics leaders. Topics follow the client's priorities: day-one measure set, metric definitions and certification, data governance, technical architecture, analytics team design, and connecting KPIs to the data platform. Includes one round of light written review of client drafts. IEM schedules sessions, prepares agendas and issues notes and action items."
+   "A series of 60-minute virtual coaching sessions, roughly every 3 to 4 weeks, led by Cleveland Clinic analytics leaders. Topics follow the client's priorities: day-one measure set, metric definitions and certification, data governance, technical architecture, analytics team design, and connecting KPIs to the data platform. Includes one round of light written review of client drafts. The International & Emerging Markets team schedules sessions, prepares agendas and issues notes and action items."
   ],
   "duration": "About 6 months",
   "durationDetail": [
@@ -652,8 +691,8 @@ window.CC_CATALOG = [
   ],
   "resourcesCC": [
    "IEM relationship manager (scheduling, agendas, notes, action tracking)",
-   "Executive Director, Data Strategy & Governance",
-   "Executive Director, Analytic Solutions & Customer Success",
+   "Cleveland Clinic data strategy and governance leader",
+   "Cleveland Clinic analytic solutions leader",
    "Guest SMEs for architecture and EHR integration sessions"
   ],
   "resourcesClient": [
@@ -669,13 +708,9 @@ window.CC_CATALOG = [
    "Architecture and integration decisions that avoid costly rework",
    "Right-sized analytics team plan for opening and growth"
   ],
-  "owner": [
-   "Greg Nelson",
-   "Executive Director, Data Strategy & Governance",
-   "Enterprise Data & Analytics, Cleveland Clinic Digital"
-  ],
   "deliveredBy": [
-   "Enterprise Data & Analytics, Cleveland Clinic Digital"
+   "Enterprise Data & Analytics",
+   "Cleveland Clinic Digital"
   ]
  },
  {
@@ -695,7 +730,7 @@ window.CC_CATALOG = [
    "AI tools are entering hospitals quickly through vendors, platforms and staff experimentation, often without a clear process for review, approval or monitoring. Leaders worry about patient safety, bias, privacy, cybersecurity and regulatory exposure, while wanting to benefit from use cases such as documentation support. Requests usually come from the CEO, CMIO, CIO or compliance leaders, triggered by a proposed AI deployment, unmanaged shadow AI or upcoming regulatory and accreditation expectations."
   ],
   "value": [
-   "Cleveland Clinic has operated a multidisciplinary AI Task Force since 2021, bringing together clinical, informatics, data science, legal, bioethics, compliance, cybersecurity, IT and quality leaders to ensure responsible use of AI in healthcare. Our approach is aligned to the NIST AI Risk Management Framework (Govern, Map, Measure, Manage), and covers internally developed, vendor, platform-native and organic AI. Clients learn from a working intake, review, approval and monitoring process designed to enable innovation rather than slow it down."
+   "Cleveland Clinic has operated a multidisciplinary AI Task Force since 2021, bringing together clinical, informatics, data science, legal, bioethics, compliance, cybersecurity, IT and quality leaders to ensure responsible use of AI in healthcare. Our approach is aligned to the NIST AI Risk Management Framework (Govern, Map, Measure, Manage) and covers internally developed, vendor, platform-native and organic AI. Clients learn from a working intake, review, approval and monitoring process designed to enable innovation rather than slow it down."
   ],
   "deliverables": [
    "AI governance model and multidisciplinary committee design",
@@ -731,13 +766,9 @@ window.CC_CATALOG = [
    "Ongoing monitoring for performance, bias and unintended impacts",
    "Readiness for emerging regulatory and accreditation expectations"
   ],
-  "owner": [
-   "Jenny Owens, AIGP",
-   "Senior Director",
-   "Cleveland Clinic AI Task Force"
-  ],
   "deliveredBy": [
-   "Cleveland Clinic AI Task Force"
+   "AI Task Force",
+   "Cleveland Clinic"
   ]
  },
  {
@@ -774,7 +805,7 @@ window.CC_CATALOG = [
   ],
   "duration": "12 to 18 months (aligned to go-live)",
   "durationDetail": [
-   "Plan and pre-work (about T-15months); validation and build (about T-12months); deploy and test; training (from about T-6 months); operational readiness (about T-4 months, with 90-day assessment); cutover and go-live (60/30-day assessments); stabilize and optimize (up to about 3 months after go-live)."
+   "Plan and pre-work (about T-15 months); validation and build (about T-12 months); deploy and test; training (from about T-6 months); operational readiness (about T-4 months, with 90-day assessment); cutover and go-live (60/30-day assessments); stabilize and optimize (up to about 3 months after go-live)."
   ],
   "resourcesCC": [
    "IEM engagement lead",
@@ -795,12 +826,9 @@ window.CC_CATALOG = [
    "High caregiver training completion before go-live",
    "Smoother go-live and faster stabilization"
   ],
-  "owner": [
-   "Craig Baker",
-   "Cleveland Clinic Digital / Information Technology"
-  ],
   "deliveredBy": [
-   "Cleveland Clinic Digital / Information Technology"
+   "Information Technology",
+   "Cleveland Clinic Digital"
   ]
  },
  {
@@ -817,8 +845,7 @@ window.CC_CATALOG = [
   "durationShort": "8 to 12 weeks",
   "deliveryShort": "Virtual, Hybrid, Workshop-based",
   "need": [
-   "Patients increasingly expect to book, communicate, prepare for care and follow up digitally, yet many hospitals deploy patient apps and portals that are disconnected from clinical pathways and workflows.",
-   "Patients may also rely on insecure consumer channels. Requests typically come from the CEO, Chief Experience Officer, CMIO or marketing and access leaders, triggered by a new hospital opening, a patient app launch or low digital engagement."
+   "Patients increasingly expect to book, communicate, prepare for care and follow up digitally, yet many hospitals deploy patient apps and portals that are disconnected from clinical pathways and workflows. Patients may also rely on insecure consumer channels. Requests typically come from the CEO, Chief Experience Officer, CMIO or marketing and access leaders, triggered by a new hospital opening, a patient app launch or low digital engagement."
   ],
   "value": [
    "Cleveland Clinic is recognized for patient experience and operates digital tools across the full patient journey, from scheduling and check-in to telehealth, secure messaging and patient education. Our experts connect digital touchpoints to clinical pathways so technology supports how care is actually delivered, and bring practical lessons on adoption, secure communication and patient engagement."
@@ -855,12 +882,9 @@ window.CC_CATALOG = [
    "Shift from insecure channels to secure digital communication",
    "Clear roadmap for digital patient experience improvements"
   ],
-  "owner": [
-   "Alexander Odisheli",
-   "Cleveland Clinic Digital / Patient Experience"
-  ],
   "deliveredBy": [
-   "Cleveland Clinic Digital / Patient Experience"
+   "Patient Experience",
+   "Cleveland Clinic Digital"
   ]
  },
  {
@@ -881,7 +905,7 @@ window.CC_CATALOG = [
    "Intended audience: Varies by program (see Key Deliverables). Participation is application-based and limited by specialty availability."
   ],
   "value": [
-   "Structured, observation-based visiting programs at Cleveland Clinic in Cleveland and regional sites, Cleveland Clinic Florida and Cleveland Clinic Abu Dhabi. Participants observe clinical, surgical and operational practice, attend rounds and teaching conferences, and gain exposure to leadership, accreditation and operational excellence, without direct patient care.",
+   "Cleveland Clinic offers structured, observation-based visiting programs in Cleveland and at regional sites, Cleveland Clinic Florida and Cleveland Clinic Abu Dhabi. Participants observe clinical, surgical and operational practice, attend rounds and teaching conferences, and gain exposure to leadership, accreditation and operational excellence, without direct patient care.",
    "Programs range from broad exposure for medical students to objective-based, one-on-one preceptorships and tailored mentorship for nurse leaders, so participants bring transferable practices back to their home institutions."
   ],
   "deliverables": [
@@ -909,8 +933,8 @@ window.CC_CATALOG = [
   "resourcesClient": [
    "Observational only: no direct patient care, hands-on activity or research",
    "Application review and specialty availability; international compliance review for the International Visitor Program",
-   "Visa eligibility (typically B1/B2 for U.S. programs; Visit Visa for Cleveland Clinic Abu Dhabi)",
-   "English-language application documents for the International Visitor Program; preceptorships are not designed for IMGs seeking U.S. clinical training",
+   "Visa eligibility (typically B1/B2 for U.S. programs; visit visa for Cleveland Clinic Abu Dhabi)",
+   "English-language application documents for the International Visitor Program; preceptorships are not designed for international medical graduates (IMGs) seeking U.S. clinical training",
    "Program fees: IVP Observership $500 per participant; IVP Preceptorship $1,250 to $7,000 per participant per week; Visiting Nurse Scholars variable, based on application; LATAM Ortho sponsored; Pharmacy Ambassador and CCAD Observership to be confirmed"
   ],
   "outcomes": [
@@ -919,11 +943,6 @@ window.CC_CATALOG = [
    "Targeted skill development against defined learning objectives",
    "Clearer career direction through exposure to U.S. clinical practice",
    "Long-term capacity building at the participant's home institution"
-  ],
-  "owner": [
-   "Cleveland Clinic program hosts",
-   "Center for International Medical Education; Nursing Institute; Pharmacy Education",
-   "Cleveland Clinic Florida Orthopaedic & Rheumatology Institute; Cleveland Clinic Abu Dhabi"
   ],
   "deliveredBy": [
    "Center for International Medical Education; Nursing Institute; Pharmacy Education",
@@ -971,16 +990,18 @@ window.CC_CATALOG = [
    "CCAD Clinical Elective and CCAD Research Student Program: 4 weeks. Hospitalist and Pediatric Internal Medicine Fellowships (NST): about 1 year. Clinical Research Fellowships: 1 year or longer. CCAD Medical Fellowships: 2 to 3 years depending on specialty, with academic cycles beginning in January. Availability of U.S. fellowships to external clients requires program approval and is to be confirmed."
   ],
   "resourcesCC": [],
-  "resourcesClient": [],
+  "resourcesClient": [
+   "CCAD Clinical Elective: visit visa, plus specialty and institutional approval",
+   "CCAD Medical Fellowships: credential verification, licensing and a work visa",
+   "Hospitalist and Pediatric Internal Medicine Fellowships (NST): USMLE and ECFMG requirements, program approval and a 1-month preceptorship",
+   "Clinical Research Fellowships: GME requirements and J-1 visa eligibility",
+   "CCAD Research Student Program: visit visa and an approved research project",
+   "Program fees: to be confirmed"
+  ],
   "outcomes": [
    "Supervised, hands-on clinical skill development",
    "Advanced specialty skills beyond core training",
    "Strengthened research capability and evidence-based practice"
-  ],
-  "owner": [
-   "Cleveland Clinic program hosts",
-   "Center for Medical Education",
-   "Cleveland Clinic Abu Dhabi"
   ],
   "deliveredBy": [
    "Center for Medical Education",
@@ -1027,17 +1048,19 @@ window.CC_CATALOG = [
    "Global Physician Leadership Immersion and Executive Visitors Program: 3 days, offered in scheduled cohorts. Samson Global Leadership Academy: 1 to 2 weeks, with scheduling and cohort availability to be confirmed. Executive Leader Development Pathway: about 4 months, launching January 2027. Executive Leadership Onboarding: about 4 months including 5 in-person days, launching March 2027."
   ],
   "resourcesCC": [],
-  "resourcesClient": [],
+  "resourcesClient": [
+   "Global Physician Leadership Immersion: physicians on a leadership track",
+   "Executive Visitors Program: fixed program structure",
+   "Samson Global Leadership Academy: senior-level participants and a fixed schedule",
+   "Executive Leadership Onboarding: executive sponsorship, completion of the eLearning and attendance at 5 in-person days",
+   "Executive Leader Development Pathway: executive sponsorship and participation for the full 4 months",
+   "Program fees: Global Physician Leadership Immersion $3,500 per participant ($1,500 for Cleveland Clinic strategic partners); Executive Visitors Program $4,000 per participant, with location-specific pricing; Samson Global Leadership Academy $8,500 to $15,000 per participant; Executive Leadership Onboarding and Executive Leader Development Pathway to be confirmed"
+  ],
   "outcomes": [
    "Stronger leadership capability for current and emerging leaders",
    "First-hand exposure to Cleveland Clinic practices and care models",
    "Shared alignment with the organization's mission, vision and values",
    "Leadership development tied to measurable organizational results"
-  ],
-  "owner": [
-   "Cleveland Clinic program hosts",
-   "Global Leadership & Learning (Global Executive Education)",
-   "International & Emerging Markets; Education Institute"
   ],
   "deliveredBy": [
    "Global Leadership & Learning (Global Executive Education)",
@@ -1078,7 +1101,8 @@ window.CC_CATALOG = [
    "Format: In-person courses and forums, locally facilitated onboarding, virtual classes and coaching, and self-paced eLearning",
    "Location: Participant organization, Cleveland Clinic (United States), virtual or online",
    "Offering type: Program (Coach Training + Program Development also includes advisory support)",
-   "Customizable: Yes for onboarding, coaching and HRO eLearnings; R.E.D.E. and the Patient Experience Leaders Forum follow a fixed curriculum R.E.D.E. implementation plan, delivery site, CME option and fee are customized to client needs."
+   "Customizable: Yes for onboarding, coaching and HRO eLearnings; R.E.D.E. and the Patient Experience Leaders Forum follow a fixed curriculum.",
+   "R.E.D.E. implementation plan, delivery site, CME option and fee are customized to client needs."
   ],
   "duration": "5 hours to about 7 months, by program",
   "durationDetail": [
@@ -1094,16 +1118,11 @@ window.CC_CATALOG = [
   ],
   "outcomes": [
    "Shared alignment with the organization's mission, vision and values",
-   "Practical communication and relationship skills caregivers can apply at their home institution",
+   "Practical communication and relationship skills caregivers can apply in daily practice",
    "Organization-wide capability building and culture change",
    "Sustainable internal capability to lead and reinforce change",
    "Improved patient safety and team performance",
    "Sustained reinforcement of caregiver learning by their leaders"
-  ],
-  "owner": [
-   "Cleveland Clinic program hosts",
-   "Global Leadership & Learning (Global Executive Education)",
-   "Center for Excellence in Healthcare Communication; Office of Patient Experience"
   ],
   "deliveredBy": [
    "Global Leadership & Learning (Global Executive Education)",
@@ -1128,7 +1147,7 @@ window.CC_CATALOG = [
    "Intended audience: Healthcare professionals, educators, simulation leaders and organizations."
   ],
   "value": [
-   "Cleveland Clinic's Simulation and Advanced Skills Center reports 48,000 annual learner encounters and more than 2,500 courses annually, using high- and low-fidelity manikins, procedural trainers, VR and mixed reality, standardized patients, in situ training, surgical simulation and resuscitation education to strengthen technical skills, teamwork and patient safety.",
+   "Cleveland Clinic's Simulation and Advanced Skills Center reports 48,000 learner encounters and more than 2,500 courses each year, using high- and low-fidelity manikins, procedural trainers, VR and mixed reality, standardized patients, in situ training, surgical simulation and resuscitation education to strengthen technical skills, teamwork and patient safety.",
    "International engagements can assess needs, implement solutions and build sustainable local capacity, and Cleveland Clinic Abu Dhabi offers customizable, specialty-specific simulation training in the region."
   ],
   "deliverables": [
@@ -1152,21 +1171,16 @@ window.CC_CATALOG = [
   ],
   "resourcesCC": [],
   "resourcesClient": [
-   "Visit Visa for onsite attendance at Cleveland Clinic Abu Dhabi",
+   "visit visa for on-site attendance at Cleveland Clinic Abu Dhabi",
    "Scope depends on facilities, equipment, faculty, accreditation goals, requested specialty and scenarios, and scheduling",
-   "Onsite and Cleveland Clinic-hosted options are available",
-   "Program fee: To be confirmed"
+   "On-site and Cleveland Clinic-hosted options are available",
+   "Program fee: to be confirmed"
   ],
   "outcomes": [
    "Practical skills participants can apply at their home institution",
    "Improved patient safety and team performance",
    "Tested and improved clinical systems, spaces and workflows",
    "Sustainable local simulation capability through program design and train-the-trainer support"
-  ],
-  "owner": [
-   "Cleveland Clinic program hosts",
-   "Simulation and Advanced Skills Center",
-   "Cleveland Clinic Abu Dhabi"
   ],
   "deliveredBy": [
    "Simulation and Advanced Skills Center",
@@ -1182,7 +1196,7 @@ window.CC_CATALOG = [
    "existing"
   ],
   "pdf": "brochures/3_Education/EDU-06_Clinical_Knowledge_Exchange_Expert_Sessions_Product_Profile.pdf",
-  "subtitle": "Cleveland Clinic experts shared with your teams through best-practice sessions, a member speaker series, presenters for your own events and visiting professorships.",
+  "subtitle": "Cleveland Clinic expertise for your teams through best-practice sessions, a member speaker series, presenters for your own events and visiting professorships.",
   "category": "Education & Training",
   "durationShort": "1 hour to 2 weeks, by format",
   "deliveryShort": "On-site, Virtual",
@@ -1205,7 +1219,8 @@ window.CC_CATALOG = [
    "Format: Live virtual sessions, presenter support for client events, and in-person didactic teaching",
    "Location: Virtual or client site; Visiting Professorships are delivered in person",
    "Offering type: Standardized member offering (Speaker Series), program or custom engagement",
-   "Customizable: Yes, except the CC Connected Speaker Series Client Symposium/Conference support is aligned with expert consultation and educational services offered through Cleveland Clinic Connected."
+   "Customizable: Yes, except the CC Connected Speaker Series.",
+   "Client Symposium/Conference support is aligned with expert consultation and educational services offered through Cleveland Clinic Connected."
   ],
   "duration": "1 hour to 2 weeks, by format",
   "durationDetail": [
@@ -1220,11 +1235,6 @@ window.CC_CATALOG = [
   "outcomes": [
    "Transfer of Cleveland Clinic expertise and best practices to the client organization",
    "Broad access to Cleveland Clinic specialty expertise for staff at the client's own institution"
-  ],
-  "owner": [
-   "Cleveland Clinic program hosts",
-   "International & Emerging Markets (Cleveland Clinic Connected)",
-   "Center for Medical Education"
   ],
   "deliveredBy": [
    "International & Emerging Markets (Cleveland Clinic Connected)",
@@ -1242,7 +1252,7 @@ window.CC_CATALOG = [
   "pdf": "brochures/3_Education/EDU-07_Medical_Education_Faculty_Development_Product_Profile.pdf",
   "subtitle": "Expert review of medical school curricula and practical faculty development in teaching, learner assessment and curriculum design.",
   "category": "Education & Training",
-  "durationShort": "Half-day workshops to 3 to 6 month reviews",
+  "durationShort": "Half-day workshops to 3- to 6-month reviews",
   "deliveryShort": "On-site, Virtual, Workshop-based",
   "need": [
    "Medical schools and teaching hospitals building or strengthening their education programs need an outside, expert view of their curriculum and practical development for the clinicians who teach. Best fit for medical school deans seeking a high-level curriculum review, and for clinical educators or faculty teams seeking development in teaching, assessment, curriculum design or clinical education.",
@@ -1265,14 +1275,14 @@ window.CC_CATALOG = [
    "Offering type: Advisory / Consulting and Program",
    "Customizable: Yes"
   ],
-  "duration": "Half-day workshops to 3 to 6 month reviews",
+  "duration": "Half-day workshops to 3- to 6-month reviews",
   "durationDetail": [
    "Undergraduate Medical Curriculum Review: 3 to 6 months. CCAD Faculty Development: half-day to multi-day; ACGME Assessment Hub Training is offered twice yearly (June and December), and other workshops can be explored based on demand."
   ],
   "resourcesCC": [],
   "resourcesClient": [
    "Curriculum documents for review, including syllabi if individual review is in scope",
-   "Visit Visa for onsite attendance at Cleveland Clinic Abu Dhabi",
+   "visit visa for on-site attendance at Cleveland Clinic Abu Dhabi",
    "Workshop scope and schedule depend on demand and faculty availability",
    "Program fees: Curriculum Review $450 per hour; Faculty Development to be confirmed"
   ],
@@ -1281,11 +1291,6 @@ window.CC_CATALOG = [
    "Stronger teaching and learner-assessment capability among faculty",
    "Improved curricula and clinical education programs",
    "Transfer of Cleveland Clinic expertise and best practices to the client organization"
-  ],
-  "owner": [
-   "Cleveland Clinic program hosts",
-   "Center for International Medical Education",
-   "Cleveland Clinic Abu Dhabi"
   ],
   "deliveredBy": [
    "Center for International Medical Education",
@@ -1313,7 +1318,7 @@ window.CC_CATALOG = [
    "Members gain direct access to Cleveland Clinic SQPE experts who assess, review and coach on an ongoing basis, translating proven practices into the member's own context rather than delivering a single static report."
   ],
   "deliverables": [
-   "Initial onsite organizational SQPE assessment and written report",
+   "Initial on-site organizational SQPE assessment and written report",
    "Review of priority SQPE metric definitions with the member team",
    "Data collection and quarterly metric performance submission process",
    "Quarterly SQPE review meetings with Cleveland Clinic experts",
@@ -1321,35 +1326,31 @@ window.CC_CATALOG = [
   ],
   "deliveryModel": "On-site / Hybrid",
   "deliveryDetail": [
-   "The program begins with an onsite assessment by the Cleveland Clinic SQPE team, followed by quarterly review meetings built around the member's submitted metric data. An annual reassessment measures progress and resets priorities for the following year."
+   "The program begins with an on-site assessment by the Cleveland Clinic SQPE team, followed by quarterly review meetings built around the member's submitted metric data. An annual reassessment measures progress and resets priorities for the following year."
   ],
   "duration": "12-month cycle, renewed annually",
   "durationDetail": [
-   "Initial onsite assessment within the first [X] months of membership; quarterly reviews throughout the year; annual assessment and report at the close of each membership year."
+   "Initial on-site assessment within the first [X] months of membership; quarterly reviews throughout the year; annual assessment and report at the close of each membership year."
   ],
   "resourcesCC": [
    "SQPE engagement lead",
    "Quality and patient safety subject matter experts",
    "Nursing quality expert",
    "Data and metrics analyst",
-   "CC Connected program manager"
+   "Cleveland Clinic Connected program manager"
   ],
   "resourcesClient": [
    "Executive sponsor (CEO, CMO or CNO)",
    "Quality and patient safety lead",
    "Data owner responsible for quarterly metric submission",
-   "Access to policies, data and clinical areas during the onsite assessment"
+   "Access to policies, data and clinical areas during the on-site assessment"
   ],
   "outcomes": [
    "A documented SQPE baseline compared with Cleveland Clinic standards",
    "Standardized definitions for priority SQPE metrics",
    "Reliable quarterly performance data visible to leadership",
    "A prioritized, year-over-year improvement plan",
-   "Measurable progress on priority metrics, e.g. [X%] improvement in selected measures"
-  ],
-  "owner": [
-   "CC Connected SQPE Team",
-   "Cleveland Clinic Connected"
+   "Measurable progress on the 3 to 5 priority measures each member selects, against targets the member sets"
   ],
   "deliveredBy": [
    "CC Connected SQPE Team",
@@ -1370,7 +1371,7 @@ window.CC_CATALOG = [
   "deliveryShort": "Hybrid",
   "need": [
    "Leaders often hold different views of how mature their organization is in performance improvement, patient experience and safety culture. Without a shared, structured scale, it is hard to agree on priorities or to track progress over time.",
-   "This offering is typically requested by executive and quality leaders preparing improvement strategies, or as part of the annual SQPE cycle of a CC Connected membership."
+   "This offering is typically requested by executive and quality leaders preparing improvement strategies, or as part of the annual SQPE cycle of a Cleveland Clinic Connected membership."
   ],
   "value": [
    "Cleveland Clinic has developed maturity scales for Performance Improvement (PI), Patient Experience (PE) and High Reliability and Safety Culture that reflect how these capabilities develop in a high-performing health system.",
@@ -1406,10 +1407,6 @@ window.CC_CATALOG = [
    "Clear priorities for advancing PI, PE and safety culture",
    "A baseline for measuring maturity gains year over year"
   ],
-  "owner": [
-   "CC Connected SQPE Team",
-   "Cleveland Clinic Connected"
-  ],
   "deliveredBy": [
    "CC Connected SQPE Team",
    "Cleveland Clinic Connected"
@@ -1428,8 +1425,7 @@ window.CC_CATALOG = [
   "durationShort": "[X] months before opening",
   "deliveryShort": "Hybrid",
   "need": [
-   "New hospitals have a rare opportunity to design safety, quality and patient experience into their structures, processes and culture before opening, but they also risk launching without mature systems in place.",
-   "Leaders must stand up governance, metrics, policies and training on a compressed timeline.",
+   "New hospitals have a rare opportunity to design safety, quality and patient experience into their structures, processes and culture before opening, but they also risk launching without mature systems in place. Leaders must stand up governance, metrics, policies and training on a compressed timeline.",
    "Requests typically come from owners, developers and executive teams of greenfield hospital projects preparing for opening and accreditation."
   ],
   "value": [
@@ -1445,7 +1441,7 @@ window.CC_CATALOG = [
   ],
   "deliveryModel": "Hybrid",
   "deliveryDetail": [
-   "Cleveland Clinic SQPE experts guide hospital leadership through the advisory guide in virtual working sessions, with onsite visits at key milestones before opening [confirm delivery approach]."
+   "Cleveland Clinic SQPE experts guide hospital leadership through the advisory guide in virtual working sessions, with on-site visits at key milestones before opening [confirm delivery approach]."
   ],
   "duration": "[X] months before opening",
   "durationDetail": [
@@ -1454,7 +1450,7 @@ window.CC_CATALOG = [
   "resourcesCC": [
    "SQPE advisory lead",
    "Quality, patient safety, nursing and patient experience experts",
-   "CC Connected program manager"
+   "Cleveland Clinic Connected program manager"
   ],
   "resourcesClient": [
    "Hospital executive team",
@@ -1467,10 +1463,6 @@ window.CC_CATALOG = [
    "Governance, metrics and policies aligned with Cleveland Clinic practice",
    "Readiness for accreditation and regulatory review",
    "A clear path to SQPE maturity in the first years of operation"
-  ],
-  "owner": [
-   "CC Connected SQPE Team",
-   "Cleveland Clinic Connected"
   ],
   "deliveredBy": [
    "CC Connected SQPE Team",
@@ -1504,11 +1496,11 @@ window.CC_CATALOG = [
    "Patient safety and infection prevention guides: safety event reporting, isolation practices, PPE, high-level disinfection, sterile processing, patient identification, Universal Protocol (Surgical Safety Checklist)",
    "Nursing and professional practice guides: nursing shared governance, nursing professional practice, plan of care visits, professional practice evaluation (peer review, OPPE, FPPE)",
    "Governance and readiness guides: safety and quality governance, accreditation and regulatory readiness, policy and document management",
-   "Improvement and leadership guides: CCIM, visual management, daily tiered huddles, problem-solving, change management, leadership rounding, Kaizen boards, leader behaviors, leader guided discussions, HEART Chats"
+   "Improvement and leadership guides: CCIM, visual management, daily tiered huddles, problem-solving, change management, leadership rounding, Kaizen boards, leader behaviors, leader-guided discussions, HEART Chats"
   ],
   "deliveryModel": "Virtual",
   "deliveryDetail": [
-   "Guides are provided digitally and can be used independently by member teams or reviewed with Cleveland Clinic SQPE experts during quarterly review meetings [confirm]."
+   "Guides are provided digitally for member teams to use independently."
   ],
   "duration": "Available throughout the membership term",
   "durationDetail": [
@@ -1516,7 +1508,7 @@ window.CC_CATALOG = [
   ],
   "resourcesCC": [
    "SQPE content owners for each topic",
-   "CC Connected program team to distribute and update guides"
+   "Cleveland Clinic Connected program team to distribute and update guides"
   ],
   "resourcesClient": [
    "Quality, nursing and operations leaders to apply the guides",
@@ -1528,10 +1520,6 @@ window.CC_CATALOG = [
    "Faster self-assessment against Cleveland Clinic practice",
    "Consistent improvement approaches across units",
    "Practical tools that support metric improvement in priority areas"
-  ],
-  "owner": [
-   "CC Connected SQPE Team",
-   "Cleveland Clinic Connected"
   ],
   "deliveredBy": [
    "CC Connected SQPE Team",
@@ -1557,7 +1545,7 @@ window.CC_CATALOG = [
   ],
   "value": [
    "Courses are delivered through Cleveland Clinic's Healthcare EDU platform and reflect the practices Cleveland Clinic uses with its own caregivers, so content is grounded in real operational experience rather than theory.",
-   "Because courses are self-paced and online, members can reach large numbers of caregivers quickly and consistently, and can pair eLearning with Cleveland Clinic's onsite and train-the-trainer programs for deeper adoption."
+   "Because courses are self-paced and online, members can reach large numbers of caregivers quickly and consistently, and can pair eLearning with Cleveland Clinic's on-site and train-the-trainer programs for deeper adoption."
   ],
   "deliverables": [
    "Access to the Healthcare EDU library of SQPE-related eLearning courses",
@@ -1571,7 +1559,7 @@ window.CC_CATALOG = [
   ],
   "duration": "Ongoing access for the membership term",
   "durationDetail": [
-   "Individual courses typically take [X minutes to X hours] to complete; access continues throughout the CC Connected membership."
+   "Individual courses typically take [X minutes to X hours] to complete; access continues throughout the Cleveland Clinic Connected membership."
   ],
   "resourcesCC": [
    "Healthcare EDU platform team",
@@ -1588,10 +1576,6 @@ window.CC_CATALOG = [
    "A shared Cleveland Clinic language for safety and quality",
    "Scalable training without large-scale staff release",
    "Trackable course completion for [number of] target caregivers"
-  ],
-  "owner": [
-   "CC Connected SQPE Team",
-   "Cleveland Clinic Connected"
   ],
   "deliveredBy": [
    "CC Connected SQPE Team",
@@ -1611,17 +1595,16 @@ window.CC_CATALOG = [
   "durationShort": "[X to X] weeks per program",
   "deliveryShort": "On-site, Hybrid, Workshop-based",
   "need": [
-   "Culture change in safety, communication and improvement does not scale through external trainers alone.",
-   "Hospitals need internal faculty who can deliver proven programs, adapt them to local context and sustain them after an engagement ends.",
+   "Culture change in safety, communication and improvement does not scale through external trainers alone. Hospitals need internal faculty who can deliver proven programs, adapt them to local context and sustain them after an engagement ends.",
    "Requests typically come from CNOs, CMOs, quality leaders and patient experience leaders who want to embed Cleveland Clinic methods across their workforce and reduce long-term reliance on outside support."
   ],
   "value": [
-   "These programs use the curricula Cleveland Clinic applies with its own caregivers, including Communicate with HEART for all caregivers and REDE to Communicate for physicians and advanced practice providers, alongside High Reliability, Just Culture and Performance Improvement.",
-   "Cleveland Clinic prepares member faculty through a combination of onsite and eLearning instruction, so the member gains internal trainers [confirm certification] and the materials to teach independently."
+   "These programs use the curricula Cleveland Clinic applies with its own caregivers, including Communicate with HEART for all caregivers and R.E.D.E. to Communicate for physicians and advanced practice providers, alongside High Reliability, Just Culture and Performance Improvement.",
+   "Cleveland Clinic prepares member faculty through a combination of on-site and eLearning instruction, so the member gains internal trainers [confirm certification] and the materials to teach independently."
   ],
   "deliverables": [
    "Communicate with HEART train-the-trainer (all caregivers)",
-   "REDE to Communicate train-the-trainer (physicians and APPs)",
+   "R.E.D.E. to Communicate train-the-trainer (physicians and APPs)",
    "High Reliability train-the-trainer",
    "Just Culture train-the-trainer",
    "Performance Improvement train-the-trainer",
@@ -1629,11 +1612,11 @@ window.CC_CATALOG = [
   ],
   "deliveryModel": "On-site / Hybrid / Workshop-based",
   "deliveryDetail": [
-   "Each program combines eLearning preparation with onsite, workshop-based training led by Cleveland Clinic faculty. Member trainers then deliver the program locally, with Cleveland Clinic available for follow-up support."
+   "Each program combines eLearning preparation with on-site, workshop-based training led by Cleveland Clinic faculty. Member trainers then deliver the program locally, with Cleveland Clinic available for follow-up support."
   ],
   "duration": "[X to X] weeks per program",
   "durationDetail": [
-   "Members may select one or more programs; each typically includes eLearning pre-work, an onsite training visit and a follow-up period as trainers begin local delivery."
+   "Members may select one or more programs; each typically includes eLearning pre-work, an on-site training visit and a follow-up period as trainers begin local delivery."
   ],
   "resourcesCC": [
    "Cleveland Clinic master trainers for each program",
@@ -1651,10 +1634,6 @@ window.CC_CATALOG = [
    "Sustainable, locally led training capacity",
    "Improved caregiver and provider communication",
    "Stronger high reliability, just culture and improvement practices across the organization"
-  ],
-  "owner": [
-   "CC Connected SQPE Team",
-   "Cleveland Clinic Connected"
   ],
   "deliveredBy": [
    "CC Connected SQPE Team",
@@ -1685,8 +1664,8 @@ window.CC_CATALOG = [
   "deliverables": [
    "Monthly Speaker Series sessions led by Cleveland Clinic experts",
    "SQPE and nursing Knowledge Sharing Sessions on member-requested topics",
-   "Session materials shared with attendees [confirm]",
-   "Annual calendar of planned speaker topics [confirm]"
+   "Speaker Series session recordings shared with attendees",
+   "Annual calendar of planned Speaker Series topics"
   ],
   "deliveryModel": "Virtual",
   "deliveryDetail": [
@@ -1694,10 +1673,10 @@ window.CC_CATALOG = [
   ],
   "duration": "Ongoing, monthly cadence",
   "durationDetail": [
-   "Speaker Series sessions run monthly throughout the membership year; Knowledge Sharing Sessions are scheduled as requested, typically [X] per year."
+   "Speaker Series sessions run monthly throughout the membership year; Knowledge Sharing Sessions are scheduled as requested."
   ],
   "resourcesCC": [
-   "CC Connected program coordinator",
+   "Cleveland Clinic Connected program coordinator",
    "Cleveland Clinic subject matter expert presenters",
    "Virtual session support"
   ],
@@ -1711,10 +1690,6 @@ window.CC_CATALOG = [
    "Faster answers to emerging SQPE questions",
    "Stronger professional development for quality and nursing teams",
    "A deeper working relationship between member teams and Cleveland Clinic experts"
-  ],
-  "owner": [
-   "CC Connected SQPE Team",
-   "Cleveland Clinic Connected"
   ],
   "deliveredBy": [
    "CC Connected SQPE Team",

@@ -596,16 +596,26 @@
   var KV = /^(Format|Location|Offering type|Customizable|Add-on|Learn more[^:]*|Intended audience|Note|Prerequisites?):\s*(.*)$/;
 
   function paragraphsHTML(list) {
-    var plain = [], kv = [];
+    // Keep the original order. "Format:", "Location:" style lines become a definition list;
+    // a plain line right after one of them continues that item.
+    var blocks = [];
     list.forEach(function (t) {
       var m = KV.exec(t);
-      if (m) kv.push(m); else plain.push(t);
+      var last = blocks[blocks.length - 1];
+      if (m) {
+        if (!last || last.type !== "kv") { last = { type: "kv", items: [] }; blocks.push(last); }
+        last.items.push([m[1], m[2]]);
+      } else if (last && last.type === "kv") {
+        var it = last.items[last.items.length - 1];
+        it[1] = it[1] + " " + t;
+      } else {
+        blocks.push({ type: "p", text: t });
+      }
     });
-    var html = plain.map(function (t) { return "<p>" + rich(t) + "</p>"; }).join("");
-    if (kv.length) {
-      html += '<dl class="kv">' + kv.map(function (m) { return "<div><dt>" + esc(m[1]) + "</dt><dd>" + rich(m[2]) + "</dd></div>"; }).join("") + "</dl>";
-    }
-    return html;
+    return blocks.map(function (b) {
+      if (b.type === "p") return "<p>" + rich(b.text) + "</p>";
+      return '<dl class="kv">' + b.items.map(function (kv) { return "<div><dt>" + esc(kv[0]) + "</dt><dd>" + rich(kv[1]) + "</dd></div>"; }).join("") + "</dl>";
+    }).join("");
   }
 
   function listHTML(items, green) {
