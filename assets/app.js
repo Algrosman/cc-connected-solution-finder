@@ -1,4 +1,4 @@
-/* Cleveland Clinic Connected: advisory solution finder, catalog and cart. */
+/* Cleveland Clinic Connected: product navigator, catalog and cart. */
 (function () {
   "use strict";
 
@@ -440,7 +440,7 @@
     if (instant) { void field.offsetWidth; field.classList.remove("no-anim"); }
 
     var n = ids.length, count;
-    if (!a.status) count = n + " solutions across " + DOMAINS.length + " areas";
+    if (!a.status) count = n + " solutions across " + DOMAINS.length + " domains";
     else if (!a.domain) count = n + " offered to " + STATUS_PLURAL[a.status];
     else if (isResult) count = "Your best match and " + plural(rec.alternatives.length, "alternative", "alternatives");
     else if (state.order.length <= 2) count = plural(n, DOMAIN_BY_ID[a.domain].short + " solution", DOMAIN_BY_ID[a.domain].short + " solutions") + " for " + STATUS_PLURAL[a.status];
@@ -796,8 +796,8 @@
     var html = cartHead("Your cart", plural(items.length, "solution", "solutions"));
     html += '<div class="panel-body">';
     if (!items.length) {
-      html += '<div class="cart-empty"><h3>Your cart is empty</h3><p>Use the solution finder or browse all solutions, then add the ones you would like to discuss with our team.</p>' +
-        '<button type="button" class="btn btn-primary" data-action="go-finder">Find a solution</button></div>';
+      html += '<div class="cart-empty"><h3>Your cart is empty</h3><p>Use the product navigator or browse all solutions, then add the ones you would like to discuss with our team.</p>' +
+        '<button type="button" class="btn btn-primary" data-action="go-finder">Open the product navigator</button></div>';
     } else {
       html += '<ul class="cart-list">' + items.map(function (p) {
         return '<li class="cart-item"><span class="ref">' + esc(p.id) + " &nbsp;&nbsp;" + esc(DOMAIN_BY_ID[p.domain].name) + "</span>" +
