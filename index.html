@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Advisory Solutions | Cleveland Clinic Connected</title>
+  <meta name="description" content="Find Cleveland Clinic Connected advisory solutions for new and existing hospitals in finance, safety and quality, digital tools and analytics, and education.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#finder">Skip to the solution finder</a>
+
+  <div class="proto-note" id="protoNote" role="note">
+    <div class="wrap">Concept prototype for internal review. Solution details come from draft product profiles and will change before launch.</div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="#top" aria-label="Cleveland Clinic Connected, advisory solutions home">
+        <img src="assets/cleveland-clinic-logo.png" alt="Cleveland Clinic" width="174" height="29">
+        <span class="brand-sub">Connected</span>
+      </a>
+      <nav class="main-nav" aria-label="Main">
+        <a href="#finder">Find a solution</a>
+        <a href="#portfolio">All solutions</a>
+        <a href="#how">How it works</a>
+        <a href="#contact">Contact us</a>
+      </nav>
+      <button class="cart-button" id="cartButton" type="button" aria-controls="cartPanel" aria-haspopup="dialog">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2.2l2.1 10.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.5L20.5 8H6.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="19.5" r="1.4" fill="currentColor"/><circle cx="17" cy="19.5" r="1.4" fill="currentColor"/></svg>
+        <span class="cart-label">Cart</span>
+        <span class="cart-count" id="cartCount" aria-live="polite">0</span>
+      </button>
+    </div>
+    <div class="wrap">
+      <ol class="crumbs" aria-label="Breadcrumb">
+        <li><a href="https://my.clevelandclinic.org/">Home</a></li>
+        <li><a href="https://my.clevelandclinic.org/professionals">Resources for Medical Professionals</a></li>
+        <li><a href="https://my.clevelandclinic.org/professionals/connected">Cleveland Clinic Connected</a></li>
+        <li aria-current="page">Advisory solutions</li>
+      </ol>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="finder" aria-labelledby="heroTitle">
+      <div class="wrap">
+        <div class="hero-intro">
+          <h1 id="heroTitle">Find the advisory support your hospital needs</h1>
+          <p class="hero-lede">Answer a few questions about your hospital and priorities. We will match you with a Cleveland Clinic Connected solution that you can add to your cart, compare with others or send to our team as a proposal request.</p>
+        </div>
+
+        <div class="finder">
+          <ol class="finder-steps" id="finderSteps" aria-label="Progress">
+            <li data-step="status">Your hospital</li>
+            <li data-step="domain">Advisory area</li>
+            <li data-step="needs">Your priorities</li>
+            <li data-step="result">Recommendation</li>
+          </ol>
+
+          <div class="finder-grid">
+            <div class="finder-main" id="finderMain" tabindex="-1"></div>
+
+            <aside class="finder-side" aria-label="How your answers narrow the portfolio">
+              <div class="map-head">
+                <h2 class="map-title">The portfolio</h2>
+                <p class="map-count" id="mapCount" aria-live="polite"></p>
+              </div>
+              <div class="map" id="portfolioMap"></div>
+              <ul class="map-legend" aria-label="Map key">
+                <li><span class="key key-live"></span>Matches so far</li>
+                <li><span class="key key-top"></span>Recommended</li>
+                <li><span class="key key-alt"></span>Also consider</li>
+                <li><span class="key key-off"></span>Not offered to your hospital type</li>
+              </ul>
+              <div class="answers" id="answerList"></div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how" id="how" aria-labelledby="howTitle">
+      <div class="wrap">
+        <h2 id="howTitle" class="section-title">How it works</h2>
+        <ol class="how-steps">
+          <li>
+            <h3>Tell us about your hospital</h3>
+            <p>Whether you operate an existing hospital or are building a new one, a few questions point us to the solutions designed for your stage.</p>
+          </li>
+          <li>
+            <h3>Review your recommendation</h3>
+            <p>See the solution that fits best, what you receive and how it is delivered, with two alternatives worth comparing.</p>
+          </li>
+          <li>
+            <h3>Build your cart and request a proposal</h3>
+            <p>Add solutions from any area, then send your cart to the Cleveland Clinic Connected team to scope an engagement.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="portfolio" id="portfolio" aria-labelledby="portfolioTitle">
+      <div class="wrap">
+        <div class="portfolio-head">
+          <h2 id="portfolioTitle" class="section-title">All solutions</h2>
+          <p class="section-lede">Every Cleveland Clinic Connected advisory solution, grouped by area. Each one is marked for new hospitals, existing hospitals or both.</p>
+        </div>
+
+        <div class="toolbar">
+          <div class="segmented" role="radiogroup" aria-label="Show solutions for">
+            <button type="button" role="radio" aria-checked="true" data-fit="all">All hospitals</button>
+            <button type="button" role="radio" aria-checked="false" data-fit="new">New<span class="seg-long"> hospitals</span></button>
+            <button type="button" role="radio" aria-checked="false" data-fit="existing">Existing<span class="seg-long"> hospitals</span></button>
+          </div>
+          <label class="search">
+            <span class="visually-hidden">Search solutions</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m15.5 15.5 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <input type="search" id="catalogSearch" placeholder="Search by topic, such as EHR or accreditation" autocomplete="off">
+          </label>
+          <p class="toolbar-count" id="catalogCount" aria-live="polite"></p>
+        </div>
+
+        <div class="domains" id="domainList"></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contactTitle">
+      <div class="wrap contact-row">
+        <div>
+          <h2 id="contactTitle" class="contact-title">Not sure where to start?</h2>
+          <p>Our team works with hospital owners, ministries and health systems around the world. Tell us what you are planning and we will help you shape the right engagement.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-light" id="contactEmailLink" href="mailto:ccconnected@ccf.org">Email the Connected team</a>
+          <button class="btn btn-ghost-light" type="button" data-action="open-cart">Review your cart</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <div class="footer-brand">
+        <p class="footer-name">Cleveland Clinic Connected</p>
+        <p>International &amp; Emerging Markets</p>
+        <p><a id="footerEmail" href="mailto:ccconnected@ccf.org">ccconnected@ccf.org</a></p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://my.clevelandclinic.org/professionals/connected">About Cleveland Clinic Connected</a></li>
+        <li><a href="#portfolio">All solutions</a></li>
+        <li><a href="#finder">Solution finder</a></li>
+      </ul>
+      <p class="footer-legal">&copy; <span id="year"></span> Cleveland Clinic. Solution scope, timing and availability are confirmed during proposal development.</p>
+    </div>
+  </footer>
+
+  <div class="scrim" id="scrim" hidden></div>
+
+  <aside class="panel" id="detailPanel" role="dialog" aria-modal="true" aria-labelledby="detailTitle" hidden></aside>
+  <aside class="panel panel-cart" id="cartPanel" role="dialog" aria-modal="true" aria-labelledby="cartTitle" hidden></aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <div class="print-area" id="printArea" aria-hidden="true"></div>
+
+  <script src="data/products.js"></script>
+  <script src="data/finder.js"></script>
+  <script src="assets/config.js"></script>
+  <script src="assets/engine.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
