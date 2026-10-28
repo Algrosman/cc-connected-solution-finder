@@ -172,7 +172,7 @@
     options.forEach(function (o) {
       html += '<button type="button" class="option" data-action="answer" data-key="' + esc(q.id) + '" data-value="' + esc(o.id) +
         '" aria-pressed="' + (recall === o.id ? "true" : "false") + '">' +
-        '<span class="option-mark" aria-hidden="true"></span><span>' +
+        "<span>" +
         '<span class="option-label">' + esc(o.label) + "</span>" +
         (o.detail ? '<span class="option-detail">' + esc(o.detail) + "</span>" : "") +
         (o.meta ? '<span class="option-meta">' + esc(o.meta) + "</span>" : "") +
@@ -256,6 +256,7 @@
   var field = $("#portfolioField");
   var tip = $("#fieldTip");
   var tiles = {};
+  var labels = {};
   var fieldBuilt = false;
   // boxes are grouped by area in the same order as the color key
   var ORDERED = CATALOG.slice().sort(function (x, y) {
@@ -278,6 +279,13 @@
       b.addEventListener("blur", hideTip);
       field.appendChild(b);
       tiles[p.id] = b;
+    });
+    DOMAINS.forEach(function (d) {
+      var l = document.createElement("span");
+      l.className = "field-label is-out";
+      l.setAttribute("aria-hidden", "true");
+      field.insertBefore(l, field.firstChild);
+      labels[d.id] = l;
     });
     fieldBuilt = true;
   }
@@ -309,9 +317,40 @@
     return ORDERED.filter(function (p) { return ids.indexOf(p.id) !== -1; }).map(function (p) { return p.id; });
   }
 
-  function fieldLayout(n, W, isResult) {
+  function fieldLayout(ids, W, isResult) {
     var stacked = window.matchMedia("(max-width: 900px)").matches;
-    var gap = 6, boxes = [], i;
+    var n = ids.length, gap = 6, boxes = [], i, y = 0;
+    var groups = DOMAINS.map(function (d) {
+      return { d: d, ids: ids.filter(function (id) { return BY_ID[id].domain === d.id; }) };
+    }).filter(function (g) { return g.ids.length; });
+
+    // More than one area on show: four small labeled clusters, two per row
+    if (!isResult && groups.length > 1) {
+      var labelsOut = [];
+      var cg = stacked ? 14 : 20;                 // space between clusters
+      var cw = (W - cg) / 2;                      // cluster width
+      var ccols = stacked ? 7 : 4;                // boxes per cluster row
+      var bw = Math.min(stacked ? 30 : 40, (cw - gap * (ccols - 1)) / ccols);
+      var lh = stacked ? 18 : 34;                 // room for the area name
+      var rowGap = stacked ? 12 : 22;
+      for (var gi = 0; gi < groups.length; gi += 2) {
+        var rowH = 0;
+        [groups[gi], groups[gi + 1]].forEach(function (g, side) {
+          if (!g) return;
+          var x0 = side * (cw + cg);
+          labelsOut.push({ id: g.d.id, x: x0, y: y, w: cw, h: lh, text: stacked ? g.d.short : g.d.name });
+          var by = y + lh + 6;
+          g.ids.forEach(function (id, k) {
+            boxes[ids.indexOf(id)] = { x: x0 + (k % ccols) * (bw + gap), y: by + Math.floor(k / ccols) * (bw + gap), w: bw, h: bw };
+          });
+          var r = Math.ceil(g.ids.length / ccols);
+          rowH = Math.max(rowH, lh + 6 + r * bw + (r - 1) * gap);
+        });
+        y += rowH + rowGap;
+      }
+      return { boxes: boxes, labels: labelsOut, height: y - rowGap, text: false };
+    }
+
     if (isResult) {
       if (!stacked) {
         var hTop = 120, hAlt = 92, half = (W - gap) / 2;
@@ -320,11 +359,11 @@
           boxes.push({ x: ((i - 1) % 2) * (half + gap), y: hTop + gap + Math.floor((i - 1) / 2) * (hAlt + gap), w: half, h: hAlt });
         }
         var altRows = Math.ceil((n - 1) / 2);
-        return { boxes: boxes, height: hTop + (altRows ? altRows * (hAlt + gap) : 0), text: true };
+        return { boxes: boxes, labels: [], height: hTop + (altRows ? altRows * (hAlt + gap) : 0), text: true };
       }
       var w3 = (W - gap * (n - 1)) / n;
       for (i = 0; i < n; i++) boxes.push({ x: i * (w3 + gap), y: 0, w: w3, h: 96 });
-      return { boxes: boxes, height: 96, text: true };
+      return { boxes: boxes, labels: [], height: 96, text: true };
     }
     var cols = stacked ? (n >= 17 ? 14 : n >= 9 ? 9 : n) : (n >= 17 ? 7 : n >= 9 ? 4 : n >= 4 ? 2 : 1);
     var w = (W - gap * (cols - 1)) / cols;
@@ -332,7 +371,7 @@
     var h = text ? (n <= 3 && !stacked ? 84 : 76) : Math.min(w, 64);
     for (i = 0; i < n; i++) boxes.push({ x: (i % cols) * (w + gap), y: Math.floor(i / cols) * (h + gap), w: w, h: h });
     var rows = Math.ceil(n / cols);
-    return { boxes: boxes, height: rows * h + (rows - 1) * gap, text: text };
+    return { boxes: boxes, labels: [], height: rows * h + (rows - 1) * gap, text: text };
   }
 
   function place(t, b) {
@@ -349,7 +388,7 @@
     var ids = fieldIds(step);
     var isResult = step.type === "result";
     var rec = isResult ? recommendation() : null;
-    var L = fieldLayout(ids.length, field.clientWidth, isResult);
+    var L = fieldLayout(ids, field.clientWidth, isResult);
     if (instant) field.classList.add("no-anim");
 
     CATALOG.forEach(function (p) {
@@ -382,14 +421,22 @@
       t.removeAttribute("aria-hidden");
       t.setAttribute("aria-label", (isTop ? "Best match: " : isAlt ? "Also consider: " : "") + p.title + ". " + p.subtitle);
     });
+    // area names above (or beside) each row while more than one area is on show
+    DOMAINS.forEach(function (d) {
+      var l = labels[d.id];
+      var spec = L.labels.filter(function (x) { return x.id === d.id; })[0];
+      if (!spec) { l.classList.add("is-out"); return; }
+      if (l.classList.contains("is-out")) { l.style.transition = "none"; }
+      l.textContent = spec.text;
+      l.style.left = spec.x + "px";
+      l.style.top = spec.y + "px";
+      l.style.width = spec.w + "px";
+      l.style.height = spec.h + "px";
+      if (l.style.transition === "none") { void l.offsetWidth; l.style.transition = ""; }
+      l.classList.remove("is-out");
+    });
     field.style.height = L.height + "px";
     if (instant) { void field.offsetWidth; field.classList.remove("no-anim"); }
-
-    // color key, only while more than one area is on show
-    var shown = DOMAINS.filter(function (d) { return ids.some(function (id) { return BY_ID[id].domain === d.id; }); });
-    $("#fieldLegend").innerHTML = shown.length > 1 ? shown.map(function (d) {
-      return '<li><span style="background:' + DOMAIN_COLOR[d.id] + '"></span>' + esc(d.short) + "</li>";
-    }).join("") : "";
 
     var n = ids.length, count;
     if (!a.status) count = n + " solutions across " + DOMAINS.length + " areas";
