@@ -38,7 +38,7 @@ Then open http://localhost:8000.
 
 The brochure text lives in `brochures/brochure-content.json`, one entry per solution with the same fields as the Advisory Product Builder form (name, tagline, category, need, value, deliverables, delivery modes and detail, duration and notes, resources, outcomes), plus `questions`: the three client questions the offering answers. The PDFs and the website are both generated from it, so they always say the same thing.
 
-Each one-page profile reads straight down: the domain (Safety, Quality, and Patient Experience is spelled out as "Safety, Quality, and Patient Experience (SQPE)"), title and tagline; a band with the category, typical duration and delivery model; then Client need, Questions we help you answer, What you receive, How it works and Expected outcomes. The value statement, client team and assumptions appear on the website only. Text is never italic or all capitals, and each "What you receive" bullet should fit on one line.
+Each one-page profile reads straight down: the domain (Safety, Quality, and Patient Experience is spelled out as "Safety, Quality, and Patient Experience (SQPE)"), title and tagline; a band with the category, typical duration and delivery model; then Client need, Questions we help you answer, What you receive, How it works and Expected outcomes. The value statement, client team and assumptions appear on the website only. Typical duration (the band cell, phase week ranges and timing notes) is shown on the Education profiles only; `SHOW_DURATION` in `scripts/render_onepagers.js` controls which domains show it. Text is never italic or all capitals, and each "What you receive" bullet should fit on one line.
 
 To change a brochure:
 

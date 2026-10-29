@@ -23,11 +23,6 @@ STAGE = {  # column text for the contents table
     "FIN-01": "Plan", "FIN-02": "Plan", "FIN-03": "Measure and Optimize", "FIN-04": "Measure",
     "FIN-05": "Manage", "FIN-06": "Transform", "FIN-07": "Premium International",
 }
-# Overall range for the contents table; each profile gives the detail.
-SHORT_DURATION = {
-    "FIN-01": "4 to 12 weeks", "FIN-02": "6 to 12 weeks", "FIN-03": "4 to 24 weeks", "FIN-04": "2 to 12 weeks",
-    "FIN-05": "2 to 20 weeks", "FIN-06": "4 to 20 weeks", "FIN-07": "8 to 24 weeks",
-}
 SUMMARY_PAGES = 2
 
 pages, start = {}, SUMMARY_PAGES + 1
@@ -82,14 +77,14 @@ spec = {
     "premium": "senior-led engagements that draw on every stage for greenfield hospitals, multi-site networks, "
                "national programs and complex partnerships.",
     "offerings": [{"id": it["id"], "name": it["name"], "desc": desc(it["tagline"]), "stage": STAGE[it["id"]],
-                   "duration": SHORT_DURATION[it["id"]], "page": pages[it["id"]][0]} for it in items],
+                   "page": pages[it["id"]][0]} for it in items],
     "how": [
         "Who delivers: every offering is delivered by Cleveland Clinic's Finance Advisory team, offered through "
         "Cleveland Clinic International & Emerging Markets, working alongside a named lead on the client's side",
         "Scope: most offerings are modular, so clients can start with one module and add others later; "
         "deliverables are confirmed at scoping",
-        "Phases and timing: each profile sets out the phases of the work, typical timing for each, and what "
-        "moves an engagement within its range",
+        "Phases: each profile sets out the phases of the work; timing is agreed at scoping, around the client's "
+        "decisions and data",
         "Team and time: each profile lists the client team needed and the assumptions the plan depends on; the "
         "Cleveland Clinic team and time commitments are confirmed at scoping",
     ],
