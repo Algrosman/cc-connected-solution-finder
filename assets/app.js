@@ -688,7 +688,7 @@
     var res = "";
     var clientLabel = p.assumptions.length ? "Your team" : "Your team and inputs";
     if (p.resourcesCC.length || p.resourcesClient.length) {
-      res = '<section class="dsec"><h3>Resource requirements</h3>';
+      res = '<section class="dsec"><h3>Working together</h3>';
       if (p.resourcesCC.length && p.resourcesClient.length) {
         res += '<div class="res-cols"><div><h4>Cleveland Clinic team</h4>' + listHTML(p.resourcesCC) + "</div>" +
           "<div><h4>" + clientLabel + "</h4>" + listHTML(p.resourcesClient, true) + "</div></div>";

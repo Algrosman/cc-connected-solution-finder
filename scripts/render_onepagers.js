@@ -165,8 +165,7 @@ function render(d, LOGO, size, dateStr, FONTS) {
   if (d.phases && d.phases.length) bullets(d.phases.map(p => p.name + " (" + p.weeks + "): " + p.detail), BLUE, true);
   else if (d.deliveryDetail) para(d.deliveryDetail);
   if (d.durationNotes) para(d.durationNotes);
-  const needs = d.resClient.concat(d.assumptions || []);
-  if (needs.length) { heading("What we need from you"); bullets(needs, GREEN, false); }
+  // Client team and assumptions stay in the full profile on the website, not on the flyer.
   heading("Expected outcomes"); bullets(d.outcomes, GREEN, false);
   if (overflow) excess = y - BOTTOM + (col === 1 ? 0 : 0);
 
