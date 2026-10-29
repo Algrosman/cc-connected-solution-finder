@@ -394,6 +394,10 @@ mark.tbc { background: var(--tbc); color: inherit; padding: 0 3px; border-radius
 .phase-item { height: 100%; background: rgba(255,255,255,0.06); border: 1px solid var(--rule-on-navy); border-radius: var(--radius); color: var(--white); text-align: left; width: 100%; padding: 10px 12px; font: inherit; font-size: 14.5px; line-height: 1.35; cursor: pointer; }
 .phase-item:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
 .phase-ref { display: block; font-size: 12px; letter-spacing: 0.06em; color: var(--blue-on-navy); margin-bottom: 2px; }
+.phase-milestone { cursor: default; background: transparent; border: 1px dashed var(--green-on-navy); }
+.phase-milestone:hover { border-color: var(--green-on-navy); background: transparent; }
+.phase-milestone .phase-ref { color: var(--green-on-navy); }
+.phase-milestone-note { display: block; font-size: 13.5px; color: var(--slate-on-navy); margin-top: 2px; }
 .bundle-teaser { margin-top: 24px; display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 16px 20px; border: 1px solid var(--rule-on-navy); border-left: 3px solid var(--green-on-navy); border-radius: 0; }
 .teaser-label { font-weight: 600; color: var(--white); font-size: 15px; }
 .bundle-teaser p + p { color: var(--slate-on-navy); font-size: 14.5px; margin-top: 2px; line-height: 1.45; }
