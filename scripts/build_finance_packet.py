@@ -90,8 +90,8 @@ spec = {
         "deliverables are confirmed at scoping",
         "Phases and timing: each profile sets out the phases of the work, typical timing for each, and what "
         "moves an engagement within its range",
-        "Team and time: each profile lists the Cleveland Clinic roles involved and the share of each person's "
-        "time, the client team needed, and the assumptions the plan depends on",
+        "Team and time: each profile lists the client team needed and the assumptions the plan depends on; the "
+        "Cleveland Clinic team and time commitments are confirmed at scoping",
     ],
     "terms": [
         ["Pro forma", "projected financial statements for a new facility, program or arrangement"],

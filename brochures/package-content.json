@@ -66,6 +66,51 @@
    "Early decisions on the financial model, core systems and quality governance made before they are expensive to change",
    "Finance, quality, digital and workforce ready on the same opening date",
    "A founding workforce trained in the hospital's culture, quality standards and systems before the first patient"
-  ]
+  ],
+  "onePage": {
+   "need": "Opening a new hospital means making finance, quality, digital and workforce decisions at once, often with advisors who do not coordinate, and early choices are expensive to change once construction starts.",
+   "value": "Cleveland Clinic runs 23 hospitals and 300 outpatient locations with about 83,000 caregivers (as of December 31, 2025). The package brings its finance, quality, digital and education teams into one engagement, sequenced to the client's milestones.",
+   "deliverablesIntro": "Two offerings from each area, each with the scope in its own profile:",
+   "deliverables": [
+    "Financial planning and modeling (FIN-05): forecast from opening to steady state",
+    "Financial reporting (FIN-04): KPIs and dashboards from day one",
+    "Greenfield SQPE advisory (SQPE-03): quality built into governance",
+    "SQPE guide library (SQPE-04): mature practice for policies and training",
+    "Digital strategy (IT-01): roadmap tied to the opening timeline",
+    "Digital activation (IT-06): a safe, on-time go-live",
+    "Caregiver culture (EDU-04): onboarding for the founding workforce",
+    "Simulation training (EDU-05): practice and systems testing before opening"
+   ],
+   "phases": [
+    {
+     "name": "Plan",
+     "weeks": "design",
+     "detail": "FIN-05, IT-01, SQPE-03"
+    },
+    {
+     "name": "Prepare",
+     "weeks": "construction",
+     "detail": "FIN-04, SQPE-04, EDU-04"
+    },
+    {
+     "name": "Activate",
+     "weeks": "run-up to opening",
+     "detail": "IT-06, EDU-05"
+    }
+   ],
+   "durationNotes": "Each offering keeps its own duration; total length follows the opening date.",
+   "resClient": [
+    "Executive sponsor, such as the CEO or project director",
+    "Leads for finance, quality, IT and workforce"
+   ],
+   "assumptions": [
+    "Scope and sequence are confirmed at scoping; offerings can be swapped"
+   ],
+   "outcomes": [
+    "One coordinated plan across all four areas",
+    "Early decisions made before they are costly to change",
+    "Every area ready on the same opening date"
+   ]
+  }
  }
 ]

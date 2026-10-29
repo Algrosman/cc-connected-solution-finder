@@ -18,9 +18,11 @@ It is plain HTML, CSS and JavaScript with no build step, so it runs on any stati
 | `data/finder.js` | The questions, options and scoring weights |
 | `brochures/` | The offering profile PDFs, the Finance packet (`1_Finance/00_Finance_Advisory_Offerings_Packet.pdf`) and `Offerings_Index.csv` |
 | `brochures/brochure-content.json` | Source text for every brochure (the builder's input fields, plus the optional fields below) |
-| `scripts/render_brochures.js` | Regenerates the brochure PDFs from that source with the builder's own PDF code |
+| `scripts/render_onepagers.js` | Generates the one-page brochure PDFs (single column, 10.4 pt) from the brochure source, using the builder's logo, colors and fonts |
+| `scripts/render_brochures.js` | The earlier multi-page renderer, which runs the builder's own PDF code (kept for reference) |
+| `data/packages.js` and `brochures/package-content.json` | The All-in-One New Hospital Package: the offerings it bundles (website) and its one-page profile (PDF) |
 | `scripts/add_links.py` | Re-adds clickable links the builder cannot draw |
-| `scripts/build_finance_packet.py` | Builds the Finance packet: a two-page executive summary (drawn by `scripts/finance_packet_summary.js`) followed by the seven Finance profiles, with a linked contents table and bookmarks |
+| `scripts/build_finance_packet.py` | Builds the Finance packet: a two-page executive summary (drawn by `scripts/finance_packet_summary.js`) followed by the seven one-page Finance profiles, with a linked contents table and bookmarks |
 | `scripts/build_catalog.py` | Rebuilds `data/products.js` from the brochure source (or a PDF when there is no source entry) |
 | `tests/check_finder.js` | Walks every finder path and confirms every solution can be recommended |
 
@@ -45,12 +47,13 @@ To change a brochure:
    - `phases`: `[{"name", "weeks", "detail"}]`, listed under Typical Duration; `durationNotes` then explains what moves an engagement within its range
    - `resNote`: what the Cleveland Clinic team percentages mean
    - `assumptions`: engagement assumptions, listed separately from the client team (the client panel is then labelled "Client team" rather than "Client team and inputs")
-2. Regenerate the PDFs with the builder's own PDF code (needs Node.js, `npm install jspdf@2.5.1 playwright`, and a copy of the builder repo):
+2. Regenerate the one-page PDFs (needs Node.js, `npm install jspdf@2.5.1 playwright`, and a copy of the builder repo):
    ```
-   node scripts/render_brochures.js ../iem-advisory-product-builder/index.html brochures/brochure-content.json brochures
+   node scripts/render_onepagers.js ../iem-advisory-product-builder/index.html brochures/brochure-content.json brochures
+   node scripts/render_onepagers.js ../iem-advisory-product-builder/index.html brochures/package-content.json brochures
    python3 scripts/add_links.py brochures
    ```
-   Add solution IDs at the end of the first command to regenerate only those brochures. After changing a Finance profile, rebuild the packet:
+   Add solution IDs at the end of the first command to regenerate only those brochures. Every brochure must fit on one page at 10.4 pt; the script names any that do not. When the full profile is too long for one page, add an `onePage` object to the entry with shorter versions of any fields (for example `need`, `deliverables` or `outcomes`): the PDF uses those, and the website keeps the full text. After changing a Finance profile, rebuild the packet:
    ```
    python3 scripts/build_finance_packet.py ../iem-advisory-product-builder/index.html brochures
    ```
