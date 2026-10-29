@@ -46,6 +46,15 @@
       return '<mark class="tbc" title="To be confirmed">' + m + "</mark>";
     });
   }
+  // Named pages that the brochure text refers to, linked wherever the name appears
+  var LINKS = { "Consulting Services & Observation Programs": "https://my.clevelandclinic.org/departments/nursing/grow-here/consulting-and-observation#nurse-scholars-tab" };
+  function linkify(html) {
+    Object.keys(LINKS).forEach(function (t) {
+      html = html.split(esc(t)).join('<a href="' + LINKS[t] + '" target="_blank" rel="noopener">' + esc(t) + "</a>");
+    });
+    return html;
+  }
+  function same(a, b) { var n = function (x) { return String(x || "").toLowerCase().replace(/[^a-z0-9]+/g, ""); }; return n(a) === n(b); }
   function plural(n, one, many) { return n + " " + (n === 1 ? one : many); }
   function storageGet(key) { try { return window.localStorage.getItem(key); } catch (e) { return null; } }
   function storageSet(key, val) { try { window.localStorage.setItem(key, val); } catch (e) { /* storage unavailable */ } }
@@ -663,7 +672,7 @@
     });
     return blocks.map(function (b) {
       if (b.type === "p") return "<p>" + rich(b.text) + "</p>";
-      return '<dl class="kv">' + b.items.map(function (kv) { return "<div><dt>" + esc(kv[0]) + "</dt><dd>" + rich(kv[1]) + "</dd></div>"; }).join("") + "</dl>";
+      return b.items.map(function (kv) { return '<p class="kv-line"><strong>' + esc(kv[0]) + ":</strong> " + linkify(rich(kv[1])) + "</p>"; }).join("");
     }).join("");
   }
 
@@ -673,8 +682,17 @@
     return m ? "<strong>" + esc(m[1]) + ":</strong> " + rich(m[2]) : rich(x);
   }
 
+  function autoLeadHTML(x) {
+    // Dotted abbreviations (R.E.D.E., vs.) are not the end of a program name
+    var P = "\u0001", safe = x.replace(/\b(?:[A-Za-z]\.){2,}|\b(?:vs|etc)\./g, function (a) { return a.replace(/\./g, P); });
+    var m = /^([A-Z][^.]{2,64})\.\s+([\s\S]*)$/.exec(safe);
+    if (!m) return rich(x);
+    return "<strong>" + esc(m[1].split(P).join(".")) + ".</strong> " + rich(m[2].split(P).join("."));
+  }
   function listHTML(items, green, lead) {
-    return '<ul class="squares' + (green ? " green" : "") + '">' + items.map(function (x) { return "<li>" + (lead ? leadHTML(x) : rich(x)) + "</li>"; }).join("") + "</ul>";
+    return '<ul class="squares' + (green ? " green" : "") + '">' + items.map(function (x) {
+      return "<li>" + (lead === "auto" ? autoLeadHTML(x) : lead ? leadHTML(x) : rich(x)) + "</li>";
+    }).join("") + "</ul>";
   }
 
   function packetLinkHTML(d, small, label) {
@@ -694,13 +712,15 @@
     if (p.resourcesCC.length || p.resourcesClient.length) {
       res = '<section class="dsec"><h3>Working together</h3>';
       if (p.resourcesCC.length && p.resourcesClient.length) {
-        res += '<div class="res-cols"><div><h4>Cleveland Clinic team</h4>' + listHTML(p.resourcesCC) + "</div>" +
+        // The percentages note explains the Cleveland Clinic list, so it sits directly under it
+        res += '<div class="res-cols"><div><h4>Cleveland Clinic team</h4>' + listHTML(p.resourcesCC) +
+          (p.resourcesNote ? '<p class="res-note">' + rich(p.resourcesNote) + "</p>" : "") + "</div>" +
           "<div><h4>" + clientLabel + "</h4>" + listHTML(p.resourcesClient, true) + "</div></div>";
       } else {
         res += "<h4 style=\"font-size:14px;color:var(--slate);margin-bottom:8px\">" + (p.resourcesCC.length ? "Cleveland Clinic team" : clientLabel) + "</h4>" +
           listHTML(p.resourcesCC.length ? p.resourcesCC : p.resourcesClient, !p.resourcesCC.length);
       }
-      if (p.resourcesNote) res += '<p class="res-note">' + rich(p.resourcesNote) + "</p>";
+      if (p.resourcesNote && !(p.resourcesCC.length && p.resourcesClient.length)) res += '<p class="res-note">' + rich(p.resourcesNote) + "</p>";
       if (p.assumptions.length) res += '<h4 class="sub-h">Engagement assumptions</h4>' + listHTML(p.assumptions);
       res += "</section>";
     }
@@ -719,9 +739,9 @@
       '<section class="dsec"><h3>The need</h3>' + paragraphsHTML(p.need) + "</section>" +
       (p.questions.length ? '<section class="dsec"><h3>Questions we help you answer</h3>' + listHTML(p.questions) + "</section>" : "") +
       '<section class="dsec"><h3>What Cleveland Clinic brings</h3>' + paragraphsHTML(p.value) + "</section>" +
-      '<section class="dsec"><h3>Key deliverables</h3>' + (p.deliverablesIntro ? "<p class=\"intro\">" + rich(p.deliverablesIntro) + "</p>" : "") + listHTML(p.deliverables, false, p.leadBold) + "</section>" +
-      '<section class="dsec"><h3>How it is delivered</h3><p class="lead-in">' + esc(p.deliveryModel) + "</p>" + paragraphsHTML(p.deliveryDetail) + "</section>" +
-      '<section class="dsec"><h3>Typical duration</h3><p class="lead-in">' + rich(p.duration) + "</p>" +
+      '<section class="dsec"><h3>Key deliverables</h3>' + (p.deliverablesIntro ? "<p class=\"intro\">" + rich(p.deliverablesIntro) + "</p>" : "") + listHTML(p.deliverables, false, p.leadBold || "auto") + "</section>" +
+      '<section class="dsec"><h3>How it is delivered</h3>' + (same(p.deliveryModel, p.deliveryShort) && p.deliveryDetail.length ? "" : '<p class="lead-in">' + esc(p.deliveryModel) + "</p>") + paragraphsHTML(p.deliveryDetail) + "</section>" +
+      '<section class="dsec"><h3>Typical duration</h3>' + (same(p.duration, p.durationShort) && (p.phases.length || p.durationDetail.length) ? "" : '<p class="lead-in">' + rich(p.duration) + "</p>") +
       (p.phases.length ? '<ul class="squares phases">' + p.phases.map(function (ph) {
         return "<li><strong>" + esc(ph.name) + " (" + esc(ph.weeks) + "):</strong> " + rich(ph.detail) + "</li>";
       }).join("") + "</ul>" : "") +

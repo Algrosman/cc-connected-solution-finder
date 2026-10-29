@@ -1430,7 +1430,7 @@ window.CC_CATALOG = [
    "Systems testing of clinical systems, spaces and workflows",
    "Simulation curriculum and program design, including accreditation readiness",
    "Faculty development and train-the-trainer support",
-   "CCAD Simulation-Based Training. Licensed healthcare professionals; single-session to multi-day specialty training at Cleveland Clinic Abu Dhabi"
+   "Simulation-based training at Cleveland Clinic Abu Dhabi for licensed healthcare professionals, from a single session to multi-day specialty training"
   ],
   "deliveryModel": "On-site / Workshop-based",
   "deliveryDetail": [
@@ -1445,7 +1445,7 @@ window.CC_CATALOG = [
   ],
   "resourcesCC": [],
   "resourcesClient": [
-   "visit visa for on-site attendance at Cleveland Clinic Abu Dhabi",
+   "Visit visa for on-site attendance at Cleveland Clinic Abu Dhabi",
    "Scope depends on facilities, equipment, faculty, accreditation goals, requested specialty and scenarios, and scheduling",
    "On-site and Cleveland Clinic-hosted options are available",
    "Program fee: to be confirmed"
@@ -1497,7 +1497,7 @@ window.CC_CATALOG = [
    "Visiting Professorships. Cleveland Clinic physicians deliver lectures, teaching and symposiums tailored to the host institution over 1 to 2 weeks",
    "Undergraduate Medical Curriculum Review. High-level advisory review of curriculum strengths, gaps and improvement considerations, with optional individual syllabus review given extra time and resources",
    "CCAD Faculty Development. Half-day to multi-day workshops on teaching skills, learner assessment, curriculum design and clinical education",
-   "ACGME Assessment Hub Training, offered twice yearly at Cleveland Clinic Abu Dhabi"
+   "ACGME Assessment Hub Training. Offered twice yearly at Cleveland Clinic Abu Dhabi"
   ],
   "deliveryModel": "On-site / Virtual / Workshop-based",
   "deliveryDetail": [
