@@ -376,6 +376,10 @@ mark.tbc { background: var(--tbc); color: inherit; padding: 0 3px; border-radius
 /* ---------- Contact and footer ---------- */
 /* ---------- Pre-built package (after the four areas) ---------- */
 #bundleSlot:empty { display: none; }
+/* Invitation to ask for an advisory solution that is not in the catalog */
+.custom-ask { margin-top: 40px; padding: 20px 24px; background: var(--white); border-left: 3px solid var(--green); font-size: 17px; line-height: 1.5; color: var(--ink); }
+.custom-ask a { color: var(--blue-dark); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+.custom-ask a:hover { color: var(--navy); }
 .bundle { margin-top: 40px; background: var(--navy); color: var(--white); border-radius: var(--radius); display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.25fr); gap: 40px; padding: 36px 40px 40px; border-top: 4px solid var(--blue-bright); scroll-margin-top: 16px; }
 .bundle-eyebrow { font-size: 15px; font-weight: 500; color: var(--green-on-navy); margin-bottom: 10px; }
 .bundle-title { font-family: var(--serif); font-size: clamp(1.6rem, 1.3rem + 0.9vw, 2.1rem); font-weight: 600; line-height: 1.15; }

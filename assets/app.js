@@ -1194,6 +1194,10 @@
     $("#contactEmailLink").href = "mailto:" + CONFIG.contactEmail;
     $("#footerEmail").href = "mailto:" + CONFIG.contactEmail;
     $("#footerEmail").textContent = CONFIG.contactEmail;
+    $all(".custom-ask-email").forEach(function (a) {
+      a.href = "mailto:" + CONFIG.contactEmail + "?subject=" + encodeURIComponent("Advisory solution request");
+      a.textContent = CONFIG.contactEmail;
+    });
   }
   $("#year").textContent = new Date().getFullYear();
   $("#cartCount").textContent = state.cart.length;
