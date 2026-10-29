@@ -163,8 +163,8 @@ function render(d, LOGO, size, dateStr, FONTS) {
   heading("How it works");
   leadLine(d.deliveryModes.join("  /  ") + "   |   " + d.duration);
   if (d.phases && d.phases.length) bullets(d.phases.map(p => p.name + " (" + p.weeks + "): " + p.detail), BLUE, true);
-  else if (d.deliveryDetail) para(d.deliveryDetail);
-  if (d.durationNotes) para(d.durationNotes);
+  const notes = [d.phases && d.phases.length ? "" : d.deliveryDetail, d.durationNotes].filter(Boolean);
+  if (notes.length) para(notes.join("\n"));
   // Client team and assumptions stay in the full profile on the website, not on the flyer.
   heading("Expected outcomes"); bullets(d.outcomes, GREEN, false);
   if (overflow) excess = y - BOTTOM + (col === 1 ? 0 : 0);

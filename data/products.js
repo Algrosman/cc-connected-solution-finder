@@ -1650,7 +1650,7 @@ window.CC_CATALOG = [
   ],
   "duration": "12-month cycle, renewed annually",
   "durationDetail": [
-   "Initial on-site assessment within the first [X] months of membership; quarterly reviews throughout the year; annual assessment and report at the close of each membership year."
+   "Initial on-site assessment early in the first membership year; quarterly reviews throughout the year; annual assessment and report at the close of each membership year."
   ],
   "resourcesCC": [
    "SQPE engagement lead",
@@ -1694,7 +1694,7 @@ window.CC_CATALOG = [
   "pdf": "brochures/4_SQPE/SQPE-02_Organizational_Maturity_Assessment_Product_Profile.pdf",
   "subtitle": "See where your organization stands on performance improvement, patient experience and safety culture, and how your view compares with Cleveland Clinic's.",
   "category": "Clinical Advisory",
-  "durationShort": "[X to X] weeks",
+  "durationShort": "Set at scoping; repeatable annually",
   "deliveryShort": "Hybrid",
   "need": [
    "Leaders often hold different views of how mature their organization is in performance improvement, patient experience and safety culture. Without a shared, structured scale, it is hard to agree on priorities or to track progress over time.",
@@ -1715,9 +1715,9 @@ window.CC_CATALOG = [
   "deliveryDetail": [
    "Member leaders complete the self-assessment for each scale. The Cleveland Clinic SQPE team conducts its own assessment, then reviews the comparison with leadership and agrees on priorities."
   ],
-  "duration": "[X to X] weeks",
+  "duration": "Set at scoping; repeatable annually",
   "durationDetail": [
-   "Can be repeated annually to track progress, aligned with the annual SQPE assessment in the core program."
+   "Timing depends on how many of the three scales are in scope and when leaders complete the self-assessment. The assessment can be repeated each year to track progress, aligned with the annual SQPE assessment in the core program."
   ],
   "resourcesCC": [
    "SQPE assessment lead",
@@ -1756,7 +1756,7 @@ window.CC_CATALOG = [
   "pdf": "brochures/4_SQPE/SQPE-03_Greenfield_Hospital_SQPE_Advisory_Guide_Product_Profile.pdf",
   "subtitle": "Build safety, quality and patient experience into a new hospital from day one, guided by Cleveland Clinic.",
   "category": "Hospital Development",
-  "durationShort": "[X] months before opening",
+  "durationShort": "Aligned to the opening timeline",
   "deliveryShort": "Hybrid",
   "need": [
    "New hospitals have a rare opportunity to design safety, quality and patient experience into their structures, processes and culture before opening, but they also risk launching without mature systems in place. Leaders must stand up governance, metrics, policies and training on a compressed timeline.",
@@ -1771,15 +1771,15 @@ window.CC_CATALOG = [
    "Recommended SQPE governance structure and committee design",
    "Priority SQPE metrics and data processes to establish before opening",
    "Readiness roadmap aligned to opening and accreditation milestones",
-   "Recommended SQPE training and education plan [confirm scope]"
+   "Recommended SQPE training and education plan"
   ],
   "deliveryModel": "Hybrid",
   "deliveryDetail": [
-   "Cleveland Clinic SQPE experts guide hospital leadership through the advisory guide in virtual working sessions, with on-site visits at key milestones before opening [confirm delivery approach]."
+   "Cleveland Clinic SQPE experts guide hospital leadership through the advisory guide in virtual working sessions, with on-site visits at key milestones before opening."
   ],
-  "duration": "[X] months before opening",
+  "duration": "Aligned to the opening timeline",
   "durationDetail": [
-   "Typically aligned with the pre-opening timeline, with optional support continuing into the first year of operations."
+   "Support runs through the pre-opening period, timed to design, construction and accreditation milestones, with optional support continuing into the first year of operations."
   ],
   "resourcesCC": [
    "SQPE advisory lead",
@@ -1899,7 +1899,7 @@ window.CC_CATALOG = [
    "Access to the Healthcare EDU library of SQPE-related eLearning courses",
    "Course recommendations mapped to member SQPE priorities",
    "Learner enrollment and access setup",
-   "Completion reporting for member administrators [confirm availability]"
+   "Completion reporting for member administrators"
   ],
   "deliveryModel": "Self-paced Online",
   "deliveryDetail": [
@@ -1907,7 +1907,7 @@ window.CC_CATALOG = [
   ],
   "duration": "Ongoing access for the membership term",
   "durationDetail": [
-   "Individual courses typically take [X minutes to X hours] to complete; access continues throughout the Cleveland Clinic Connected membership."
+   "Courses are self-paced and vary in length; access continues throughout the Cleveland Clinic Connected membership."
   ],
   "resourcesCC": [
    "Healthcare EDU platform team",
@@ -1923,7 +1923,7 @@ window.CC_CATALOG = [
    "Consistent SQPE knowledge across caregivers and sites",
    "A shared Cleveland Clinic language for safety and quality",
    "Scalable training without large-scale staff release",
-   "Trackable course completion for [number of] target caregivers"
+   "Trackable course completion across the caregiver groups the member selects"
   ],
   "stageNote": "",
   "deliverablesIntro": "",
@@ -1947,7 +1947,7 @@ window.CC_CATALOG = [
   "pdf": "brochures/4_SQPE/SQPE-06_Train-the-Trainer_Programs_Product_Profile.pdf",
   "subtitle": "Equip your own leaders to teach Cleveland Clinic's communication, reliability and improvement programs, building lasting internal capability.",
   "category": "Education & Training",
-  "durationShort": "[X to X] weeks per program",
+  "durationShort": "Varies by program; set at scoping",
   "deliveryShort": "On-site, Hybrid, Workshop-based",
   "need": [
    "Culture change in safety, communication and improvement does not scale through external trainers alone. Hospitals need internal faculty who can deliver proven programs, adapt them to local context and sustain them after an engagement ends.",
@@ -1955,7 +1955,7 @@ window.CC_CATALOG = [
   ],
   "value": [
    "These programs use the curricula Cleveland Clinic applies with its own caregivers, including Communicate with HEART for all caregivers and R.E.D.E. to Communicate for physicians and advanced practice providers, alongside High Reliability, Just Culture and Performance Improvement.",
-   "Cleveland Clinic prepares member faculty through a combination of on-site and eLearning instruction, so the member gains internal trainers [confirm certification] and the materials to teach independently."
+   "Cleveland Clinic prepares member faculty through a combination of on-site and eLearning instruction, so the member gains its own trainers and the materials to teach independently."
   ],
   "deliverables": [
    "Communicate with HEART train-the-trainer (all caregivers)",
@@ -1969,7 +1969,7 @@ window.CC_CATALOG = [
   "deliveryDetail": [
    "Each program combines eLearning preparation with on-site, workshop-based training led by Cleveland Clinic faculty. Member trainers then deliver the program locally, with Cleveland Clinic available for follow-up support."
   ],
-  "duration": "[X to X] weeks per program",
+  "duration": "Varies by program; set at scoping",
   "durationDetail": [
    "Members may select one or more programs; each typically includes eLearning pre-work, an on-site training visit and a follow-up period as trainers begin local delivery."
   ],
