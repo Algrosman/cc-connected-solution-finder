@@ -78,9 +78,9 @@
    "value": "Delivered by Cleveland Clinic's Finance Advisory team. Cleveland Clinic runs 23 hospitals and 300 outpatient locations with about 83,000 caregivers, from Northeast Ohio to London and Abu Dhabi (as of December 31, 2025). Business cases draw on Cleveland Clinic's own experience opening services and facilities.",
    "deliverablesIntro": "Modules are selected at scoping:",
    "deliverables": [
-    "Market and feasibility assessment: Excel-based demand model by service, viability, key risks and conditions for success",
-    "Business case and pro forma: multi-year model showing return on investment and net present value under three scenarios",
-    "Prioritization and roadmap: opportunities ranked on agreed criteria and a phased, funded implementation plan",
+    "Market and feasibility assessment: demand model by service, viability, risks and success conditions",
+    "Business case and pro forma: multi-year model of return and net present value in three scenarios",
+    "Prioritization and roadmap: opportunities ranked on agreed criteria and a phased, funded plan",
     "Executive presentation: findings and a go or no-go recommendation for the board"
    ],
    "phases": [
@@ -328,7 +328,7 @@
    "value": "Delivered by Cleveland Clinic's Finance Advisory team. Cleveland Clinic runs 23 hospitals and 300 outpatient locations with about 83,000 caregivers, from Northeast Ohio to London and Abu Dhabi (as of December 31, 2025). Opportunities are tested by an operator for what is achievable without compromising care.",
    "deliverablesIntro": "The first three form the diagnostic; the last is the extended scope:",
    "deliverables": [
-    "Assessment and benchmarking: key performance indicators (KPIs), drivers of results and comparison with agreed peers",
+    "Assessment and benchmarking: key performance indicators, drivers of results and peer comparison",
     "Cost and revenue opportunities: quantified and ranked by value and ease",
     "Improvement roadmap: actions with owners, timing and estimated impact",
     "Cost accounting and service line profitability: allocation rules and margin by service line"
@@ -584,7 +584,7 @@
    "value": "Delivered by Cleveland Clinic's Finance Advisory team. Cleveland Clinic runs 23 hospitals and 300 outpatient locations with about 83,000 caregivers, from Northeast Ohio to London and Abu Dhabi (as of December 31, 2025). Models are handed over with training and an assumptions workbook so the client's team owns them.",
    "deliverablesIntro": "Excel-based modules that together form one planning toolkit:",
    "deliverables": [
-    "Volume, revenue and staffing models: by service line, with ramp-up, payer mix and full-time equivalent (FTE) needs",
+    "Volume, revenue and staffing models: by service line, including ramp-up, payer mix and headcount",
     "Three-statement model: profit and loss, cash flow and balance sheet with scenario toggles",
     "Scenario package: best, base and downside cases with break-even analysis",
     "Budget, forecast and capital plan: budget process, 3 to 10 year forecast and capital priorities"
@@ -1230,7 +1230,7 @@
    "need": "Opening a new hospital or switching major systems is high risk: build, testing, training and cutover must come together on a fixed date, and many organizations lack the governance, risk tracking and readiness checkpoints to manage it.",
    "value": "Cleveland Clinic activates its own facilities and systems with a standard Global Design and Activation Playbook. Across 9 major implementations in 3 years, more than 13,000 caregivers were trained (94% before go-live), about 1,500 served as EHR champions and more than 12,000 devices were deployed. Clients gain a proven governance model, RIDAC discipline (risks, issues, decisions, actions, changes) and objective readiness checkpoints.",
    "deliverables": [
-    "Due diligence and an activation plan aligned to an ideal greenfield timeline (from about 15 months before go-live)",
+    "Due diligence and an activation plan on a greenfield timeline, from about 15 months before go-live",
     "Project governance and RIDAC set-up, with status reporting and communications templates",
     "Validation, testing and training plan review",
     "90/60/30-day go-live readiness assessments",
@@ -1475,11 +1475,11 @@
    "need": "Organizations need leaders who build strong teams, decide well in complex systems and carry a culture of excellence through growth or a new hospital opening.",
    "value": "Programs combine experiential learning with direct exposure to Cleveland Clinic's leadership, culture and operating model, at Cleveland Clinic or as blended pathways with the participant organization.",
    "deliverables": [
-    "Global Physician Leadership Immersion Program. Physicians new to leadership; 3-day cohort in the United States",
+    "Global Physician Leadership Immersion Program. Physicians new to leadership; 3-day U.S. cohort",
     "Executive Visitors Program. Healthcare leaders; 3-day operational immersion",
     "Samson Global Leadership Academy. Senior executives; 1 to 2 week intensive",
     "Executive Leadership Onboarding. Leaders of new hospitals; about 4 months, from March 2027",
-    "Executive Leader Development Pathway. Leaders of established hospitals; about 4 months, from January 2027"
+    "Executive Leader Development Pathway. Leaders of existing hospitals; about 4 months, from January 2027"
    ],
    "deliveryDetail": "Format: In-person immersions and cohorts, and hybrid pathways\nLocation: Cleveland Clinic (United States) and the participant organization",
    "durationNotes": "",
@@ -1544,7 +1544,7 @@
    "need": "Growing organizations and new hospitals need caregivers and leaders who share the same purpose, values and behaviors, and the internal capability to sustain them.",
    "value": "Programs draw on Cleveland Clinic's own onboarding, coaching, R.E.D.E. communication, high reliability and patient experience approaches, with leader reinforcement so behaviors last.",
    "deliverables": [
-    "Foundational Skills Onboarding. Patient-facing caregivers; 4 days, locally facilitated, plus a Leader Supplement",
+    "Foundational Skills Onboarding. Patient-facing caregivers; 4 days, locally led, plus a Leader Supplement",
     "Coach Training + Program Development. Coaching champions; about 7 months",
     "High Reliability Organization (HRO) eLearnings. All caregivers and leaders; 5 hours",
     "The R.E.D.E. Model. Open to all; 3-day communication course with a CME option",
@@ -1773,6 +1773,11 @@
     "A subspecialist's view without the patient leaving local care",
     "Treatment decisions confirmed or refined with documented input",
     "Physicians build expertise case by case"
+   ],
+   "deliverables": [
+    "Written specialist report: assessment with diagnosis and treatment recommendations",
+    "Specialist matched to the case: from any Cleveland Clinic specialty",
+    "Defined turnaround: the report is typically returned within three days of the complete case"
    ]
   },
   "questions": [
@@ -1972,10 +1977,12 @@
    "deliverables": [
     "Clinical outcome guides: CLABSI, CAUTI, C. diff, MRSA, mortality, sepsis, falls and pressure injuries",
     "Medication safety guides: reconciliation, labeling, and high-risk and look-alike/sound-alike medications",
-    "Patient safety and infection prevention guides: event reporting, isolation, PPE, disinfection, sterile processing, patient identification and Universal Protocol",
-    "Nursing and professional practice guides: shared governance, professional practice, plan of care visits and peer review (OPPE, FPPE)",
-    "Governance and readiness guides: safety and quality governance, accreditation readiness and policy management",
-    "Improvement and leadership guides: CCIM, visual management, tiered huddles, problem-solving, change management, leader rounding and HEART Chats"
+    "Patient safety guides: event reporting, patient identification and Universal Protocol",
+    "Infection prevention guides: isolation, PPE, disinfection and sterile processing",
+    "Nursing and professional practice guides: shared governance, plan of care visits and peer review",
+    "Governance and readiness guides: safety and quality governance, accreditation and policy management",
+    "Improvement guides: CCIM, visual management, tiered huddles, problem-solving and change management",
+    "Leadership guides: leader rounding and HEART Chats"
    ],
    "deliveryDetail": "Guides are provided digitally for member teams to use on demand, and Cleveland Clinic updates them as practices evolve.",
    "durationNotes": "",
@@ -1989,7 +1996,8 @@
    "What does mature practice look like for infection prevention, medication safety and other priorities?",
    "How do our units compare with Cleveland Clinic practice?",
    "What practical steps should our teams take next?"
-  ]
+  ],
+  "leadBold": true
  },
  {
   "id": "SQPE-05",

@@ -47,7 +47,12 @@ function render(d, LOGO, size, dateStr, FONTS, LOOK) {
   function lead(t, mode) {
     let m = t.match(/^([^:]{2,80}):\s+([\s\S]*)$/);
     if (m && (mode === "colon" || KV.test(m[1]))) return [m[1] + ":", m[2]];
-    if (mode === "auto") { m = t.match(/^([A-Z][^.]{2,58})\.\s+([\s\S]*)$/); if (m) return [m[1] + ".", m[2]]; }
+    if (mode === "auto") {
+      // Dotted abbreviations such as R.E.D.E. are part of a program name, not its end
+      const P = "\u0001", safe = t.replace(/\b(?:[A-Z]\.){2,}/g, x => x.replace(/\./g, P));
+      m = safe.match(/^([A-Z][^.]{2,58})\.\s+([\s\S]*)$/);
+      if (m) return [m[1].split(P).join(".") + ".", m[2].split(P).join(".")];
+    }
     return ["", t];
   }
   function wrap(rest, width, hw) {

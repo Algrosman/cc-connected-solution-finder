@@ -1864,7 +1864,7 @@ window.CC_CATALOG = [
   ],
   "stageNote": "",
   "deliverablesIntro": "",
-  "leadBold": false,
+  "leadBold": true,
   "phases": [],
   "resourcesNote": "",
   "assumptions": [],
