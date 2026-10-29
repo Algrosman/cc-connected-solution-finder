@@ -1,4 +1,4 @@
-/* Cleveland Clinic Connected: product navigator, catalog, packages and the advisory package (cart). */
+/* Cleveland Clinic Connected: product navigator, catalog, packages and the advisory service package (cart). */
 (function () {
   "use strict";
 
@@ -77,7 +77,7 @@
     var added = inCart(id);
     return '<button type="button" class="btn ' + (added ? "btn-secondary is-added" : "btn-secondary") + " " + (extraClass || "") +
       '" data-action="' + (added ? "open-cart" : "add") + '" data-id="' + id + '" aria-label="' +
-      (added ? "In your package: " : "Add to your package: ") + esc(BY_ID[id].title) + '">' + (added ? ICON.check + "In your package" : ICON.plus + "Add to package") + "</button>";
+      (added ? "In your advisory service package: " : "Add to your advisory service package: ") + esc(BY_ID[id].title) + '">' + (added ? ICON.check + "In your package" : ICON.plus + "Add to package") + "</button>";
   }
 
   /* ---------------- Finder ---------------- */
@@ -786,7 +786,7 @@
     state.cart.push(id);
     saveCart();
     refreshCartUI();
-    toast("Added to your package: " + BY_ID[id].title);
+    toast("Added to your advisory service package: " + BY_ID[id].title);
   }
 
   function addBundle(pkgId) {
@@ -796,7 +796,7 @@
     bundleIds(pkg).forEach(function (id) { if (BY_ID[id] && !inCart(id)) { state.cart.push(id); added++; } });
     saveCart();
     refreshCartUI();
-    toast(added ? "Added " + plural(added, "offering", "offerings") + " from the " + pkg.title : "The " + pkg.title + " is already in your package");
+    toast(added ? "Added " + plural(added, "offering", "offerings") + " from the " + pkg.title : "The " + pkg.title + " is already in your advisory service package");
   }
 
   function bundleIds(pkg) {
@@ -813,7 +813,7 @@
     var c = $("#cartCount");
     c.textContent = state.cart.length;
     c.classList.remove("bump"); void c.offsetWidth; c.classList.add("bump");
-    $("#cartButton").setAttribute("aria-label", "Your advisory package, " + plural(state.cart.length, "solution", "solutions"));
+    $("#cartButton").setAttribute("aria-label", "Advisory service package, " + plural(state.cart.length, "solution", "solutions"));
     // Re-render everything that shows add buttons, keeping the finder where it is.
     var step = currentStep();
     if (step.type === "result") renderResult();
@@ -849,10 +849,10 @@
     if (state.cartView === "form") { renderForm(panel); return; }
     if (state.cartView === "done") { renderDone(panel); return; }
     var items = state.cart.map(function (id) { return BY_ID[id]; });
-    var html = cartHead("Your advisory package", plural(items.length, "solution", "solutions"));
+    var html = cartHead("Your advisory service package", plural(items.length, "solution", "solutions"));
     html += '<div class="panel-body">';
     if (!items.length) {
-      html += '<div class="cart-empty"><h3>Your package is empty</h3><p>Use the product navigator or browse all solutions, then add the ones you would like to discuss with our team.</p>' +
+      html += '<div class="cart-empty"><h3>Your advisory service package is empty</h3><p>Use the product navigator or browse all solutions, then add the ones you would like to discuss with our team.</p>' +
         '<button type="button" class="btn btn-primary" data-action="go-finder">Open the product navigator</button></div>';
     } else {
       html += '<ul class="cart-list">' + items.map(function (p) {
@@ -880,7 +880,7 @@
       return '<div class="field"><label for="f-' + name + '">' + label + (required ? "" : ' <span class="opt">(optional)</span>') + "</label>" +
         '<input id="f-' + name + '" name="' + name + '" type="' + type + '"' + (required ? " required" : "") + ' value="' + esc(draft[name] || "") + '"' + (extra || "") + "></div>";
     }
-    var html = cartHead("Request a proposal", plural(items.length, "solution", "solutions") + " in your package");
+    var html = cartHead("Request a proposal", plural(items.length, "solution", "solutions") + " in your advisory service package");
     html += '<div class="panel-body"><form class="form" id="requestForm" novalidate>' +
       '<p class="form-intro">Tell us about your organization. The Cleveland Clinic Connected team will contact you to scope the solutions below.</p>' +
       listHTML(items.map(function (p) { return p.id + "  " + p.title; })) +
@@ -1027,7 +1027,7 @@
       (sent ? "" : '<a class="btn btn-primary" href="' + esc(mailtoLink(req)) + '">Open the email again</a>') +
       '<button type="button" class="btn btn-secondary" data-action="print">Print or save as PDF</button>' +
       "</div>" +
-      '<p style="margin-top:22px;font-size:14.5px">Your package is unchanged, so you can keep adding solutions. <button type="button" class="remove" data-action="clear-cart">Clear package</button></p>' +
+      '<p style="margin-top:22px;font-size:14.5px">Your advisory service package is unchanged, so you can keep adding solutions. <button type="button" class="remove" data-action="clear-cart">Clear package</button></p>' +
       "</div></div>";
     panel.innerHTML = html;
   }

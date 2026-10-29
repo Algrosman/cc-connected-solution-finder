@@ -1,6 +1,6 @@
-// One-page offering profiles. Same content, colors, fonts and logo as the Advisory Product Builder's
-// brochures, in a single column that reads straight down, sized to fit one Letter page. The largest type size that
-// fits is used (10.8 pt, or down to 10 pt if needed); anything that still does not fit is reported, not cut silently.
+// One-page offering profiles: a single column that reads straight down, on one Letter page, using the
+// website's fonts (Source Serif 4 for titles and headings, Roboto for everything else; TrueType copies in
+// scripts/fonts) and the builder's logo and colors. Body text is 10.4 pt; profiles that do not fit are reported.
 // Usage: node scripts/render_onepagers.js <builder index.html> <content.json> <out dir> [IDs...]
 // Needs: npm install jspdf@2.5.1 playwright
 const fs = require("fs");
@@ -11,10 +11,21 @@ const [builderHtml, contentJson, outDir, ...only] = process.argv.slice(2);
 const src = fs.readFileSync(builderHtml, "utf8");
 const logo = src.match(/<div class="topbar"><div class="in">\s*<img src="(data:image\/png;base64,[^"]+)"/)[1];
 const jspdf = fs.readFileSync(require.resolve("jspdf/dist/jspdf.umd.min.js"), "utf8");
+const FONT_DIR = path.join(__dirname, "fonts");
+const FONTS = {};
+for (const f of ["Roboto-Regular.ttf", "Roboto-Medium.ttf", "Roboto-Bold.ttf", "SourceSerif4-SemiBold.ttf", "SourceSerif4-Italic.ttf"]) {
+  FONTS[f] = fs.readFileSync(path.join(FONT_DIR, f)).toString("base64");
+}
 
-function render(d, LOGO, size, dateStr) {
+function render(d, LOGO, size, dateStr, FONTS) {
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF({ unit: "pt", format: "letter" });
+  [["Roboto-Regular.ttf", "Roboto", "normal"], ["Roboto-Medium.ttf", "Roboto", "medium"], ["Roboto-Bold.ttf", "Roboto", "bold"],
+   ["SourceSerif4-SemiBold.ttf", "SourceSerif", "semibold"], ["SourceSerif4-Italic.ttf", "SourceSerif", "italic"]].forEach(([f, fam, st]) => {
+    doc.addFileToVFS(f, FONTS[f]); doc.addFont(f, fam, st);
+  });
+  const SANS = st => doc.setFont("Roboto", st || "normal");
+  const SERIF = st => doc.setFont("SourceSerif", st || "semibold");
   const W = 612, H = 792, M = 46, CW = W - 2 * M, COLW = CW, BOTTOM = H - 50;
   const NAVY = [15, 37, 68], BLUE = [55, 97, 173], GREEN = [70, 125, 60], INK = [29, 36, 48], MUTED = [95, 107, 122], LINE = [222, 227, 234];
   const setC = c => doc.setTextColor(c[0], c[1], c[2]);
@@ -40,7 +51,7 @@ function render(d, LOGO, size, dateStr) {
   }
   // Wrap text whose first line starts after a bold lead of width hw.
   function wrap(rest, width, hw) {
-    doc.setFont("helvetica", "normal"); doc.setFontSize(size);
+    SANS(); doc.setFontSize(size);
     const lines = []; let cur = "";
     rest.split(/\s+/).filter(Boolean).forEach(w => {
       const s = cur ? cur + " " + w : w;
@@ -57,14 +68,14 @@ function render(d, LOGO, size, dateStr) {
   }
   function paraBlock(p) {
     const [head, rest] = lead(p, "kv");
-    doc.setFont("helvetica", "bold"); doc.setFontSize(size);
+    SANS("medium"); doc.setFontSize(size);
     const hw = head ? doc.getTextWidth(head) * 1.015 + size * 0.32 : 0;
     const lines = wrap(rest, COLW, hw);
     lines.forEach((ln, i) => {
       ensure(LH);
       let cx = x0();
-      if (i === 0 && head) { doc.setFont("helvetica", "bold"); setC(NAVY); doc.text(head, cx, y); cx += hw; }
-      doc.setFont("helvetica", "normal"); setC(INK);
+      if (i === 0 && head) { SANS("medium"); setC(NAVY); doc.text(head, cx, y); cx += hw; }
+      SANS(); setC(INK);
       const avail = COLW - (i === 0 ? hw : 0);
       const words = ln.split(" ");
       const ww = words.reduce((s, w) => s + doc.getTextWidth(w), 0);
@@ -80,7 +91,7 @@ function render(d, LOGO, size, dateStr) {
     items.forEach(it => {
       const t = clean(it);
       const [head, rest] = lead(t, colon ? "colon" : "auto");
-      doc.setFont("helvetica", "bold"); doc.setFontSize(size);
+      SANS("medium"); doc.setFontSize(size);
       const ind = size * 1.15;
       const hw = head ? doc.getTextWidth(head) * 1.015 + size * 0.32 : 0;
       const lines = wrap(rest, COLW - ind, hw);
@@ -89,90 +100,81 @@ function render(d, LOGO, size, dateStr) {
       lines.forEach((ln, i) => {
         ensure(LH);
         let cx = x0() + ind;
-        if (i === 0 && head) { doc.setFont("helvetica", "bold"); setC(NAVY); doc.text(head, cx, y); cx += hw; }
-        doc.setFont("helvetica", "normal"); setC(INK);
+        if (i === 0 && head) { SANS("medium"); setC(NAVY); doc.text(head, cx, y); cx += hw; }
+        SANS(); setC(INK);
         if (ln) doc.text(ln, cx, y);
         y += LH;
       });
       y += size * 0.28;
     });
   }
-  function heading(num, title) {
-    ensure(size * 2.4 + LH * 4); // keep the heading with the first lines that follow it
-    if (y > bodyTop + 1) y += size * 0.5;
-    doc.setFont("times", "bold"); doc.setFontSize(size + 4); setC(GREEN);
-    doc.text(num, x0(), y + 1);
-    doc.setFont("helvetica", "bold"); doc.setFontSize(size - 0.4); setC(NAVY);
-    doc.text(clean(title).toUpperCase(), x0() + size * 2.1, y, { charSpace: 0.7 });
-    y += size * 0.5; stroke(LINE); doc.setLineWidth(0.6); doc.line(x0(), y, x0() + COLW, y);
-    y += size * 1.3;
-  }
-  function label(t, color) {
-    ensure(LH * 2);
-    doc.setFont("helvetica", "bold"); doc.setFontSize(size - 1.3); setC(color);
-    doc.text(t, x0(), y, { charSpace: 0.6 });
-    y += LH * 0.95;
+  function heading(title) {
+    ensure(size * 2.6 + LH * 4); // keep the heading with the first lines that follow it
+    if (y > bodyTop + 1) y += size * 0.55;
+    SERIF("semibold"); doc.setFontSize(size + 3.6); setC(NAVY);
+    doc.text(clean(title), x0(), y);
+    y += size * 0.55; stroke(LINE); doc.setLineWidth(0.6); doc.line(x0(), y, x0() + COLW, y);
+    y += size * 1.25;
   }
   function leadLine(t) {
     ensure(LH * 2);
-    doc.setFont("times", "bold"); doc.setFontSize(size + 1.4); setC(NAVY);
-    doc.splitTextToSize(clean(t), COLW).forEach(ln => { ensure(LH); doc.text(ln, x0(), y); y += LH * 1.08; });
+    SANS("medium"); doc.setFontSize(size + 0.4); setC(NAVY);
+    doc.splitTextToSize(clean(t), COLW).forEach(ln => { ensure(LH); doc.text(ln, x0(), y); y += LH * 1.05; });
     y += size * 0.15;
   }
 
   /* ---- Header ---- */
   fill(NAVY); doc.rect(0, 0, W, 5, "F");
-  doc.addImage(LOGO, "PNG", M, 20, 118, 118 * 120 / 720, "cclogo", "FAST");
-  doc.setFont("helvetica", "bold"); doc.setFontSize(6.6); setC(GREEN);
-  { const t = "INTERNATIONAL & EMERGING MARKETS  |  " + (d.headerLabel || "ADVISORY OFFERING PROFILE");
-    const tw = doc.getTextWidth(t) + 0.8 * (t.length - 1); doc.text(t, W - M - tw, 33, { charSpace: 0.8 }); }
-  y = 66;
-  doc.setFont("times", "bold"); doc.setFontSize(20); setC(NAVY);
-  doc.splitTextToSize(clean(d.name), CW).forEach(ln => { doc.text(ln, M, y); y += 22; });
+  doc.addImage(LOGO, "PNG", M, 20, 124, 124 * 120 / 720, "cclogo", "FAST");
+  SANS("medium"); doc.setFontSize(9); setC(GREEN);
+  doc.text("International & Emerging Markets  |  " + (d.headerLabel || "Advisory offering profile"), W - M, 34, { align: "right" });
+  y = 70;
+  SERIF("semibold"); doc.setFontSize(22); setC(NAVY);
+  doc.splitTextToSize(clean(d.name), CW).forEach(ln => { doc.text(ln, M, y); y += 25; });
   if (d.tagline) {
-    y -= 4; doc.setFont("times", "italic"); doc.setFontSize(10.2); setC(MUTED);
-    doc.splitTextToSize(clean(d.tagline), CW).forEach(ln => { y += 12.6; doc.text(ln, M, y); });
+    y -= 6; SERIF("italic"); doc.setFontSize(11.5); setC(MUTED);
+    doc.splitTextToSize(clean(d.tagline), CW).forEach(ln => { y += 14.5; doc.text(ln, M, y); });
   }
-  y += 12;
-  /* ---- At-a-glance band ---- */
-  const glance = [["CATEGORY", d.category + (d.stageNote ? "\n(" + d.stageNote + ")" : "")], ["TYPICAL DURATION", d.duration], ["DELIVERY MODEL", d.deliveryModes.join(", ")]];
-  const cellW = CW / 3, pad = 10;
-  doc.setFont("helvetica", "normal"); doc.setFontSize(8.2);
+  y += 14;
+  /* ---- At-a-glance ribbon ---- */
+  const glance = [["Category", d.category + (d.stageNote ? "\n(" + d.stageNote + ")" : "")], ["Typical duration", d.duration], ["Delivery model", d.deliveryModes.join(", ")]];
+  const cellW = CW / 3, pad = 12, VL = 13;
+  SANS(); doc.setFontSize(10.6);
   const cells = glance.map(g => [].concat(...clean(g[1]).split("\n").map(p => doc.splitTextToSize(p, cellW - 2 * pad))));
-  const bandH = 30 + Math.max(...cells.map(c => c.length)) * 10.2;
+  const bandH = 34 + Math.max(...cells.map(c => c.length)) * VL;
   fill(NAVY); doc.rect(0, y, W, bandH, "F");
-  fill(BLUE); doc.rect(0, y + bandH, W / 2, 2.2, "F"); fill(GREEN); doc.rect(W / 2, y + bandH, W / 2, 2.2, "F");
+  fill(BLUE); doc.rect(0, y + bandH, W / 2, 2.5, "F"); fill(GREEN); doc.rect(W / 2, y + bandH, W / 2, 2.5, "F");
   glance.forEach((g, i) => {
     const cx = M + i * cellW + (i ? pad : 0);
-    if (i) { doc.setDrawColor(60, 85, 120); doc.setLineWidth(0.5); doc.line(M + i * cellW, y + 11, M + i * cellW, y + bandH - 11); }
-    doc.setFont("helvetica", "bold"); doc.setFontSize(6.4); doc.setTextColor(150, 185, 228); doc.text(g[0], cx, y + 16, { charSpace: 0.8 });
-    doc.setFont("helvetica", "normal"); doc.setFontSize(8.2); doc.setTextColor(255, 255, 255);
-    cells[i].forEach((ln, j) => doc.text(ln, cx, y + 28 + j * 10.2));
+    if (i) { doc.setDrawColor(60, 85, 120); doc.setLineWidth(0.5); doc.line(M + i * cellW, y + 12, M + i * cellW, y + bandH - 12); }
+    SANS("medium"); doc.setFontSize(9); doc.setTextColor(150, 185, 228); doc.text(g[0], cx, y + 18);
+    SANS(); doc.setFontSize(10.6); doc.setTextColor(255, 255, 255);
+    cells[i].forEach((ln, j) => doc.text(ln, cx, y + 32 + j * VL));
   });
-  y += bandH + 2.2 + 18;
+  y += bandH + 2.5 + 20;
   bodyTop = y;
 
   /* ---- Body, flowing down the left column and then the right ---- */
-  heading("01", "Client Need"); para(d.need);
-  heading("02", "Why Cleveland Clinic"); para(d.value);
-  heading("03", "What You Receive");
+  heading("Client need"); para(d.need);
+  heading("Why Cleveland Clinic"); para(d.value);
+  heading("What you receive");
   if (d.deliverablesIntro) { para(d.deliverablesIntro); y += size * 0.3; }
   bullets(d.deliverables, BLUE, d.leadBold);
-  heading("04", "How It Works");
+  heading("How it works");
   leadLine(d.deliveryModes.join("  /  ") + "   |   " + d.duration);
   if (d.phases && d.phases.length) bullets(d.phases.map(p => p.name + " (" + p.weeks + "): " + p.detail), BLUE, true);
   else if (d.deliveryDetail) para(d.deliveryDetail);
   if (d.durationNotes) para(d.durationNotes);
   const needs = d.resClient.concat(d.assumptions || []);
-  if (needs.length) { heading("05", "What We Need From You"); bullets(needs, GREEN, false); }
-  heading(needs.length ? "06" : "05", "Expected Outcomes"); bullets(d.outcomes, GREEN, false);
+  if (needs.length) { heading("What we need from you"); bullets(needs, GREEN, false); }
+  heading("Expected outcomes"); bullets(d.outcomes, GREEN, false);
   if (overflow) excess = y - BOTTOM + (col === 1 ? 0 : 0);
 
   /* ---- Footer ---- */
   fill(BLUE); doc.rect(M, H - 36, CW / 2, 1, "F"); fill(GREEN); doc.rect(M + CW / 2, H - 36, CW / 2, 1, "F");
-  doc.setFont("helvetica", "normal"); doc.setFontSize(6.8); setC(MUTED);
-  doc.text("CLEVELAND CLINIC  |  INTERNATIONAL & EMERGING MARKETS", M, H - 24, { charSpace: 0.5 });
-  doc.text("Prepared " + dateStr, W - M, H - 24, { align: "right" });
+  SANS(); doc.setFontSize(8.5); setC(MUTED);
+  doc.text("Cleveland Clinic  |  International & Emerging Markets", M, H - 23);
+  doc.text("Prepared " + dateStr, W - M, H - 23, { align: "right" });
   return { overflow, excess: Math.round(excess), uri: overflow ? null : doc.output("datauristring"), endY: y, col };
 }
 
@@ -198,12 +200,13 @@ function render(d, LOGO, size, dateStr) {
       outcomes: src.outcomes,
     };
     let res = null, used = null;
-    for (let size = 10.4; size >= 10.39; size = Math.round((size - 0.2) * 100) / 100) {
-      res = await p.evaluate(([fn, d, logo, size, dateStr]) => (new Function("return " + fn)())(d, logo, size, dateStr),
-        [render.toString(), d, logo, size, dateStr]);
+    const BODY_PT = Number(process.env.ONEPAGE_SIZE || 10.4);
+    for (let size = BODY_PT; size >= BODY_PT - 0.01; size = Math.round((size - 0.2) * 100) / 100) {
+      res = await p.evaluate(([fn, d, logo, size, dateStr, fonts]) => (new Function("return " + fn)())(d, logo, size, dateStr, fonts),
+        [render.toString(), d, logo, size, dateStr, FONTS]);
       if (!res.overflow) { used = size; break; }
     }
-    if (!used) { report.push(`${it.id}: over by about ${res.excess} pt of column (${Math.round(res.excess / (10.4 * 1.33))} lines) at 10.4 pt`); continue; }
+    if (!used) { report.push(`${it.id}: over by about ${res.excess} pt of column (${Math.round(res.excess / (BODY_PT * 1.33))} lines) at ${BODY_PT} pt`); continue; }
     const file = path.join(outDir, it.file);
     fs.mkdirSync(path.dirname(file), { recursive: true });
     fs.writeFileSync(file, Buffer.from(res.uri.split(",")[1], "base64"));
