@@ -18,9 +18,11 @@ It is plain HTML, CSS and JavaScript with no build step, so it runs on any stati
 | `data/finder.js` | The questions, options and scoring weights |
 | `brochures/` | The offering profile PDFs, the Finance packet (`1_Finance/00_Finance_Advisory_Offerings_Packet.pdf`) and `Offerings_Index.csv` |
 | `brochures/brochure-content.json` | Source text for every brochure (the builder's input fields, plus the optional fields below) |
-| `scripts/render_brochures.js` | Regenerates the brochure PDFs from that source with the builder's own PDF code |
+| `scripts/render_onepagers.js` | Generates the one-page brochure PDFs from the brochure source: a single column at 10.4 pt in the website's fonts (Source Serif 4 and Roboto, in `scripts/fonts`) and colors, with the builder's logo |
+| `scripts/render_brochures.js` | The earlier multi-page renderer, which runs the builder's own PDF code (kept for reference) |
+| `data/packages.js` and `brochures/package-content.json` | The All-in-One New Hospital Package: the offerings it bundles (website) and its one-page profile (PDF) |
 | `scripts/add_links.py` | Re-adds clickable links the builder cannot draw |
-| `scripts/build_finance_packet.py` | Builds the Finance packet: a two-page executive summary (drawn by `scripts/finance_packet_summary.js`) followed by the seven Finance profiles, with a linked contents table and bookmarks |
+| `scripts/build_finance_packet.py` | Builds the Finance packet: a two-page executive summary (drawn by `scripts/finance_packet_summary.js` in the same style as the profiles) followed by the seven one-page Finance profiles, with a linked contents table and bookmarks |
 | `scripts/build_catalog.py` | Rebuilds `data/products.js` from the brochure source (or a PDF when there is no source entry) |
 | `tests/check_finder.js` | Walks every finder path and confirms every solution can be recommended |
 
@@ -34,7 +36,9 @@ Then open http://localhost:8000.
 
 ## Updating the brochures
 
-The brochure text lives in `brochures/brochure-content.json`, one entry per solution with the same fields as the Advisory Product Builder form (name, tagline, category, need, value, deliverables, delivery modes and detail, duration and notes, resources, outcomes, owner). The PDFs and the website are both generated from it, so they always say the same thing.
+The brochure text lives in `brochures/brochure-content.json`, one entry per solution with the same fields as the Advisory Product Builder form (name, tagline, category, need, value, deliverables, delivery modes and detail, duration and notes, resources, outcomes), plus `questions`: the three client questions the offering answers. The PDFs and the website are both generated from it, so they always say the same thing.
+
+Each one-page profile reads straight down: the domain (Safety, Quality, and Patient Experience is spelled out as "Safety, Quality, and Patient Experience (SQPE)"), title and tagline; a band with the category, typical duration and delivery model; then Client need, Questions we help you answer, What you receive, How it works and Expected outcomes. The value statement, client team and assumptions appear on the website only. Text is never italic or all capitals, and each "What you receive" bullet should fit on one line.
 
 To change a brochure:
 
@@ -45,12 +49,13 @@ To change a brochure:
    - `phases`: `[{"name", "weeks", "detail"}]`, listed under Typical Duration; `durationNotes` then explains what moves an engagement within its range
    - `resNote`: what the Cleveland Clinic team percentages mean
    - `assumptions`: engagement assumptions, listed separately from the client team (the client panel is then labelled "Client team" rather than "Client team and inputs")
-2. Regenerate the PDFs with the builder's own PDF code (needs Node.js, `npm install jspdf@2.5.1 playwright`, and a copy of the builder repo):
+2. Regenerate the one-page PDFs (needs Node.js, `npm install jspdf@2.5.1 playwright`, and a copy of the builder repo):
    ```
-   node scripts/render_brochures.js ../iem-advisory-product-builder/index.html brochures/brochure-content.json brochures
+   node scripts/render_onepagers.js ../iem-advisory-product-builder/index.html brochures/brochure-content.json brochures
+   node scripts/render_onepagers.js ../iem-advisory-product-builder/index.html brochures/package-content.json brochures
    python3 scripts/add_links.py brochures
    ```
-   Add solution IDs at the end of the first command to regenerate only those brochures. After changing a Finance profile, rebuild the packet:
+   Add solution IDs at the end of the first command to regenerate only those brochures. Every brochure must fit on one page at 10.4 pt; the script names any that do not (set `ONEPAGE_FORCE=1` to write them anyway for a look). When the full profile is too long for one page, or a deliverable runs past one line, add an `onePage` object to the entry with shorter versions of any fields (for example `need`, `deliverables` or `outcomes`): the PDF uses those, and the website keeps the full text. After changing a Finance profile, rebuild the packet:
    ```
    python3 scripts/build_finance_packet.py ../iem-advisory-product-builder/index.html brochures
    ```

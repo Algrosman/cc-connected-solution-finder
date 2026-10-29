@@ -2,7 +2,7 @@
   "_comment": "Website-only fields that the brochures do not carry. 'fit' lists which hospitals a solution is offered to: 'new' (hospital in development) and/or 'existing' (operating hospital). Add an entry for every new product ID in Offerings_Index.csv.",
   "areaToDomain": {
     "Finance Advisory": "finance",
-    "Safety, Quality & Patient Experience (SQPE)": "sqpe",
+    "Safety, Quality, and Patient Experience (SQPE)": "sqpe",
     "IT / Digital & Technology Advisory": "digital",
     "Education & Training": "education"
   },

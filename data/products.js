@@ -88,6 +88,11 @@ window.CC_CATALOG = [
    "Modules, scenarios and the projection horizon are confirmed at scoping",
    "Stakeholders are available for interviews and working sessions, and draft deliverables are reviewed within an agreed turnaround",
    "Recommendations are advisory; decisions and implementation remain with the client's leadership"
+  ],
+  "questions": [
+   "Is this facility, service line or market entry financially viable?",
+   "Which growth opportunities should we pursue first?",
+   "How should we fund and sequence the plan over the next several years?"
   ]
  },
  {
@@ -176,6 +181,11 @@ window.CC_CATALOG = [
    "The structures and scenarios to be compared are confirmed at scoping",
    "Stakeholders are available for interviews and working sessions, and draft deliverables are reviewed within an agreed turnaround",
    "Recommendations are advisory; decisions and implementation remain with the client's leadership"
+  ],
+  "questions": [
+   "What would this partnership, joint venture or acquisition cost, return and risk?",
+   "Which structure works best for each party?",
+   "What should we resolve before we sign?"
   ]
  },
  {
@@ -270,6 +280,11 @@ window.CC_CATALOG = [
    "Peer groups and benchmark sources are agreed at scoping",
    "Stakeholders are available for interviews and working sessions, and draft deliverables are reviewed within an agreed turnaround",
    "Recommendations are advisory; decisions and implementation remain with the client's leadership"
+  ],
+  "questions": [
+   "Where are we losing margin, and why?",
+   "How do our costs and productivity compare with our peers?",
+   "Which service lines make money, and which lose it?"
   ]
  },
  {
@@ -361,6 +376,11 @@ window.CC_CATALOG = [
    "The modules in scope are confirmed at scoping",
    "Stakeholders are available for interviews and working sessions, and draft deliverables are reviewed within an agreed turnaround",
    "Recommendations are advisory; decisions and implementation remain with the client's leadership"
+  ],
+  "questions": [
+   "Can our leaders trust the numbers they see each month?",
+   "Which KPIs should we track, and how should each one be defined?",
+   "How do we make month-end reporting faster and less dependent on a few people?"
   ]
  },
  {
@@ -454,6 +474,11 @@ window.CC_CATALOG = [
    "Modules and the projection horizon are confirmed at scoping",
    "Stakeholders are available for interviews and working sessions, and draft deliverables are reviewed within an agreed turnaround",
    "Recommendations are advisory; decisions and implementation remain with the client's leadership"
+  ],
+  "questions": [
+   "Is our plan affordable, and how does it change if volumes change?",
+   "How do staffing, revenue and capital connect to our volume forecast?",
+   "How do we shorten the budget cycle and forecast with confidence?"
   ]
  },
  {
@@ -545,6 +570,11 @@ window.CC_CATALOG = [
    "The modules in scope are confirmed at scoping",
    "Stakeholders are available for interviews and working sessions, and draft deliverables are reviewed within an agreed turnaround",
    "Recommendations are advisory; decisions and implementation remain with the client's leadership"
+  ],
+  "questions": [
+   "Does our finance function fit the organization we have become?",
+   "Who should decide what, and how should finance be organized?",
+   "What is a realistic, phased path to a stronger finance organization?"
   ]
  },
  {
@@ -635,6 +665,11 @@ window.CC_CATALOG = [
    "On-site visits are scheduled at key milestones agreed at scoping",
    "Stakeholders are available for interviews and working sessions, and draft deliverables are reviewed within an agreed turnaround",
    "Recommendations are advisory; decisions and implementation remain with the client's leadership"
+  ],
+  "questions": [
+   "What will this development cost to build and run, and when will it be sustainable?",
+   "How should sites, services and phasing fit together?",
+   "What will investors and the board need to see before they commit?"
   ]
  },
  {
@@ -691,7 +726,12 @@ window.CC_CATALOG = [
   "leadBold": false,
   "phases": [],
   "resourcesNote": "",
-  "assumptions": []
+  "assumptions": [],
+  "questions": [
+   "Where do we stand digitally today, and where should we invest first?",
+   "How do our digital decisions line up with our clinical plan, capital plan and opening date?",
+   "What should we do in the next 6 to 12 months?"
+  ]
  },
  {
   "id": "IT-02",
@@ -763,7 +803,12 @@ window.CC_CATALOG = [
   "leadBold": false,
   "phases": [],
   "resourcesNote": "",
-  "assumptions": []
+  "assumptions": [],
+  "questions": [
+   "Should we build, rent or combine data center capacity?",
+   "How do we connect our systems without costly rework?",
+   "Are we protected against cyberattacks, and can we keep running through downtime?"
+  ]
  },
  {
   "id": "IT-03",
@@ -819,7 +864,12 @@ window.CC_CATALOG = [
   "leadBold": false,
   "phases": [],
   "resourcesNote": "",
-  "assumptions": []
+  "assumptions": [],
+  "questions": [
+   "Which EHR is right for us, and how should we organize its implementation?",
+   "How should our clinical workflows be designed before build begins?",
+   "How do we get more value from the EHR we already have?"
+  ]
  },
  {
   "id": "IT-04",
@@ -881,7 +931,12 @@ window.CC_CATALOG = [
   "leadBold": false,
   "phases": [],
   "resourcesNote": "",
-  "assumptions": []
+  "assumptions": [],
+  "questions": [
+   "Which measures should our leaders track in the first year?",
+   "How do we make sure everyone calculates them the same way?",
+   "What data governance, architecture and analytics team do we need?"
+  ]
  },
  {
   "id": "IT-05",
@@ -941,7 +996,12 @@ window.CC_CATALOG = [
   "leadBold": false,
   "phases": [],
   "resourcesNote": "",
-  "assumptions": []
+  "assumptions": [],
+  "questions": [
+   "How do we review, approve and monitor AI tools safely?",
+   "What AI is already in use across our organization?",
+   "Who should make decisions about AI, and on what principles?"
+  ]
  },
  {
   "id": "IT-06",
@@ -1003,7 +1063,12 @@ window.CC_CATALOG = [
   "leadBold": false,
   "phases": [],
   "resourcesNote": "",
-  "assumptions": []
+  "assumptions": [],
+  "questions": [
+   "Are we on track to go live safely on our opening date?",
+   "How do we manage risks, issues and decisions across a complex activation?",
+   "Will our people be trained and ready before go-live?"
+  ]
  },
  {
   "id": "IT-07",
@@ -1061,7 +1126,12 @@ window.CC_CATALOG = [
   "leadBold": false,
   "phases": [],
   "resourcesNote": "",
-  "assumptions": []
+  "assumptions": [],
+  "questions": [
+   "What digital experience should our patients have, from first contact to follow-up?",
+   "Which apps, portals and digital tools should we offer, and in what order?",
+   "How do we tie digital journeys to our clinical pathways?"
+  ]
  },
  {
   "id": "EDU-01",
@@ -1125,7 +1195,12 @@ window.CC_CATALOG = [
   "leadBold": false,
   "phases": [],
   "resourcesNote": "",
-  "assumptions": []
+  "assumptions": [],
+  "questions": [
+   "Where can our physicians, nurses and pharmacists see Cleveland Clinic practice first-hand?",
+   "Which program fits each professional group and learning goal?",
+   "What does each program involve, and who is eligible?"
+  ]
  },
  {
   "id": "EDU-02",
@@ -1186,7 +1261,12 @@ window.CC_CATALOG = [
   "leadBold": false,
   "phases": [],
   "resourcesNote": "",
-  "assumptions": []
+  "assumptions": [],
+  "questions": [
+   "How can our physicians and trainees train beyond observation?",
+   "Which rotations, fellowships or research programs fit their goals?",
+   "What eligibility, credentialing and visa steps are involved?"
+  ]
  },
  {
   "id": "EDU-03",
@@ -1247,7 +1327,12 @@ window.CC_CATALOG = [
   "leadBold": false,
   "phases": [],
   "resourcesNote": "",
-  "assumptions": []
+  "assumptions": [],
+  "questions": [
+   "How do we prepare physicians for their first leadership roles?",
+   "How do we bring a new executive team together before opening?",
+   "How do we develop senior leaders in ways that show measurable results?"
+  ]
  },
  {
   "id": "EDU-04",
@@ -1311,7 +1396,12 @@ window.CC_CATALOG = [
   "leadBold": false,
   "phases": [],
   "resourcesNote": "",
-  "assumptions": []
+  "assumptions": [],
+  "questions": [
+   "How do we build a shared culture of service and safety across our workforce?",
+   "How do we strengthen communication between caregivers and patients?",
+   "How do we make new behaviors last after training ends?"
+  ]
  },
  {
   "id": "EDU-05",
@@ -1371,7 +1461,12 @@ window.CC_CATALOG = [
   "leadBold": false,
   "phases": [],
   "resourcesNote": "",
-  "assumptions": []
+  "assumptions": [],
+  "questions": [
+   "How can our teams practice procedures and emergencies safely?",
+   "Are our new spaces, systems and workflows ready for patients?",
+   "How do we build a simulation program of our own?"
+  ]
  },
  {
   "id": "EDU-06",
@@ -1434,7 +1529,12 @@ window.CC_CATALOG = [
   "leadBold": false,
   "phases": [],
   "resourcesNote": "",
-  "assumptions": []
+  "assumptions": [],
+  "questions": [
+   "How can our staff learn from Cleveland Clinic experts without traveling?",
+   "Can Cleveland Clinic faculty teach or present at our institution?",
+   "How strong is our medical curriculum, and how do we develop the clinicians who teach it?"
+  ]
  },
  {
   "id": "EDU-07",
@@ -1510,6 +1610,11 @@ window.CC_CATALOG = [
    "Availability depends on legal approval in the client's jurisdiction",
    "Patient consent is obtained as local rules require",
    "The local care team remains responsible for the patient's care and for acting on the report"
+  ],
+  "questions": [
+   "What would a Cleveland Clinic specialist recommend for this complex case?",
+   "Is our treatment plan the right one?",
+   "How can our physicians get expert input without sending the patient abroad?"
   ]
  },
  {
@@ -1545,7 +1650,7 @@ window.CC_CATALOG = [
   ],
   "duration": "12-month cycle, renewed annually",
   "durationDetail": [
-   "Initial on-site assessment within the first [X] months of membership; quarterly reviews throughout the year; annual assessment and report at the close of each membership year."
+   "Initial on-site assessment early in the first membership year; quarterly reviews throughout the year; annual assessment and report at the close of each membership year."
   ],
   "resourcesCC": [
    "SQPE engagement lead",
@@ -1572,7 +1677,12 @@ window.CC_CATALOG = [
   "leadBold": false,
   "phases": [],
   "resourcesNote": "",
-  "assumptions": []
+  "assumptions": [],
+  "questions": [
+   "How do our safety, quality and patient experience compare with Cleveland Clinic standards?",
+   "Which measures should we prioritize, and how do we track them reliably?",
+   "Are we improving year over year?"
+  ]
  },
  {
   "id": "SQPE-02",
@@ -1584,7 +1694,7 @@ window.CC_CATALOG = [
   "pdf": "brochures/4_SQPE/SQPE-02_Organizational_Maturity_Assessment_Product_Profile.pdf",
   "subtitle": "See where your organization stands on performance improvement, patient experience and safety culture, and how your view compares with Cleveland Clinic's.",
   "category": "Clinical Advisory",
-  "durationShort": "[X to X] weeks",
+  "durationShort": "Set at scoping; repeatable annually",
   "deliveryShort": "Hybrid",
   "need": [
    "Leaders often hold different views of how mature their organization is in performance improvement, patient experience and safety culture. Without a shared, structured scale, it is hard to agree on priorities or to track progress over time.",
@@ -1605,9 +1715,9 @@ window.CC_CATALOG = [
   "deliveryDetail": [
    "Member leaders complete the self-assessment for each scale. The Cleveland Clinic SQPE team conducts its own assessment, then reviews the comparison with leadership and agrees on priorities."
   ],
-  "duration": "[X to X] weeks",
+  "duration": "Set at scoping; repeatable annually",
   "durationDetail": [
-   "Can be repeated annually to track progress, aligned with the annual SQPE assessment in the core program."
+   "Timing depends on how many of the three scales are in scope and when leaders complete the self-assessment. The assessment can be repeated each year to track progress, aligned with the annual SQPE assessment in the core program."
   ],
   "resourcesCC": [
    "SQPE assessment lead",
@@ -1629,7 +1739,12 @@ window.CC_CATALOG = [
   "leadBold": false,
   "phases": [],
   "resourcesNote": "",
-  "assumptions": []
+  "assumptions": [],
+  "questions": [
+   "How mature are our improvement, patient experience and safety culture practices today?",
+   "Does our leaders' view match an outside assessment?",
+   "Where should we focus first?"
+  ]
  },
  {
   "id": "SQPE-03",
@@ -1641,7 +1756,7 @@ window.CC_CATALOG = [
   "pdf": "brochures/4_SQPE/SQPE-03_Greenfield_Hospital_SQPE_Advisory_Guide_Product_Profile.pdf",
   "subtitle": "Build safety, quality and patient experience into a new hospital from day one, guided by Cleveland Clinic.",
   "category": "Hospital Development",
-  "durationShort": "[X] months before opening",
+  "durationShort": "Aligned to the opening timeline",
   "deliveryShort": "Hybrid",
   "need": [
    "New hospitals have a rare opportunity to design safety, quality and patient experience into their structures, processes and culture before opening, but they also risk launching without mature systems in place. Leaders must stand up governance, metrics, policies and training on a compressed timeline.",
@@ -1656,15 +1771,15 @@ window.CC_CATALOG = [
    "Recommended SQPE governance structure and committee design",
    "Priority SQPE metrics and data processes to establish before opening",
    "Readiness roadmap aligned to opening and accreditation milestones",
-   "Recommended SQPE training and education plan [confirm scope]"
+   "Recommended SQPE training and education plan"
   ],
   "deliveryModel": "Hybrid",
   "deliveryDetail": [
-   "Cleveland Clinic SQPE experts guide hospital leadership through the advisory guide in virtual working sessions, with on-site visits at key milestones before opening [confirm delivery approach]."
+   "Cleveland Clinic SQPE experts guide hospital leadership through the advisory guide in virtual working sessions, with on-site visits at key milestones before opening."
   ],
-  "duration": "[X] months before opening",
+  "duration": "Aligned to the opening timeline",
   "durationDetail": [
-   "Typically aligned with the pre-opening timeline, with optional support continuing into the first year of operations."
+   "Support runs through the pre-opening period, timed to design, construction and accreditation milestones, with optional support continuing into the first year of operations."
   ],
   "resourcesCC": [
    "SQPE advisory lead",
@@ -1688,7 +1803,12 @@ window.CC_CATALOG = [
   "leadBold": false,
   "phases": [],
   "resourcesNote": "",
-  "assumptions": []
+  "assumptions": [],
+  "questions": [
+   "How do we build safety and quality into a new hospital from day one?",
+   "What governance, metrics and policies should be in place before we open?",
+   "How do we prepare for accreditation alongside opening?"
+  ]
  },
  {
   "id": "SQPE-04",
@@ -1744,10 +1864,15 @@ window.CC_CATALOG = [
   ],
   "stageNote": "",
   "deliverablesIntro": "",
-  "leadBold": false,
+  "leadBold": true,
   "phases": [],
   "resourcesNote": "",
-  "assumptions": []
+  "assumptions": [],
+  "questions": [
+   "What does mature practice look like for infection prevention, medication safety and other priorities?",
+   "How do our units compare with Cleveland Clinic practice?",
+   "What practical steps should our teams take next?"
+  ]
  },
  {
   "id": "SQPE-05",
@@ -1774,7 +1899,7 @@ window.CC_CATALOG = [
    "Access to the Healthcare EDU library of SQPE-related eLearning courses",
    "Course recommendations mapped to member SQPE priorities",
    "Learner enrollment and access setup",
-   "Completion reporting for member administrators [confirm availability]"
+   "Completion reporting for member administrators"
   ],
   "deliveryModel": "Self-paced Online",
   "deliveryDetail": [
@@ -1782,7 +1907,7 @@ window.CC_CATALOG = [
   ],
   "duration": "Ongoing access for the membership term",
   "durationDetail": [
-   "Individual courses typically take [X minutes to X hours] to complete; access continues throughout the Cleveland Clinic Connected membership."
+   "Courses are self-paced and vary in length; access continues throughout the Cleveland Clinic Connected membership."
   ],
   "resourcesCC": [
    "Healthcare EDU platform team",
@@ -1798,14 +1923,19 @@ window.CC_CATALOG = [
    "Consistent SQPE knowledge across caregivers and sites",
    "A shared Cleveland Clinic language for safety and quality",
    "Scalable training without large-scale staff release",
-   "Trackable course completion for [number of] target caregivers"
+   "Trackable course completion across the caregiver groups the member selects"
   ],
   "stageNote": "",
   "deliverablesIntro": "",
   "leadBold": false,
   "phases": [],
   "resourcesNote": "",
-  "assumptions": []
+  "assumptions": [],
+  "questions": [
+   "How do we train caregivers consistently across shifts and sites?",
+   "Which safety, quality and patient experience topics should every caregiver learn?",
+   "How do we build skills without pulling large numbers of staff off the floor?"
+  ]
  },
  {
   "id": "SQPE-06",
@@ -1817,7 +1947,7 @@ window.CC_CATALOG = [
   "pdf": "brochures/4_SQPE/SQPE-06_Train-the-Trainer_Programs_Product_Profile.pdf",
   "subtitle": "Equip your own leaders to teach Cleveland Clinic's communication, reliability and improvement programs, building lasting internal capability.",
   "category": "Education & Training",
-  "durationShort": "[X to X] weeks per program",
+  "durationShort": "Varies by program; set at scoping",
   "deliveryShort": "On-site, Hybrid, Workshop-based",
   "need": [
    "Culture change in safety, communication and improvement does not scale through external trainers alone. Hospitals need internal faculty who can deliver proven programs, adapt them to local context and sustain them after an engagement ends.",
@@ -1825,7 +1955,7 @@ window.CC_CATALOG = [
   ],
   "value": [
    "These programs use the curricula Cleveland Clinic applies with its own caregivers, including Communicate with HEART for all caregivers and R.E.D.E. to Communicate for physicians and advanced practice providers, alongside High Reliability, Just Culture and Performance Improvement.",
-   "Cleveland Clinic prepares member faculty through a combination of on-site and eLearning instruction, so the member gains internal trainers [confirm certification] and the materials to teach independently."
+   "Cleveland Clinic prepares member faculty through a combination of on-site and eLearning instruction, so the member gains its own trainers and the materials to teach independently."
   ],
   "deliverables": [
    "Communicate with HEART train-the-trainer (all caregivers)",
@@ -1839,7 +1969,7 @@ window.CC_CATALOG = [
   "deliveryDetail": [
    "Each program combines eLearning preparation with on-site, workshop-based training led by Cleveland Clinic faculty. Member trainers then deliver the program locally, with Cleveland Clinic available for follow-up support."
   ],
-  "duration": "[X to X] weeks per program",
+  "duration": "Varies by program; set at scoping",
   "durationDetail": [
    "Members may select one or more programs; each typically includes eLearning pre-work, an on-site training visit and a follow-up period as trainers begin local delivery."
   ],
@@ -1865,7 +1995,12 @@ window.CC_CATALOG = [
   "leadBold": false,
   "phases": [],
   "resourcesNote": "",
-  "assumptions": []
+  "assumptions": [],
+  "questions": [
+   "How do we teach Cleveland Clinic programs with our own faculty?",
+   "Which programs, such as Communicate with HEART, R.E.D.E. or Just Culture, fit our priorities?",
+   "How do we keep training going after Cleveland Clinic's involvement ends?"
+  ]
  },
  {
   "id": "SQPE-07",
@@ -1923,6 +2058,11 @@ window.CC_CATALOG = [
   "leadBold": false,
   "phases": [],
   "resourcesNote": "",
-  "assumptions": []
+  "assumptions": [],
+  "questions": [
+   "How do our teams stay current with Cleveland Clinic practice?",
+   "Can we hear from Cleveland Clinic experts on the topics we choose?",
+   "Where can our teams bring questions as they work on our priorities?"
+  ]
  }
 ];
