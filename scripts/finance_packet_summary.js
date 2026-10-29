@@ -137,7 +137,7 @@ function draw(S, LOGO, FONTS) {
   heading("Offerings in this packet");
   SANS(); doc.setFontSize(9.4); setC(SLATE); doc.text("Select an offering to go to its profile.", M, y); y += 12;
   {
-    const cols = [{ label: "Offering", w: 300 }, { label: "Stage", w: 86 }, { label: "Duration", w: 86 }, { label: "Page", w: CW - 472, right: true }];
+    const cols = [{ label: "Offering", w: 340 }, { label: "Stage", w: 120 }, { label: "Page", w: CW - 460, right: true }];
     const pad = 7;
     fill(NAVY); doc.rect(M, y, CW, 2, "F");
     SANS(); doc.setFontSize(9); setC(SLATE);
@@ -145,14 +145,14 @@ function draw(S, LOGO, FONTS) {
     y += 23; stroke(LINE); doc.setLineWidth(0.6); doc.line(M, y, M + CW, y);
     S.offerings.forEach(o => {
       const nm = wrap(o.name, cols[0].w - pad, 0, 9.8, "medium"), ds = wrap(o.desc, cols[0].w - pad, 0, 9.2);
-      const h = pad + 4 + nm.length * 12.4 + 2 + ds.length * 11.6 + pad;
+      const st = wrap(o.stage, cols[1].w - 2 * pad, 0, 9.4);
+      const h = Math.max(pad + 4 + nm.length * 12.4 + 2 + ds.length * 11.6 + pad, pad + 9 + st.length * 12 + pad);
       const top = y; let yy = y + pad + 9;
       SANS("medium"); doc.setFontSize(9.8); setC(NAVY); nm.forEach(l => { doc.text(l, M, yy); yy += 12.4; });
       yy += 2; SANS(); doc.setFontSize(9.2); setC(SLATE); ds.forEach(l => { doc.text(l, M, yy); yy += 11.6; });
       SANS(); doc.setFontSize(9.4); setC(INK);
       let ty = y + pad + 9;
       wrap(o.stage, cols[1].w - 2 * pad, 0, 9.4).forEach((l, i) => { SANS(); doc.setFontSize(9.4); setC(INK); doc.text(l, M + cols[0].w + pad, ty + i * 12); });
-      wrap(o.duration, cols[2].w - 2 * pad, 0, 9.4).forEach((l, i) => { SANS(); doc.setFontSize(9.4); setC(INK); doc.text(l, M + cols[0].w + cols[1].w + pad, ty + i * 12); });
       SANS("medium"); doc.setFontSize(9.8); setC(BLUE); doc.text(String(o.page), M + CW - pad, ty, { align: "right" });
       y += h; stroke(LINE); doc.setLineWidth(0.6); doc.line(M, y, M + CW, y);
       links.push({ page: page(), x0: M, y0: top, x1: M + CW, y1: y, id: o.id });

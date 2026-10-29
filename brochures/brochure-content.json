@@ -480,7 +480,7 @@
      "detail": "training, documentation and governance"
     }
    ],
-   "durationNotes": "Timing shown is for a full redesign; a single module takes 2 to 5 weeks.",
+   "durationNotes": "",
    "resClient": [
     "Executive sponsor and a finance or reporting lead for weekly sessions",
     "Report owners, users and IT for workshops and system access"
@@ -606,7 +606,7 @@
      "detail": "validation, training and documentation"
     }
    ],
-   "durationNotes": "Timing shown is for the full toolkit; a single module takes 2 to 12 weeks.",
+   "durationNotes": "",
    "resClient": [
     "Executive sponsor with decision authority and a finance lead for weekly working sessions",
     "Finance analysts who will own the models"
@@ -731,7 +731,7 @@
      "detail": "refined with executives on-site"
     }
    ],
-   "durationNotes": "Timing shown is for a full transformation; a single module takes 4 to 10 weeks.",
+   "durationNotes": "",
    "resClient": [
     "CFO or executive sponsor with decision authority",
     "Finance leaders across entities for workshops"
@@ -855,7 +855,7 @@
      "detail": "board and investor readouts"
     }
    ],
-   "durationNotes": "Partnership strategies run 8 to 16 weeks; greenfield and national programs 12 to 24 weeks.",
+   "durationNotes": "",
    "resClient": [
     "Program sponsor or steering committee",
     "Client program director and functional leads"
@@ -989,7 +989,7 @@
     "Prioritized risk mitigation recommendations"
    ],
    "deliveryDetail": "Remote architecture and security review, virtual working sessions with Cleveland Clinic experts and written recommendations; optional on-site deep-dive or tabletop exercise.",
-   "durationNotes": "Security-focused scopes run 6 to 12 weeks; full architecture scopes 8 to 16 weeks.",
+   "durationNotes": "",
    "resClient": [
     "Executive sponsor (CIO, CISO or IT director)",
     "Architecture, hosting and security documentation",
@@ -1230,13 +1230,13 @@
    "need": "Opening a new hospital or switching major systems is high risk: build, testing, training and cutover must come together on a fixed date, and many organizations lack the governance, risk tracking and readiness checkpoints to manage it.",
    "value": "Cleveland Clinic activates its own facilities and systems with a standard Global Design and Activation Playbook. Across 9 major implementations in 3 years, more than 13,000 caregivers were trained (94% before go-live), about 1,500 served as EHR champions and more than 12,000 devices were deployed. Clients gain a proven governance model, RIDAC discipline (risks, issues, decisions, actions, changes) and objective readiness checkpoints.",
    "deliverables": [
-    "Due diligence and an activation plan on a greenfield timeline, from about 15 months before go-live",
+    "Due diligence and an activation plan aligned to a greenfield timeline",
     "Project governance and RIDAC set-up, with status reporting and communications templates",
     "Validation, testing and training plan review",
     "90/60/30-day go-live readiness assessments",
     "Cutover, go-live support and stabilization recommendations"
    ],
-   "durationNotes": "Runs from about 15 months before go-live, with readiness assessments at 90, 60 and 30 days and up to 3 months of stabilization.",
+   "durationNotes": "",
    "resClient": [
     "Executive sponsor and steering committee",
     "Program and project managers, with project plans, timelines and status reports",
@@ -1886,7 +1886,10 @@
    "How mature are our improvement, patient experience and safety culture practices today?",
    "Does our leaders' view match an outside assessment?",
    "Where should we focus first?"
-  ]
+  ],
+  "onePage": {
+   "durationNotes": ""
+  }
  },
  {
   "id": "SQPE-03",
@@ -1931,7 +1934,10 @@
    "How do we build safety and quality into a new hospital from day one?",
    "What governance, metrics and policies should be in place before we open?",
    "How do we prepare for accreditation alongside opening?"
-  ]
+  ],
+  "onePage": {
+   "durationNotes": ""
+  }
  },
  {
   "id": "SQPE-04",
@@ -2040,7 +2046,10 @@
    "How do we train caregivers consistently across shifts and sites?",
    "Which safety, quality and patient experience topics should every caregiver learn?",
    "How do we build skills without pulling large numbers of staff off the floor?"
-  ]
+  ],
+  "onePage": {
+   "durationNotes": ""
+  }
  },
  {
   "id": "SQPE-06",

@@ -13,6 +13,8 @@ const logo = src.match(/<div class="topbar"><div class="in">\s*<img src="(data:i
 const jspdf = fs.readFileSync(require.resolve("jspdf/dist/jspdf.umd.min.js"), "utf8");
 const FONT_DIR = path.join(__dirname, "fonts");
 // The domain line above each title, as the website names the domains. SQPE is spelled out at first mention.
+// Typical duration is shown on the Education profiles only (Oct 29, 2026).
+const SHOW_DURATION = new Set(["EDU"]);
 const DOMAIN_LABEL = { FIN: "Finance", SQPE: "Safety, Quality, and Patient Experience (SQPE)", IT: "Digital Tools & Analytics",
   EDU: "Education", PKG: "Advisory package across all four domains" };
 const FONTS = {};
@@ -157,16 +159,19 @@ function render(d, LOGO, size, dateStr, FONTS) {
   y += 16;
 
   /* ---- At-a-glance facts: a light band with a navy top rule ---- */
-  const glance = [["Category", d.category + (d.stageNote ? " (" + d.stageNote + ")" : "")], ["Typical duration", d.duration], ["Delivery model", d.deliveryModes.join(", ")]];
+  const glance = [["Category", d.category + (d.stageNote ? " (" + d.stageNote + ")" : "")], ...(d.showDuration ? [["Typical duration", d.duration]] : []), ["Delivery model", d.deliveryModes.join(", ")]];
   const pad = 14, VL = 14;
   SANS("medium"); doc.setFontSize(10.8);
   // Column widths that keep the band as short as possible (each column at least 24% of the width)
   let best = null;
-  for (let a = 24; a <= 52; a += 2) for (let b = 24; b <= 52; b += 2) {
-    const c = 100 - a - b; if (c < 24) continue;
-    const ws = [a, b, c].map(f => f / 100 * CW);
+  const splits = glance.length === 3
+    ? [].concat(...[...Array(15)].map((_, i) => [...Array(15)].map((_, j) => [24 + 2 * i, 24 + 2 * j, 52 - 2 * i - 2 * j]))).filter(x => x[2] >= 24)
+    : [...Array(21)].map((_, i) => [30 + 2 * i, 70 - 2 * i]);
+  const pref = glance.length === 3 ? [40, 30, 30] : [55, 45];
+  for (const sp of splits) {
+    const ws = sp.map(f => f / 100 * CW);
     const cl = glance.map((g, i) => doc.splitTextToSize(clean(g[1]), ws[i] - 2 * pad));
-    const score = Math.max(...cl.map(x => x.length)) * 1000 + cl.reduce((t, x) => t + x.length, 0) * 50 + Math.abs(a - 40) + Math.abs(b - 30);
+    const score = Math.max(...cl.map(x => x.length)) * 1000 + cl.reduce((t, x) => t + x.length, 0) * 50 + sp.reduce((t, x, i) => t + Math.abs(x - pref[i]), 0);
     if (!best || score < best.score) best = { score, ws, cl };
   }
   const widths = best.ws, cells = best.cl;
@@ -192,7 +197,7 @@ function render(d, LOGO, size, dateStr, FONTS) {
   if (d.deliverablesIntro) { para(d.deliverablesIntro); y += size * 0.3; }
   list(d.deliverables, "square", BLUE, d.leadBold);
   heading("How it works");
-  if (d.phases && d.phases.length) { list(d.phases.map(p => p.name + " (" + p.weeks + "): " + p.detail), "number", BLUE, true); y += size * 0.15; }
+  if (d.phases && d.phases.length) { list(d.phases.map(p => p.name + (d.showDuration || d.phasesAreWhen ? " (" + p.weeks + ")" : "") + ": " + p.detail), "number", BLUE, true); y += size * 0.15; }
   const notes = [d.phases && d.phases.length ? "" : d.deliveryDetail, d.durationNotes].filter(Boolean);
   if (notes.length) para(notes.join("\n"));
   heading("Expected outcomes"); list(d.outcomes, "check", GREEN, false);
@@ -226,6 +231,7 @@ function render(d, LOGO, size, dateStr, FONTS) {
       duration: src.duration, phases: src.phases || [], durationNotes: src.durationNotes,
       resCC: src.resCC, resClient: src.resClient, resNote: src.resNote, assumptions: src.assumptions || [],
       outcomes: src.outcomes, domainLabel: DOMAIN_LABEL[it.id.split("-")[0]] || "",
+      showDuration: SHOW_DURATION.has(it.id.split("-")[0]), phasesAreWhen: it.id.startsWith("PKG"),
     };
     let res = null, used = null;
     const BODY_PT = Number(process.env.ONEPAGE_SIZE || 10.4);
