@@ -627,12 +627,16 @@
         '<p class="bundle-note">' + esc(pkg.note) + "</p>" +
         '<div class="bundle-actions">' + addBtn +
         '<a class="btn btn-ghost-light" href="' + esc(pkg.pdf) + '" target="_blank" rel="noopener">' + ICON.pdf + "Package profile (PDF)</a></div></div>" +
-        '<ol class="bundle-phases">' + pkg.phases.map(function (ph) {
-          return '<li><p class="phase-name">' + esc(ph.name) + '</p><p class="phase-when">' + esc(ph.when) + "</p><ul>" +
+        '<ol class="bundle-phases" style="--rows:' + Math.max.apply(null, pkg.phases.map(function (ph) { return ph.ids.length; })) + '">' + pkg.phases.map(function (ph, pi) {
+          var rows = Math.max.apply(null, pkg.phases.map(function (x) { return x.ids.length; }));
+          var cap = pkg.milestone && pi === pkg.phases.length - 1 && ph.ids.length < rows
+            ? '<li><div class="phase-item phase-milestone"><span class="phase-ref">' + esc(pkg.milestone.label) + "</span>" + esc(pkg.milestone.title) +
+              '<span class="phase-milestone-note">' + esc(pkg.milestone.text) + "</span></div></li>" : "";
+          return '<li><div class="phase-head"><p class="phase-name">' + esc(ph.name) + '</p><p class="phase-when">' + esc(ph.when) + "</p></div><ul>" +
             ph.ids.map(function (id) {
               var p = BY_ID[id];
               return '<li><button type="button" class="phase-item" data-action="detail" data-id="' + id + '"><span class="phase-ref">' + esc(id) + "</span>" + esc(p.title) + "</button></li>";
-            }).join("") + "</ul></li>";
+            }).join("") + cap + "</ul></li>";
         }).join("") + "</ol></section>";
     }).join("");
   }

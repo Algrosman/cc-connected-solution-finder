@@ -382,15 +382,22 @@ mark.tbc { background: var(--tbc); color: inherit; padding: 0 3px; border-radius
 .bundle-sub { color: var(--slate-on-navy); font-size: 17px; line-height: 1.5; margin-top: 12px; }
 .bundle-note { color: var(--slate-on-navy); font-size: 15px; line-height: 1.5; margin-top: 10px; }
 .bundle-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
-.bundle-phases { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; counter-reset: phase; }
-.bundle-phases > li { border-top: 1px solid var(--rule-on-navy); padding-top: 14px; counter-increment: phase; }
+/* Phases share rows (CSS subgrid), and every row is as tall as the tallest box, so all boxes are the same size */
+.bundle-phases { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: auto repeat(var(--rows, 3), 1fr); column-gap: 20px; row-gap: 8px; counter-reset: phase; }
+.bundle-phases > li { border-top: 1px solid var(--rule-on-navy); padding-top: 14px; counter-increment: phase; display: grid; grid-row: span calc(var(--rows, 3) + 1); grid-template-rows: subgrid; row-gap: 8px; }
+.phase-head { margin-bottom: 4px; }
 .phase-name { font-family: var(--serif); font-size: 20px; font-weight: 600; }
 .phase-name::before { content: counter(phase) "  "; color: var(--blue-on-navy); }
 .phase-when { font-size: 13.5px; color: var(--slate-on-navy); margin-top: 2px; }
-.bundle-phases ul { list-style: none; padding: 0; margin-top: 12px; display: grid; gap: 8px; }
-.phase-item { background: rgba(255,255,255,0.06); border: 1px solid var(--rule-on-navy); border-radius: var(--radius); color: var(--white); text-align: left; width: 100%; padding: 10px 12px; font: inherit; font-size: 14.5px; line-height: 1.35; cursor: pointer; }
+.bundle-phases ul { list-style: none; padding: 0; display: grid; grid-row: span var(--rows, 3); grid-template-rows: subgrid; row-gap: 8px; }
+.bundle-phases ul > li { display: flex; }
+.phase-item { height: 100%; background: rgba(255,255,255,0.06); border: 1px solid var(--rule-on-navy); border-radius: var(--radius); color: var(--white); text-align: left; width: 100%; padding: 10px 12px; font: inherit; font-size: 14.5px; line-height: 1.35; cursor: pointer; }
 .phase-item:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
 .phase-ref { display: block; font-size: 12px; letter-spacing: 0.06em; color: var(--blue-on-navy); margin-bottom: 2px; }
+.phase-milestone { cursor: default; background: transparent; border: 1px dashed var(--green-on-navy); }
+.phase-milestone:hover { border-color: var(--green-on-navy); background: transparent; }
+.phase-milestone .phase-ref { color: var(--green-on-navy); }
+.phase-milestone-note { display: block; font-size: 13.5px; color: var(--slate-on-navy); margin-top: 2px; }
 .bundle-teaser { margin-top: 24px; display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 16px 20px; border: 1px solid var(--rule-on-navy); border-left: 3px solid var(--green-on-navy); border-radius: 0; }
 .teaser-label { font-weight: 600; color: var(--white); font-size: 15px; }
 .bundle-teaser p + p { color: var(--slate-on-navy); font-size: 14.5px; margin-top: 2px; line-height: 1.45; }
@@ -665,7 +672,10 @@ body.is-locked { overflow: hidden; }
   .hero-top, .membership-row, .faq-row { grid-template-columns: 1fr; gap: 32px; }
   .benefits { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 20px; margin-top: 36px; }
   .bundle { grid-template-columns: 1fr; padding: 28px 24px 30px; gap: 28px; }
-  .bundle-phases { grid-template-columns: 1fr; }
+  .bundle-phases { grid-template-columns: 1fr; grid-template-rows: none; row-gap: 20px; }
+  .bundle-phases > li { display: block; grid-row: auto; }
+  .bundle-phases ul { grid-row: auto; grid-template-rows: none; margin-top: 12px; }
+  .phase-item { min-height: 5.45em; }
   .bundle-teaser { flex-direction: column; align-items: flex-start; }
   .hero-photo { order: -1; aspect-ratio: 16 / 9; }
   .how-steps { grid-template-columns: 1fr; gap: 16px; }
