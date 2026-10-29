@@ -47,7 +47,7 @@ def desc(tagline):
 name = {it["id"]: it["name"] for it in items}
 spec = {
     "title": "Finance Advisory Offerings",
-    "subtitle": "",
+    "subtitle": "An executive summary of the Finance Advisory offerings, with a one-page profile of each.",
     "dateLine": "Prepared " + datetime.date.today().strftime("%B %-d, %Y"),
     "totalPages": total,
     "why": "Cleveland Clinic's Finance Advisory team helps hospitals, health systems, governments and investors "
@@ -121,7 +121,7 @@ with tempfile.TemporaryDirectory() as tmp:
         packet[ln["page"] - 1].insert_link({"kind": pymupdf.LINK_GOTO, "page": target,
                                             "from": pymupdf.Rect(ln["x0"], ln["y0"], ln["x1"], ln["y1"]),
                                             "to": pymupdf.Point(0, 0)})
-    toc = [[1, "Executive summary", 1], [2, "Why Cleveland Clinic", 1], [2, "The Finance Advisory Lifecycle", 1],
+    toc = [[1, "Executive summary", 1], [2, "What Cleveland Clinic brings", 1], [2, "The Finance Advisory Lifecycle", 1],
            [2, "Terms used in this packet", 1], [2, "Offerings in this packet", 2], [2, "How engagements work", 2]]
     toc += [[1, f"{it['name']}", pages[it["id"]][0]] for it in items]
     packet.set_toc(toc)
