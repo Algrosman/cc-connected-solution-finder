@@ -27,7 +27,7 @@ window.CC_FINDER = {
     },
     {
       id: "sqpe",
-      name: "Safety, Quality & Patient Experience (SQPE)",
+      name: "Safety, Quality, and Patient Experience (SQPE)",
       phrase: "safety, quality and patient experience",
       short: "SQPE",
       blurb: "Assessment, governance, maturity guides and training that raise safety, quality and the patient experience."
