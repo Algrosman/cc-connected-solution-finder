@@ -111,6 +111,11 @@
     "Early decisions made before they are costly to change",
     "Every area ready on the same opening date"
    ]
-  }
+  },
+  "questions": [
+   "How do we coordinate finance, quality, digital and workforce decisions for a new hospital?",
+   "What needs to happen during design, construction and the run-up to opening?",
+   "How do we make sure every area is ready on opening day?"
+  ]
  }
 ]

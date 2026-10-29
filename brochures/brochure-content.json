@@ -114,7 +114,12 @@
     "The board decides with validated data and documented assumptions",
     "An approved, funded plan and models the finance team can update"
    ]
-  }
+  },
+  "questions": [
+   "Is this facility, service line or market entry financially viable?",
+   "Which growth opportunities should we pursue first?",
+   "How should we fund and sequence the plan over the next several years?"
+  ]
  },
  {
   "id": "FIN-02",
@@ -230,7 +235,12 @@
     "Each partner's economics understood and material risks surfaced early",
     "Negotiators armed with scenario-tested numbers"
    ]
-  }
+  },
+  "questions": [
+   "What would this partnership, joint venture or acquisition cost, return and risk?",
+   "Which structure works best for each party?",
+   "What should we resolve before we sign?"
+  ]
  },
  {
   "id": "FIN-03",
@@ -359,7 +369,12 @@
     "Ranked opportunities, each with an owner, achievable without compromising care",
     "True margin by service line to guide investment"
    ]
-  }
+  },
+  "questions": [
+   "Where are we losing margin, and why?",
+   "How do our costs and productivity compare with our peers?",
+   "Which service lines make money, and which lose it?"
+  ]
  },
  {
   "id": "FIN-04",
@@ -479,7 +494,12 @@
     "A consistent monthly package that explains results, produced faster",
     "A governed path to AI-enabled reporting"
    ]
-  }
+  },
+  "questions": [
+   "Can our leaders trust the numbers they see each month?",
+   "Which KPIs should we track, and how should each one be defined?",
+   "How do we make month-end reporting faster and less dependent on a few people?"
+  ]
  },
  {
   "id": "FIN-05",
@@ -600,7 +620,12 @@
     "Quick scenario testing and a shorter budget cycle",
     "Models the finance team maintains after handover"
    ]
-  }
+  },
+  "questions": [
+   "Is our plan affordable, and how does it change if volumes change?",
+   "How do staffing, revenue and capital connect to our volume forecast?",
+   "How do we shorten the budget cycle and forecast with confidence?"
+  ]
  },
  {
   "id": "FIN-06",
@@ -720,7 +745,12 @@
     "Faster close and planning, with clear decision rights",
     "A phased, fundable transformation roadmap"
    ]
-  }
+  },
+  "questions": [
+   "Does our finance function fit the organization we have become?",
+   "Who should decide what, and how should finance be organized?",
+   "What is a realistic, phased path to a stronger finance organization?"
+  ]
  },
  {
   "id": "FIN-07",
@@ -839,7 +869,12 @@
     "Sites, services and partners planned as one strategy",
     "A stronger position in partner negotiations"
    ]
-  }
+  },
+  "questions": [
+   "What will this development cost to build and run, and when will it be sustainable?",
+   "How should sites, services and phasing fit together?",
+   "What will investors and the board need to see before they commit?"
+  ]
  },
  {
   "id": "IT-01",
@@ -882,7 +917,12 @@
   ],
   "onePage": {
    "value": "Cleveland Clinic advises from the perspective of an operating academic health system that plans, builds and runs digital capabilities across domestic and international locations. Client leaders work with Cleveland Clinic Digital experts around a simple maturity view and a three-horizon roadmap (Foundation, Build & Integrate, Optimize & Scale). Recommendations are vendor-neutral, and the client owns all decisions."
-  }
+  },
+  "questions": [
+   "Where do we stand digitally today, and where should we invest first?",
+   "How do our digital decisions line up with our clinical plan, capital plan and opening date?",
+   "What should we do in the next 6 to 12 months?"
+  ]
  },
  {
   "id": "IT-02",
@@ -961,7 +1001,12 @@
     "Security and privacy designed in from day one",
     "Tested downtime and continuity procedures"
    ]
-  }
+  },
+  "questions": [
+   "Should we build, rent or combine data center capacity?",
+   "How do we connect our systems without costly rework?",
+   "Are we protected against cyberattacks, and can we keep running through downtime?"
+  ]
  },
  {
   "id": "IT-03",
@@ -1001,6 +1046,11 @@
    "Confident, well-governed EHR decisions",
    "Clear implementation team structure and roles",
    "Improved clinician workflows and reduced documentation burden"
+  ],
+  "questions": [
+   "Which EHR is right for us, and how should we organize its implementation?",
+   "How should our clinical workflows be designed before build begins?",
+   "How do we get more value from the EHR we already have?"
   ]
  },
  {
@@ -1065,7 +1115,12 @@
     "Data governance in place before go-live",
     "Architecture decisions that avoid costly rework"
    ]
-  }
+  },
+  "questions": [
+   "Which measures should our leaders track in the first year?",
+   "How do we make sure everyone calculates them the same way?",
+   "What data governance, architecture and analytics team do we need?"
+  ]
  },
  {
   "id": "IT-05",
@@ -1119,7 +1174,12 @@
     "Visibility of all AI in use, including shadow AI",
     "Ongoing monitoring for performance, bias and unintended impacts"
    ]
-  }
+  },
+  "questions": [
+   "How do we review, approve and monitor AI tools safely?",
+   "What AI is already in use across our organization?",
+   "Who should make decisions about AI, and on what principles?"
+  ]
  },
  {
   "id": "IT-06",
@@ -1182,7 +1242,12 @@
     "Program and project managers, with project plans, timelines and status reports",
     "Application, infrastructure and training teams, EHR champions and operational leads"
    ]
-  }
+  },
+  "questions": [
+   "Are we on track to go live safely on our opening date?",
+   "How do we manage risks, issues and decisions across a complex activation?",
+   "Will our people be trained and ready before go-live?"
+  ]
  },
  {
   "id": "IT-07",
@@ -1224,6 +1289,11 @@
    "Higher patient digital adoption and engagement",
    "Shift from insecure channels to secure digital communication",
    "Clear roadmap for digital patient experience improvements"
+  ],
+  "questions": [
+   "What digital experience should our patients have, from first contact to follow-up?",
+   "Which apps, portals and digital tools should we offer, and in what order?",
+   "How do we tie digital journeys to our clinical pathways?"
   ]
  },
  {
@@ -1288,7 +1358,12 @@
     "Transferable skills participants apply at home",
     "Long-term capacity building at the home institution"
    ]
-  }
+  },
+  "questions": [
+   "Where can our physicians, nurses and pharmacists see Cleveland Clinic practice first-hand?",
+   "Which program fits each professional group and learning goal?",
+   "What does each program involve, and who is eligible?"
+  ]
  },
  {
   "id": "EDU-02",
@@ -1349,7 +1424,12 @@
     "Advanced specialty skills beyond core training",
     "Stronger research capability"
    ]
-  }
+  },
+  "questions": [
+   "How can our physicians and trainees train beyond observation?",
+   "Which rotations, fellowships or research programs fit their goals?",
+   "What eligibility, credentialing and visa steps are involved?"
+  ]
  },
  {
   "id": "EDU-03",
@@ -1412,7 +1492,12 @@
     "First-hand exposure to the Cleveland Clinic model",
     "Leadership development tied to measurable results"
    ]
-  }
+  },
+  "questions": [
+   "How do we prepare physicians for their first leadership roles?",
+   "How do we bring a new executive team together before opening?",
+   "How do we develop senior leaders in ways that show measurable results?"
+  ]
  },
  {
   "id": "EDU-04",
@@ -1476,7 +1561,12 @@
     "Practical communication skills used daily",
     "Internal capability to sustain culture change"
    ]
-  }
+  },
+  "questions": [
+   "How do we build a shared culture of service and safety across our workforce?",
+   "How do we strengthen communication between caregivers and patients?",
+   "How do we make new behaviors last after training ends?"
+  ]
  },
  {
   "id": "EDU-05",
@@ -1538,7 +1628,12 @@
     "Tested clinical systems, spaces and workflows",
     "Sustainable local simulation capability"
    ]
-  }
+  },
+  "questions": [
+   "How can our teams practice procedures and emergencies safely?",
+   "Are our new spaces, systems and workflows ready for patients?",
+   "How do we build a simulation program of our own?"
+  ]
  },
  {
   "id": "EDU-06",
@@ -1602,7 +1697,12 @@
     "A curriculum strengthened by expert review",
     "Stronger teaching skills among faculty"
    ]
-  }
+  },
+  "questions": [
+   "How can our staff learn from Cleveland Clinic experts without traveling?",
+   "Can Cleveland Clinic faculty teach or present at our institution?",
+   "How strong is our medical curriculum, and how do we develop the clinicians who teach it?"
+  ]
  },
  {
   "id": "EDU-07",
@@ -1674,7 +1774,12 @@
     "Treatment decisions confirmed or refined with documented input",
     "Physicians build expertise case by case"
    ]
-  }
+  },
+  "questions": [
+   "What would a Cleveland Clinic specialist recommend for this complex case?",
+   "Is our treatment plan the right one?",
+   "How can our physicians get expert input without sending the patient abroad?"
+  ]
  },
  {
   "id": "SQPE-01",
@@ -1728,7 +1833,12 @@
     "A prioritized, year-over-year improvement plan",
     "Measurable progress on the 3 to 5 priority measures each member selects, against targets the member sets"
    ]
-  }
+  },
+  "questions": [
+   "How do our safety, quality and patient experience compare with Cleveland Clinic standards?",
+   "Which measures should we prioritize, and how do we track them reliably?",
+   "Are we improving year over year?"
+  ]
  },
  {
   "id": "SQPE-02",
@@ -1766,6 +1876,11 @@
    "Alignment between leadership perception and independent assessment",
    "Clear priorities for advancing PI, PE and safety culture",
    "A baseline for measuring maturity gains year over year"
+  ],
+  "questions": [
+   "How mature are our improvement, patient experience and safety culture practices today?",
+   "Does our leaders' view match an outside assessment?",
+   "Where should we focus first?"
   ]
  },
  {
@@ -1806,6 +1921,11 @@
    "Governance, metrics and policies aligned with Cleveland Clinic practice",
    "Readiness for accreditation and regulatory review",
    "A clear path to SQPE maturity in the first years of operation"
+  ],
+  "questions": [
+   "How do we build safety and quality into a new hospital from day one?",
+   "What governance, metrics and policies should be in place before we open?",
+   "How do we prepare for accreditation alongside opening?"
   ]
  },
  {
@@ -1864,7 +1984,12 @@
     "Faster self-assessment against Cleveland Clinic practice",
     "Consistent improvement approaches that support priority metrics"
    ]
-  }
+  },
+  "questions": [
+   "What does mature practice look like for infection prevention, medication safety and other priorities?",
+   "How do our units compare with Cleveland Clinic practice?",
+   "What practical steps should our teams take next?"
+  ]
  },
  {
   "id": "SQPE-05",
@@ -1902,6 +2027,11 @@
    "A shared Cleveland Clinic language for safety and quality",
    "Scalable training without large-scale staff release",
    "Trackable course completion for [number of] target caregivers"
+  ],
+  "questions": [
+   "How do we train caregivers consistently across shifts and sites?",
+   "Which safety, quality and patient experience topics should every caregiver learn?",
+   "How do we build skills without pulling large numbers of staff off the floor?"
   ]
  },
  {
@@ -1948,7 +2078,12 @@
   ],
   "onePage": {
    "need": "Culture change in safety, communication and improvement does not scale through external trainers alone; hospitals need internal faculty who can deliver proven programs and sustain them. Requests typically come from CNOs, CMOs, quality and patient experience leaders."
-  }
+  },
+  "questions": [
+   "How do we teach Cleveland Clinic programs with our own faculty?",
+   "Which programs, such as Communicate with HEART, R.E.D.E. or Just Culture, fit our priorities?",
+   "How do we keep training going after Cleveland Clinic's involvement ends?"
+  ]
  },
  {
   "id": "SQPE-07",
@@ -1986,6 +2121,11 @@
    "Faster answers to emerging SQPE questions",
    "Stronger professional development for quality and nursing teams",
    "A deeper working relationship between member teams and Cleveland Clinic experts"
+  ],
+  "questions": [
+   "How do our teams stay current with Cleveland Clinic practice?",
+   "Can we hear from Cleveland Clinic experts on the topics we choose?",
+   "Where can our teams bring questions as they work on our priorities?"
   ]
  }
 ]

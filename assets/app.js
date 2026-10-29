@@ -713,6 +713,7 @@
       "<div><dt>Delivery model</dt><dd>" + esc(p.deliveryShort) + "</dd></div>" +
       "</dl>" +
       '<section class="dsec"><h3>The need</h3>' + paragraphsHTML(p.need) + "</section>" +
+      (p.questions.length ? '<section class="dsec"><h3>Questions we help you answer</h3>' + listHTML(p.questions) + "</section>" : "") +
       '<section class="dsec"><h3>What Cleveland Clinic brings</h3>' + paragraphsHTML(p.value) + "</section>" +
       '<section class="dsec"><h3>Key deliverables</h3>' + (p.deliverablesIntro ? "<p class=\"intro\">" + rich(p.deliverablesIntro) + "</p>" : "") + listHTML(p.deliverables, false, p.leadBold) + "</section>" +
       '<section class="dsec"><h3>How it is delivered</h3><p class="lead-in">' + esc(p.deliveryModel) + "</p>" + paragraphsHTML(p.deliveryDetail) + "</section>" +

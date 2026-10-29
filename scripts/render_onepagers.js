@@ -69,7 +69,7 @@ function render(d, LOGO, size, dateStr, FONTS) {
   function paraBlock(p) {
     const [head, rest] = lead(p, "kv");
     SANS("medium"); doc.setFontSize(size);
-    const hw = head ? doc.getTextWidth(head) * 1.015 + size * 0.32 : 0;
+    const hw = head ? doc.getTextWidth(head) + size * 0.27 : 0;
     const lines = wrap(rest, COLW, hw);
     lines.forEach((ln, i) => {
       ensure(LH);
@@ -93,7 +93,7 @@ function render(d, LOGO, size, dateStr, FONTS) {
       const [head, rest] = lead(t, colon ? "colon" : "auto");
       SANS("medium"); doc.setFontSize(size);
       const ind = size * 1.15;
-      const hw = head ? doc.getTextWidth(head) * 1.015 + size * 0.32 : 0;
+      const hw = head ? doc.getTextWidth(head) + size * 0.27 : 0;
       const lines = wrap(rest, COLW - ind, hw);
       ensure(LH * Math.min(lines.length, 2));
       fill(color); doc.rect(x0() + 0.5, y - size * 0.62, size * 0.42, size * 0.42, "F");
@@ -156,7 +156,7 @@ function render(d, LOGO, size, dateStr, FONTS) {
 
   /* ---- Body, flowing down the left column and then the right ---- */
   heading("Client need"); para(d.need);
-  heading("Why Cleveland Clinic"); para(d.value);
+  if (d.questions && d.questions.length) { heading("Questions we help you answer"); bullets(d.questions, BLUE, false); }
   heading("What you receive");
   if (d.deliverablesIntro) { para(d.deliverablesIntro); y += size * 0.3; }
   bullets(d.deliverables, BLUE, d.leadBold);
@@ -192,7 +192,7 @@ function render(d, LOGO, size, dateStr, FONTS) {
     const src = Object.assign({}, it, it.onePage || {});
     const d = {
       name: src.name, tagline: src.tagline, category: src.category, stageNote: src.stageNote, headerLabel: src.headerLabel,
-      need: src.need, value: src.value, deliverablesIntro: src.deliverablesIntro, leadBold: !!src.leadBold,
+      need: src.need, value: src.value, questions: src.questions || [], deliverablesIntro: src.deliverablesIntro, leadBold: !!src.leadBold,
       deliverables: src.deliverables, deliveryModes: src.deliveryModes, deliveryDetail: src.deliveryDetail,
       duration: src.duration, phases: src.phases || [], durationNotes: src.durationNotes,
       resCC: src.resCC, resClient: src.resClient, resNote: src.resNote, assumptions: src.assumptions || [],
