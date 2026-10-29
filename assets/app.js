@@ -268,7 +268,10 @@
      One box per solution. Boxes drop out as visitors answer and the ones left grow,
      so the field always shows what is still in the running. Hover or focus shows a
      short description; selecting a box opens the full profile. */
-  var DOMAIN_COLOR = { finance: "#1f9be0", sqpe: "#2f9a4f", digital: "#14a0a6", education: "#8b6fd0" };
+  // Shades of the two Cleveland Clinic logo colors: blue and green, each in a deep and a light shade.
+  // Light shades carry navy numbers so they stay readable.
+  var DOMAIN_COLOR = { finance: "#007bc2", sqpe: "#1b7638", digital: "#6cbde9", education: "#7cc48f" };
+  var DOMAIN_INK = { finance: "#ffffff", sqpe: "#ffffff", digital: "#0f2f55", education: "#0f2f55" };
   var field = $("#portfolioField");
   var tip = $("#fieldTip");
   var tiles = {};
@@ -288,6 +291,7 @@
       b.setAttribute("data-action", "detail");
       b.setAttribute("data-id", p.id);
       b.style.backgroundColor = DOMAIN_COLOR[p.domain] || DOMAIN_COLOR.finance;
+      b.style.setProperty("--tile-ink", DOMAIN_INK[p.domain] || "#ffffff");
       // number within its area, taken from the brochure code (FIN-03 is Finance 3)
       var num = parseInt(String(p.id).split("-").pop(), 10) || "";
       b.setAttribute("data-num", num);
@@ -337,6 +341,20 @@
     return ORDERED.filter(function (p) { return ids.indexOf(p.id) !== -1; }).map(function (p) { return p.id; });
   }
 
+  var labelProbe = null;
+  function labelHeight(text, width) {
+    if (!labelProbe) {
+      labelProbe = document.createElement("span");
+      labelProbe.className = "field-label";
+      labelProbe.setAttribute("aria-hidden", "true");
+      labelProbe.style.cssText = "visibility:hidden;position:absolute;left:-9999px;top:0;display:block;";
+      field.appendChild(labelProbe);
+    }
+    labelProbe.style.width = width + "px";
+    labelProbe.textContent = text;
+    return Math.ceil(labelProbe.scrollHeight);
+  }
+
   function fieldLayout(ids, W, isResult) {
     var stacked = window.matchMedia("(max-width: 900px)").matches;
     var n = ids.length, gap = 6, boxes = [], i, y = 0;
@@ -351,10 +369,11 @@
       var cw = (W - cg) / 2;                      // cluster width
       var ccols = stacked ? 7 : 4;                // boxes per cluster row
       var bw = Math.min(stacked ? 30 : 40, (cw - gap * (ccols - 1)) / ccols);
-      var lh = stacked ? 18 : 34;                 // room for the area name
       var rowGap = stacked ? 12 : 22;
       for (var gi = 0; gi < groups.length; gi += 2) {
         var rowH = 0;
+        // room for the area names in this row: two lines, or more when a name needs it
+        var lh = stacked ? 18 : Math.max(34, labelHeight(groups[gi].d.name, cw), groups[gi + 1] ? labelHeight(groups[gi + 1].d.name, cw) : 0);
         [groups[gi], groups[gi + 1]].forEach(function (g, side) {
           if (!g) return;
           var x0 = side * (cw + cg);
