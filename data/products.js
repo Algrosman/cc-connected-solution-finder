@@ -1228,7 +1228,7 @@ window.CC_CATALOG = [
    "CCAD Medical Fellowship Programs. Post-residency physicians; 2 to 3 years in Cardiology, Gastroenterology, Vascular Surgery, Critical Care or Hematology/Oncology",
    "Hospitalist Fellowship (NST). International physicians; about 1 year of non-accredited advanced hospital-medicine training with research and quality improvement",
    "Pediatric Internal Medicine Fellowship (NST). International physicians; about 1 year of non-accredited advanced pediatric training with research and quality improvement",
-   "Clinical Research Fellowships. Physicians; 1 year or longer of paid research training in clinical research methods, innovation and evidence-based practice",
+   "Clinical Research Fellowships. Physicians; 1 year or longer of research training in clinical research methods, innovation and evidence-based practice",
    "CCAD Research Student Program. University students and interns; 4-week placement supporting a CCAD-approved research project, without patient care"
   ],
   "deliveryModel": "On-site",
