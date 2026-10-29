@@ -268,10 +268,9 @@
      One box per solution. Boxes drop out as visitors answer and the ones left grow,
      so the field always shows what is still in the running. Hover or focus shows a
      short description; selecting a box opens the full profile. */
-  // Shades of the two Cleveland Clinic logo colors: blue and green, each in a deep and a light shade.
-  // Light shades carry navy numbers so they stay readable.
-  var DOMAIN_COLOR = { finance: "#007bc2", sqpe: "#1b7638", digital: "#6cbde9", education: "#7cc48f" };
-  var DOMAIN_INK = { finance: "#ffffff", sqpe: "#ffffff", digital: "#0f2f55", education: "#0f2f55" };
+  // Shades of the two Cleveland Clinic logo colors, blue and green: a deeper and a lighter shade of each,
+  // all dark enough for white numbers.
+  var DOMAIN_COLOR = { finance: "#0a6db0", sqpe: "#1b7638", digital: "#3a8fd0", education: "#3a9150" };
   var field = $("#portfolioField");
   var tip = $("#fieldTip");
   var tiles = {};
@@ -291,7 +290,6 @@
       b.setAttribute("data-action", "detail");
       b.setAttribute("data-id", p.id);
       b.style.backgroundColor = DOMAIN_COLOR[p.domain] || DOMAIN_COLOR.finance;
-      b.style.setProperty("--tile-ink", DOMAIN_INK[p.domain] || "#ffffff");
       // number within its area, taken from the brochure code (FIN-03 is Finance 3)
       var num = parseInt(String(p.id).split("-").pop(), 10) || "";
       b.setAttribute("data-num", num);
