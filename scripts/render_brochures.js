@@ -36,7 +36,7 @@ const HELPERS = `
         const t = clean(it); const m = t.match(/^([^:]{2,80}):\\s+([\\s\\S]*)$/);
         const head = m ? m[1]+':' : ''; const rest = m ? m[2] : t;
         const avail = width-18;
-        doc.setFont('helvetica','bold'); const hw = head ? doc.getTextWidth(head+' ') : 0;
+        doc.setFont('helvetica','bold'); const hw = head ? doc.getTextWidth(head)*1.015 + size*0.32 : 0; // viewers draw bold slightly wider than jsPDF measures
         doc.setFont('helvetica','normal');
         const lines = []; let cur = '';
         rest.split(/\\s+/).forEach(w=>{
@@ -69,7 +69,7 @@ const HELPERS = `
 patch("    function heading(num, title){", HELPERS + "    function heading(num, title){", "helpers");
 
 // "Offering", not "product".
-patch("ADVISORY PRODUCT PROFILE", "ADVISORY OFFERING PROFILE", "cover header");
+patch("ADVISORY PRODUCT PROFILE';", "'+(d.headerLabel||'ADVISORY OFFERING PROFILE');", "cover header");
 
 // Blue band: no product owner; category carries a plain-language stage anchor.
 patch("['CATEGORY', d.category],", "['CATEGORY', d.category + (d.stageNote ? '\\n(' + d.stageNote + ')' : '')],", "band category");
@@ -78,7 +78,7 @@ patch("const cellW = CW/4,", "const cellW = CW/glance.length,", "band width");
 
 // 03: optional intro paragraph and bold lead-ins.
 patch("heading('03','Key Deliverables'); bullets(d.deliverables, M, CW, BODY, LH, BLUE);",
-  "heading('03','Key Deliverables');" +
+  "if(d.deliverablesIntro) ensure(150); heading('03','Key Deliverables');" +
   " if(d.deliverablesIntro){ justified(d.deliverablesIntro, M, CW, BODY, LH); y+=8; }" +
   " (d.leadBold ? leadBullets : bullets)(d.deliverables, M, CW, BODY, LH, BLUE);", "deliverables");
 
@@ -131,7 +131,7 @@ window.makePDF = d => buildPDF(d).output('datauristring');
   for (const it of items) {
     if (only.length && !only.includes(it.id)) continue;
     const d = {
-      name: it.name, tagline: it.tagline, category: it.category, stageNote: it.stageNote,
+      name: it.name, tagline: it.tagline, category: it.category, stageNote: it.stageNote, headerLabel: it.headerLabel,
       need: it.need, value: it.value, deliverablesIntro: it.deliverablesIntro, leadBold: !!it.leadBold,
       deliverables: it.deliverables, deliveryModes: it.deliveryModes, deliveryDetail: it.deliveryDetail,
       duration: it.duration, phases: it.phases || [], durationNotes: it.durationNotes,

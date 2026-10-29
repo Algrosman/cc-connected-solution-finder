@@ -53,7 +53,7 @@ function draw(S, LOGO) {
     items.forEach(t => {
       const m = t.match(/^([^:]{2,80}):\s+([\s\S]*)$/);
       const head = m[1] + ":"; const rest = m[2]; const avail = CW - 18;
-      doc.setFontSize(size); doc.setFont("helvetica", "bold"); const hw = doc.getTextWidth(head + " ");
+      doc.setFontSize(size); doc.setFont("helvetica", "bold"); const hw = doc.getTextWidth(head) * 1.015 + size * 0.32;
       doc.setFont("helvetica", "normal");
       const lines = []; let cur = "";
       rest.split(/\s+/).forEach(w => {
@@ -165,7 +165,7 @@ function draw(S, LOGO) {
     y += bh + 10;
     // Premium International band
     doc.setFont("helvetica", "normal"); doc.setFontSize(9);
-    const head = "Premium International: "; doc.setFont("helvetica", "bold"); const hw = doc.getTextWidth(head);
+    const head = "Premium International:"; doc.setFont("helvetica", "bold"); const hw = doc.getTextWidth(head) * 1.015 + 9 * 0.32;
     doc.setFont("helvetica", "normal");
     const lines = []; let cur = ""; const avail = CW - 2 * 12;
     S.premium.split(/\s+/).forEach(w => { const t = cur ? cur + " " + w : w; if (doc.getTextWidth(t) <= (lines.length ? avail : avail - hw)) cur = t; else { lines.push(cur); cur = w; } });
@@ -185,7 +185,7 @@ function draw(S, LOGO) {
       col = i < Math.ceil(S.terms.length / 2) ? 0 : 1;
       const x = M + col * (colW + 24);
       doc.setFontSize(8.8); doc.setFont("helvetica", "bold");
-      const head = t[0] + ": "; const hw = doc.getTextWidth(head);
+      const head = t[0] + ":"; const hw = doc.getTextWidth(head) * 1.015 + 8.8 * 0.32;
       doc.setFont("helvetica", "normal");
       const lines = []; let cur = "";
       t[1].split(/\s+/).forEach(w => { const s = cur ? cur + " " + w : w; if (doc.getTextWidth(s) <= (lines.length ? colW : colW - hw)) cur = s; else { lines.push(cur); cur = w; } });

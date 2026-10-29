@@ -1,0 +1,71 @@
+[
+ {
+  "id": "PKG-NEW",
+  "area": "Packages",
+  "file": "0_Packages/All-in-One_New_Hospital_Package_Profile.pdf",
+  "headerLabel": "ADVISORY PACKAGE PROFILE",
+  "name": "All-in-One New Hospital Package",
+  "tagline": "Eight Cleveland Clinic offerings across finance, safety and quality, digital and education, sequenced as one advisory program from design to opening day.",
+  "category": "All-in-one package",
+  "stageNote": "for hospitals being built",
+  "need": "Opening a new hospital means making finance, safety and quality, digital and workforce decisions at the same time, often with separate advisors who do not coordinate. Decisions made early, such as the financial model, core systems and quality governance, are expensive to change once construction is under way, and every area has to be ready on the same opening date.\nThe package is for owners, developers and leadership teams of hospitals in planning, design or construction who want one coordinated Cleveland Clinic engagement rather than separate offerings.",
+  "value": "Cleveland Clinic is an operating health system with 23 hospitals, 300 outpatient locations and about 83,000 caregivers, and has grown from Northeast Ohio into Florida, Las Vegas, Toronto, London and Abu Dhabi (figures as of December 31, 2025).\nThe package brings Cleveland Clinic's finance, safety and quality, digital and education teams into one engagement, sequenced to the client's design, construction and opening milestones, so the financial plan, quality governance, digital systems and workforce are ready together.\nEach offering keeps the scope set out in its own profile, and offerings can be added or swapped to match the client's priorities.",
+  "deliverablesIntro": "The package combines two offerings from each area:",
+  "leadBold": true,
+  "deliverables": [
+   "Integrated Financial Planning, Forecasting & Modeling (FIN-05): driver-based volume, revenue, staffing and capital models and a multi-year forecast from opening to steady state",
+   "Financial Reporting & Performance Management (FIN-04): the KPIs, dashboards and month-end reporting leaders will rely on from day one",
+   "Greenfield Hospital SQPE Advisory Guide (SQPE-03): safety, quality and patient experience built into the hospital's governance, metrics and policies before opening",
+   "SQPE One-Pager Maturity Guide Library (SQPE-04): concise Cleveland Clinic guides showing what mature practice looks like, for policies and training",
+   "Digital Strategy & Roadmap (IT-01): a phased digital roadmap aligned to the clinical plan, capital plan and opening timeline",
+   "Digital Hospital Activation & Readiness (IT-06): Cleveland Clinic's activation playbook for a safe, on-time digital go-live",
+   "Caregiver Development, Culture & Patient Experience (EDU-04): onboarding, communication and patient experience programs for the founding workforce",
+   "Simulation & Advanced Skills Training (EDU-05): simulation-based training and systems testing so teams practice before the first patient"
+  ],
+  "deliveryModes": [
+   "On-site",
+   "Hybrid",
+   "Workshop-based"
+  ],
+  "deliveryDetail": "Delivered as one coordinated engagement, with a single Cleveland Clinic engagement lead and a joint plan across finance, safety and quality, digital and education. Each offering is delivered by its own Cleveland Clinic team on the timing that fits the client's milestones, with joint reviews at the end of each phase.",
+  "duration": "Phased to the opening date",
+  "phases": [
+   {
+    "name": "Plan",
+    "weeks": "design and pre-construction",
+    "detail": "Financial models and forecast (FIN-05), digital strategy and roadmap (IT-01) and safety and quality design (SQPE-03)"
+   },
+   {
+    "name": "Prepare",
+    "weeks": "during construction",
+    "detail": "KPIs and reporting (FIN-04), good-practice guides for policies and training (SQPE-04) and culture and patient experience programs for the founding workforce (EDU-04)"
+   },
+   {
+    "name": "Activate",
+    "weeks": "the run-up to opening",
+    "detail": "Digital activation and go-live readiness (IT-06) and simulation training and systems testing (EDU-05)"
+   }
+  ],
+  "durationNotes": "Each offering keeps the duration set out in its own profile; digital activation, for example, typically runs 12 to 18 months up to go-live. Total length depends on the opening date and on how far design and construction have progressed when the engagement starts.",
+  "resCC": [
+   "Engagement lead from International & Emerging Markets, coordinating all four areas",
+   "Finance, safety and quality, digital and education teams for their offerings"
+  ],
+  "resClient": [
+   "Executive sponsor, such as the CEO or project director",
+   "Leads for finance, quality, IT and workforce",
+   "Access to design, construction and opening plans"
+  ],
+  "assumptions": [
+   "Scope and sequence are confirmed at scoping against the opening date",
+   "Offerings can be added or swapped to match the client's priorities",
+   "Each offering's own client inputs and assumptions also apply"
+  ],
+  "outcomes": [
+   "One coordinated plan for finance, quality, digital and workforce readiness",
+   "Early decisions on the financial model, core systems and quality governance made before they are expensive to change",
+   "Finance, quality, digital and workforce ready on the same opening date",
+   "A founding workforce trained in the hospital's culture, quality standards and systems before the first patient"
+  ]
+ }
+]

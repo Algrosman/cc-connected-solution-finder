@@ -1,8 +1,9 @@
-/* Cleveland Clinic Connected: product navigator, catalog and cart. */
+/* Cleveland Clinic Connected: product navigator, catalog, packages and the advisory package (cart). */
 (function () {
   "use strict";
 
   var CATALOG = window.CC_CATALOG || [];
+  var PACKAGES = window.CC_PACKAGES || [];
   var FINDER = window.CC_FINDER;
   var CONFIG = window.CC_CONFIG || {};
   var E = window.CCEngine;
@@ -76,7 +77,7 @@
     var added = inCart(id);
     return '<button type="button" class="btn ' + (added ? "btn-secondary is-added" : "btn-secondary") + " " + (extraClass || "") +
       '" data-action="' + (added ? "open-cart" : "add") + '" data-id="' + id + '" aria-label="' +
-      (added ? "In cart: " : "Add to cart: ") + esc(BY_ID[id].title) + '">' + (added ? ICON.check + "In cart" : ICON.plus + "Add to cart") + "</button>";
+      (added ? "In your package: " : "Add to your package: ") + esc(BY_ID[id].title) + '">' + (added ? ICON.check + "In your package" : ICON.plus + "Add to package") + "</button>";
   }
 
   /* ---------------- Finder ---------------- */
@@ -232,6 +233,12 @@
           cartButtonHTML(a.id, "btn-small on-navy-btn") + "</div>";
       });
       html += "</section>";
+    }
+    var pkgNew = PACKAGES.filter(function (k) { return k.fit.indexOf(state.answers.status) !== -1; })[0];
+    if (pkgNew) {
+      html += '<div class="bundle-teaser"><div><p class="teaser-label">All-in-one option for new hospitals</p>' +
+        "<p>Prefer one coordinated engagement? The " + esc(pkgNew.title) + " combines two offerings from each area, from design to opening day.</p></div>" +
+        '<button type="button" class="btn btn-light btn-small" data-action="go-bundle">See the package</button></div>';
     }
     html += '<div class="result-more">' +
       '<button type="button" class="link-btn" data-action="another">Find a solution in another area</button>' +
@@ -592,8 +599,42 @@
         '<p style="margin-top:16px"><button type="button" class="btn btn-secondary btn-small" data-action="clear-search">Clear search</button></p></div>';
     }
     $("#domainList").innerHTML = html;
+    renderBundles(total);
     var filterText = state.fit === "all" ? "" : " for " + STATUS_PLURAL[state.fit];
     $("#catalogCount").textContent = "Showing " + plural(total, "solution", "solutions") + filterText;
+  }
+
+  /* ---------------- Pre-built packages ---------------- */
+  function renderBundles(shownCount) {
+    var slot = $("#bundleSlot");
+    if (!slot) return;
+    var q = (state.query || "").toLowerCase();
+    slot.innerHTML = PACKAGES.filter(function (pkg) {
+      if (state.fit !== "all" && pkg.fit.indexOf(state.fit) === -1) return false;
+      if (!q) return true;
+      return (pkg.title + " " + pkg.tagline + " all-in-one package new hospital").toLowerCase().indexOf(q) !== -1;
+    }).map(function (pkg) {
+      var ids = bundleIds(pkg);
+      var missing = ids.filter(function (id) { return !inCart(id); }).length;
+      var addBtn = !missing
+        ? '<button type="button" class="btn btn-light" data-action="open-cart">' + ICON.check + "Package added</button>"
+        : '<button type="button" class="btn btn-light" data-action="add-bundle" data-id="' + pkg.id + '">' + ICON.plus +
+          (missing === ids.length ? "Add all " + ids.length + " to your package" : "Add the remaining " + missing) + "</button>";
+      return '<section class="bundle" id="bundle-' + pkg.id + '" aria-labelledby="bt-' + pkg.id + '">' +
+        '<div class="bundle-head"><p class="bundle-eyebrow">All-in-one option &nbsp;|&nbsp; For new hospitals</p>' +
+        '<h3 class="bundle-title" id="bt-' + pkg.id + '">' + esc(pkg.title) + "</h3>" +
+        '<p class="bundle-sub">' + esc(pkg.tagline) + "</p>" +
+        '<p class="bundle-note">' + esc(pkg.note) + "</p>" +
+        '<div class="bundle-actions">' + addBtn +
+        '<a class="btn btn-ghost-light" href="' + esc(pkg.pdf) + '" target="_blank" rel="noopener">' + ICON.pdf + "Package profile (PDF)</a></div></div>" +
+        '<ol class="bundle-phases">' + pkg.phases.map(function (ph) {
+          return '<li><p class="phase-name">' + esc(ph.name) + '</p><p class="phase-when">' + esc(ph.when) + "</p><ul>" +
+            ph.ids.map(function (id) {
+              var p = BY_ID[id];
+              return '<li><button type="button" class="phase-item" data-action="detail" data-id="' + id + '"><span class="phase-ref">' + esc(id) + "</span>" + esc(p.title) + "</button></li>";
+            }).join("") + "</ul></li>";
+        }).join("") + "</ol></section>";
+    }).join("");
   }
 
   /* ---------------- Detail panel ---------------- */
@@ -745,7 +786,21 @@
     state.cart.push(id);
     saveCart();
     refreshCartUI();
-    toast("Added to cart: " + BY_ID[id].title);
+    toast("Added to your package: " + BY_ID[id].title);
+  }
+
+  function addBundle(pkgId) {
+    var pkg = PACKAGES.filter(function (k) { return k.id === pkgId; })[0];
+    if (!pkg) return;
+    var added = 0;
+    bundleIds(pkg).forEach(function (id) { if (BY_ID[id] && !inCart(id)) { state.cart.push(id); added++; } });
+    saveCart();
+    refreshCartUI();
+    toast(added ? "Added " + plural(added, "offering", "offerings") + " from the " + pkg.title : "The " + pkg.title + " is already in your package");
+  }
+
+  function bundleIds(pkg) {
+    return pkg.phases.reduce(function (all, ph) { return all.concat(ph.ids); }, []);
   }
 
   function removeFromCart(id) {
@@ -758,7 +813,7 @@
     var c = $("#cartCount");
     c.textContent = state.cart.length;
     c.classList.remove("bump"); void c.offsetWidth; c.classList.add("bump");
-    $("#cartButton").setAttribute("aria-label", "Cart, " + plural(state.cart.length, "solution", "solutions"));
+    $("#cartButton").setAttribute("aria-label", "Your advisory package, " + plural(state.cart.length, "solution", "solutions"));
     // Re-render everything that shows add buttons, keeping the finder where it is.
     var step = currentStep();
     if (step.type === "result") renderResult();
@@ -768,7 +823,8 @@
       var id = (location.hash.match(/solution=([A-Z0-9-]+)/) || [])[1];
       var foot = $(".panel-foot", dp);
       if (id && foot) {
-        foot.innerHTML = cartButtonHTML(id) + '<a class="btn btn-quiet" href="' + esc(BY_ID[id].pdf) + '" target="_blank" rel="noopener">' + ICON.pdf + "Download brochure (PDF)</a>";
+        foot.innerHTML = cartButtonHTML(id) + '<a class="btn btn-quiet" href="' + esc(BY_ID[id].pdf) + '" target="_blank" rel="noopener">' + ICON.pdf + "Download brochure (PDF)</a>" +
+          packetLinkHTML(DOMAIN_BY_ID[BY_ID[id].domain]);
         if (!inCart(id)) { var b = $(".btn", foot); b.classList.remove("btn-secondary"); b.classList.add("btn-primary"); }
       }
     }
@@ -793,10 +849,10 @@
     if (state.cartView === "form") { renderForm(panel); return; }
     if (state.cartView === "done") { renderDone(panel); return; }
     var items = state.cart.map(function (id) { return BY_ID[id]; });
-    var html = cartHead("Your cart", plural(items.length, "solution", "solutions"));
+    var html = cartHead("Your advisory package", plural(items.length, "solution", "solutions"));
     html += '<div class="panel-body">';
     if (!items.length) {
-      html += '<div class="cart-empty"><h3>Your cart is empty</h3><p>Use the product navigator or browse all solutions, then add the ones you would like to discuss with our team.</p>' +
+      html += '<div class="cart-empty"><h3>Your package is empty</h3><p>Use the product navigator or browse all solutions, then add the ones you would like to discuss with our team.</p>' +
         '<button type="button" class="btn btn-primary" data-action="go-finder">Open the product navigator</button></div>';
     } else {
       html += '<ul class="cart-list">' + items.map(function (p) {
@@ -806,7 +862,7 @@
           '<button type="button" class="remove" data-action="remove" data-id="' + p.id + '" aria-label="Remove ' + esc(p.title) + '">Remove</button></li>';
       }).join("") + "</ul>";
       html += '<p class="cart-summary">There is no charge to request a proposal. Our team confirms scope, timing and fees with you before any engagement begins.</p>' +
-        '<p><button type="button" class="remove" data-action="clear-cart">Empty cart</button></p>';
+        '<p><button type="button" class="remove" data-action="clear-cart">Clear package</button></p>';
     }
     html += "</div>";
     if (items.length) {
@@ -824,7 +880,7 @@
       return '<div class="field"><label for="f-' + name + '">' + label + (required ? "" : ' <span class="opt">(optional)</span>') + "</label>" +
         '<input id="f-' + name + '" name="' + name + '" type="' + type + '"' + (required ? " required" : "") + ' value="' + esc(draft[name] || "") + '"' + (extra || "") + "></div>";
     }
-    var html = cartHead("Request a proposal", plural(items.length, "solution", "solutions") + " in your cart");
+    var html = cartHead("Request a proposal", plural(items.length, "solution", "solutions") + " in your package");
     html += '<div class="panel-body"><form class="form" id="requestForm" novalidate>' +
       '<p class="form-intro">Tell us about your organization. The Cleveland Clinic Connected team will contact you to scope the solutions below.</p>' +
       listHTML(items.map(function (p) { return p.id + "  " + p.title; })) +
@@ -844,7 +900,7 @@
       '<p class="form-error" id="formError" role="alert" hidden></p>' +
       "</form></div>" +
       '<div class="panel-foot"><button type="submit" form="requestForm" class="btn btn-primary" id="sendBtn">Send request</button>' +
-      '<button type="button" class="btn btn-quiet" data-action="to-list">' + ICON.back + "Back to cart</button></div>";
+      '<button type="button" class="btn btn-quiet" data-action="to-list">' + ICON.back + "Back to your package</button></div>";
     panel.innerHTML = html;
     $("#requestForm").addEventListener("input", saveDraft);
     $("#requestForm").addEventListener("submit", submitRequest);
@@ -971,7 +1027,7 @@
       (sent ? "" : '<a class="btn btn-primary" href="' + esc(mailtoLink(req)) + '">Open the email again</a>') +
       '<button type="button" class="btn btn-secondary" data-action="print">Print or save as PDF</button>' +
       "</div>" +
-      '<p style="margin-top:22px;font-size:14.5px">Your cart is unchanged, so you can keep adding solutions. <button type="button" class="remove" data-action="clear-cart">Empty cart</button></p>' +
+      '<p style="margin-top:22px;font-size:14.5px">Your package is unchanged, so you can keep adding solutions. <button type="button" class="remove" data-action="clear-cart">Clear package</button></p>' +
       "</div></div>";
     panel.innerHTML = html;
   }
@@ -998,7 +1054,7 @@
       "<h1>Proposal request</h1><p>Cleveland Clinic Connected, International &amp; Emerging Markets</p>" +
       "<h2>Contact</h2><table>" + rows.map(function (r) { return "<tr><th>" + esc(r[0]) + "</th><td>" + esc(r[1]) + "</td></tr>"; }).join("") + "</table>" +
       "<h2>Solutions of interest</h2><table>" + sol + "</table>" +
-      (req.finderAnswers.length ? "<h2>Solution finder answers</h2><table>" + req.finderAnswers.map(function (a) { return "<tr><th>" + esc(a.question) + "</th><td>" + esc(a.answer) + "</td></tr>"; }).join("") + "</table>" : "");
+      (req.finderAnswers.length ? "<h2>Product navigator answers</h2><table>" + req.finderAnswers.map(function (a) { return "<tr><th>" + esc(a.question) + "</th><td>" + esc(a.answer) + "</td></tr>"; }).join("") + "</table>" : "");
     window.print();
   }
 
@@ -1006,7 +1062,7 @@
   var toastTimer = null;
   function toast(msg) {
     var t = $("#toast");
-    t.innerHTML = "<span>" + esc(msg) + '</span><button type="button" data-action="open-cart">View cart</button>';
+    t.innerHTML = "<span>" + esc(msg) + '</span><button type="button" data-action="open-cart">View package</button>';
     t.hidden = false;
     requestAnimationFrame(function () { t.classList.add("is-on"); });
     clearTimeout(toastTimer);
@@ -1030,6 +1086,14 @@
       case "another": another(); break;
       case "detail": openDetail(id, el); break;
       case "add": addToCart(id); break;
+      case "add-bundle": addBundle(id); break;
+      case "go-bundle":
+        if (state.fit === "existing") { state.fit = "all"; $all(".segmented [data-fit]").forEach(function (b) { b.setAttribute("aria-checked", String(b.getAttribute("data-fit") === "all")); }); }
+        state.query = ""; var cs = $("#catalogSearch"); if (cs) cs.value = "";
+        renderCatalog();
+        var bs = $("#bundleSlot .bundle");
+        if (bs) bs.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+        break;
       case "remove": removeFromCart(id); break;
       case "open-cart": state.cartView = "list"; openCart(el); break;
       case "close-panel": var p = openPanel(); if (p) hidePanel(p); break;
