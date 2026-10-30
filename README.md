@@ -11,10 +11,10 @@ It is plain HTML, CSS and JavaScript with no build step, so it runs on any stati
 | Path | What it is |
 | --- | --- |
 | `index.html` | The page, including all of its text |
-| `assets/styles.css` | All styling (Cleveland Clinic colors and Roboto, with a consulting-style layout) |
-| `assets/site.js` | Contact email and footer year, the section bands, the package roadmap animation, the priority wheel and the partner highlights carousel |
+| `assets/styles.css` | All styling (palette taken from the Cleveland Clinic logo) |
+| `assets/site.js` | Applies the contact email from `assets/config.js` and the footer year |
 | `assets/config.js` | Settings: contact email and prototype banner |
-| `assets/img/` | Hero, membership, member and partner highlight photos |
+| `assets/img/` | Hero, membership and member photos |
 
 ## Preview locally
 
@@ -29,8 +29,8 @@ Then open http://localhost:8000.
 All text is in `index.html`:
 
 - **Advisory expertise:** one card per domain, each with "For new hospitals" and "For existing hospitals" points. Keep these at a high level; solution detail belongs in the private builder.
-- **Programs:** the All-in-One New Hospital Package roadmap (three phases on one line ending on opening day; each item carries its domain tag) and, for existing hospitals, a priority wheel: four priorities, each with how we help and examples "from our work" that open the matching partner story. Keep the examples to what partners or Cleveland Clinic have announced publicly.
-- **Partner highlights:** one story per member in a carousel that rotates every 9 seconds while on screen (it stops on hover, on keyboard focus, with the pause button and for visitors who prefer reduced motion). Each story is drawn from a public announcement and linked to it. Add only what has been announced publicly, and no individual people's names. Photos go in `assets/img/highlights/` (3:2, at least 1200 pixels wide) and should show people at the event or engagement, with Marketing's approval. The "Photo to come" notes show only while `showPrototypeNotice` is on.
+- **Programs:** the All-in-One New Hospital Package (three phases, each listing the domain and a short description) and the program for existing hospitals.
+- **Partner highlights:** one card per member, each drawn from a public announcement and linked to it. Add only what has been announced publicly, and no individual people's names.
 - **Member network:** one entry per member hospital with a photo in `assets/img/members/` (640 by 425 pixels).
 
 ## Before going live
