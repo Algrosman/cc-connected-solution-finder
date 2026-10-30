@@ -123,7 +123,7 @@
   var nowEl = $("#storiesNow"), allEl = $("#storiesAll"), pauseBtn = $(".stories-pause", root);
   var DWELL = 9000;                 /* milliseconds on each story */
   var index = 0, elapsed = 0, last = null;
-  var userPaused = reduceMotion, hovering = false, focused = false, visible = false;
+  var userPaused = reduceMotion, focused = false, visible = false;
 
   controls.hidden = false;
   allEl.textContent = slides.length;
@@ -158,7 +158,7 @@
     if (byUser) track.setAttribute("aria-live", "polite");
   }
   window.CCStories = { go: function (i) { go(i, true); } };
-  function playing() { return !userPaused && !hovering && !focused && visible && !document.hidden; }
+  function playing() { return !userPaused && !focused && visible && !document.hidden; }
   function setPaused(p) {
     userPaused = p;
     root.classList.toggle("is-paused", p);
@@ -180,8 +180,6 @@
   pauseBtn.addEventListener("click", function () { setPaused(!userPaused); });
   $(".stories-prev", root).addEventListener("click", function () { go(index - 1, true); });
   $(".stories-next", root).addEventListener("click", function () { go(index + 1, true); });
-  root.addEventListener("mouseenter", function () { hovering = true; });
-  root.addEventListener("mouseleave", function () { hovering = false; });
   /* Keyboard focus inside the carousel stops the rotation; a mouse click on a control does not */
   root.addEventListener("focusin", function (e) {
     var kb = true;
