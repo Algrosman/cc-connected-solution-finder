@@ -169,8 +169,14 @@ section[id], article[id], div[id] { scroll-margin-top: 12px; }
 .membership-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr); gap: 64px; align-items: center; }
 .membership-photo { aspect-ratio: 16 / 10; overflow: hidden; border-radius: var(--radius); background: var(--mist); }
 .membership-photo img { width: 100%; height: 100%; object-fit: cover; }
-.benefits { list-style: none; padding: 0; margin-top: 52px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
-.benefits p { flex: 1 0 auto; }
+/* What membership includes: an open row of icons, no boxes */
+.includes { list-style: none; padding: 32px 0 0; margin-top: 52px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; border-top: 1px solid var(--rule); }
+.includes li { display: grid; grid-template-columns: 48px minmax(0, 1fr); column-gap: 14px; align-content: start; }
+.inc-icon { grid-row: 1 / span 2; width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; background: var(--sky); color: var(--blue-dark); }
+.includes li:nth-child(even) .inc-icon { background: #eef7f0; color: var(--green); }
+.inc-title { font-size: 17px; font-weight: 500; line-height: 1.3; color: var(--ink); padding-top: 2px; }
+.includes p { color: var(--slate); font-size: 15px; line-height: 1.5; margin-top: 6px; }
+.includes a { color: var(--blue-dark); font-weight: 500; white-space: nowrap; }
 .network { margin-top: 72px; }
 .network-head { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; flex-wrap: wrap; margin-bottom: 24px; padding-bottom: 14px; border-bottom: 1px solid var(--rule); }
 .network-title { font-size: 26px; font-weight: 300; color: var(--ink); }
@@ -181,23 +187,14 @@ section[id], article[id], div[id] { scroll-margin-top: 12px; }
 .member-place { font-size: 14px; color: var(--slate); margin-top: 3px; }
 
 /* ---------- Expertise ---------- */
-.xp-matrix { margin-top: 44px; display: grid; gap: 14px; }
-.xp-head, .xp-row { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr) minmax(0, 1fr); column-gap: 40px; }
-.xp-head { padding: 0 32px 0 36px; font-size: 12.5px; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; color: var(--slate); }
-.xp-head span { padding-bottom: 10px; border-bottom: 2px solid #c9d2dc; }
-.xp-head .xp-col-new { color: var(--green); border-bottom-color: var(--green); }
-.xp-head .xp-col-existing { color: var(--blue-dark); border-bottom-color: var(--blue); }
-.xp-row { padding: 28px 32px 26px; align-items: start; }
-.xp-main { display: flex; flex-direction: column; }
-.xp-name { font-size: 23px; }
-.xp-row .xp-desc { margin-top: 8px; }
-.xp-main .arrow-link { padding-top: 14px; margin-top: 0; }
-.xp-for { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-.xp-new { color: var(--green); }
-.xp-existing { color: var(--blue-dark); }
-.xp-list { list-style: none; padding: 2px 0 2px 14px; margin-top: 4px; display: grid; gap: 10px; border-left: 2px solid var(--rule); }
-.xp-new + .xp-list { border-left-color: var(--green); }
-.xp-existing + .xp-list { border-left-color: var(--blue); }
+/* The four domains, once each: open columns with a colored top rule */
+.domains { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; margin-top: 48px; }
+.domain { display: flex; flex-direction: column; border-top: 5px solid var(--accent); padding-top: 22px; }
+.domain-name { font-size: 22px; font-weight: 400; line-height: 1.25; color: var(--ink); }
+.domain p { color: var(--slate); font-size: 15.5px; line-height: 1.55; margin-top: 10px; }
+.domain .arrow-link { margin-top: auto; padding-top: 18px; }
+.section-lede a { color: var(--blue-dark); font-weight: 500; }
+.xp-list { list-style: none; padding: 2px 0 2px 14px; margin-top: 4px; display: grid; gap: 10px; border-left: 2px solid var(--accent, var(--rule)); }
 .xp-list li { font-size: 15.5px; line-height: 1.45; color: var(--ink); }
 .custom-ask { margin: 40px auto 0; text-align: center; font-size: 17px; color: var(--ink); }
 .custom-ask a { color: var(--blue-dark); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
@@ -269,8 +266,12 @@ section[id], article[id], div[id] { scroll-margin-top: 12px; }
 .rm-anim.is-in [data-phase="3"] .rm-item { transition-delay: 850ms; }
 .rm-anim.is-in .rm-flag { transition-delay: 1100ms; }
 
-/* Existing hospitals */
-.existing { margin-top: 24px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 48px; align-items: center; padding: 34px 40px 38px; background: var(--white); box-shadow: var(--shadow); border-top: 4px solid var(--green); }
+.package-more { margin-top: 26px; padding-top: 18px; border-top: 1px solid var(--rule); color: var(--slate); font-size: 15.5px; }
+.package-more span { font-weight: 600; color: var(--ink); }
+
+/* Existing hospitals: an open, pale blue panel (no card), then what we offer by domain */
+.existing { margin-top: 24px; padding: 36px 40px 40px; background: var(--sky); border-radius: var(--radius); }
+.existing-top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 48px; align-items: center; }
 .existing-title { font-size: clamp(1.5rem, 1.25rem + 0.8vw, 1.95rem); font-weight: 300; line-height: 1.15; }
 .existing-text { color: var(--slate); font-size: 16.5px; line-height: 1.55; margin: 10px 0 22px; }
 .flow { list-style: none; padding: 0; display: grid; gap: 0; counter-reset: flow; }
@@ -279,6 +280,10 @@ section[id], article[id], div[id] { scroll-margin-top: 12px; }
 .flow li::before { content: "0" counter(flow); font-size: 26px; font-weight: 300; color: var(--green); line-height: 1; }
 .flow-name { font-weight: 600; font-size: 16px; color: var(--green); }
 .flow-text { font-size: 15.5px; line-height: 1.45; color: var(--ink); }
+.flow li { border-color: #cfe3f1 !important; }
+.ex-domains { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; margin-top: 34px; padding-top: 26px; border-top: 1px solid #cfe3f1; }
+.ex-name { font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); color: color-mix(in srgb, var(--accent) 72%, #000); margin-bottom: 10px; }
+.ex-domain .xp-list li { font-size: 15px; }
 
 /* ---------- Partner highlights: story carousel ---------- */
 .stories { margin-top: 40px; }
@@ -346,8 +351,7 @@ section[id], article[id], div[id] { scroll-margin-top: 12px; }
 /* ---------- Responsive ---------- */
 @media (max-width: 1080px) {
   .main-nav { gap: 20px; }
-  .xp-head, .xp-row { column-gap: 28px; }
-  .benefits { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .includes, .domains, .ex-domains { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 32px; }
   .roadmap { --lane-w: 96px; --flag-w: 128px; }
   .rm-item { font-size: 14.5px; }
 }
@@ -367,16 +371,10 @@ section[id], article[id], div[id] { scroll-margin-top: 12px; }
   .band-body { padding-top: 52px; padding-bottom: 64px; }
   .membership-row, .faq-row, .connect { grid-template-columns: 1fr; gap: 32px; }
   .members { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px; }
-  .xp-head { display: none; }
-  .xp-row { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 28px; row-gap: 18px; padding: 26px 26px 24px; }
-  .xp-main { display: contents; }
-  .xp-main > * { grid-column: 1 / -1; }
-  .xp-row .xp-desc { margin-top: -12px; }
-  .xp-main .arrow-link { order: 3; padding-top: 0; }
-  .xp-for { position: static; width: auto; height: auto; overflow: visible; clip: auto; white-space: normal; display: block; font-size: 14px; font-weight: 600; margin: 0 0 8px; }
   .package { padding: 28px 24px 30px; }
   .package-head { grid-template-columns: 1fr; gap: 18px; }
-  .existing { grid-template-columns: 1fr; gap: 26px; padding: 28px 24px 30px; }
+  .existing { padding: 28px 24px 30px; }
+  .existing-top { grid-template-columns: 1fr; gap: 26px; }
   .story { grid-template-columns: 1fr; gap: 24px; }
   .story-photo { order: -1; }
 }
@@ -416,8 +414,7 @@ section[id], article[id], div[id] { scroll-margin-top: 12px; }
   .hero h1 { font-size: 32px; }
   .hero-strap { font-size: 17.5px; }
   .hero-lede { font-size: 16.5px; }
-  .benefits { grid-template-columns: 1fr; }
-  .xp-row { grid-template-columns: 1fr; padding: 22px 20px; }
+  .includes, .domains, .ex-domains { grid-template-columns: 1fr; }
   .section-bar > .wrap { min-height: 54px; gap: 12px; }
   .bar-num { font-size: 24px; }
   .bar-rule { width: 24px; }
