@@ -9,8 +9,9 @@
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
   <a class="skip-link" href="#top">Skip to main content</a>
@@ -30,57 +31,59 @@
         <a class="nav-mid" href="#programs">Programs</a>
         <a class="nav-mid" href="#partners">Partner highlights</a>
       </nav>
-      <a class="cart-button header-cta" href="#contact">Contact our team</a>
+      <a class="btn btn-primary header-cta" href="#contact">Let's connect</a>
     </div>
   </header>
 
   <main id="top">
+    <!-- Hero: navy panel with the photo bleeding off the right edge -->
     <section class="hero" aria-labelledby="heroTitle">
-      <div class="wrap">
+      <figure class="hero-media">
+        <img src="assets/img/hero-caregivers-hallway.jpg" alt="Cleveland Clinic caregivers talking in a hallway" width="856" height="560" decoding="async">
+      </figure>
+      <div class="wrap hero-inner">
         <ol class="crumbs" aria-label="Breadcrumb">
           <li><a href="https://my.clevelandclinic.org/">Home</a></li>
           <li><a href="https://my.clevelandclinic.org/professionals">Resources for Medical Professionals</a></li>
           <li aria-current="page">Cleveland Clinic Connected</li>
         </ol>
-        <div class="hero-top">
-          <div class="hero-intro">
-            <p class="eyebrow">Cleveland Clinic Connected</p>
-            <h1 id="heroTitle">Cleveland Clinic expertise for your hospital, at every stage</h1>
-            <p class="hero-lede">Advisory services, education and clinical collaboration for hospitals that are being built and hospitals already caring for patients.</p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#contact">Talk to our team</a>
-              <a class="btn btn-quiet" href="#expertise">See our advisory expertise</a>
-            </div>
+        <div class="hero-copy">
+          <h1 id="heroTitle">Cleveland Clinic expertise for your hospital, at every stage</h1>
+          <p class="hero-strap">Advice from a health system that runs hospitals every day.</p>
+          <p class="hero-lede">Advisory services, education and clinical collaboration for hospitals that are being built and hospitals already caring for patients.</p>
+          <div class="hero-actions">
+            <a class="btn btn-light" href="#contact">Let's connect</a>
+            <a class="btn btn-ghost-light" href="#expertise">Explore our expertise</a>
           </div>
-          <figure class="hero-photo">
-            <img src="assets/img/hero-caregivers-hallway.jpg" alt="Cleveland Clinic caregivers talking in a hallway" width="856" height="560" decoding="async">
-          </figure>
-        </div>
-        <div class="how" id="how" aria-labelledby="howTitle">
-          <h2 id="howTitle" class="how-title">How it works</h2>
-          <ol class="how-steps">
-            <li>
-              <h3>Tell us about your hospital</h3>
-              <p>Email our team about where your hospital is today and what you want to achieve.</p>
-            </li>
-            <li>
-              <h3>Explore your options</h3>
-              <p>We share a private catalog with the full detail of our advisory solutions, so you can choose what fits.</p>
-            </li>
-            <li>
-              <h3>Agree on your engagement</h3>
-              <p>We turn your choices into a proposal and a plan, and stay with you through delivery.</p>
-            </li>
-          </ol>
         </div>
       </div>
     </section>
 
-    <section class="membership" id="membership" aria-labelledby="membershipTitle">
-      <div class="wrap">
+    <section class="how" aria-labelledby="howTitle">
+      <div class="wrap how-row">
+        <h2 id="howTitle" class="how-title">How we work with you</h2>
+        <ol class="how-steps">
+          <li>
+            <h3>Tell us about your hospital</h3>
+            <p>Email our team about where your hospital is today and what you want to achieve.</p>
+          </li>
+          <li>
+            <h3>Explore your options</h3>
+            <p>We share a private catalog with the full detail of our advisory solutions, so you can choose what fits.</p>
+          </li>
+          <li>
+            <h3>Agree on your engagement</h3>
+            <p>We turn your choices into a proposal and a plan, and stay with you through delivery.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="band band-white" id="membership" aria-labelledby="membershipTitle">
+      <p class="section-bar bar-navy"><span class="wrap">Membership</span></p>
+      <div class="wrap band-body">
         <div class="membership-row">
-          <div class="membership-copy">
-            <p class="eyebrow">Membership</p>
+          <div>
             <h2 id="membershipTitle" class="section-title">More than an advisory engagement</h2>
             <p class="section-lede">Cleveland Clinic Connected links hospitals and health organizations around the world with Cleveland Clinic's expertise. Membership brings four kinds of support together, so your teams can draw on Cleveland Clinic as needs change.</p>
           </div>
@@ -90,27 +93,27 @@
         </div>
 
         <ol class="benefits">
-          <li>
-            <h3>Operational advisory services</h3>
+          <li class="card" style="--accent: var(--blue)">
+            <h3 class="card-title">Operational advisory services</h3>
             <p>Finance, safety, quality and patient experience, and digital tools and analytics, scoped to your hospital.</p>
-            <a class="text-link" href="#expertise">See our advisory expertise</a>
+            <a class="arrow-link" href="#expertise">See our advisory expertise</a>
           </li>
-          <li>
-            <h3>Education and training</h3>
+          <li class="card" style="--accent: var(--green)">
+            <h3 class="card-title">Education and training</h3>
             <p>Observerships, fellowships, leadership development, simulation, faculty development and expert sessions.</p>
-            <a class="text-link" href="#expertise">See our education offerings</a>
+            <a class="arrow-link" href="#expertise">See our education offerings</a>
           </li>
-          <li>
-            <h3>Provider-to-provider consultations</h3>
+          <li class="card" style="--accent: var(--blue)">
+            <h3 class="card-title">Provider-to-provider consultations</h3>
             <p>Member physicians bring their most complex cases to Cleveland Clinic specialists through eClinical Review.</p>
           </li>
-          <li>
-            <h3>Co-branding and marketing support</h3>
+          <li class="card" style="--accent: var(--green)">
+            <h3 class="card-title">Co-branding and marketing support</h3>
             <p>Use of the Cleveland Clinic Connected brand, and help developing marketing that shows your commitment to quality care.</p>
           </li>
         </ol>
 
-        <div class="network" aria-labelledby="networkTitle">
+        <div class="network" id="network" aria-labelledby="networkTitle">
           <div class="network-head">
             <h3 id="networkTitle" class="network-title">Our member network</h3>
             <p class="network-lede">Members include hospitals in Vietnam, Uzbekistan, Croatia and the United States.</p>
@@ -161,72 +164,97 @@
       </div>
     </section>
 
-    <section class="portfolio expertise" id="expertise" aria-labelledby="expertiseTitle">
-      <div class="wrap">
-        <div class="portfolio-head">
-          <h2 id="expertiseTitle" class="section-title">Our advisory expertise</h2>
+    <section class="band band-mist" id="expertise" aria-labelledby="expertiseTitle">
+      <p class="section-bar bar-blue"><span class="wrap">Our expertise</span></p>
+      <div class="wrap band-body">
+        <div class="section-head is-center">
+          <h2 id="expertiseTitle" class="section-title">Explore our advisory expertise</h2>
           <p class="section-lede">Four domains, each drawing on how Cleveland Clinic runs its own hospitals, with solutions for new hospitals and for hospitals already caring for patients.</p>
+          <div class="stage-switch" role="group" aria-label="Show solutions for" hidden>
+            <button type="button" data-stage="new" aria-pressed="true">New hospitals</button>
+            <button type="button" data-stage="existing" aria-pressed="false">Existing hospitals</button>
+          </div>
         </div>
 
-        <div class="xp-grid">
-          <article class="xp-card" style="--xp: #0a6db0">
-            <h3 class="xp-name">Finance</h3>
+        <div class="xp-grid" id="xpGrid">
+          <article class="card xp-card" style="--accent: var(--c-fin)">
+            <h3 class="card-title xp-name">Finance</h3>
             <p class="xp-desc">Financial strategy, planning and performance advice from an operating health system, from deciding whether to invest to running a finance function that fits the organization.</p>
-            <h4 class="xp-for xp-new">For new hospitals</h4>
-            <ul class="xp-list">
-              <li>Feasibility, business cases and funding plans for new facilities and programs</li>
-              <li>Financial planning, budgeting and reporting in place before opening</li>
-            </ul>
-            <h4 class="xp-for xp-existing">For existing hospitals</h4>
-            <ul class="xp-list">
-              <li>Margin improvement, benchmarking and service line profitability</li>
-              <li>Partnerships, transactions and finance organization design</li>
-            </ul>
+            <div class="xp-stage" data-for="new">
+              <h4 class="xp-for xp-new">For new hospitals</h4>
+              <ul class="xp-list">
+                <li>Feasibility, business cases and funding plans for new facilities and programs</li>
+                <li>Financial planning, budgeting and reporting in place before opening</li>
+              </ul>
+            </div>
+            <div class="xp-stage" data-for="existing">
+              <h4 class="xp-for xp-existing">For existing hospitals</h4>
+              <ul class="xp-list">
+                <li>Margin improvement, benchmarking and service line profitability</li>
+                <li>Partnerships, transactions and finance organization design</li>
+              </ul>
+            </div>
+            <a class="arrow-link" href="mailto:ccconnected@ccf.org?subject=Finance%20advisory">Talk to us about finance</a>
           </article>
 
-          <article class="xp-card" style="--xp: #1b7638">
-            <h3 class="xp-name">Safety, Quality, and Patient Experience (SQPE)</h3>
+          <article class="card xp-card" style="--accent: var(--c-sqpe)">
+            <h3 class="card-title xp-name">Safety, Quality, and Patient Experience (SQPE)</h3>
             <p class="xp-desc">Cleveland Clinic's approach to safety, quality and patient experience, applied to your hospital through assessment, practical guidance and training.</p>
-            <h4 class="xp-for xp-new">For new hospitals</h4>
-            <ul class="xp-list">
-              <li>Governance, metrics and policies built in before opening and accreditation</li>
-              <li>Practice guides and training for a new workforce</li>
-            </ul>
-            <h4 class="xp-for xp-existing">For existing hospitals</h4>
-            <ul class="xp-list">
-              <li>A year-round program that benchmarks performance against Cleveland Clinic standards</li>
-              <li>Maturity assessments and train-the-trainer programs that build lasting capability</li>
-            </ul>
+            <div class="xp-stage" data-for="new">
+              <h4 class="xp-for xp-new">For new hospitals</h4>
+              <ul class="xp-list">
+                <li>Governance, metrics and policies built in before opening and accreditation</li>
+                <li>Practice guides and training for a new workforce</li>
+              </ul>
+            </div>
+            <div class="xp-stage" data-for="existing">
+              <h4 class="xp-for xp-existing">For existing hospitals</h4>
+              <ul class="xp-list">
+                <li>A year-round program that benchmarks performance against Cleveland Clinic standards</li>
+                <li>Maturity assessments and train-the-trainer programs that build lasting capability</li>
+              </ul>
+            </div>
+            <a class="arrow-link" href="mailto:ccconnected@ccf.org?subject=SQPE%20advisory">Talk to us about SQPE</a>
           </article>
 
-          <article class="xp-card" style="--xp: #3a8fd0">
-            <h3 class="xp-name">Digital Tools &amp; Analytics</h3>
+          <article class="card xp-card" style="--accent: var(--c-dig)">
+            <h3 class="card-title xp-name">Digital Tools &amp; Analytics</h3>
             <p class="xp-desc">Vendor-neutral advice on the strategy, systems and governance behind a digital hospital, from a health system that runs them every day.</p>
-            <h4 class="xp-for xp-new">For new hospitals</h4>
-            <ul class="xp-list">
-              <li>A digital roadmap tied to the clinical plan and the opening date</li>
-              <li>Infrastructure, EHR and activation readiness for a safe go-live</li>
-            </ul>
-            <h4 class="xp-for xp-existing">For existing hospitals</h4>
-            <ul class="xp-list">
-              <li>EHR optimization, interoperability and cybersecurity</li>
-              <li>Data and analytics foundations, AI governance and the digital patient journey</li>
-            </ul>
+            <div class="xp-stage" data-for="new">
+              <h4 class="xp-for xp-new">For new hospitals</h4>
+              <ul class="xp-list">
+                <li>A digital roadmap tied to the clinical plan and the opening date</li>
+                <li>Infrastructure, EHR and activation readiness for a safe go-live</li>
+              </ul>
+            </div>
+            <div class="xp-stage" data-for="existing">
+              <h4 class="xp-for xp-existing">For existing hospitals</h4>
+              <ul class="xp-list">
+                <li>EHR optimization, interoperability and cybersecurity</li>
+                <li>Data and analytics foundations, AI governance and the digital patient journey</li>
+              </ul>
+            </div>
+            <a class="arrow-link" href="mailto:ccconnected@ccf.org?subject=Digital%20advisory">Talk to us about digital</a>
           </article>
 
-          <article class="xp-card" style="--xp: #3a9150">
-            <h3 class="xp-name">Education</h3>
+          <article class="card xp-card" style="--accent: var(--c-edu)">
+            <h3 class="card-title xp-name">Education</h3>
             <p class="xp-desc">Cleveland Clinic education for physicians, nurses, pharmacists and leaders, at Cleveland Clinic, at Cleveland Clinic Abu Dhabi or at your hospital.</p>
-            <h4 class="xp-for xp-new">For new hospitals</h4>
-            <ul class="xp-list">
-              <li>Leadership onboarding and a culture program for the founding workforce</li>
-              <li>Simulation training and systems testing before opening</li>
-            </ul>
-            <h4 class="xp-for xp-existing">For existing hospitals</h4>
-            <ul class="xp-list">
-              <li>Observerships, fellowships and leadership development</li>
-              <li>Expert sessions, visiting faculty and specialist input on complex cases</li>
-            </ul>
+            <div class="xp-stage" data-for="new">
+              <h4 class="xp-for xp-new">For new hospitals</h4>
+              <ul class="xp-list">
+                <li>Leadership onboarding and a culture program for the founding workforce</li>
+                <li>Simulation training and systems testing before opening</li>
+              </ul>
+            </div>
+            <div class="xp-stage" data-for="existing">
+              <h4 class="xp-for xp-existing">For existing hospitals</h4>
+              <ul class="xp-list">
+                <li>Observerships, fellowships and leadership development</li>
+                <li>Expert sessions, visiting faculty and specialist input on complex cases</li>
+              </ul>
+            </div>
+            <a class="arrow-link" href="mailto:ccconnected@ccf.org?subject=Education">Talk to us about education</a>
           </article>
         </div>
 
@@ -234,171 +262,278 @@
       </div>
     </section>
 
-    <section class="programs" id="programs" aria-labelledby="programsTitle">
-      <div class="wrap">
-        <div class="portfolio-head">
+    <section class="band band-white" id="programs" aria-labelledby="programsTitle">
+      <p class="section-bar bar-green"><span class="wrap">Programs</span></p>
+      <div class="wrap band-body">
+        <div class="section-head is-center">
           <h2 id="programsTitle" class="section-title">Programs for new and existing hospitals</h2>
           <p class="section-lede">Most engagements combine several domains. We shape each one around where your hospital is today.</p>
         </div>
 
-        <section class="bundle" aria-labelledby="pkgTitle">
-          <div class="bundle-head">
-            <p class="bundle-eyebrow">For new hospitals</p>
-            <h3 class="bundle-title" id="pkgTitle">All-in-One New Hospital Package</h3>
-            <p class="bundle-sub">Cleveland Clinic advisory across finance, safety and quality, digital and education, sequenced as one program from design to opening day.</p>
-            <p class="bundle-note">One engagement lead coordinates every domain, and the program can be adjusted at scoping.</p>
-            <div class="bundle-actions">
-              <a class="btn btn-light pkg-email" href="mailto:ccconnected@ccf.org?subject=All-in-One%20New%20Hospital%20Package">Ask about the package</a>
+        <article class="package" id="package" aria-labelledby="pkgTitle">
+          <div class="package-head">
+            <div>
+              <p class="eyebrow">For new hospitals</p>
+              <h3 class="package-title" id="pkgTitle">All-in-One New Hospital Package</h3>
+              <p class="package-sub">Cleveland Clinic advisory across finance, safety and quality, digital and education, sequenced as one program from design to opening day.</p>
+            </div>
+            <div class="package-aside">
+              <p>One engagement lead coordinates every domain, and the program can be adjusted at scoping.</p>
+              <a class="btn btn-primary pkg-email" href="mailto:ccconnected@ccf.org?subject=All-in-One%20New%20Hospital%20Package">Ask about the package</a>
             </div>
           </div>
-          <ol class="bundle-phases" style="--rows:3">
-            <li>
-              <div class="phase-head"><p class="phase-name">Plan</p><p class="phase-when">Design and pre-construction</p></div>
-              <ul>
-                <li><div class="phase-item phase-static"><span class="phase-ref">Finance</span>Financial planning and modeling</div></li>
-                <li><div class="phase-item phase-static"><span class="phase-ref">Digital</span>Digital strategy and roadmap</div></li>
-                <li><div class="phase-item phase-static"><span class="phase-ref">SQPE</span>Safety and quality built into the design</div></li>
-              </ul>
-            </li>
-            <li>
-              <div class="phase-head"><p class="phase-name">Prepare</p><p class="phase-when">During construction</p></div>
-              <ul>
-                <li><div class="phase-item phase-static"><span class="phase-ref">Finance</span>Financial reporting from day one</div></li>
-                <li><div class="phase-item phase-static"><span class="phase-ref">SQPE</span>Mature practice for policies and training</div></li>
-                <li><div class="phase-item phase-static"><span class="phase-ref">Education</span>A culture program for the founding workforce</div></li>
-              </ul>
-            </li>
-            <li>
-              <div class="phase-head"><p class="phase-name">Activate</p><p class="phase-when">The run-up to opening</p></div>
-              <ul>
-                <li><div class="phase-item phase-static"><span class="phase-ref">Digital</span>Digital activation and go-live readiness</div></li>
-                <li><div class="phase-item phase-static"><span class="phase-ref">Education</span>Simulation training and systems testing</div></li>
-                <li><div class="phase-item phase-milestone"><span class="phase-ref">Milestone</span>Opening day<span class="phase-milestone-note">Every area ready on the same day</span></div></li>
-              </ul>
-            </li>
-          </ol>
-        </section>
 
-        <section class="existing" aria-labelledby="existingTitle">
+          <!-- Roadmap: phases run left to right, one lane per domain, ending on opening day.
+               On phones it becomes a vertical timeline. Each item keeps its domain tag for screen readers. -->
+          <div class="roadmap" id="roadmap">
+            <div class="rm-lanes" aria-hidden="true">
+              <span class="rm-lane" data-lane="fin" style="--d: var(--c-fin)">Finance</span>
+              <span class="rm-lane" data-lane="sqpe" style="--d: var(--c-sqpe)">SQPE</span>
+              <span class="rm-lane" data-lane="dig" style="--d: var(--c-dig)">Digital</span>
+              <span class="rm-lane" data-lane="edu" style="--d: var(--c-edu)">Education</span>
+              <span class="rm-track" data-lane="fin" style="--d: var(--c-fin)"></span>
+              <span class="rm-track" data-lane="sqpe" style="--d: var(--c-sqpe)"></span>
+              <span class="rm-track" data-lane="dig" style="--d: var(--c-dig)"></span>
+              <span class="rm-track" data-lane="edu" style="--d: var(--c-edu)"></span>
+            </div>
+            <ol class="rm-phases">
+              <li class="rm-phase" data-phase="1">
+                <div class="rm-chev"><span class="rm-num">1</span><span class="rm-name">Plan</span><span class="rm-when">Design and pre-construction</span></div>
+                <ul class="rm-items">
+                  <li class="rm-item" data-lane="fin" style="--d: var(--c-fin)"><span class="rm-tag">Finance</span><span class="rm-text">Financial planning and modeling</span></li>
+                  <li class="rm-item" data-lane="sqpe" style="--d: var(--c-sqpe)"><span class="rm-tag">SQPE</span><span class="rm-text">Safety and quality built into the design</span></li>
+                  <li class="rm-item" data-lane="dig" style="--d: var(--c-dig)"><span class="rm-tag">Digital</span><span class="rm-text">Digital strategy and roadmap</span></li>
+                </ul>
+              </li>
+              <li class="rm-phase" data-phase="2">
+                <div class="rm-chev"><span class="rm-num">2</span><span class="rm-name">Prepare</span><span class="rm-when">During construction</span></div>
+                <ul class="rm-items">
+                  <li class="rm-item" data-lane="fin" style="--d: var(--c-fin)"><span class="rm-tag">Finance</span><span class="rm-text">Financial reporting from day one</span></li>
+                  <li class="rm-item" data-lane="sqpe" style="--d: var(--c-sqpe)"><span class="rm-tag">SQPE</span><span class="rm-text">Mature practice for policies and training</span></li>
+                  <li class="rm-item" data-lane="edu" style="--d: var(--c-edu)"><span class="rm-tag">Education</span><span class="rm-text">A culture program for the founding workforce</span></li>
+                </ul>
+              </li>
+              <li class="rm-phase" data-phase="3">
+                <div class="rm-chev"><span class="rm-num">3</span><span class="rm-name">Activate</span><span class="rm-when">The run-up to opening</span></div>
+                <ul class="rm-items">
+                  <li class="rm-item" data-lane="dig" style="--d: var(--c-dig)"><span class="rm-tag">Digital</span><span class="rm-text">Digital activation and go-live readiness</span></li>
+                  <li class="rm-item" data-lane="edu" style="--d: var(--c-edu)"><span class="rm-tag">Education</span><span class="rm-text">Simulation training and systems testing</span></li>
+                </ul>
+              </li>
+            </ol>
+            <div class="rm-flag">
+              <span class="rm-flag-name"><svg width="14" height="16" viewBox="0 0 14 16" aria-hidden="true"><path d="M2 1v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M3 2h9l-2.2 3.5L12 9H3z" fill="currentColor"/></svg>Opening day</span>
+              <span class="rm-flag-note">Every area ready on the same day</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="existing" aria-labelledby="existingTitle">
           <div>
             <p class="eyebrow">For existing hospitals</p>
             <h3 class="existing-title" id="existingTitle">Programs built around your priorities</h3>
             <p class="existing-text">For hospitals already caring for patients, we combine advisory, education and quality programs around the goals you set: stronger margins, safer care, better use of data or a more confident workforce.</p>
-          </div>
-          <div>
-            <ul class="xp-list existing-list">
-              <li>Often starts with an assessment of safety, quality and patient experience against Cleveland Clinic standards</li>
-              <li>Adds advisory and education in the domains that matter most to you</li>
-              <li>Grows with you through Cleveland Clinic Connected membership</li>
-            </ul>
             <a class="btn btn-primary" href="#contact">Talk to our team</a>
           </div>
-        </section>
+          <ol class="flow">
+            <li><span class="flow-name">Assess</span><span class="flow-text">Often starts with an assessment of safety, quality and patient experience against Cleveland Clinic standards</span></li>
+            <li><span class="flow-name">Focus</span><span class="flow-text">Adds advisory and education in the domains that matter most to you</span></li>
+            <li><span class="flow-name">Grow</span><span class="flow-text">Grows with you through Cleveland Clinic Connected membership</span></li>
+          </ol>
+        </article>
       </div>
     </section>
 
-    <section class="partners" id="partners" aria-labelledby="partnersTitle">
-      <div class="wrap">
-        <div class="portfolio-head">
+    <section class="band band-mist" id="partners" aria-labelledby="partnersTitle">
+      <p class="section-bar bar-blue-dark"><span class="wrap">Partner highlights</span></p>
+      <div class="wrap band-body">
+        <div class="section-head">
           <h2 id="partnersTitle" class="section-title">What we've done with our partners</h2>
           <p class="section-lede">Highlights from Cleveland Clinic Connected members, drawn from public announcements by Cleveland Clinic and our partners.</p>
         </div>
-        <div class="partner-grid">
-          <article class="partner">
-            <h3 class="partner-name">Vinmec Healthcare System</h3>
-            <p class="partner-meta">Vietnam &nbsp;|&nbsp; Member since 2023</p>
-            <p>Vinmec Times City became the first Cleveland Clinic Connected member in Vietnam and Southeast Asia, and saw significant improvements in quality, safety and patient experience in its first year. Vinmec Central Park followed, with Cleveland Clinic experts reviewing its cardiovascular, oncology and neurology operations. Cleveland Clinic is now strategic advisor on Vinmec Can Gio, a new hospital planned on the Cleveland Clinic model of care.</p>
-            <p class="partner-src"><a href="https://newsroom.clevelandclinic.org/2024/05/22/cleveland-clinic-connected-membership-expands-to-second-vinmec-health-system-hospital-in-vietnam" target="_blank" rel="noopener">Cleveland Clinic, May 2024</a><a href="https://newsroom.clevelandclinic.org/2025/04/18/cleveland-clinic-and-vingroup-collaborate-to-develop-vinmec-can-gio-international-general-hospital-in-vietnam" target="_blank" rel="noopener">Cleveland Clinic, April 2025</a></p>
-          </article>
-          <article class="partner">
-            <h3 class="partner-name">Central Asian University Hospital</h3>
-            <p class="partner-meta">Tashkent, Uzbekistan &nbsp;|&nbsp; Provisional member since 2025</p>
-            <p>A new 120-bed university hospital designed on the Cleveland Clinic model of care, with Cleveland Clinic advising on facility design, medical education and residency programs, a nursing school and simulation center, physician recruitment, supply chain and digital transformation. University and hospital leaders have completed Cleveland Clinic's Global Physician Leadership Immersion Program.</p>
-            <p class="partner-src"><a href="https://newsroom.clevelandclinic.org/2025/08/27/cleveland-clinic-and-central-asian-university-sign-strategic-agreement-to-collaborate-on-central-asian-university-hospital-in-uzbekistan" target="_blank" rel="noopener">Cleveland Clinic, August 2025</a><a href="https://kun.uz/news/2025/09/17/central-asian-university-va-akfa-medline-university-hospital-vakillari-cleveland-clinicda-malaka-oshirish-kurcini-otadi" target="_blank" rel="noopener">Kun.uz, September 2025</a></p>
-          </article>
-          <article class="partner">
-            <h3 class="partner-name">Radiochirurgia Zagreb</h3>
-            <p class="partner-meta">Croatia &nbsp;|&nbsp; Member since 2025</p>
-            <p>The first European member of Cleveland Clinic Connected, admitted after a review of its safety, quality and patient experience standards. The cancer-focused hospital's clinicians take part in Cleveland Clinic education and case consultations, and two of its clinical leaders joined the Global Physician Leadership Immersion Program.</p>
-            <p class="partner-src"><a href="https://newsroom.clevelandclinic.org/2025/08/11/radiochirurgia-zagreb-becomes-a-cleveland-clinic-connected-member" target="_blank" rel="noopener">Cleveland Clinic, August 2025</a></p>
-          </article>
-          <article class="partner">
-            <h3 class="partner-name">Barton Health and Carson Valley Health</h3>
-            <p class="partner-meta">Lake Tahoe and Northern Nevada &nbsp;|&nbsp; Members since 2025 and 2026</p>
-            <p>Barton Health is working with Cleveland Clinic on cardiology, neurology and cancer care, including a new cancer program developed with guidance from Cleveland Clinic's Taussig Cancer Center, and on design, patient flow and space planning for its Nevada campus expansion. Carson Valley Health, part of Barton's regional system, joined in 2026 with a focus on service lines, beginning with oncology.</p>
-            <p class="partner-src"><a href="https://newsroom.clevelandclinic.org/2025/07/30/barton-health-becomes-a-cleveland-clinic-connected-member" target="_blank" rel="noopener">Cleveland Clinic, July 2025</a><a href="https://newsroom.clevelandclinic.org/2026/09/23/carson-valley-health-becomes-cleveland-clinic-connected-member" target="_blank" rel="noopener">Cleveland Clinic, September 2026</a></p>
-          </article>
-          <article class="partner">
-            <h3 class="partner-name">Columbus Regional Health</h3>
-            <p class="partner-meta">Indiana &nbsp;|&nbsp; Member since 2025</p>
-            <p>Invited to join for its high performance on publicly reported quality and safety measures. Its physicians can ask Cleveland Clinic subspecialists for input on complex cases, and its teams use Cleveland Clinic training, observerships and continuing medical education, while the hospital keeps its independence and local decision-making.</p>
-            <p class="partner-src"><a href="https://newsroom.clevelandclinic.org/2025/01/08/columbus-regional-health-becomes-cleveland-clinic-connected-member" target="_blank" rel="noopener">Cleveland Clinic, January 2025</a><a href="https://www.crh.org/healthy-tomorrow/story/healthy-tomorrow/2025/04/23/columbus-regional-health-is-cleveland-clinic-connected" target="_blank" rel="noopener">Columbus Regional Health, April 2025</a></p>
-          </article>
-          <article class="partner">
-            <h3 class="partner-name">Parrish Medical Center</h3>
-            <p class="partner-meta">Titusville, Florida &nbsp;|&nbsp; Member since 2024</p>
-            <p>The first U.S. member of Cleveland Clinic Connected, accepted after a review of its operations, quality and service. Its telestroke program, in place since 2012, connects its emergency departments with Cleveland Clinic stroke neurologists.</p>
-            <p class="partner-src"><a href="https://newsroom.clevelandclinic.org/2024/03/07/parrish-medical-center-becomes-a-cleveland-clinic-connected-member" target="_blank" rel="noopener">Cleveland Clinic, March 2024</a></p>
-          </article>
+
+        <div class="stories" id="stories" role="region" aria-roledescription="carousel" aria-label="Partner highlights">
+          <div class="stories-track" id="storiesTrack" aria-live="off">
+            <article class="story" role="group" aria-roledescription="slide" aria-label="1 of 6: Vinmec Healthcare System">
+              <div class="story-text">
+                <p class="story-meta">Vietnam &nbsp;|&nbsp; Member since 2023</p>
+                <h3 class="story-name">Vinmec Healthcare System</h3>
+                <p class="story-body">Vinmec Times City became the first Cleveland Clinic Connected member in Vietnam and Southeast Asia, and saw significant improvements in quality, safety and patient experience in its first year. Vinmec Central Park followed, with Cleveland Clinic experts reviewing its cardiovascular, oncology and neurology operations. Cleveland Clinic is now strategic advisor on Vinmec Can Gio, a new hospital planned on the Cleveland Clinic model of care.</p>
+                <div class="story-actions">
+                  <a class="btn btn-primary" href="https://newsroom.clevelandclinic.org/2025/04/18/cleveland-clinic-and-vingroup-collaborate-to-develop-vinmec-can-gio-international-general-hospital-in-vietnam" target="_blank" rel="noopener">Read the full story</a>
+                  <p class="story-src">Also: <a href="https://newsroom.clevelandclinic.org/2024/05/22/cleveland-clinic-connected-membership-expands-to-second-vinmec-health-system-hospital-in-vietnam" target="_blank" rel="noopener">Cleveland Clinic, May 2024</a></p>
+                </div>
+              </div>
+              <figure class="story-photo">
+                <img src="assets/img/highlights/vinmec.jpg" alt="Vinmec hospital" width="640" height="425" loading="lazy" decoding="async">
+                <figcaption class="photo-slot">Photo to come: Cleveland Clinic and Vinmec teams, for example at the Vinmec Can Gio agreement, April 2025</figcaption>
+              </figure>
+            </article>
+
+            <article class="story" role="group" aria-roledescription="slide" aria-label="2 of 6: Central Asian University Hospital">
+              <div class="story-text">
+                <p class="story-meta">Tashkent, Uzbekistan &nbsp;|&nbsp; Provisional member since 2025</p>
+                <h3 class="story-name">Central Asian University Hospital</h3>
+                <p class="story-body">A new 120-bed university hospital designed on the Cleveland Clinic model of care, with Cleveland Clinic advising on facility design, medical education and residency programs, a nursing school and simulation center, physician recruitment, supply chain and digital transformation. University and hospital leaders have completed Cleveland Clinic's Global Physician Leadership Immersion Program.</p>
+                <div class="story-actions">
+                  <a class="btn btn-primary" href="https://newsroom.clevelandclinic.org/2025/08/27/cleveland-clinic-and-central-asian-university-sign-strategic-agreement-to-collaborate-on-central-asian-university-hospital-in-uzbekistan" target="_blank" rel="noopener">Read the full story</a>
+                  <p class="story-src">Also: <a href="https://kun.uz/news/2025/09/17/central-asian-university-va-akfa-medline-university-hospital-vakillari-cleveland-clinicda-malaka-oshirish-kurcini-otadi" target="_blank" rel="noopener">Kun.uz, September 2025</a></p>
+                </div>
+              </div>
+              <figure class="story-photo">
+                <img src="assets/img/highlights/central-asian-university.jpg" alt="Central Asian University Hospital" width="640" height="420" loading="lazy" decoding="async">
+                <figcaption class="photo-slot">Photo to come: the agreement signing, August 2025, or the leadership program at Cleveland Clinic, September 2025</figcaption>
+              </figure>
+            </article>
+
+            <article class="story" role="group" aria-roledescription="slide" aria-label="3 of 6: Radiochirurgia Zagreb">
+              <div class="story-text">
+                <p class="story-meta">Croatia &nbsp;|&nbsp; Member since 2025</p>
+                <h3 class="story-name">Radiochirurgia Zagreb</h3>
+                <p class="story-body">The first European member of Cleveland Clinic Connected, admitted after a review of its safety, quality and patient experience standards. The cancer-focused hospital's clinicians take part in Cleveland Clinic education and case consultations, and two of its clinical leaders joined the Global Physician Leadership Immersion Program.</p>
+                <div class="story-actions">
+                  <a class="btn btn-primary" href="https://newsroom.clevelandclinic.org/2025/08/11/radiochirurgia-zagreb-becomes-a-cleveland-clinic-connected-member" target="_blank" rel="noopener">Read the full story</a>
+                </div>
+              </div>
+              <figure class="story-photo">
+                <img src="assets/img/highlights/radiochirurgia-zagreb.jpg" alt="Radiochirurgia Zagreb" width="640" height="410" loading="lazy" decoding="async">
+                <figcaption class="photo-slot">Photo to come: Radiochirurgia Zagreb clinical leaders at Cleveland Clinic, 2025</figcaption>
+              </figure>
+            </article>
+
+            <article class="story" role="group" aria-roledescription="slide" aria-label="4 of 6: Barton Health and Carson Valley Health">
+              <div class="story-text">
+                <p class="story-meta">Lake Tahoe and Northern Nevada &nbsp;|&nbsp; Members since 2025 and 2026</p>
+                <h3 class="story-name">Barton Health and Carson Valley Health</h3>
+                <p class="story-body">Barton Health is working with Cleveland Clinic on cardiology, neurology and cancer care, including a new cancer program developed with guidance from Cleveland Clinic's Taussig Cancer Center, and on design, patient flow and space planning for its Nevada campus expansion. Carson Valley Health, part of Barton's regional system, joined in 2026 with a focus on service lines, beginning with oncology.</p>
+                <div class="story-actions">
+                  <a class="btn btn-primary" href="https://newsroom.clevelandclinic.org/2025/07/30/barton-health-becomes-a-cleveland-clinic-connected-member" target="_blank" rel="noopener">Read the full story</a>
+                  <p class="story-src">Also: <a href="https://newsroom.clevelandclinic.org/2026/09/23/carson-valley-health-becomes-cleveland-clinic-connected-member" target="_blank" rel="noopener">Cleveland Clinic, September 2026</a></p>
+                </div>
+              </div>
+              <figure class="story-photo">
+                <img src="assets/img/highlights/barton-carson-valley.jpg" alt="Barton Health" width="640" height="411" loading="lazy" decoding="async">
+                <figcaption class="photo-slot">Photo to come: Barton Health or Carson Valley Health teams with Cleveland Clinic</figcaption>
+              </figure>
+            </article>
+
+            <article class="story" role="group" aria-roledescription="slide" aria-label="5 of 6: Columbus Regional Health">
+              <div class="story-text">
+                <p class="story-meta">Indiana &nbsp;|&nbsp; Member since 2025</p>
+                <h3 class="story-name">Columbus Regional Health</h3>
+                <p class="story-body">Invited to join for its high performance on publicly reported quality and safety measures. Its physicians can ask Cleveland Clinic subspecialists for input on complex cases, and its teams use Cleveland Clinic training, observerships and continuing medical education, while the hospital keeps its independence and local decision-making.</p>
+                <div class="story-actions">
+                  <a class="btn btn-primary" href="https://newsroom.clevelandclinic.org/2025/01/08/columbus-regional-health-becomes-cleveland-clinic-connected-member" target="_blank" rel="noopener">Read the full story</a>
+                  <p class="story-src">Also: <a href="https://www.crh.org/healthy-tomorrow/story/healthy-tomorrow/2025/04/23/columbus-regional-health-is-cleveland-clinic-connected" target="_blank" rel="noopener">Columbus Regional Health, April 2025</a></p>
+                </div>
+              </div>
+              <figure class="story-photo">
+                <img src="assets/img/highlights/columbus-regional-health.jpg" alt="Columbus Regional Health" width="640" height="425" loading="lazy" decoding="async">
+                <figcaption class="photo-slot">Photo to come: Columbus Regional Health caregivers, from its April 2025 story or social posts</figcaption>
+              </figure>
+            </article>
+
+            <article class="story" role="group" aria-roledescription="slide" aria-label="6 of 6: Parrish Medical Center">
+              <div class="story-text">
+                <p class="story-meta">Titusville, Florida &nbsp;|&nbsp; Member since 2024</p>
+                <h3 class="story-name">Parrish Medical Center</h3>
+                <p class="story-body">The first U.S. member of Cleveland Clinic Connected, accepted after a review of its operations, quality and service. Its telestroke program, in place since 2012, connects its emergency departments with Cleveland Clinic stroke neurologists.</p>
+                <div class="story-actions">
+                  <a class="btn btn-primary" href="https://newsroom.clevelandclinic.org/2024/03/07/parrish-medical-center-becomes-a-cleveland-clinic-connected-member" target="_blank" rel="noopener">Read the full story</a>
+                </div>
+              </div>
+              <figure class="story-photo">
+                <img src="assets/img/highlights/parrish-medical-center.jpg" alt="Parrish Medical Center" width="640" height="425" loading="lazy" decoding="async">
+                <figcaption class="photo-slot">Photo to come: Parrish Medical Center care team, for example the telestroke program</figcaption>
+              </figure>
+            </article>
+          </div>
+
+          <div class="stories-controls" hidden>
+            <div class="stories-progress" role="group" aria-label="Choose a highlight"></div>
+            <p class="stories-count" aria-hidden="true"><span id="storiesNow">1</span> / <span id="storiesAll">6</span></p>
+            <button type="button" class="round-btn stories-pause" aria-label="Pause automatic rotation">
+              <svg class="i-pause" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><rect x="2.5" y="2" width="3" height="10" rx="0.6" fill="currentColor"/><rect x="8.5" y="2" width="3" height="10" rx="0.6" fill="currentColor"/></svg>
+              <svg class="i-play" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M4 2.2v9.6a.6.6 0 0 0 .9.5l7.4-4.8a.6.6 0 0 0 0-1L4.9 1.7a.6.6 0 0 0-.9.5z" fill="currentColor"/></svg>
+            </button>
+            <button type="button" class="round-btn stories-prev" aria-label="Previous highlight">
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button type="button" class="round-btn stories-next" aria-label="Next highlight">
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
         </div>
+
+        <p class="stories-more"><a class="arrow-link" href="#contact">Talk to us about your hospital</a></p>
       </div>
     </section>
 
-
-    <section class="faq" id="faq" aria-labelledby="faqTitle">
-      <div class="wrap faq-row">
+    <section class="band band-white faq" id="faq" aria-labelledby="faqTitle">
+      <div class="wrap band-body faq-row">
         <div>
           <h2 id="faqTitle" class="section-title">Frequently asked questions</h2>
         </div>
         <div class="faq-list">
-            <details class="faq-item">
-              <summary>Does Cleveland Clinic provide care at member hospitals?</summary>
-              <p>No. All care at member hospitals is provided by local care teams. Member physicians can consult Cleveland Clinic specialists on complex cases through eClinical Review.</p>
-            </details>
-            <details class="faq-item">
-              <summary>Does Cleveland Clinic own or manage member hospitals?</summary>
-              <p>No. Members keep full ownership and management of their facilities. Membership is a way to collaborate, share knowledge and take part in education programs.</p>
-            </details>
-            <details class="faq-item">
-              <summary>Can member physicians refer patients to Cleveland Clinic?</summary>
-              <p>Yes. Cleveland Clinic locations in the United States and abroad accept referrals from members, but a referral cannot be guaranteed: patient safety and patient preference decide where care takes place.</p>
-            </details>
-            <details class="faq-item">
-              <summary>What does Cleveland Clinic look for in a member?</summary>
-              <p>Like-minded healthcare organizations, in the United States and internationally, that want to grow, improve their practice and deliver a better experience for their patients.</p>
-            </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact" aria-labelledby="contactTitle">
-      <div class="wrap contact-row">
-        <div>
-          <h2 id="contactTitle" class="contact-title">Not sure where to start?</h2>
-          <p>Our team works with hospital owners, ministries and health systems around the world. Tell us what you are planning and we will help you shape the right engagement.</p>
-        </div>
-        <div class="contact-actions">
-          <a class="btn btn-light" id="contactEmailLink" href="mailto:ccconnected@ccf.org">Email the Connected team</a>
+          <details class="faq-item">
+            <summary>Does Cleveland Clinic provide care at member hospitals?</summary>
+            <p>No. All care at member hospitals is provided by local care teams. Member physicians can consult Cleveland Clinic specialists on complex cases through eClinical Review.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does Cleveland Clinic own or manage member hospitals?</summary>
+            <p>No. Members keep full ownership and management of their facilities. Membership is a way to collaborate, share knowledge and take part in education programs.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can member physicians refer patients to Cleveland Clinic?</summary>
+            <p>Yes. Cleveland Clinic locations in the United States and abroad accept referrals from members, but a referral cannot be guaranteed: patient safety and patient preference decide where care takes place.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What does Cleveland Clinic look for in a member?</summary>
+            <p>Like-minded healthcare organizations, in the United States and internationally, that want to grow, improve their practice and deliver a better experience for their patients.</p>
+          </details>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap footer-row">
-      <div class="footer-brand">
-        <p class="footer-name">Cleveland Clinic Connected</p>
-        <p>International &amp; Emerging Markets</p>
-        <p><a id="footerEmail" href="mailto:ccconnected@ccf.org">ccconnected@ccf.org</a></p>
+  <footer class="site-footer" id="contact" aria-labelledby="contactTitle">
+    <div class="wrap">
+      <div class="connect">
+        <div class="connect-copy">
+          <h2 id="contactTitle" class="connect-title">Let's connect</h2>
+          <p>Not sure where to start? Our team works with hospital owners, ministries and health systems around the world. Tell us what you are planning and we will help you shape the right engagement.</p>
+          <a class="btn btn-light" id="contactEmailLink" href="mailto:ccconnected@ccf.org">Email the Connected team</a>
+        </div>
+        <nav class="footer-cols" aria-label="Footer">
+          <div>
+            <h3>Who we are</h3>
+            <ul>
+              <li><a href="#membership">Membership</a></li>
+              <li><a href="#network">Member network</a></li>
+              <li><a href="#partners">Partner highlights</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>What we do</h3>
+            <ul>
+              <li><a href="#expertise">Our advisory expertise</a></li>
+              <li><a href="#programs">Programs</a></li>
+              <li><a href="#package">New hospital package</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Questions</h3>
+            <ul>
+              <li><a href="#faq">FAQs</a></li>
+              <li><a id="footerEmail" href="mailto:ccconnected@ccf.org">ccconnected@ccf.org</a></li>
+            </ul>
+          </div>
+        </nav>
       </div>
-      <ul class="footer-links">
-        <li><a href="#membership">Membership</a></li>
-        <li><a href="#expertise">Our advisory expertise</a></li>
-        <li><a href="#programs">Programs</a></li>
-        <li><a href="#partners">Partner highlights</a></li>
-        <li><a href="#faq">FAQs</a></li>
-      </ul>
-      <p class="footer-legal">&copy; <span id="year"></span> Cleveland Clinic. Scope, timing and availability are confirmed during proposal development.</p>
+      <div class="footer-base">
+        <p class="footer-name">Cleveland Clinic Connected &nbsp;|&nbsp; International &amp; Emerging Markets</p>
+        <p class="footer-legal">&copy; <span id="year"></span> Cleveland Clinic. Scope, timing and availability are confirmed during proposal development.</p>
+      </div>
     </div>
   </footer>
 
