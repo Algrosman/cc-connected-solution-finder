@@ -286,21 +286,30 @@ section[id], article[id], div[id] { scroll-margin-top: 12px; }
 .wheel-rot { transform-box: view-box; transform-origin: 50% 50%; transition: transform 750ms var(--ease); }
 .no-anim .wheel-rot, .no-anim .seg, .no-anim .seg-label { transition: none !important; }
 .seg { cursor: pointer; outline: none; transition: transform 300ms var(--ease); }
-.seg path { stroke: var(--white); stroke-width: 2; opacity: 0.8; transition: opacity 250ms, filter 250ms; }
+/* Each piece floats: it bobs up and down on screen over a soft shadow. --upx/--upy is "screen up" in the
+   wheel's turned coordinates (set by site.js), so the motion and shadow stay vertical however the wheel turns. */
+.wheel { --upx: 0; --upy: -1; }
+.seg path { stroke: var(--white); stroke-width: 2; opacity: 0.84; transition: opacity 250ms;
+  filter: drop-shadow(calc(var(--upx) * -4px) calc(var(--upy) * -4px) 4px rgba(16, 38, 66, 0.24)); }
+.seg { animation: segFloat 3.2s ease-in-out infinite; }
+.seg path { animation: segShadow 3.2s ease-in-out infinite; }
+.seg:nth-child(2), .seg:nth-child(2) path { animation-delay: -0.8s; }
+.seg:nth-child(3), .seg:nth-child(3) path { animation-delay: -1.6s; }
+.seg:nth-child(4), .seg:nth-child(4) path { animation-delay: -2.4s; }
+.seg[aria-selected="true"] { animation-name: segFloatSel; }
+@keyframes segFloat { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(calc(var(--upx) * 6px), calc(var(--upy) * 6px)); } }
+@keyframes segFloatSel { 0%, 100% { transform: translate(var(--tx), var(--ty)); } 50% { transform: translate(calc(var(--tx) + var(--upx) * 6px), calc(var(--ty) + var(--upy) * 6px)); } }
+@keyframes segShadow {
+  0%, 100% { filter: drop-shadow(calc(var(--upx) * -4px) calc(var(--upy) * -4px) 4px rgba(16, 38, 66, 0.26)); }
+  50% { filter: drop-shadow(calc(var(--upx) * -11px) calc(var(--upy) * -11px) 9px rgba(16, 38, 66, 0.16)); }
+}
 .seg:hover path { opacity: 1; }
-.seg[aria-selected="false"]:hover { transform: translate(calc(var(--tx) * 0.5), calc(var(--ty) * 0.5)); }
 .seg[aria-selected="true"] { transform: translate(var(--tx), var(--ty)); }
-.seg[aria-selected="true"] path { opacity: 1; filter: drop-shadow(0 8px 14px rgba(16, 38, 66, 0.32)); }
+.seg[aria-selected="true"] path { opacity: 1; }
 .seg:focus-visible path { stroke: var(--navy); stroke-width: 3; }
 .seg-label { font-family: var(--sans); font-size: 13px; font-weight: 600; letter-spacing: 0.02em; fill: var(--white); pointer-events: none;
   transform-box: fill-box; transform-origin: center; transform: rotate(var(--counter, 0deg)); transition: transform 750ms var(--ease), fill 250ms; }
 .seg[aria-selected="true"] .seg-label { font-size: 13.5px; }
-/* Until someone clicks, the other segments nudge outward in turn to show they can be clicked */
-.wheel.is-hinting .seg[aria-selected="false"] { animation: segNudge 3.2s var(--ease) infinite; }
-.wheel.is-hinting .seg:nth-child(2) { animation-delay: 0.4s; }
-.wheel.is-hinting .seg:nth-child(3) { animation-delay: 0.8s; }
-.wheel.is-hinting .seg:nth-child(4) { animation-delay: 1.2s; }
-@keyframes segNudge { 0%, 40%, 100% { transform: none; } 20% { transform: translate(calc(var(--tx) * 0.8), calc(var(--ty) * 0.8)); } }
 .wheel-hub { fill: var(--white); filter: drop-shadow(0 4px 14px rgba(16, 38, 66, 0.12)); }
 .hub { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 36%; text-align: center; pointer-events: none; }
 .hub-kicker { display: block; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: color-mix(in srgb, var(--d, var(--blue)) 80%, #000); }

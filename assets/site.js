@@ -70,6 +70,9 @@
       turn += ((target - turn) % 360 + 540) % 360 - 180;
       rot.style.transform = "rotate(" + turn + "deg)";
       wheel.style.setProperty("--counter", (-turn) + "deg");
+      var rad = turn * Math.PI / 180;   /* "screen up" in the turned wheel, for the floating motion and shadow */
+      wheel.style.setProperty("--upx", (-Math.sin(rad)).toFixed(4));
+      wheel.style.setProperty("--upy", (-Math.cos(rad)).toFixed(4));
       current = i;
       if (focus) seg.focus();
     };
