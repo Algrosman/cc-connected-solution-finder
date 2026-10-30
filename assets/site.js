@@ -121,8 +121,30 @@
   if (slides.length < 2) return;
   var controls = $(".stories-controls", root), bar = $(".stories-progress", root);
   var nowEl = $("#storiesNow"), allEl = $("#storiesAll"), pauseBtn = $(".stories-pause", root);
-  var DWELL = 9000;                 /* milliseconds on each story */
-  var index = 0, elapsed = 0, last = null;
+  /* Each story shows its photos one after another (PHOTO ms each), then moves on.
+     A story stays up at least MIN_DWELL ms so there is time to read it. */
+  var PHOTO = 3500, MIN_DWELL = 10000;
+  var index = 0, elapsed = 0, last = null, shownPhoto = -1;
+  var photoSets = slides.map(function (s) { return $all(".story-photo img", s); });
+  var photoDots = slides.map(function (s, i) {
+    var box = $(".photo-dots", s); if (!box) return [];
+    box.innerHTML = ""; box.removeAttribute("aria-hidden");
+    return photoSets[i].map(function (img, k) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.setAttribute("aria-label", "Photo " + (k + 1) + " of " + photoSets[i].length);
+      b.addEventListener("click", function () { elapsed = k * (dwell(i) / photoSets[i].length); showPhoto(k); });
+      box.appendChild(b);
+      return b;
+    });
+  });
+  function dwell(i) { return Math.max(MIN_DWELL, photoSets[i].length * PHOTO); }
+  function showPhoto(k) {
+    if (k === shownPhoto) return;
+    shownPhoto = k;
+    photoSets[index].forEach(function (img, j) { img.classList.toggle("is-on", j === k); });
+    photoDots[index].forEach(function (d, j) { d.classList.toggle("is-on", j === k); d.setAttribute("aria-current", j === k ? "true" : "false"); });
+  }
   var userPaused = reduceMotion, focused = false, visible = false;
 
   controls.hidden = false;
@@ -155,6 +177,7 @@
     index = (i + slides.length) % slides.length;
     elapsed = 0;
     render();
+    shownPhoto = -1; showPhoto(0);
     if (byUser) track.setAttribute("aria-live", "polite");
   }
   window.CCStories = { go: function (i) { go(i, true); } };
@@ -170,10 +193,12 @@
     var dt = t - last; last = t;
     if (playing()) {
       elapsed += dt;
-      if (elapsed >= DWELL) { go(index + 1, false); }
+      if (elapsed >= dwell(index)) { go(index + 1, false); }
     }
+    var D = dwell(index), n = photoSets[index].length;
+    if (n > 1) showPhoto(Math.min(n - 1, Math.floor(elapsed / (D / n))));
     var fill = dots[index].querySelector(".fill");
-    fill.style.setProperty("--p", Math.min(elapsed / DWELL, 1).toFixed(4));
+    fill.style.setProperty("--p", Math.min(elapsed / D, 1).toFixed(4));
     requestAnimationFrame(tick);
   }
 
@@ -212,5 +237,6 @@
 
   setPaused(userPaused);
   render();
+  showPhoto(0);
   requestAnimationFrame(tick);
 })();
