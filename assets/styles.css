@@ -127,7 +127,7 @@ section[id], article[id], div[id] { scroll-margin-top: 12px; }
 .band-white { background: var(--white); }
 .band-mist { background: var(--mist); }
 .band-body { padding-top: 72px; padding-bottom: 88px; }
-/* Section bands: a gradient strip with the section number, a short rule, the label and
+/* Section bands: a gradient strip with a short rule, the label and
    a run of chevrons (the same shape as the package roadmap) fading in on the right */
 .section-bar { position: relative; overflow: hidden; color: var(--white); background: linear-gradient(100deg, var(--b1) 0%, var(--b1) 30%, var(--b2) 100%); }
 .section-bar::before {
@@ -138,8 +138,7 @@ section[id], article[id], div[id] { scroll-margin-top: 12px; }
 }
 .section-bar::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: linear-gradient(90deg, var(--b3) 0%, var(--b3) 25%, transparent 75%); }
 .section-bar > .wrap { position: relative; display: flex; align-items: center; gap: 16px; min-height: 64px; }
-.bar-num { font-size: 30px; font-weight: 300; line-height: 1; font-variant-numeric: tabular-nums; color: var(--b3); }
-.bar-rule { width: 40px; height: 1px; background: rgba(255, 255, 255, 0.75); transform-origin: left center; transition: transform 700ms var(--ease) 150ms; }
+.bar-rule { width: 40px; height: 2px; background: var(--b3); transform-origin: left center; transition: transform 700ms var(--ease) 150ms; }
 .bar-label { font-size: 13.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; transition: transform 700ms var(--ease) 150ms, opacity 700ms var(--ease) 150ms; }
 .bar-navy { --b1: var(--navy); --b2: #0a5f9e; --b3: var(--blue-on-navy); }
 .bar-blue { --b1: var(--blue-dark); --b2: var(--blue-bright); --b3: #bfe3f7; }
@@ -416,7 +415,6 @@ section[id], article[id], div[id] { scroll-margin-top: 12px; }
   .hero-lede { font-size: 16.5px; }
   .includes, .domains, .ex-domains { grid-template-columns: 1fr; }
   .section-bar > .wrap { min-height: 54px; gap: 12px; }
-  .bar-num { font-size: 24px; }
   .bar-rule { width: 24px; }
   .section-bar::before { width: 40%; }
   .member-name { font-size: 15px; }
