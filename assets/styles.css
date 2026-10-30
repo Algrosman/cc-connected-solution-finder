@@ -701,13 +701,14 @@ body.is-locked { overflow: hidden; }
 .xp-card { background: var(--white); border-top: 3px solid var(--xp, var(--blue)); padding: 28px 30px 26px; }
 .xp-name { font-family: var(--serif); font-weight: 600; font-size: 24px; line-height: 1.2; color: var(--ink); }
 .xp-desc { color: var(--slate); font-size: 16px; line-height: 1.55; margin-top: 8px; }
-.xp-for { display: flex; align-items: center; gap: 8px; font-size: 14.5px; font-weight: 600; color: var(--ink); margin: 18px 0 8px; }
-.xp-for::before { content: ""; width: 9px; height: 9px; border-radius: 1.5px; }
-.xp-new::before { background: var(--green); }
-.xp-existing::before { background: var(--blue); }
-.xp-list { list-style: none; padding: 0; display: grid; gap: 6px; }
-.xp-list li { position: relative; padding-left: 18px; font-size: 15.5px; line-height: 1.45; }
-.xp-list li::before { content: ""; position: absolute; left: 2px; top: 0.6em; width: 6px; height: 6px; background: var(--xp, var(--blue)); }
+/* "For new / existing hospitals": a colored label over a list marked by one thin line, no bullets */
+.xp-for { font-size: 14.5px; font-weight: 600; margin: 20px 0 8px; }
+.xp-new { color: var(--green); }
+.xp-existing { color: var(--blue-dark); }
+.xp-list { list-style: none; margin: 0; padding: 2px 0 2px 14px; display: grid; gap: 7px; border-left: 2px solid var(--rule); }
+.xp-new + .xp-list { border-left-color: var(--green); }
+.xp-existing + .xp-list { border-left-color: var(--blue); }
+.xp-list li { font-size: 15.5px; line-height: 1.45; }
 
 .programs { background: var(--white); padding: 72px 0 80px; border-top: 1px solid var(--rule); scroll-margin-top: 8px; }
 .programs .bundle { margin-top: 32px; }
@@ -718,7 +719,7 @@ body.is-locked { overflow: hidden; }
 .existing-title { font-family: var(--serif); font-size: clamp(1.5rem, 1.25rem + 0.8vw, 1.9rem); font-weight: 600; line-height: 1.15; color: var(--ink); }
 .existing-text { color: var(--slate); font-size: 17px; line-height: 1.55; margin-top: 10px; }
 .existing-list { margin-bottom: 24px; }
-.existing-list li::before { background: var(--green); }
+.existing-list { border-left-color: var(--green); }
 
 .partners { background: var(--mist); padding: 72px 0 88px; border-top: 1px solid var(--rule); scroll-margin-top: 8px; }
 .partner-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 32px; }
