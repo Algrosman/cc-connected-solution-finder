@@ -218,26 +218,16 @@
             </div>
             <div class="package-aside">
               <p>One engagement lead coordinates every domain, and the program can be adjusted at scoping.</p>
-              <a class="btn btn-primary pkg-email" href="mailto:ccconnected@ccf.org?subject=All-in-One%20New%20Hospital%20Package">Ask about the package</a>
+              <a class="btn btn-light pkg-email" href="mailto:ccconnected@ccf.org?subject=All-in-One%20New%20Hospital%20Package">Ask about the package</a>
             </div>
           </div>
 
-          <!-- Roadmap: phases run left to right, one lane per domain, ending on opening day.
-               On phones it becomes a vertical timeline. Each item keeps its domain tag for screen readers. -->
+          <!-- Roadmap: three phases on one line that fills in from left to right and ends on opening day.
+               Each item carries a domain tag. On phones and tablets it becomes a vertical timeline. -->
           <div class="roadmap" id="roadmap">
-            <div class="rm-lanes" aria-hidden="true">
-              <span class="rm-lane" data-lane="fin" style="--d: var(--c-fin)">Finance</span>
-              <span class="rm-lane" data-lane="sqpe" style="--d: var(--c-sqpe)">SQPE</span>
-              <span class="rm-lane" data-lane="dig" style="--d: var(--c-dig)">Digital</span>
-              <span class="rm-lane" data-lane="edu" style="--d: var(--c-edu)">Education</span>
-              <span class="rm-track" data-lane="fin" style="--d: var(--c-fin)"></span>
-              <span class="rm-track" data-lane="sqpe" style="--d: var(--c-sqpe)"></span>
-              <span class="rm-track" data-lane="dig" style="--d: var(--c-dig)"></span>
-              <span class="rm-track" data-lane="edu" style="--d: var(--c-edu)"></span>
-            </div>
             <ol class="rm-phases">
               <li class="rm-phase" data-phase="1">
-                <div class="rm-chev"><span class="rm-num">1</span><span class="rm-name">Plan</span><span class="rm-when">Design and pre-construction</span></div>
+                <div class="rm-chev"><span class="rm-num rm-node">1</span><span class="rm-name">Plan</span><span class="rm-when">Design and pre-construction</span></div>
                 <ul class="rm-items">
                   <li class="rm-item" data-lane="fin" style="--d: var(--c-fin)"><span class="rm-tag">Finance</span><span class="rm-text">Financial planning and modeling</span></li>
                   <li class="rm-item" data-lane="sqpe" style="--d: var(--c-sqpe)"><span class="rm-tag">SQPE</span><span class="rm-text">Safety and quality built into the design</span></li>
@@ -245,7 +235,7 @@
                 </ul>
               </li>
               <li class="rm-phase" data-phase="2">
-                <div class="rm-chev"><span class="rm-num">2</span><span class="rm-name">Prepare</span><span class="rm-when">During construction</span></div>
+                <div class="rm-chev"><span class="rm-num rm-node">2</span><span class="rm-name">Prepare</span><span class="rm-when">During construction</span></div>
                 <ul class="rm-items">
                   <li class="rm-item" data-lane="fin" style="--d: var(--c-fin)"><span class="rm-tag">Finance</span><span class="rm-text">Financial reporting from day one</span></li>
                   <li class="rm-item" data-lane="sqpe" style="--d: var(--c-sqpe)"><span class="rm-tag">SQPE</span><span class="rm-text">Mature practice for policies and training</span></li>
@@ -253,7 +243,7 @@
                 </ul>
               </li>
               <li class="rm-phase" data-phase="3">
-                <div class="rm-chev"><span class="rm-num">3</span><span class="rm-name">Activate</span><span class="rm-when">The run-up to opening</span></div>
+                <div class="rm-chev"><span class="rm-num rm-node">3</span><span class="rm-name">Activate</span><span class="rm-when">The run-up to opening</span></div>
                 <ul class="rm-items">
                   <li class="rm-item" data-lane="dig" style="--d: var(--c-dig)"><span class="rm-tag">Digital</span><span class="rm-text">Digital activation and go-live readiness</span></li>
                   <li class="rm-item" data-lane="edu" style="--d: var(--c-edu)"><span class="rm-tag">Education</span><span class="rm-text">Simulation training and systems testing</span></li>
@@ -261,7 +251,8 @@
               </li>
             </ol>
             <div class="rm-flag">
-              <span class="rm-flag-name"><svg width="14" height="16" viewBox="0 0 14 16" aria-hidden="true"><path d="M2 1v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M3 2h9l-2.2 3.5L12 9H3z" fill="currentColor"/></svg>Opening day</span>
+              <span class="rm-node" aria-hidden="true"><svg width="16" height="18" viewBox="0 0 14 16"><path d="M2 1v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M3 2h9l-2.2 3.5L12 9H3z" fill="currentColor"/></svg></span>
+              <span class="rm-flag-name">Opening day</span>
               <span class="rm-flag-note">Every area ready on the same day</span>
             </div>
           </div>
@@ -273,43 +264,125 @@
             <div>
               <p class="eyebrow">For existing hospitals</p>
               <h3 class="existing-title" id="existingTitle">Programs built around your priorities</h3>
-              <p class="existing-text">For hospitals already caring for patients, we combine advisory, education and quality programs around the goals you set: stronger margins, safer care, better use of data or a more confident workforce.</p>
+            </div>
+            <div>
+              <p class="existing-text">For hospitals already caring for patients, we build the program around the goals you set. Most start with an assessment against Cleveland Clinic standards, then focus where it matters most and grow with you through membership.</p>
               <a class="btn btn-primary" href="#contact">Talk to our team</a>
             </div>
-            <ol class="flow">
-              <li><span class="flow-name">Assess</span><span class="flow-text">Often starts with an assessment of safety, quality and patient experience against Cleveland Clinic standards</span></li>
-              <li><span class="flow-name">Focus</span><span class="flow-text">Adds advisory and education in the domains that matter most to you</span></li>
-              <li><span class="flow-name">Grow</span><span class="flow-text">Grows with you through Cleveland Clinic Connected membership</span></li>
-            </ol>
           </div>
-          <div class="ex-domains" aria-label="What we offer existing hospitals">
-            <div class="ex-domain" style="--accent: var(--c-fin)">
-              <h4 class="ex-name">Finance</h4>
-              <ul class="xp-list">
-                <li>Margin improvement, benchmarking and service line profitability</li>
-                <li>Partnerships, transactions and finance organization design</li>
-              </ul>
+
+          <!-- Priority explorer: the wheel's four segments are tabs; the selected one turns to face its panel.
+               Without JavaScript the wheel is hidden and all four panels show. -->
+          <div class="explorer" id="explorer">
+            <div class="wheel-wrap">
+              <p class="wheel-hint" aria-hidden="true">Choose a priority</p>
+              <div class="wheel-box">
+                <svg class="wheel" viewBox="0 0 340 340" role="tablist" aria-label="Choose a priority">
+                  <circle class="wheel-ring" cx="170" cy="170" r="162"/>
+                  <g class="wheel-rot">
+                  <g class="seg" role="tab" id="tab-margins" aria-controls="pri-margins" aria-selected="true" tabindex="0" data-key="margins" data-angle="-45" style="--d: var(--c-fin); --tx: 4.95px; --ty: -4.95px" aria-label="Stronger margins and growth">
+                    <path d="M174.19 20.06 A150 150 0 0 1 319.94 165.81 L255.97 167.60 A86 86 0 0 0 172.40 84.03 Z"/>
+                    <text class="seg-label" x="253.44" y="86.56" text-anchor="middle" dominant-baseline="central">Margins</text>
+                  </g>
+                  <g class="seg" role="tab" id="tab-safety" aria-controls="pri-safety" aria-selected="false" tabindex="-1" data-key="safety" data-angle="45" style="--d: var(--c-sqpe); --tx: 4.95px; --ty: 4.95px" aria-label="Safer, more reliable care">
+                    <path d="M319.94 174.19 A150 150 0 0 1 174.19 319.94 L172.40 255.97 A86 86 0 0 0 255.97 172.40 Z"/>
+                    <text class="seg-label" x="253.44" y="253.44" text-anchor="middle" dominant-baseline="central">Safety</text>
+                  </g>
+                  <g class="seg" role="tab" id="tab-data" aria-controls="pri-data" aria-selected="false" tabindex="-1" data-key="data" data-angle="135" style="--d: var(--c-dig); --tx: -4.95px; --ty: 4.95px" aria-label="Better use of data and technology">
+                    <path d="M165.81 319.94 A150 150 0 0 1 20.06 174.19 L84.03 172.40 A86 86 0 0 0 167.60 255.97 Z"/>
+                    <text class="seg-label" x="86.56" y="253.44" text-anchor="middle" dominant-baseline="central">Data</text>
+                  </g>
+                  <g class="seg" role="tab" id="tab-workforce" aria-controls="pri-workforce" aria-selected="false" tabindex="-1" data-key="workforce" data-angle="225" style="--d: var(--c-edu); --tx: -4.95px; --ty: -4.95px" aria-label="A more confident workforce">
+                    <path d="M20.06 165.81 A150 150 0 0 1 165.81 20.06 L167.60 84.03 A86 86 0 0 0 84.03 167.60 Z"/>
+                    <text class="seg-label" x="86.56" y="86.56" text-anchor="middle" dominant-baseline="central">Workforce</text>
+                  </g>
+                  </g>
+                  <circle class="wheel-hub" cx="170" cy="170" r="76"/>
+                </svg>
+                <div class="hub" aria-hidden="true"><span class="hub-kicker">Your priority</span><span class="hub-title" id="hubTitle">Stronger margins and growth</span></div>
+              </div>
             </div>
-            <div class="ex-domain" style="--accent: var(--c-sqpe)">
-              <h4 class="ex-name">SQPE</h4>
-              <ul class="xp-list">
-                <li>A year-round program that benchmarks performance against Cleveland Clinic standards</li>
-                <li>Maturity assessments and train-the-trainer programs that build lasting capability</li>
-              </ul>
-            </div>
-            <div class="ex-domain" style="--accent: var(--c-dig)">
-              <h4 class="ex-name">Digital</h4>
-              <ul class="xp-list">
-                <li>EHR optimization, interoperability and cybersecurity</li>
-                <li>Data and analytics foundations, AI governance and the digital patient journey</li>
-              </ul>
-            </div>
-            <div class="ex-domain" style="--accent: var(--c-edu)">
-              <h4 class="ex-name">Education</h4>
-              <ul class="xp-list">
-                <li>Observerships, fellowships and leadership development</li>
-                <li>Expert sessions, visiting faculty and specialist input on complex cases</li>
-              </ul>
+            <div class="pri-panels">
+              <section class="pri is-on" id="pri-margins" role="tabpanel" aria-labelledby="tab-margins" style="--d: var(--c-fin)">
+                <p class="pri-domain">Finance</p>
+                <h4 class="pri-title">Stronger margins and growth</h4>
+                <div class="pri-cols">
+                  <div>
+                    <p class="pri-label">How we help</p>
+                    <ul class="xp-list pri-help" style="--accent: var(--c-fin)">
+                    <li>Margin improvement, benchmarking and service line profitability</li>
+                    <li>Partnerships, transactions and finance organization design</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p class="pri-label">From our work</p>
+                    <ul class="pri-proof">
+                    <li><span class="proof-who">Columbus Regional Health</span>Strategic facility planning and physician recruitment, part of nearly 30 projects in its first year. <a class="proof-link" href="#partners" data-story="4">See the story</a></li>
+                    <li><span class="proof-who">Barton Health</span>Advice on service adjacencies and patient room design for its hospital planning. <a class="proof-link" href="#partners" data-story="3">See the story</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+              <section class="pri" id="pri-safety" role="tabpanel" aria-labelledby="tab-safety" style="--d: var(--c-sqpe)">
+                <p class="pri-domain">SQPE</p>
+                <h4 class="pri-title">Safer, more reliable care</h4>
+                <div class="pri-cols">
+                  <div>
+                    <p class="pri-label">How we help</p>
+                    <ul class="xp-list pri-help" style="--accent: var(--c-sqpe)">
+                    <li>A year-round program that benchmarks performance against Cleveland Clinic standards</li>
+                    <li>Maturity assessments and train-the-trainer programs that build lasting capability</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p class="pri-label">From our work</p>
+                    <ul class="pri-proof">
+                    <li><span class="proof-who">Vinmec Times City</span>Significant improvements in quality, safety and patient experience in its first year as a member, with Cleveland Clinic checklist practice adapted as a safety tool. <a class="proof-link" href="#partners" data-story="0">See the story</a></li>
+                    <li><span class="proof-who">Columbus Regional Health</span>Safety, quality and patient experience initiatives under way across the hospital. <a class="proof-link" href="#partners" data-story="4">See the story</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+              <section class="pri" id="pri-data" role="tabpanel" aria-labelledby="tab-data" style="--d: var(--c-dig)">
+                <p class="pri-domain">Digital Tools &amp; Analytics</p>
+                <h4 class="pri-title">Better use of data and technology</h4>
+                <div class="pri-cols">
+                  <div>
+                    <p class="pri-label">How we help</p>
+                    <ul class="xp-list pri-help" style="--accent: var(--c-dig)">
+                    <li>EHR optimization, interoperability and cybersecurity</li>
+                    <li>Data and analytics foundations, AI governance and the digital patient journey</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p class="pri-label">From our work</p>
+                    <ul class="pri-proof">
+                    <li><span class="proof-who">Barton Health</span>A Cleveland Clinic neurology assessment identified 3T MRI imaging as a key opportunity, and Cleveland Clinic heart and vascular leaders are guiding new heart imaging technology. <a class="proof-link" href="#partners" data-story="3">See the story</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+              <section class="pri" id="pri-workforce" role="tabpanel" aria-labelledby="tab-workforce" style="--d: var(--c-edu)">
+                <p class="pri-domain">Education</p>
+                <h4 class="pri-title">A more confident workforce</h4>
+                <div class="pri-cols">
+                  <div>
+                    <p class="pri-label">How we help</p>
+                    <ul class="xp-list pri-help" style="--accent: var(--c-edu)">
+                    <li>Observerships, fellowships and leadership development</li>
+                    <li>Expert sessions, visiting faculty and specialist input on complex cases</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p class="pri-label">From our work</p>
+                    <ul class="pri-proof">
+                    <li><span class="proof-who">Columbus Regional Health</span>Physician, nursing and quality leaders spent several days learning alongside Cleveland Clinic counterparts in Ohio, and five complex cases went to Cleveland Clinic specialists through eClinical Review. <a class="proof-link" href="#partners" data-story="4">See the story</a></li>
+                    <li><span class="proof-who">Vinmec Central Park</span>An epilepsy seminar with Cleveland Clinic drew about 200 clinicians in 2025. <a class="proof-link" href="#partners" data-story="0">See the story</a></li>
+                    <li><span class="proof-who">Radiochirurgia Zagreb</span>Two clinical leaders selected for Cleveland Clinic's Global Physician Leadership Immersion Program. <a class="proof-link" href="#partners" data-story="2">See the story</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </article>
