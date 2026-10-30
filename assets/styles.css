@@ -169,12 +169,11 @@ section[id], article[id], div[id] { scroll-margin-top: 12px; }
 .membership-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr); gap: 64px; align-items: center; }
 .membership-photo { aspect-ratio: 16 / 10; overflow: hidden; border-radius: var(--radius); background: var(--mist); }
 .membership-photo img { width: 100%; height: 100%; object-fit: cover; }
-/* What membership includes: an open row of icons, no boxes */
-.includes { list-style: none; padding: 32px 0 0; margin-top: 52px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; border-top: 1px solid var(--rule); }
-.includes li { display: grid; grid-template-columns: 48px minmax(0, 1fr); column-gap: 14px; align-content: start; }
-.inc-icon { grid-row: 1 / span 2; width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; background: var(--sky); color: var(--blue-dark); }
-.includes li:nth-child(even) .inc-icon { background: #eef7f0; color: var(--green); }
-.inc-title { font-size: 17px; font-weight: 500; line-height: 1.3; color: var(--ink); padding-top: 2px; }
+/* What membership includes: an open row with a colored top rule, no boxes or icons */
+.includes { list-style: none; padding: 0; margin-top: 52px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+.includes li { border-top: 3px solid var(--blue); padding-top: 16px; }
+.includes li:nth-child(even) { border-top-color: var(--green); }
+.inc-title { font-size: 18px; font-weight: 500; line-height: 1.3; color: var(--ink); }
 .includes p { color: var(--slate); font-size: 15px; line-height: 1.5; margin-top: 6px; }
 .includes a { color: var(--blue-dark); font-weight: 500; white-space: nowrap; }
 .network { margin-top: 72px; }
