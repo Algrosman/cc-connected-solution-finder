@@ -362,7 +362,7 @@ section[id], article[id], div[id] { scroll-margin-top: 12px; }
 .faq-item summary:hover { color: var(--blue); }
 .faq-item p { color: var(--slate); padding: 0 40px 22px 0; line-height: 1.6; max-width: 70ch; }
 
-/* ---------- Footer: Let's connect ---------- */
+/* ---------- Footer: Connect ---------- */
 .site-footer { background: var(--navy-deep); color: var(--slate-on-navy); font-size: 15px; }
 .connect { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 56px; padding: 64px 0 52px; }
 .connect-title { font-size: clamp(2.2rem, 1.8rem + 1.4vw, 3rem); font-weight: 300; color: var(--white); line-height: 1.1; margin-bottom: 16px; }
