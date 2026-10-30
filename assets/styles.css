@@ -285,18 +285,14 @@ section[id], article[id], div[id] { scroll-margin-top: 12px; }
 .wheel-rot { transform-box: view-box; transform-origin: 50% 50%; transition: transform 750ms var(--ease); }
 .no-anim .wheel-rot, .no-anim .seg, .no-anim .seg-label { transition: none !important; }
 .seg { cursor: pointer; outline: none; transition: transform 300ms var(--ease); }
-/* Each piece floats: it bobs up and down on screen over a soft shadow. --upx/--upy is "screen up" in the
+/* The selected piece floats: it bobs up and down on screen over a soft shadow. --upx/--upy is "screen up" in the
    wheel's turned coordinates (set by site.js), so the motion and shadow stay vertical however the wheel turns. */
 .wheel { --upx: 0; --upy: -1; }
 .seg path { stroke: var(--white); stroke-width: 2; opacity: 0.84; transition: opacity 250ms;
   filter: drop-shadow(calc(var(--upx) * -4px) calc(var(--upy) * -4px) 4px rgba(16, 38, 66, 0.24)); }
-.seg { animation: segFloat 3.2s ease-in-out infinite; }
-.seg path { animation: segShadow 3.2s ease-in-out infinite; }
-.seg:nth-child(2), .seg:nth-child(2) path { animation-delay: -0.8s; }
-.seg:nth-child(3), .seg:nth-child(3) path { animation-delay: -1.6s; }
-.seg:nth-child(4), .seg:nth-child(4) path { animation-delay: -2.4s; }
-.seg[aria-selected="true"] { animation-name: segFloatSel; }
-@keyframes segFloat { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(calc(var(--upx) * 6px), calc(var(--upy) * 6px)); } }
+/* Only the selected piece floats */
+.seg[aria-selected="true"] { animation: segFloatSel 3.2s ease-in-out infinite; }
+.seg[aria-selected="true"] path { animation: segShadow 3.2s ease-in-out infinite; }
 @keyframes segFloatSel { 0%, 100% { transform: translate(var(--tx), var(--ty)); } 50% { transform: translate(calc(var(--tx) + var(--upx) * 6px), calc(var(--ty) + var(--upy) * 6px)); } }
 @keyframes segShadow {
   0%, 100% { filter: drop-shadow(calc(var(--upx) * -4px) calc(var(--upy) * -4px) 4px rgba(16, 38, 66, 0.26)); }
