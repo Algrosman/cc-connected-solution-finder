@@ -80,7 +80,7 @@
     </section>
 
     <section class="band band-white" id="membership" aria-labelledby="membershipTitle">
-      <p class="section-bar bar-navy"><span class="wrap">Membership</span></p>
+      <p class="section-bar bar-navy"><span class="wrap"><span class="bar-num">01</span><span class="bar-rule" aria-hidden="true"></span><span class="bar-label">Membership</span></span></p>
       <div class="wrap band-body">
         <div class="membership-row">
           <div>
@@ -165,21 +165,26 @@
     </section>
 
     <section class="band band-mist" id="expertise" aria-labelledby="expertiseTitle">
-      <p class="section-bar bar-blue"><span class="wrap">Our expertise</span></p>
+      <p class="section-bar bar-blue"><span class="wrap"><span class="bar-num">02</span><span class="bar-rule" aria-hidden="true"></span><span class="bar-label">Our expertise</span></span></p>
       <div class="wrap band-body">
         <div class="section-head is-center">
           <h2 id="expertiseTitle" class="section-title">Explore our advisory expertise</h2>
           <p class="section-lede">Four domains, each drawing on how Cleveland Clinic runs its own hospitals, with solutions for new hospitals and for hospitals already caring for patients.</p>
-          <div class="stage-switch" role="group" aria-label="Show solutions for" hidden>
-            <button type="button" data-stage="new" aria-pressed="true">New hospitals</button>
-            <button type="button" data-stage="existing" aria-pressed="false">Existing hospitals</button>
-          </div>
         </div>
 
-        <div class="xp-grid" id="xpGrid">
-          <article class="card xp-card" style="--accent: var(--c-fin)">
-            <h3 class="card-title xp-name">Finance</h3>
-            <p class="xp-desc">Financial strategy, planning and performance advice from an operating health system, from deciding whether to invest to running a finance function that fits the organization.</p>
+        <div class="xp-matrix" id="xpMatrix">
+          <div class="xp-head" aria-hidden="true">
+            <span>Domain</span>
+            <span class="xp-col-new">For new hospitals</span>
+            <span class="xp-col-existing">For existing hospitals</span>
+          </div>
+
+          <article class="card xp-row" style="--accent: var(--c-fin)">
+            <div class="xp-main">
+              <h3 class="card-title xp-name">Finance</h3>
+              <p class="xp-desc">Financial strategy, planning and performance advice from an operating health system, from deciding whether to invest to running a finance function that fits the organization.</p>
+              <a class="arrow-link" href="mailto:ccconnected@ccf.org?subject=Finance%20advisory">Talk to us about finance</a>
+            </div>
             <div class="xp-stage" data-for="new">
               <h4 class="xp-for xp-new">For new hospitals</h4>
               <ul class="xp-list">
@@ -194,12 +199,14 @@
                 <li>Partnerships, transactions and finance organization design</li>
               </ul>
             </div>
-            <a class="arrow-link" href="mailto:ccconnected@ccf.org?subject=Finance%20advisory">Talk to us about finance</a>
           </article>
 
-          <article class="card xp-card" style="--accent: var(--c-sqpe)">
-            <h3 class="card-title xp-name">Safety, Quality, and Patient Experience (SQPE)</h3>
-            <p class="xp-desc">Cleveland Clinic's approach to safety, quality and patient experience, applied to your hospital through assessment, practical guidance and training.</p>
+          <article class="card xp-row" style="--accent: var(--c-sqpe)">
+            <div class="xp-main">
+              <h3 class="card-title xp-name">Safety, Quality, and Patient Experience (SQPE)</h3>
+              <p class="xp-desc">Cleveland Clinic's approach to safety, quality and patient experience, applied to your hospital through assessment, practical guidance and training.</p>
+              <a class="arrow-link" href="mailto:ccconnected@ccf.org?subject=SQPE%20advisory">Talk to us about SQPE</a>
+            </div>
             <div class="xp-stage" data-for="new">
               <h4 class="xp-for xp-new">For new hospitals</h4>
               <ul class="xp-list">
@@ -214,12 +221,14 @@
                 <li>Maturity assessments and train-the-trainer programs that build lasting capability</li>
               </ul>
             </div>
-            <a class="arrow-link" href="mailto:ccconnected@ccf.org?subject=SQPE%20advisory">Talk to us about SQPE</a>
           </article>
 
-          <article class="card xp-card" style="--accent: var(--c-dig)">
-            <h3 class="card-title xp-name">Digital Tools &amp; Analytics</h3>
-            <p class="xp-desc">Vendor-neutral advice on the strategy, systems and governance behind a digital hospital, from a health system that runs them every day.</p>
+          <article class="card xp-row" style="--accent: var(--c-dig)">
+            <div class="xp-main">
+              <h3 class="card-title xp-name">Digital Tools &amp; Analytics</h3>
+              <p class="xp-desc">Vendor-neutral advice on the strategy, systems and governance behind a digital hospital, from a health system that runs them every day.</p>
+              <a class="arrow-link" href="mailto:ccconnected@ccf.org?subject=Digital%20advisory">Talk to us about digital</a>
+            </div>
             <div class="xp-stage" data-for="new">
               <h4 class="xp-for xp-new">For new hospitals</h4>
               <ul class="xp-list">
@@ -234,12 +243,14 @@
                 <li>Data and analytics foundations, AI governance and the digital patient journey</li>
               </ul>
             </div>
-            <a class="arrow-link" href="mailto:ccconnected@ccf.org?subject=Digital%20advisory">Talk to us about digital</a>
           </article>
 
-          <article class="card xp-card" style="--accent: var(--c-edu)">
-            <h3 class="card-title xp-name">Education</h3>
-            <p class="xp-desc">Cleveland Clinic education for physicians, nurses, pharmacists and leaders, at Cleveland Clinic, at Cleveland Clinic Abu Dhabi or at your hospital.</p>
+          <article class="card xp-row" style="--accent: var(--c-edu)">
+            <div class="xp-main">
+              <h3 class="card-title xp-name">Education</h3>
+              <p class="xp-desc">Cleveland Clinic education for physicians, nurses, pharmacists and leaders, at Cleveland Clinic, at Cleveland Clinic Abu Dhabi or at your hospital.</p>
+              <a class="arrow-link" href="mailto:ccconnected@ccf.org?subject=Education">Talk to us about education</a>
+            </div>
             <div class="xp-stage" data-for="new">
               <h4 class="xp-for xp-new">For new hospitals</h4>
               <ul class="xp-list">
@@ -254,7 +265,6 @@
                 <li>Expert sessions, visiting faculty and specialist input on complex cases</li>
               </ul>
             </div>
-            <a class="arrow-link" href="mailto:ccconnected@ccf.org?subject=Education">Talk to us about education</a>
           </article>
         </div>
 
@@ -263,7 +273,7 @@
     </section>
 
     <section class="band band-white" id="programs" aria-labelledby="programsTitle">
-      <p class="section-bar bar-green"><span class="wrap">Programs</span></p>
+      <p class="section-bar bar-green"><span class="wrap"><span class="bar-num">03</span><span class="bar-rule" aria-hidden="true"></span><span class="bar-label">Programs</span></span></p>
       <div class="wrap band-body">
         <div class="section-head is-center">
           <h2 id="programsTitle" class="section-title">Programs for new and existing hospitals</h2>
@@ -345,7 +355,7 @@
     </section>
 
     <section class="band band-mist" id="partners" aria-labelledby="partnersTitle">
-      <p class="section-bar bar-blue-dark"><span class="wrap">Partner highlights</span></p>
+      <p class="section-bar bar-blue-dark"><span class="wrap"><span class="bar-num">04</span><span class="bar-rule" aria-hidden="true"></span><span class="bar-label">Partner highlights</span></span></p>
       <div class="wrap band-body">
         <div class="section-head">
           <h2 id="partnersTitle" class="section-title">What we've done with our partners</h2>

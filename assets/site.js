@@ -1,6 +1,6 @@
-/* Cleveland Clinic Connected public site: contact links, the expertise stage switch,
+/* Cleveland Clinic Connected public site: contact links, the section bands,
    the package roadmap and the partner highlights carousel. Everything still reads
-   correctly without JavaScript: both stages show, the roadmap is static and the stories stack. */
+   correctly without JavaScript: the roadmap is static and the stories stack. */
 (function () {
   "use strict";
   var CONFIG = window.CC_CONFIG || {};
@@ -21,18 +21,14 @@
   });
   var y = $("#year"); if (y) y.textContent = new Date().getFullYear();
 
-  /* ---------- Expertise: new or existing hospitals ---------- */
-  var sw = $(".stage-switch"), grid = $("#xpGrid");
-  if (sw && grid) {
-    sw.hidden = false;
-    grid.classList.add("has-stages");
-    grid.setAttribute("data-stage", "new");
-    $all("button", sw).forEach(function (b) {
-      b.addEventListener("click", function () {
-        $all("button", sw).forEach(function (o) { o.setAttribute("aria-pressed", String(o === b)); });
-        grid.setAttribute("data-stage", b.getAttribute("data-stage"));
-      });
-    });
+  /* ---------- Section bands: draw in when they scroll into view ---------- */
+  var bars = $all(".section-bar");
+  if (bars.length && !reduceMotion && "IntersectionObserver" in window) {
+    document.documentElement.classList.add("bar-anim");
+    var barObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("is-in"); barObs.unobserve(e.target); } });
+    }, { threshold: 0.6 });
+    bars.forEach(function (el) { barObs.observe(el); });
   }
 
   /* ---------- Package roadmap: fill in on first view, light up a domain on hover ---------- */
