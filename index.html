@@ -271,35 +271,43 @@
             </div>
           </div>
 
-          <!-- Priority explorer: the wheel's four segments are tabs; the selected one turns to face its panel.
+          <!-- Priority explorer: the wheel's four domain segments are tabs; the selected one turns to face its panel.
                Without JavaScript the wheel is hidden and all four panels show. -->
           <div class="explorer" id="explorer">
             <div class="wheel-wrap">
-              <p class="wheel-hint" aria-hidden="true">Choose a priority</p>
+              <p class="wheel-hint" aria-hidden="true"><svg class="hint-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V10m0-1.5a1.5 1.5 0 0 1 3 0V11m0-1a1.5 1.5 0 0 1 3 0v4.5c0 3.6-2.4 6.5-6 6.5h-1c-2.2 0-3.5-1-4.7-2.6L4.6 14.6a1.5 1.5 0 0 1 2.3-1.9L9 15"/></svg>Click an area of the wheel to explore it</p>
               <div class="wheel-box">
-                <svg class="wheel" viewBox="0 0 340 340" role="tablist" aria-label="Choose a priority">
+                <svg class="wheel is-hinting" viewBox="0 0 340 340" role="tablist" aria-label="Choose an area">
+                  <defs>
+                    <linearGradient id="wg-fin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a8ad6"/><stop offset="1" stop-color="#0a5f9e"/></linearGradient>
+                    <linearGradient id="wg-sqpe" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#25964c"/><stop offset="1" stop-color="#16682f"/></linearGradient>
+                    <linearGradient id="wg-it" x1="1" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#2ea6e6"/><stop offset="1" stop-color="#0d74b8"/></linearGradient>
+                    <linearGradient id="wg-edu" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#4cab5c"/><stop offset="1" stop-color="#2a8340"/></linearGradient>
+                    <radialGradient id="wg-glow"><stop offset="0.55" stop-color="#1f9be0" stop-opacity="0.16"/><stop offset="1" stop-color="#1f9be0" stop-opacity="0"/></radialGradient>
+                  </defs>
+                  <circle cx="170" cy="170" r="170" fill="url(#wg-glow)"/>
                   <circle class="wheel-ring" cx="170" cy="170" r="162"/>
                   <g class="wheel-rot">
-                  <g class="seg" role="tab" id="tab-margins" aria-controls="pri-margins" aria-selected="true" tabindex="0" data-key="margins" data-angle="-45" style="--d: var(--c-fin); --tx: 4.95px; --ty: -4.95px" aria-label="Stronger margins and growth">
-                    <path d="M174.19 20.06 A150 150 0 0 1 319.94 165.81 L255.97 167.60 A86 86 0 0 0 172.40 84.03 Z"/>
-                    <text class="seg-label" x="253.44" y="86.56" text-anchor="middle" dominant-baseline="central">Margins</text>
+                  <g class="seg" role="tab" id="tab-margins" aria-controls="pri-margins" aria-selected="true" tabindex="0" data-key="margins" data-angle="-45" style="--d: var(--c-fin); --tx: 4.95px; --ty: -4.95px" aria-label="Finance" data-short="Finance" data-title="Stronger margins and growth">
+                    <path fill="url(#wg-fin)" d="M173.84 13.05 A157 157 0 0 1 326.95 166.16 L249.98 168.05 A80 80 0 0 0 171.95 90.02 Z"/>
+                    <text class="seg-label" x="253.79" y="86.21" text-anchor="middle" dominant-baseline="central">Finance</text>
                   </g>
-                  <g class="seg" role="tab" id="tab-safety" aria-controls="pri-safety" aria-selected="false" tabindex="-1" data-key="safety" data-angle="45" style="--d: var(--c-sqpe); --tx: 4.95px; --ty: 4.95px" aria-label="Safer, more reliable care">
-                    <path d="M319.94 174.19 A150 150 0 0 1 174.19 319.94 L172.40 255.97 A86 86 0 0 0 255.97 172.40 Z"/>
-                    <text class="seg-label" x="253.44" y="253.44" text-anchor="middle" dominant-baseline="central">Safety</text>
+                  <g class="seg" role="tab" id="tab-safety" aria-controls="pri-safety" aria-selected="false" tabindex="-1" data-key="safety" data-angle="45" style="--d: var(--c-sqpe); --tx: 4.95px; --ty: 4.95px" aria-label="Safety, Quality, and Patient Experience" data-short="SQPE" data-title="Safer, more reliable care">
+                    <path fill="url(#wg-sqpe)" d="M326.95 173.84 A157 157 0 0 1 173.84 326.95 L171.95 249.98 A80 80 0 0 0 249.98 171.95 Z"/>
+                    <text class="seg-label" x="253.79" y="253.79" text-anchor="middle" dominant-baseline="central">SQPE</text>
                   </g>
-                  <g class="seg" role="tab" id="tab-data" aria-controls="pri-data" aria-selected="false" tabindex="-1" data-key="data" data-angle="135" style="--d: var(--c-dig); --tx: -4.95px; --ty: 4.95px" aria-label="Better use of data and technology">
-                    <path d="M165.81 319.94 A150 150 0 0 1 20.06 174.19 L84.03 172.40 A86 86 0 0 0 167.60 255.97 Z"/>
-                    <text class="seg-label" x="86.56" y="253.44" text-anchor="middle" dominant-baseline="central">Data</text>
+                  <g class="seg" role="tab" id="tab-data" aria-controls="pri-data" aria-selected="false" tabindex="-1" data-key="data" data-angle="135" style="--d: var(--c-dig); --tx: -4.95px; --ty: 4.95px" aria-label="IT" data-short="IT" data-title="Better use of data and technology">
+                    <path fill="url(#wg-it)" d="M166.16 326.95 A157 157 0 0 1 13.05 173.84 L90.02 171.95 A80 80 0 0 0 168.05 249.98 Z"/>
+                    <text class="seg-label" x="86.21" y="253.79" text-anchor="middle" dominant-baseline="central">IT</text>
                   </g>
-                  <g class="seg" role="tab" id="tab-workforce" aria-controls="pri-workforce" aria-selected="false" tabindex="-1" data-key="workforce" data-angle="225" style="--d: var(--c-edu); --tx: -4.95px; --ty: -4.95px" aria-label="A more confident workforce">
-                    <path d="M20.06 165.81 A150 150 0 0 1 165.81 20.06 L167.60 84.03 A86 86 0 0 0 84.03 167.60 Z"/>
-                    <text class="seg-label" x="86.56" y="86.56" text-anchor="middle" dominant-baseline="central">Workforce</text>
+                  <g class="seg" role="tab" id="tab-workforce" aria-controls="pri-workforce" aria-selected="false" tabindex="-1" data-key="workforce" data-angle="225" style="--d: var(--c-edu); --tx: -4.95px; --ty: -4.95px" aria-label="Education" data-short="Education" data-title="A more confident workforce">
+                    <path fill="url(#wg-edu)" d="M13.05 166.16 A157 157 0 0 1 166.16 13.05 L168.05 90.02 A80 80 0 0 0 90.02 168.05 Z"/>
+                    <text class="seg-label" x="86.21" y="86.21" text-anchor="middle" dominant-baseline="central">Education</text>
                   </g>
                   </g>
-                  <circle class="wheel-hub" cx="170" cy="170" r="76"/>
+                  <circle class="wheel-hub" cx="170" cy="170" r="71"/>
                 </svg>
-                <div class="hub" aria-hidden="true"><span class="hub-kicker">Your priority</span><span class="hub-title" id="hubTitle">Stronger margins and growth</span></div>
+                <div class="hub" aria-hidden="true"><span class="hub-kicker" id="hubKicker">Finance</span><span class="hub-title" id="hubTitle">Stronger margins and growth</span></div>
               </div>
             </div>
             <div class="pri-panels">
@@ -344,7 +352,7 @@
                 </div>
               </section>
               <section class="pri" id="pri-data" role="tabpanel" aria-labelledby="tab-data" style="--d: var(--c-dig)">
-                <p class="pri-domain">Digital Tools &amp; Analytics</p>
+                <p class="pri-domain">IT: Digital Tools &amp; Analytics</p>
                 <h4 class="pri-title">Better use of data and technology</h4>
                 <div class="pri-cols">
                   <div>

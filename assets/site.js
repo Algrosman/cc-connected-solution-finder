@@ -55,7 +55,7 @@
   /* ---------- Existing hospitals: priority wheel ---------- */
   var ex = $("#explorer");
   if (ex) {
-    var segs = $all(".seg", ex), rot = $(".wheel-rot", ex), wheel = $(".wheel", ex), hub = $("#hubTitle");
+    var segs = $all(".seg", ex), rot = $(".wheel-rot", ex), wheel = $(".wheel", ex), hub = $("#hubTitle"), hubKicker = $("#hubKicker"), hubBox = $(".hub", ex);
     var current = 0, turn = 0;   /* running rotation in degrees, so the wheel always turns the short way */
     var stacked = window.matchMedia("(max-width: 900px)");
     var face = function () { return stacked.matches ? 90 : 0; };   /* point at the panel: right, or down when stacked */
@@ -63,7 +63,9 @@
       var seg = segs[i], key = seg.getAttribute("data-key");
       segs.forEach(function (s, k) { var on = k === i; s.setAttribute("aria-selected", String(on)); s.setAttribute("tabindex", on ? "0" : "-1"); });
       $all(".pri", ex).forEach(function (pnl) { pnl.classList.toggle("is-on", pnl.id === "pri-" + key); });
-      hub.textContent = seg.getAttribute("aria-label");
+      hub.textContent = seg.getAttribute("data-title");
+      hubKicker.textContent = seg.getAttribute("data-short");
+      hubBox.style.setProperty("--d", seg.style.getPropertyValue("--d"));
       var target = face() - parseFloat(seg.getAttribute("data-angle"));
       turn += ((target - turn) % 360 + 540) % 360 - 180;
       rot.style.transform = "rotate(" + turn + "deg)";
@@ -72,9 +74,10 @@
       if (focus) seg.focus();
     };
     segs.forEach(function (s, i) {
-      s.addEventListener("click", function () { select(i, false); });
+      s.addEventListener("click", function () { wheel.classList.remove("is-hinting"); select(i, false); });
       s.addEventListener("keydown", function (e) {
         var n = segs.length;
+        wheel.classList.remove("is-hinting");
         if (e.key === "Enter" || e.key === " ") { select(i, false); e.preventDefault(); }
         if (e.key === "ArrowRight" || e.key === "ArrowDown") { select((i + 1) % n, true); e.preventDefault(); }
         if (e.key === "ArrowLeft" || e.key === "ArrowUp") { select((i + n - 1) % n, true); e.preventDefault(); }
